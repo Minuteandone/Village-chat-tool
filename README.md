@@ -2,7 +2,7 @@
 
 This GitHub-Issues-controlled workflow lets ChatGPT read AI Village's Open Chat, and submit a message when you explicitly request it. It talks to the same public endpoints as the Village browser UI. GitHub Actions runs on demand, so you don't need to host a server.
 
-**Status:** Reading was verified in a real GitHub Actions run on October 22, 2026. The browser-based guest-message API shape was inspected and implemented, but **posting has not been tested by submitting a live message**.
+**Status:** Reading was verified in a real GitHub Actions run on October 22, 2026. **Live posting and reading were verified** on October 22, 2026. GitHub read replies now escape mentions to avoid pings.
 
 ## Commands
 
@@ -77,6 +77,21 @@ AI Village names do not necessarily refer to the same people as GitHub usernames
 - Prefer plain speaker names, without mentions, in both systems. Do not automatically mention names extracted from chat text. Never impersonate someone or send unnecessary notifications.
 - Previous GitHub comments cannot have their already-sent notifications undone by this change.
 
+## GitHub mention safety (Issue #2)
+
+GitHub can interpret a copied AI Village @name as a mention of an unrelated GitHub account. To avoid accidental notification:
+
+- **Every bot reply to a GitHub issue is escaped automatically.** Before replying, the bridge inserts a zero-width space between any `@` and the following text. This covers all chat exports, GitLab file contents, error messages, and names. Escaping is idempotent: repeated processing will not accumulate invisible characters.
+- **When composing a GitHub issue command to post to AI Village, do not type raw @names.** Use `[[at]]Name` or put a zero-width space immediately after `@` (e.g. `@​Name`). GitHub sees no mention; the bridge removes the escape **only inside the payload sent to AI Village**. The originating GitHub issue comment remains safe.
+- **Better default:** write people's names without the `@` at all. Do not infer or automatically tag a GitHub account from an AI Village display name. Only use an intentional Village tag when it is needed and its recipient is established.
+- This change applies to *new* bridge outputs. Old GitHub comments are not retroactively changed, and editing them may not undo past notifications.
+
+Example safe GitHub command:
+
+    /village post general [[at]]Gemini 4 Argon I agree about preserving the original sprite order.
+
+The AI Village message will contain the original `@Gemini 4 Argon` mention, but the GitHub command comment will not.
+
 ## Moderation and guarantees
 
 Submissions go through the normal website endpoint and are subject to the normal whitelist/moderation system. A successful API response means **submitted**, not necessarily publicly visible or approved. The bridge does not bypass whitelist status, create a new identity to evade moderation, or repeatedly retry rejected submissions.
@@ -90,7 +105,7 @@ Submissions go through the normal website endpoint and are subject to the normal
 
 ## Verification
 
-The /village read command was successfully exercised on [Issue #1](https://github.com/Minuteandone/Village-chat-tool/issues/1). Use /village status to verify the new configuration without posting. A real /village post is intentionally left for an explicitly authorized message.
+The /village read command was successfully exercised on [Issue #1](https://github.com/Minuteandone/Village-chat-tool/issues/1). Use /village status to verify the new configuration without posting. Live /village post submissions were successfully tested and appeared in AI Village public chat.
 
 
 ## Read public AI Village GitLab projects
