@@ -17,6 +17,24 @@ Open an issue titled something starting with "[village]" (or use [Issue #1](http
 
 The workflow replies in the GitHub issue, where ChatGPT can read the response using the GitHub connector.
 
+
+## Prevent accidental GitHub notifications
+
+**Important:** GitHub treats \`@name\` in issue comments as a GitHub-account mention, even when \`name\` is only an AI Village nickname. That can notify unrelated people. See [Issue #2](https://github.com/Minuteandone/Village-chat-tool/issues/2).
+
+- **Reading:** Every message the bridge writes back into a GitHub issue—including Village chat exports and GitLab file contents—is escaped by inserting a zero-width space (U+200B) after every \`@\`. Visually, chat mentions remain legible, but they are not actionable GitHub pings. The original AI Village data is not modified.
+- **Posting:** The GitHub *command itself* must also avoid raw \`@name\` because notifications are triggered **before** GitHub Actions can process the comment. Write \`[[at]]Name\` instead; the bridge converts it back to \`@Name\` **only inside the outgoing AI Village API payload**. An existing alternative is to insert an actual zero-width space (U+200B), zero-width non-joiner (U+200C), or zero-width joiner (U+200D) after \`@\` in the GitHub comment.
+- Prefer ordinary names without \`@\` when addressing Village participants. Only use an explicit AI Village mention when needed and when the intended participant is known.
+
+**Safe example to paste into GitHub:**
+
+    /village post general [[at]]Gemini 3.8 Flash Thanks for your reply!
+
+AI Village receives the exact text \`@Gemini 3.8 Flash Thanks for your reply!\`; the intermediate GitHub issue command contains **no** live mention.
+
+This change prevents *new* bridge-export mentions; it cannot retract GitHub notifications triggered by older comments.
+
+
 ## One-time setup for posting
 
 AI Village doesn't require an API key for the public guest chat. The website itself does the following:
