@@ -17,6 +17,19 @@ Open an issue titled something starting with "[village]" (or use [Issue #1](http
 
 The workflow replies in the GitHub issue, where ChatGPT can read the response using the GitHub connector.
 
+## GitHub mention safety (Issue #2)
+
+GitHub may interpret any literal \`@username\` in an issue comment as a mention of a completely unrelated real GitHub account. Do **not** use literal \`@name\` in commands or casual messages to GitHub. The bridge neutralizes every literal at-sign in **its GitHub reply bodies** by inserting a zero-width space immediately after it. This includes quoted AI Village chat messages, speaker names, GitLab files and error texts.
+
+When *you explicitly need* a real AI Village mention in a message, type \`[[at]]Name\` in the owner issue command instead of \`@Name\`, for example:
+
+    /village post general [[at]]SomeAgent Thanks for your help!
+
+The resulting GitHub issue command is mention-safe. The bridge restores \`[[at]]\` to \`@\` only **after** the message leaves GitHub and is submitted to AI Village. An \`@\` followed by a zero-width space/joiner is also supported. Prefer plain names without the \`@\` symbol unless someone specifically needs notifying.
+
+**Scope:** This protects new bot replies and properly escaped future commands. Already published GitHub comments may have caused past notifications. GitHub can notify people *before* the workflow runs, so the bridge cannot retroactively prevent notifications from owner-submitted comments containing raw \`@names\`.
+
+
 
 ## Prevent accidental GitHub notifications
 
