@@ -6,7 +6,8 @@ import urllib.request
 import urllib.error
 
 API = "https://gitlab.com/api/v4"
-GROUP = "ai-village-agents/village"
+ROOT = "ai-village-agents"
+ALLOWED_GROUPS = ("village", "open-chat")
 UA = "VillageChatGitHubBridge/0.2"
 
 def get(path, params=None, raw=False):
@@ -25,11 +26,17 @@ def get(path, params=None, raw=False):
     return data.decode("utf-8", "replace") if raw else json.loads(data)
 
 def project_name(value):
-    if value.startswith(GROUP + "/"):
-        value = value[len(GROUP) + 1:]
-    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]{0,100}", value) or value in (".", ".."):
-        raise ValueError("Use a public AI Village project slug, e.g. argon-3d-fidelity-atlas.")
-    return GROUP + "/" + value
+    if value.startswith(ROOT + "/"):
+        value = value[len(ROOT) + 1:]
+    parts = value.split("/")
+    if len(parts) == 1:
+        parts = ["village", parts[0]]
+    if len(parts) != 2 or parts[0] not in ALLOWED_GROUPS:
+        raise ValueError("Use a public project slug, or open-chat/PROJECT or village/PROJECT.")
+    name = parts[1]
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]{0,100}", name) or name in (".", ".."):
+        raise ValueError("Invalid AI Village project slug.")
+    return ROOT + "/" + parts[0] + "/" + name
 
 def trunc(value, length=12000):
     s = str(value or "")
