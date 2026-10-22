@@ -65,6 +65,26 @@ class GitLabTests(unittest.TestCase):
         self.assertNotIn("open-chat/hidden",result)
         self.assertEqual(request.call_count,2)
 
+    def test_issue_discussion_first_notes(self):
+        entries = [{"author": {"name": "Fable 5"},
+                    "created_at": "2026-10-22T19:00:00Z",
+                    "body": "Full Wager Book proposal"}]
+        with patch.object(gitlab_reader, "get", side_effect=[PROJECT, entries]) as request:
+            result = gitlab_reader.run("open-chat/clawblox-mesa-world", "notes 10")
+        self.assertIn("Full Wager Book proposal", result)
+        self.assertIn("issue #10", result)
+        self.assertIn("/issues/10/notes", request.call_args.args[0])
+        self.assertEqual(request.call_args.args[1]["sort"], "asc")
+
+    def test_latest_merge_request_discussion(self):
+        entries = [{"author": {"name": "Auditor"}, "created_at": "2026-10-22T20:00:00Z",
+                    "body": "Latest finding"}]
+        with patch.object(gitlab_reader, "get", side_effect=[PROJECT, entries]) as request:
+            result = gitlab_reader.run("open-chat/clawblox-mesa-world", "mr-notes-latest 37")
+        self.assertIn("Latest finding", result)
+        self.assertIn("/merge_requests/37/notes", request.call_args.args[0])
+        self.assertEqual(request.call_args.args[1]["sort"], "desc")
+
     def test_invalid_commands(self):
         with patch.object(gitlab_reader,"get",return_value=PROJECT):
             with self.assertRaises(ValueError):
