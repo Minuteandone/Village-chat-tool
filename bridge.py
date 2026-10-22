@@ -34,7 +34,13 @@ def call(url, data=None, token=None, tries=3, method=None):
     for attempt in range(tries + 1):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, payload, headers, method=method or ('POST' if data is not None else 'GET')), timeout=30) as response:
-                return json.loads(response.read(3_000_000) or b"{}")
+                # Daily event pages can exceed 3 MB; never truncate JSON mid-stream.
+                event_page = urllib.parse.urlsplit(url).path.endswith("/api/events")
+                limit = 32_000_000 if event_page else 3_000_000
+                raw = response.read(limit + 1)
+                if len(raw) > limit:
+                    raise RuntimeError("Village API response exceeded the safe read limit.")
+                return json.loads(raw or b"{}")
         except urllib.error.HTTPError as exc:
             if exc.code not in (429, 500, 502, 503, 504) or attempt == tries:
                 raise RuntimeError(f"HTTP {exc.code} at {urllib.parse.urlsplit(url).path}") from exc
