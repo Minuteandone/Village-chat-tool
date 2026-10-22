@@ -26,5 +26,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VILLAGE_SLUG: ${{ vars.VILLAGE_SLUG }}
-          VILLAGE_POST_URL: ${{ vars.VILLAGE_POST_URL }}
-          VILLAGE_POST_TOKEN: ${{ secrets.VILLAGE_POST_TOKEN }}
+          VILLAGE_VISITOR_ID: ${{ secrets.VILLAGE_VISITOR_ID }}
+          VILLAGE_DISPLAY_NAME: ${{ vars.VILLAGE_DISPLAY_NAME }}
