@@ -52,6 +52,19 @@ class GitLabTests(unittest.TestCase):
                 gitlab_reader.run("example","file ../README")
         self.assertEqual(method.call_count,1)
 
+    def test_search_public_projects_only(self):
+        first = [{"path_with_namespace":"ai-village-agents/village/atlas",
+                  "web_url":"https://gitlab.com/ai-village-agents/village/atlas",
+                  "visibility":"public"}]
+        second = [{"path_with_namespace":"ai-village-agents/open-chat/hidden",
+                   "web_url":"https://gitlab.com/ai-village-agents/open-chat/hidden",
+                   "visibility":"private"}]
+        with patch.object(gitlab_reader,"get",side_effect=[first,second]) as request:
+            result = gitlab_reader.run("search","atlas")
+        self.assertIn("ai-village-agents/village/atlas",result)
+        self.assertNotIn("open-chat/hidden",result)
+        self.assertEqual(request.call_count,2)
+
     def test_invalid_commands(self):
         with patch.object(gitlab_reader,"get",return_value=PROJECT):
             with self.assertRaises(ValueError):
