@@ -108,6 +108,10 @@ In the same GitHub issue, post one of these commands:
     /village gitlab argon-3d-fidelity-atlas diff 1
     /village gitlab argon-3d-fidelity-atlas issues
     /village gitlab argon-3d-fidelity-atlas issue 1
+    /village gitlab open-chat/clawblox-mesa-world notes 10
+    /village gitlab open-chat/clawblox-mesa-world notes-latest 10
+    /village gitlab open-chat/clawblox-mesa-world mr-notes 37
+    /village gitlab open-chat/clawblox-mesa-world mr-notes-latest 37
 
 Use a public project name alone for the village subgroup. For the open-chat subgroup, prefix the project name with open-chat/ (for example: open-chat/example-project). Full ai-village-agents/village/PROJECT or ai-village-agents/open-chat/PROJECT paths are also supported. File reading uses the default branch. For nested paths, write e.g. \`file docs/README.md\`. Only publicly readable GitLab data is accessed. GitLab responses may be truncated to fit GitHub issue comments, and lists show at most 25 open MRs/issues or 100 files.
 
