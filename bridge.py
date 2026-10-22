@@ -10,7 +10,7 @@ import urllib.error
 BASE = "https://theaidigest.org/village"
 UA = "VillageChatGitHubBridge/0.1 (github.com/Minuteandone/Village-chat-tool)"
 
-def call(url, data=None, token=None, tries=3):
+def call(url, data=None, token=None, tries=3, method=None):
     headers = {"Accept": "application/json", "User-Agent": UA}
     if data is not None:
         headers["Content-Type"] = "application/json"
@@ -19,7 +19,7 @@ def call(url, data=None, token=None, tries=3):
     payload = None if data is None else json.dumps(data).encode()
     for attempt in range(tries + 1):
         try:
-            with urllib.request.urlopen(urllib.request.Request(url, payload, headers), timeout=30) as response:
+            with urllib.request.urlopen(urllib.request.Request(url, payload, headers, method=method or ('POST' if data is not None else 'GET')), timeout=30) as response:
                 return json.loads(response.read(3_000_000) or b"{}")
         except urllib.error.HTTPError as exc:
             if exc.code not in (429, 500, 502, 503, 504) or attempt == tries:
@@ -77,29 +77,54 @@ def read(village, count, room):
     return "\n".join(lines)[:60000]
 
 def post(village, room, message):
-    url = os.getenv("VILLAGE_POST_URL", "").strip()
-    token = os.getenv("VILLAGE_POST_TOKEN", "").strip()
-    if not url or not token:
-        return ("⚠️ Posting not configured. **No message sent.** An authorized, verified "
-                "Village write endpoint and token must be provided as Actions variable "
-                "VILLAGE_POST_URL and secret VILLAGE_POST_TOKEN.")
-    parsed = urllib.parse.urlsplit(url)
-    if parsed.scheme != "https" or parsed.hostname != "theaidigest.org" or not parsed.path.startswith("/village/api/"):
-        raise ValueError("Write endpoint must be official HTTPS theaidigest.org/village/api/ URL.")
+    """Submit through the site's guest user and moderation process, without an API key."""
+    visitor_key = os.getenv("VILLAGE_VISITOR_ID", "").strip()
+    display_name = os.getenv("VILLAGE_DISPLAY_NAME", "").strip() or "ChatGPT (GitHub Actions)"
+    if not visitor_key:
+        return ("No message sent. GitHub Actions needs a stable browser-style visitor identifier "
+                "to keep its identity across temporary runners. Set VILLAGE_VISITOR_ID as a "
+                "repository Actions secret. It is not an AI Village password or API credential.")
+    if len(visitor_key) < 20 or len(visitor_key) > 200:
+        return "No message sent. Visitor identifier should be a random 20-200-character value."
+    if len(display_name) > 50 or not display_name:
+        return "No message sent. The display name must have 1-50 characters."
     rooms = [r for r in village.get("chatRooms", []) if room.casefold() in
              (str(r.get("id", "")).casefold(), str(r.get("name", "")).casefold())]
     if len(rooms) != 1:
         raise ValueError("Unknown or ambiguous room.")
-    # PROVISIONAL schema; adapt ONLY after the official write API is documented.
-    result = call(url, {"villageId": village["id"], "roomId": rooms[0]["id"], "content": message}, token, 0)
-    if isinstance(result, dict) and result.get("error"):
-        raise RuntimeError("Write endpoint rejected message.")
-    return "Write endpoint returned success; verify the message appeared in Open Chat."
+    person = call(BASE + "/api/users", {"localStorageId": visitor_key}, tries=0)
+    if not isinstance(person, dict) or not isinstance(person.get("id"), str):
+        raise RuntimeError("Village did not return a user ID. No chat message sent.")
+    user_id = person["id"]
+    rename = call(BASE + "/api/users/display-name",
+                  {"userId": user_id, "name": display_name, "villageId": village["id"]},
+                  tries=0, method="PUT")
+    if isinstance(rename, dict) and rename.get("error"):
+        raise RuntimeError("Village declined display name. No chat message sent.")
+    response = call(BASE + "/api/chat/messages", {
+        "villageId": village["id"], "roomId": rooms[0]["id"],
+        "content": message, "userSpeakerId": user_id
+    }, tries=0)
+    if isinstance(response, dict) and response.get("error"):
+        raise RuntimeError("AI Village rejected the submission.")
+    approved = response.get("hasBeenApproved") if isinstance(response, dict) else None
+    if approved is None and isinstance(response, dict):
+        item = response.get("message")
+        if isinstance(item, dict):
+            approved = item.get("hasBeenApproved")
+    state = ("Approval pending." if approved is False else
+             "Marked approved by server, not independently verified." if approved is True else
+             "Whitelisting/public visibility not verified.")
+    return ("Open Chat accepted a message submission under " + display_name +
+            " in " + str(rooms[0].get("name") or room) + ". " + state)
+
 
 def parse(text):
     parts = text.strip().split(maxsplit=3)
     if len(parts) < 2 or parts[0] != "/village":
         raise ValueError("Use /village read 10 or /village post general message")
+    if parts[1] == "status":
+        return ("status",)
     if parts[1] == "probe":
         return ("probe",)
     if parts[1] == "read":
@@ -128,7 +153,13 @@ def main():
     try:
         task = parse(raw)
         village = get_village()
-        if task[0] == "probe":
+        if task[0] == "status":
+            name = os.getenv("VILLAGE_DISPLAY_NAME", "").strip() or "ChatGPT (GitHub Actions)"
+            configured = bool(os.getenv("VILLAGE_VISITOR_ID", "").strip())
+            response = ("Bridge reading verified; guest posting API installed. Name: " + name +
+                        ". Stable visitor ID: " + ("configured" if configured else "not configured") +
+                        ". This command did not submit an Open Chat message.")
+        elif task[0] == "probe":
             from probe import diagnose
             response = diagnose()
         elif task[0] == "read":
