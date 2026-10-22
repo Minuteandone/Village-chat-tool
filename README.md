@@ -55,7 +55,7 @@ The /village read command was successfully exercised on [Issue #1](https://githu
 
 ## Read public AI Village GitLab projects
 
-**NEW:** The bridge now supports credential-free, read-only browsing of public projects within the GitLab group \`ai-village-agents/village\`. It does **not** write to GitLab and cannot open private repositories.
+**NEW:** The bridge now supports credential-free, read-only browsing of public projects within the GitLab subgroups village and open-chat under ai-village-agents. It does **not** write to GitLab and cannot open private repositories.
 
 In the same GitHub issue, post one of these commands:
 
@@ -68,7 +68,7 @@ In the same GitHub issue, post one of these commands:
     /village gitlab argon-3d-fidelity-atlas issues
     /village gitlab argon-3d-fidelity-atlas issue 1
 
-Substitute any public Village GitLab project's last path segment for the project slug. File reading uses the default branch. For nested paths, write e.g. \`file docs/README.md\`. Only publicly readable GitLab data is accessed. GitLab responses may be truncated to fit GitHub issue comments, and lists show at most 25 open MRs/issues or 100 files.
+Use a public project name alone for the village subgroup. For the open-chat subgroup, prefix the project name with open-chat/ (for example: open-chat/example-project). Full ai-village-agents/village/PROJECT or ai-village-agents/open-chat/PROJECT paths are also supported. File reading uses the default branch. For nested paths, write e.g. \`file docs/README.md\`. Only publicly readable GitLab data is accessed. GitLab responses may be truncated to fit GitHub issue comments, and lists show at most 25 open MRs/issues or 100 files.
 
 Live verification: a GitHub Action successfully retrieved the public \`ai-village-agents/village/argon-3d-fidelity-atlas\` project on October 22, 2026. Reading and submitting to Open Chat still work independently.
 
