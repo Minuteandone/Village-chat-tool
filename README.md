@@ -1,26 +1,59 @@
-# AI Village Open Chat GitHub Actions Bridge 🏘️
+# AI Village Open Chat — GitHub Actions bridge 🏘️
 
-Send read or post commands to AI Village's *Open Chat* through GitHub Issues. GitHub Actions runs the bridge only when the repo owner issues a command, then replies on that issue.
+This GitHub-Issues-controlled workflow lets ChatGPT read AI Village's Open Chat, and submit a message when you explicitly request it. It talks to the same public endpoints as the Village browser UI. GitHub Actions runs on demand, so you don't need to host a server.
 
-### Read
-- Create a GitHub Issue titled **[village] chat control**, with body `/village read 15`.
-- For later reads, comment `/village read 10 general` on the issue.
-- The bridge queries public Village metadata, active dates, and paginated events, then returns at most 30 matching messages in a GitHub issue reply.
-- If the initial public Village slug `open-chat` fails, change the repository Actions **Variable** `VILLAGE_SLUG` to the right Open Chat slug. That default is *unverified*.
+**Status:** Reading was verified in a real GitHub Actions run on October 22, 2026. The browser-based guest-message API shape was inspected and implemented, but **posting has not been tested by submitting a live message**.
 
-### Post (not yet connected)
-The read API shape is known from [Village-exporter](https://github.com/Minuteandone/Village-exporter), but **there is no verified official write API configured**. Posting will refuse to run without both:
-- Actions **Variable** `VILLAGE_POST_URL`: an authorized write URL under `https://theaidigest.org/village/api/`
-- Actions **Secret** `VILLAGE_POST_TOKEN`: a legitimate write credential.
+## Commands
 
-Only when the official API is confirmed can you comment `/village post general Message text`. The code contains a provisional JSON adapter (villageId, roomId, content) which could require changes. Do not use undocumented or unauthorized authentication.
+Open an issue titled something starting with "[village]" (or use [Issue #1](https://github.com/Minuteandone/Village-chat-tool/issues/1)). Post these as comments **from the repository-owner account**:
 
-### Notes
-- Every command must be authored by the repository owner on their own issue. Others are ignored.
-- Commands are executed once, never on a schedule. No auto-posting or independent ChatGPT background access.
-- Public GitHub issue comments will display chat contents and requested posts. Do not share sensitive information.
-- Requests are sequential with a 100-page safety cap; partial reads are clearly marked.
-- ChatGPT can control this via connected GitHub Issues and read workflow replies through GitHub.
-- The workflow needs Actions enabled and repository workflow permissions allowing issue comments.
+| Command | Effect |
+| --- | --- |
+| /village read 10 all | Read up to 10 most recent messages from latest active day |
+| /village read 20 general | Filter messages to the general room |
+| /village status | Confirm whether the guest identity is configured; never posts to Village |
+| /village post general Hello, Village! | Submit exactly one message in the general room |
 
-This is an **experimental bridge**, not yet confirmed to read the Open Chat deployment live. Posting is unverified.
+The workflow replies in the GitHub issue, where ChatGPT can read the response using the GitHub connector.
+
+## One-time setup for posting
+
+AI Village doesn't require an API key for the public guest chat. The website itself does the following:
+
+1. POST /village/api/users with a generated localStorageId to create or retrieve a visitor user ID.
+2. PUT /village/api/users/display-name with that user ID, the chosen display name, and village ID.
+3. POST /village/api/chat/messages with villageId, roomId, content, and userSpeakerId.
+
+Because GitHub Actions runners don't persist browser localStorage, we need **one stable randomly generated visitor identifier** so posts retain the same identity and moderation history. Store it privately in:
+
+- GitHub repository Settings → Secrets and variables → Actions → **Secrets** → New repository secret
+- Name: VILLAGE_VISITOR_ID
+- Value: your own new random string of at least 20 characters (not an existing password or token)
+
+The visitor identifier is **not** an AI Village API credential. It's the equivalent of a local browser's persistent visitor ID. Do not put it in an issue comment or a public repository file: anyone with it might be able to reuse that identity.
+
+Optional: under Actions → **Variables**, set VILLAGE_DISPLAY_NAME to the identity to display, maximum 50 characters (default: "ChatGPT (GitHub Actions)"). It is not intended to impersonate another person. The Open Chat village slug defaults to "open-chat" and has been confirmed working for reads, but you can override it using VILLAGE_SLUG.
+
+If VILLAGE_VISITOR_ID isn't set, /village post refuses to send. /village read and /village status still work.
+
+## Moderation and guarantees
+
+Submissions go through the normal website endpoint and are subject to the normal whitelist/moderation system. A successful API response means **submitted**, not necessarily publicly visible or approved. The bridge does not bypass whitelist status, create a new identity to evade moderation, or repeatedly retry rejected submissions.
+
+- Only explicit /village post commands can submit a chat message. No cron, polling-to-post, or self-sending.
+- Only issue comments from the repository owner on their own issues are executed. Other accounts and PR comments are ignored.
+- The bridge allows only fixed Village API paths, checks the room against official metadata, caps post length at 1,200 characters, and runs one message per command.
+- Github Issues are public in this repository. Both messages to be submitted and retrieved chat text are publicly visible.
+- Failed submissions surface errors in the issue and are not silently retried.
+- ChatGPT's GitHub tools cannot directly invoke external API endpoints; GitHub Actions handles those requests.
+
+## Verification
+
+The /village read command was successfully exercised on [Issue #1](https://github.com/Minuteandone/Village-chat-tool/issues/1). Use /village status to verify the new configuration without posting. A real /village post is intentionally left for an explicitly authorized message.
+
+## Local tests
+
+Run:
+
+    python3 -m unittest discover -s tests -v
