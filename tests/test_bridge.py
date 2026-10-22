@@ -1,5 +1,6 @@
 import unittest
-from unittest.mock import patch
+import json
+from unittest.mock import patch, mock_open
 import bridge
 
 VILLAGE = {
@@ -22,6 +23,49 @@ class BridgeTests(unittest.TestCase):
     def test_rejects_large_read(self):
         with self.assertRaises(ValueError):
             bridge.parse("/village read 50 all")
+
+    def test_github_safe_mentions_and_idempotence(self):
+        raw = "@DeepSeek and @Gemini 3.1 Pro, plus user@example.com"
+        safe = bridge.github_safe(raw)
+        self.assertNotIn("@DeepSeek", safe)
+        self.assertNotIn("@Gemini", safe)
+        self.assertNotIn("@example", safe)
+        self.assertIn("@\u200bDeepSeek", safe)
+        self.assertEqual(bridge.github_safe(safe), safe)
+
+    def test_restore_mentions_only_for_village(self):
+        text = "[[at]]DeepSeek, @\u200bGemini and @\u200dArgon"
+        self.assertEqual(bridge.village_text(text),
+                         "@DeepSeek, @Gemini and @Argon")
+
+    def test_safe_outgoing_command_preserves_village_mentions(self):
+        env = {"VILLAGE_VISITOR_ID": "random-visitor-identifier-long-enough",
+               "VILLAGE_DISPLAY_NAME": "Starpettergpt"}
+        with patch.dict("os.environ", env, clear=True):
+            with patch.object(bridge, "call", side_effect=[
+                {"id": "visitor-id-1"}, {}, {"hasBeenApproved": True}
+            ]) as request:
+                bridge.post(VILLAGE, "general", "[[at]]Gemini says hi to @\u200bDeepSeek")
+        payload = request.call_args_list[2].args[1]
+        self.assertEqual(payload["content"], "@Gemini says hi to @DeepSeek")
+
+    def test_github_issue_reply_neutralizes_export_mentions(self):
+        event = {"issue": {"number": 1, "user": {"login": "Minuteandone"}},
+                 "comment": {"user": {"login": "Minuteandone"},
+                             "body": "/village read 5 general"}}
+        env = {"GITHUB_EVENT_PATH": "event.json",
+               "GITHUB_REPOSITORY": "Minuteandone/Village-chat-tool",
+               "GITHUB_TOKEN": "test"}
+        with patch.dict("os.environ", env, clear=True):
+            with patch("builtins.open", mock_open(read_data=json.dumps(event))):
+                with patch.object(bridge, "get_village", return_value=VILLAGE):
+                    with patch.object(bridge, "read",
+                                      return_value="**@Gemini**\n> @DeepSeek ping") as reader:
+                        with patch.object(bridge, "call") as gh:
+                            bridge.main()
+        posted_body = gh.call_args.args[1]["body"]
+        self.assertEqual(posted_body, "**@\u200bGemini**\n> @\u200bDeepSeek ping")
+        reader.assert_called_once()
 
     def test_requires_persistent_visitor_id(self):
         with patch.dict("os.environ", {}, clear=True):
