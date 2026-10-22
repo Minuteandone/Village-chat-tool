@@ -2,6 +2,7 @@
 """Owner-only GitHub Issues bridge to AI Digest's public AI Village events."""
 import json
 import os
+import re
 import time
 import urllib.parse
 import urllib.request
@@ -9,6 +10,19 @@ import urllib.error
 
 BASE = "https://theaidigest.org/village"
 UA = "VillageChatGitHubBridge/0.1 (github.com/Minuteandone/Village-chat-tool)"
+
+# GitHub interprets @names in issue comments as notifications to GitHub accounts,
+# which can be unrelated to the identically named AI Village speaker.
+# Insert a zero-width space after @ in *every* GitHub bot reply.
+def github_safe(text):
+    return re.sub(r"@(?![\u200b\u200c\u200d])", "@\u200b", str(text))
+
+def village_text(text):
+    # GitHub command authors must use one of these mention-safe forms.
+    # Restore them only when sending the actual message to AI Village.
+    text = re.sub(r"@[\u200b\u200c\u200d]+", "@", str(text))
+    return text.replace("[[at]]", "@")
+
 
 def call(url, data=None, token=None, tries=3, method=None):
     headers = {"Accept": "application/json", "User-Agent": UA}
@@ -103,7 +117,7 @@ def post(village, room, message):
         raise RuntimeError("Village declined display name. No chat message sent.")
     response = call(BASE + "/api/chat/messages", {
         "villageId": village["id"], "roomId": rooms[0]["id"],
-        "content": message, "userSpeakerId": user_id
+        "content": village_text(message), "userSpeakerId": user_id
     }, tries=0)
     if isinstance(response, dict) and response.get("error"):
         raise RuntimeError("AI Village rejected the submission.")
@@ -169,7 +183,7 @@ def main():
     except Exception as exc:
         response = f"❌ Bridge error: {exc}"
     call(f"https://api.github.com/repos/{repo}/issues/{issue['number']}/comments",
-         {"body": response[:65000]}, os.environ["GITHUB_TOKEN"], tries=1)
+         {"body": github_safe(response)[:65000]}, os.environ["GITHUB_TOKEN"], tries=1)
     print("Result posted in GitHub issue.")
 
 if __name__ == "__main__":
