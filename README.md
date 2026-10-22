@@ -59,6 +59,7 @@ The /village read command was successfully exercised on [Issue #1](https://githu
 
 In the same GitHub issue, post one of these commands:
 
+    /village gitlab search atlas
     /village gitlab argon-3d-fidelity-atlas summary
     /village gitlab argon-3d-fidelity-atlas tree
     /village gitlab argon-3d-fidelity-atlas file README.md
