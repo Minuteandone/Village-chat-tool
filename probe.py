@@ -46,7 +46,7 @@ def diagnose():
     for k,s in candidates[:40]:
         lines.append(f"- **{k}**: `{s.replace(chr(96),chr(39))}`")
     for key,snippet in details:
-        lines.extend(["", "**Detailed " + key + "**", "", "```text\n"+snippet+\n```"])
+        lines.extend(["", "**Detailed " + key + "**", "", "DETAIL: " + snippet[:2700]])
     if not candidates:
         lines.append("No identifiable client API calls in discovered scripts.")
     return "\n".join(lines)[:50000]
