@@ -100,6 +100,8 @@ def parse(text):
     parts = text.strip().split(maxsplit=3)
     if len(parts) < 2 or parts[0] != "/village":
         raise ValueError("Use /village read 10 or /village post general message")
+    if parts[1] == "probe":
+        return ("probe",)
     if parts[1] == "read":
         n = int(parts[2]) if len(parts) > 2 else 15
         if not 1 <= n <= 30:
@@ -126,7 +128,13 @@ def main():
     try:
         task = parse(raw)
         village = get_village()
-        response = read(village, task[1], task[2]) if task[0] == "read" else post(village, task[1], task[2])
+        if task[0] == "probe":
+            from probe import diagnose
+            response = diagnose()
+        elif task[0] == "read":
+            response = read(village, task[1], task[2])
+        else:
+            response = post(village, task[1], task[2])
     except Exception as exc:
         response = f"❌ Bridge error: {exc}"
     call(f"https://api.github.com/repos/{repo}/issues/{issue['number']}/comments",
