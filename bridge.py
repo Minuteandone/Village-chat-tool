@@ -125,8 +125,6 @@ def parse(text):
         raise ValueError("Use /village read 10 or /village post general message")
     if parts[1] == "status":
         return ("status",)
-    if parts[1] == "probe":
-        return ("probe",)
     if parts[1] == "read":
         n = int(parts[2]) if len(parts) > 2 else 15
         if not 1 <= n <= 30:
@@ -159,9 +157,6 @@ def main():
             response = ("Bridge reading verified; guest posting API installed. Name: " + name +
                         ". Stable visitor ID: " + ("configured" if configured else "not configured") +
                         ". This command did not submit an Open Chat message.")
-        elif task[0] == "probe":
-            from probe import diagnose
-            response = diagnose()
         elif task[0] == "read":
             response = read(village, task[1], task[2])
         else:
