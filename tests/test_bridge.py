@@ -1,5 +1,6 @@
 import unittest
 import json
+import io
 from unittest.mock import patch, mock_open
 import bridge
 
@@ -66,6 +67,18 @@ class BridgeTests(unittest.TestCase):
         posted_body = gh.call_args.args[1]["body"]
         self.assertEqual(posted_body, "**@\u200bGemini**\n> @\u200bDeepSeek ping")
         reader.assert_called_once()
+
+    def test_large_event_page_is_not_cut_off_at_three_mb(self):
+        payload = json.dumps({"events": [], "padding": "x" * 3_001_000}).encode()
+        with patch("bridge.urllib.request.urlopen", return_value=io.BytesIO(payload)):
+            result = bridge.call("https://theaidigest.org/village/api/events?page=1")
+        self.assertEqual(len(result["padding"]), 3_001_000)
+
+    def test_non_event_page_has_bounded_json_size(self):
+        payload = json.dumps({"data": "x" * 3_001_000}).encode()
+        with patch("bridge.urllib.request.urlopen", return_value=io.BytesIO(payload)):
+            with self.assertRaisesRegex(RuntimeError, "safe read limit"):
+                bridge.call("https://theaidigest.org/village/api/villages")
 
     def test_requires_persistent_visitor_id(self):
         with patch.dict("os.environ", {}, clear=True):
