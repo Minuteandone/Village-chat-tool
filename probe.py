@@ -21,6 +21,7 @@ def diagnose():
         if url not in urls:urls.append(url)
     candidates=[]
     details=[]
+    endpoints={}
     errors=[]
     for url in urls[:45]:
         try:
@@ -29,6 +30,13 @@ def diagnose():
             errors.append(str(ex)[:120])
             continue
         lower=js.lower()
+        for path in re.findall(r'/village/api/[a-zA-Z0-9_/\-]+',js):
+            endpoints[path]=endpoints.get(path,0)+1
+        for target in ('userSpeakerId', '/village/api/users/display-name', '/village/api/session', 'guestUser', 'anonymous', 'displayName', '/village/api/users'):
+            matches=list(re.finditer(re.escape(target), js))
+            for found in matches[:2]:
+                if len(details)<35:
+                    details.append((target,re.sub(r'\s+',' ',js[max(0,found.start()-330):found.end()+600])[:1000]))
         for target in ("/village/api/chat/messages", "userSpeakerId", "/village/api/users"):
             ix=js.find(target)
             if ix>=0 and len(details)<8:
@@ -45,6 +53,7 @@ def diagnose():
            f"Candidate snippets: {len(candidates)}; errors: {len(errors)}",""]
     for k,s in candidates[:40]:
         lines.append(f"- **{k}**: `{s.replace(chr(96),chr(39))}`")
+    lines.extend(["", "**API endpoints**", "", ", ".join(sorted(endpoints))])
     for key,snippet in details:
         lines.extend(["", "**Detailed " + key + "**", "", "DETAIL: " + snippet[:2700]])
     if not candidates:
