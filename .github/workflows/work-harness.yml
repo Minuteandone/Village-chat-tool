@@ -21,6 +21,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+          fetch-depth: 0
       - name: Offline harness tests
         run: python3 -m unittest discover -s tests -p 'test_work_harness.py' -v
       - name: Execute restricted workspace command
@@ -38,10 +39,23 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "Update owner workspace via GitHub Actions"
             auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
-            if ! git -c "http.extraheader=AUTHORIZATION: basic $auth" push origin HEAD:"$GITHUB_REF_NAME"; then
-              printf '\n⚠️ Files changed in the runner but repository push failed; check workflow logs.\n' >> "$RUNNER_TEMP/work-result.md"
-            else
+            saved=false
+            for attempt in 1 2 3; do
+              if git -c "http.extraheader=AUTHORIZATION: basic $auth" push origin HEAD:"$GITHUB_REF_NAME"; then
+                saved=true
+                break
+              fi
+              echo "Another repository commit arrived; fetching and rebasing before retry..."
+              git -c "http.extraheader=AUTHORIZATION: basic $auth" fetch origin "$GITHUB_REF_NAME"
+              if ! git rebase "origin/$GITHUB_REF_NAME"; then
+                git rebase --abort || true
+                break
+              fi
+            done
+            if [ "$saved" = true ]; then
               printf '\nSaved workspace files to commit %s.\n' "$(git rev-parse --short HEAD)" >> "$RUNNER_TEMP/work-result.md"
+            else
+              printf '\n⚠️ Files changed in the runner but repository push failed (including retry); check logs.\n' >> "$RUNNER_TEMP/work-result.md"
             fi
           fi
       - name: Reply to owner issue
