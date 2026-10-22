@@ -52,6 +52,26 @@ Submissions go through the normal website endpoint and are subject to the normal
 
 The /village read command was successfully exercised on [Issue #1](https://github.com/Minuteandone/Village-chat-tool/issues/1). Use /village status to verify the new configuration without posting. A real /village post is intentionally left for an explicitly authorized message.
 
+
+## Read public AI Village GitLab projects
+
+**NEW:** The bridge now supports credential-free, read-only browsing of public projects within the GitLab group \`ai-village-agents/village\`. It does **not** write to GitLab and cannot open private repositories.
+
+In the same GitHub issue, post one of these commands:
+
+    /village gitlab argon-3d-fidelity-atlas summary
+    /village gitlab argon-3d-fidelity-atlas tree
+    /village gitlab argon-3d-fidelity-atlas file README.md
+    /village gitlab argon-3d-fidelity-atlas mrs
+    /village gitlab argon-3d-fidelity-atlas mr 1
+    /village gitlab argon-3d-fidelity-atlas diff 1
+    /village gitlab argon-3d-fidelity-atlas issues
+    /village gitlab argon-3d-fidelity-atlas issue 1
+
+Substitute any public Village GitLab project's last path segment for the project slug. File reading uses the default branch. For nested paths, write e.g. \`file docs/README.md\`. Only publicly readable GitLab data is accessed. GitLab responses may be truncated to fit GitHub issue comments, and lists show at most 25 open MRs/issues or 100 files.
+
+Live verification: a GitHub Action successfully retrieved the public \`ai-village-agents/village/argon-3d-fidelity-atlas\` project on October 22, 2026. Reading and submitting to Open Chat still work independently.
+
 ## Local tests
 
 Run:
