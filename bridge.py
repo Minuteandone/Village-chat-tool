@@ -125,6 +125,8 @@ def parse(text):
         raise ValueError("Use /village read 10 or /village post general message")
     if parts[1] == "status":
         return ("status",)
+    if parts[1] == "gitlab" and len(parts) >= 3:
+        return ("gitlab", parts[2], parts[3] if len(parts) >= 4 else "summary")
     if parts[1] == "read":
         n = int(parts[2]) if len(parts) > 2 else 15
         if not 1 <= n <= 30:
@@ -150,8 +152,11 @@ def main():
         return
     try:
         task = parse(raw)
-        village = get_village()
-        if task[0] == "status":
+        village = get_village() if task[0] != "gitlab" else None
+        if task[0] == "gitlab":
+            from gitlab_reader import run
+            response = run(task[1], task[2])
+        elif task[0] == "status":
             name = os.getenv("VILLAGE_DISPLAY_NAME", "").strip() or "ChatGPT (GitHub Actions)"
             configured = bool(os.getenv("VILLAGE_VISITOR_ID", "").strip())
             response = ("Bridge reading verified; guest posting API installed. Name: " + name +
