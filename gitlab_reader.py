@@ -114,7 +114,31 @@ def read_project(slug, operation="summary", argument=""):
         return "\n".join(lines)
     raise ValueError("Commands: summary, tree [directory], file PATH, mrs, mr IID, diff IID, issues, issue IID.")
 
+def search_projects(term):
+    term = term.strip()
+    if not term or len(term) > 80:
+        raise ValueError("Supply a short project search term.")
+    lines = ["### Public AI Village GitLab project search: " + term, ""]
+    total = 0
+    for subgroup in ALLOWED_GROUPS:
+        group = ROOT + "/" + subgroup
+        route = "/groups/" + urllib.parse.quote(group, safe="") + "/projects"
+        results = get(route, {"search": term, "per_page": 25, "simple": "true"})
+        lines.append("#### " + subgroup)
+        for row in results if isinstance(results, list) else []:
+            if row.get("visibility") != "public":
+                continue
+            path = str(row.get("path_with_namespace", ""))
+            lines.append("- " + path + " — " + str(row.get("web_url", "")))
+            total += 1
+    if not total:
+        lines.append("(no public matching projects returned)")
+    return "\n".join(lines)
+
+
 def run(slug, spec):
+    if slug == "search":
+        return trunc(search_projects(spec), 22000)
     words = spec.strip().split(maxsplit=1)
     operation = words[0].lower() if words else "summary"
     argument = words[1] if len(words) > 1 else ""
