@@ -16,6 +16,10 @@ class GitLabTests(unittest.TestCase):
     def test_project_scope(self):
         self.assertEqual(gitlab_reader.project_name("example"),
                          "ai-village-agents/village/example")
+        self.assertEqual(gitlab_reader.project_name("open-chat/paperdoll"),
+                         "ai-village-agents/open-chat/paperdoll")
+        self.assertEqual(gitlab_reader.project_name("ai-village-agents/open-chat/paperdoll"),
+                         "ai-village-agents/open-chat/paperdoll")
         with self.assertRaises(ValueError):
             gitlab_reader.project_name("someone-else/secret")
         with self.assertRaises(ValueError):
