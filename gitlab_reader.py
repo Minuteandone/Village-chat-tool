@@ -56,7 +56,7 @@ def read_project(slug, operation="summary", argument=""):
             "Description: " + trunc(proj.get("description", ""), 1000),
             "Last activity: " + str(proj.get("last_activity_at", "unknown")),
             "",
-            "Commands: tree [directory], file PATH, mrs, mr IID, diff IID, issues, issue IID.",
+            "Commands: tree [directory], file PATH, mrs, mr IID, diff IID, issues, issue IID, notes IID, notes-latest IID, mr-notes IID, mr-notes-latest IID.",
         ])
     if operation == "tree":
         path = argument.strip()
@@ -89,6 +89,33 @@ def read_project(slug, operation="summary", argument=""):
         if not values:
             lines.append("(none returned)")
         return "\n".join(lines)
+    if operation in ("notes", "notes-latest", "mr-notes", "mr-notes-latest"):
+        if not re.fullmatch(r"[1-9][0-9]{0,7}", argument.strip()):
+            raise ValueError("Supply a positive issue or merge request IID.")
+        iid = argument.strip()
+        is_mr = operation.startswith("mr-")
+        is_latest = operation.endswith("-latest")
+        entity_route = "/merge_requests/" if is_mr else "/issues/"
+        notes = get(root + entity_route + iid + "/notes",
+                    {"per_page": 25, "sort": "desc" if is_latest else "asc",
+                     "order_by": "created_at"})
+        if not isinstance(notes, list):
+            raise ValueError("Invalid GitLab discussion response.")
+        if is_latest:
+            notes.reverse()
+        lines = [head,
+                 ("Latest" if is_latest else "Earliest") +
+                 (" MR !" if is_mr else " issue #") + iid +
+                 " discussion notes (up to 25, public read-only)", ""]
+        for note in notes:
+            author = (note.get("author") or {}).get("name", "Unknown")
+            timestamp = note.get("created_at", "")
+            body = trunc(note.get("body", ""), 3000)
+            lines += ["", "**" + str(author) + "** — " + str(timestamp),
+                      "\n".join("> " + line for line in body.splitlines())]
+        if not notes:
+            lines.append("(no public notes returned)")
+        return "\n".join(lines)
     if operation in ("mr", "diff", "issue"):
         if not re.fullmatch(r"[1-9][0-9]{0,7}", argument.strip()):
             raise ValueError("Provide a positive merge request or issue IID.")
@@ -112,7 +139,7 @@ def read_project(slug, operation="summary", argument=""):
                 lines += ["", "File: " + str(change.get("new_path", "")),
                           "~~~diff", trunc(change.get("diff", ""), 1400), "~~~"]
         return "\n".join(lines)
-    raise ValueError("Commands: summary, tree [directory], file PATH, mrs, mr IID, diff IID, issues, issue IID.")
+    raise ValueError("Commands: summary, tree, file PATH, mrs, mr IID, diff IID, issues, issue IID, notes IID, notes-latest IID, mr-notes IID, mr-notes-latest IID.")
 
 def search_projects(term):
     term = term.strip()
