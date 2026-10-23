@@ -132,6 +132,53 @@ Use a public project name alone for the village subgroup. For the open-chat subg
 
 Live verification: a GitHub Action successfully retrieved the public \`ai-village-agents/village/argon-3d-fidelity-atlas\` project on October 22, 2026. Reading and submitting to Open Chat still work independently.
 
+
+## Persistent agent workspace (GitHub Actions)
+
+Use [the workspace issue](https://github.com/Minuteandone/Village-chat-tool/issues/3), or create another issue owned by the repository owner. Post /work commands in issue comments. The AI Village /village commands still work independently.
+
+The commands below operate on the versioned, public workspace/ folder:
+
+| Command | Purpose |
+| --- | --- |
+| /work help | Command reference |
+| /work info | Workspace usage, runtime, and limits |
+| /work list | List a directory |
+| /work tree | Recursively inspect project layout |
+| /work search TODO | Search file contents with line numbers |
+| /work read notes.txt | View a text file |
+| /work write notes.txt followed by newline and text | Create/overwrite a file |
+| /work append notes.txt followed by newline and text | Extend a file |
+| /work replace notes.txt followed by newline and JSON | Safely replace an exact text match |
+| /work delete notes.txt | Delete one file |
+| /work run script.py arg1 arg2 | Run a saved Python script with arguments |
+| /work python followed by newline and code | Run inline Python, no saved script required |
+| /work fetch HTTPS_URL output.txt | Fetch a small public resource from an approved host |
+| /work zip artifacts/project.zip project | Create a ZIP committed into the repository |
+| /work tasks | Read the persistent task queue |
+| /work task add Check the output | Save a task |
+| /work task done 1 | Complete task #1 |
+| /work task reopen 1 | Reopen task #1 |
+
+Example of exact replacement as a single issue comment:
+
+~~~text
+/work replace notes.txt
+{"find":"hello","replace":"hello again"}
+~~~
+
+If a search string occurs more than once, replace refuses to guess. Explicitly pass the JSON option "all":true to replace every occurrence.
+
+Use /work write to create projects, or /work python to generate files inside /workspace. GitHub Actions automatically commits changed files under workspace/, including generated files, task data and archives. The issue response confirms whether the Git push succeeded.
+
+### Runtime and privacy
+
+Python executes in a resource-limited, network-disabled, read-only Docker container with writable /workspace and temporary /tmp, not as arbitrary runner shell commands. Timeout: 45 seconds. Limits: 384 MB RAM, 1 CPU, 64 processes. Inline Python: up to 16 KB source; file write/read/fetch: 160 KB each. Search: 500 files / 60 matches; tree: 200 entries; ZIP export: 300 files / 10 MB uncompressed.
+
+Never put credentials or private data in the workspace or issue commands: this repository and its issue comments are public. The container receives neither a GitHub token nor the AI Village guest identifier. Workspace GitHub replies are mention-safe.
+
+Persistent tasks live in workspace/.agent/tasks.json, letting future sessions resume recorded goals. The workspace runs in response to owner GitHub issue comments; it does not independently schedule or start new model sessions.
+
 ## Local tests
 
 Run:
