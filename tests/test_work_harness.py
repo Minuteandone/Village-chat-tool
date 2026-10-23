@@ -67,5 +67,81 @@ class HarnessTests(unittest.TestCase):
         self.assertIn("Fetched",result)
         self.assertEqual((self.work/"notes/copy.txt").read_bytes(),b"source file")
 
+
+    def test_github_reply_mention_safety(self):
+        raw="From @AgentName to @someone: contact help@example.org; literal @\u200bAlreadySafe"
+        safe=h.github_safe(raw)
+        self.assertIn("@\u200bAgentName",safe)
+        self.assertIn("@\u200bsomeone",safe)
+        self.assertIn("help@\u200bexample.org",safe)
+        self.assertEqual(h.github_safe(safe),safe)
+
+    def test_reject_escape_via_symlink(self):
+        outside=pathlib.Path(self.temp.name)/"outside"
+        outside.mkdir()
+        (outside/"private.txt").write_text("keep out")
+        (self.work/"link").symlink_to(outside,target_is_directory=True)
+        with self.assertRaises(ValueError):
+            h.execute("/work read link/private.txt")
+        with self.assertRaises(ValueError):
+            h.execute("/work write link/evil.txt\nnot allowed")
+        self.assertFalse((outside/"evil.txt").exists())
+
+    def test_enforce_write_limit(self):
+        with self.assertRaises(ValueError):
+            h.execute("/work write large.txt\n"+"X"*(h.MAX_FILE+1))
+        self.assertFalse((self.work/"large.txt").exists())
+
+    def test_run_enforces_resource_limits(self):
+        (self.work/"script.py").write_text("print('test')\n")
+        fake=MagicMock(returncode=0,stdout="done",stderr="")
+        with patch.object(h.subprocess,"run",return_value=fake) as run:
+            h.execute("/work run script.py")
+        argv=run.call_args.args[0]
+        for flag in ("--network","--read-only","--pids-limit",
+                     "--memory","--cpus","--security-opt","--user"):
+            self.assertIn(flag,argv)
+        self.assertEqual(argv[argv.index("--network")+1],"none")
+        self.assertEqual(run.call_args.kwargs["timeout"],45)
+
+    def test_runner_timeout_is_bounded(self):
+        (self.work/"slow.py").write_text("while True: pass\n")
+        with patch.object(h.subprocess,"run",side_effect=h.subprocess.TimeoutExpired("docker",45)):
+            result=h.execute("/work run slow.py")
+        self.assertIn("45-second",result)
+
+    def test_oversized_fetch_is_rejected_without_write(self):
+        response=MagicMock()
+        response.read.return_value=b"x"*(h.MAX_FILE+1)
+        opener=MagicMock()
+        opener.open.return_value.__enter__.return_value=response
+        with patch.object(h.urllib.request,"build_opener",return_value=opener):
+            with self.assertRaises(ValueError):
+                h.execute("/work fetch https://raw.githubusercontent.com/owner/repo/main/large.dat downloads/large.dat")
+        self.assertFalse((self.work/"downloads/large.dat").exists())
+
+    def test_fetch_disables_redirects(self):
+        response=MagicMock()
+        response.read.return_value=b"ok"
+        opener=MagicMock()
+        opener.open.return_value.__enter__.return_value=response
+        with patch.object(h.urllib.request,"build_opener",return_value=opener) as builder:
+            h.execute("/work fetch https://raw.githubusercontent.com/owner/repo/main/a.txt a.txt")
+        handler=builder.call_args.args[0]
+        self.assertIsNone(handler.redirect_request(None,None,302,"Moved",{}, "https://evil.example/"))
+
+    def test_unauthorized_issue_comment_does_not_execute(self):
+        import json, os
+        event={"issue":{"user":{"login":"Minuteandone"}},
+               "comment":{"user":{"login":"stranger"},"body":"/work run script.py"}}
+        fixture=pathlib.Path(self.temp.name)/"event.json"
+        fixture.write_text(json.dumps(event))
+        with patch.dict(os.environ,{"GITHUB_EVENT_PATH":str(fixture),
+                                   "GITHUB_REPOSITORY":"Minuteandone/Village-chat-tool"}):
+            with patch.object(h,"execute") as execute:
+                h.main()
+                execute.assert_not_called()
+
+
 if __name__=="__main__":
     unittest.main()
