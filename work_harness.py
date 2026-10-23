@@ -19,6 +19,10 @@ MAX_COMMENT = 28_000
 ALLOWED_HOSTS = {"raw.githubusercontent.com", "theaidigest.org",
                  "gitlab.com", "api.github.com"}
 
+def github_safe(text):
+    """Keep Village-style @names from pinging unrelated GitHub users in replies."""
+    return re.sub(r"@(?![\u200b\u200c\u200d])", "@\u200b", str(text))
+
 def resolve(path="", *, expect_file=False):
     path = path.strip() or "."
     p = pathlib.PurePosixPath(path)
@@ -98,9 +102,9 @@ def execute(command):
                "python", "-I", "-B", relative]
         try:
             result = subprocess.run(cmd, capture_output=True, text=True,
-                                    timeout=60, check=False)
+                                    timeout=45, check=False)
         except subprocess.TimeoutExpired:
-            return "Execution timed out; 60-second runner limit."
+            return "Execution timed out; 45-second runner limit."
         return ("### Run workspace/" + relative + "\n\n"
                 "Exit code: " + str(result.returncode) + "\n\n"
                 "STDOUT:\n~~~text\n" + result.stdout[:13000] + "\n~~~\n\n"
