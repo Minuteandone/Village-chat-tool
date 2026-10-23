@@ -153,5 +153,40 @@ class ResearchToolsTests(unittest.TestCase):
         self.assertFalse((self.work/"script.py").exists())
 
 
+
+    def test_reject_unrelated_bing_and_fallback_to_encyclopedia(self):
+        stale = [{"title": "Casablanca", "url": "https://example.org/film",
+                  "snippet": "Classic film aspect ratio"}]
+        wikipedia = [{"title": "Python (programming language)",
+                      "url": "https://en.wikipedia.org/wiki/Python_(programming_language)",
+                      "snippet": "Python programming language"}]
+        with patch.object(tools, "_search_bing", return_value=stale):
+            with patch.object(tools, "_search_ddg", return_value=[]):
+                with patch.object(tools, "_search_wikipedia", return_value=wikipedia):
+                    engine, results = tools.web_search("Python programming documentation")
+        self.assertIn("Wikipedia", engine)
+        self.assertEqual(results[0]["title"], "Python (programming language)")
+
+    def test_wikipedia_api_parser(self):
+        sample = {"query": {"search": [
+            {"title": "Python (programming language)",
+             "snippet": "<span class='searchmatch'>Python</span> is a language."}]}}
+        with patch.object(tools, "fetch", return_value=(
+            json.dumps(sample).encode("utf-8"), "application/json")):
+            found = tools._search_wikipedia("Python")
+        self.assertEqual(len(found), 1)
+        self.assertIn("en.wikipedia.org/wiki/Python_", found[0]["url"])
+        self.assertNotIn("<span", found[0]["snippet"])
+
+    def test_github_repository_search(self):
+        sample = {"items": [
+            {"full_name": "example/my-game", "html_url": "https://github.com/example/my-game",
+             "description": "An open-source example game."}]}
+        with patch.object(tools, "_api", return_value=sample) as api:
+            result = harness.execute("/work github search example game")
+        self.assertIn("example/my-game", result)
+        self.assertIn("search/repositories?", api.call_args.args[0])
+
+
 if __name__ == "__main__":
     unittest.main()
