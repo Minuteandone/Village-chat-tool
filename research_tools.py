@@ -289,12 +289,12 @@ def _github(value, workspace, resolve):
             ref = _ref(ref)
             encoded_path = "/".join(urllib.parse.quote(p, safe="") for p in file_path.split("/"))
             if (not file_path or file_path.startswith("/") or ".." in Path(file_path).parts
-                    or "\\\\" in file_path):
+                    or "\\" in file_path):
                 raise ValueError("Invalid repository file path.")
             source = "https://raw.githubusercontent.com/" + repo + "/" + urllib.parse.quote(ref, safe="/") + "/" + encoded_path
             content, _ = fetch(source, MAX_DOWNLOAD_BYTES)
             location = save(workspace, resolve, out_path, content)
-            return f"Downloaded {repo}/{file_path} ({len(content)} bytes) to {location}.\\nSource: {source}"
+            return f"Downloaded {repo}/{file_path} ({len(content)} bytes) to {location}.\nSource: {source}"
         content, meta = _gh_file(repo, file_path, ref)
         if b"\x00" in content[:2048]:
             raise ValueError("Binary file: use github download.")
@@ -305,7 +305,6 @@ def _github(value, workspace, resolve):
         if not out.lower().endswith(".zip"):
             raise ValueError("GitHub archive destination must end in .zip.")
         ref = _ref(args[3] if len(args) == 4 else "HEAD")
-        url = "https://api.github.com/repos/" + repo + "/zipball/" + urllib.parse.quote(ref, safe="")
         # The GitHub archive API uses a cross-domain redirect. Instead use codeload
         # with a pinned, explicitly requested branch/tag and no redirects.
         url = "https://codeload.github.com/" + repo + "/zip/" + urllib.parse.quote(ref, safe="")
@@ -329,7 +328,9 @@ def run(workspace, resolve, value):
         if command == "search":
             engine, results = web_search(arg)
             data = {"query": arg, "engine": engine, "results": results}
-            last = workspace / ".agent" / "research-last.json"
+            last = resolve(".agent/research-last.json", expect_file=True)
+            if last.is_symlink() or last.parent.is_symlink():
+                raise ValueError("Unsafe saved-search path.")
             last.parent.mkdir(parents=True, exist_ok=True)
             last.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             digest = hashlib.sha256(arg.encode()).hexdigest()[:12]
@@ -345,7 +346,7 @@ def run(workspace, resolve, value):
             args = arg.split()
             if len(args) not in (1, 2) or not args[0].isdecimal():
                 raise ValueError("Use /work web open RESULT_NUMBER [output.txt].")
-            last = workspace / ".agent" / "research-last.json"
+            last = resolve(".agent/research-last.json", expect_file=True)
             if not last.is_file() or last.is_symlink():
                 raise ValueError("No saved web results. Run /work web search first.")
             saved = json.loads(last.read_text(encoding="utf-8"))
