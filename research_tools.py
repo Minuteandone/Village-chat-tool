@@ -201,16 +201,47 @@ def _search_ddg(query):
     return p.results[:10]
 
 
+
+
+def _relevant(results, query):
+    """Reject blatantly unrelated feeds (some free endpoints return stale results)."""
+    words = [w.casefold() for w in re.findall(r"[A-Za-z0-9]{3,}", query)
+             if w.casefold() not in {"the", "and", "for", "with", "from", "how", "what", "about"}]
+    if not words:
+        return True
+    joined = " ".join((r.get("title", "") + " " + r.get("snippet", "")).casefold()
+                      for r in results[:6])
+    return any(w in joined for w in words)
+
+
+def _search_wikipedia(query):
+    params = urllib.parse.urlencode({"action": "query", "list": "search",
+                                     "srsearch": query, "srlimit": "10", "format": "json"})
+    data, _ = fetch("https://en.wikipedia.org/w/api.php?" + params, MAX_TEXT_BYTES,
+                    accept="application/json")
+    response = json.loads(data)
+    found = response.get("query", {}).get("search", [])
+    results = []
+    for item in found[:10]:
+        title = item.get("title", "")
+        if not title:
+            continue
+        snippet = html.unescape(re.sub(r"<[^>]*>", "", item.get("snippet", "")))
+        link = "https://en.wikipedia.org/wiki/" + urllib.parse.quote(title.replace(" ", "_"), safe="()")
+        results.append({"title": title[:180], "url": link, "snippet": snippet[:360]})
+    return results
+
 def web_search(query):
     if not 2 <= len(query.strip()) <= 180:
         raise ValueError("Search query must have 2–180 characters.")
     errors = []
-    for label, engine in (("Bing RSS", _search_bing), ("DuckDuckGo HTML", _search_ddg)):
+    for label, engine in (("Bing RSS", _search_bing), ("DuckDuckGo HTML", _search_ddg),
+                          ("Wikipedia (encyclopedia only)", _search_wikipedia)):
         try:
             results = engine(query)
-            if results:
+            if results and _relevant(results, query):
                 return label, results
-            errors.append(f"{label}: no results")
+            errors.append(f"{label}: no relevant results")
         except (ValueError, ET.ParseError, urllib.error.URLError, TimeoutError, OSError) as exc:
             errors.append(f"{label}: {type(exc).__name__}")
     raise ValueError("Search unavailable on these public endpoints (" + ", ".join(errors) + ").")
@@ -256,7 +287,21 @@ def _gh_file(repo, path, ref):
 def _github(value, workspace, resolve):
     args = value.split()
     if len(args) < 2:
-        raise ValueError("Use /work github repo|tree|file|download|archive owner/repo ...")
+        raise ValueError("Use /work github search QUERY or github repo|tree|file|download|archive owner/repo ...")
+    if args[0] == "search":
+        query = " ".join(args[1:]).strip()
+        if not 2 <= len(query) <= 160:
+            raise ValueError("GitHub search query must be 2–160 characters.")
+        result = _api("search/repositories?" +
+                      urllib.parse.urlencode({"q": query, "per_page": 8}))
+        repos = result.get("items", [])
+        if not repos:
+            return "No public GitHub repositories found."
+        lines = ["### GitHub repository search 🐙", "Query: " + query, ""]
+        for n, info in enumerate(repos, 1):
+            lines.append(f"{n}. {info.get('full_name')} — {info.get('description') or 'No description'}")
+            lines.append("   " + str(info.get("html_url", "")))
+        return "\n".join(lines)
     op, repo = args[:2]
     _repo(repo)
     base = "repos/" + repo
