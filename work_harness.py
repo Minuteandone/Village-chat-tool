@@ -9,6 +9,8 @@ import json
 import pathlib
 import re
 import subprocess
+import shlex
+import zipfile
 import urllib.parse
 import urllib.request
 
@@ -38,35 +40,53 @@ def resolve(path="", *, expect_file=False):
 def parse(command):
     if not command.startswith("/work "):
         raise ValueError("Use /work help for commands.")
-    if command.startswith("/work write "):
-        head, separator, body = command.partition("\n")
-        if not separator:
-            raise ValueError("Write needs a newline after the filename.")
-        filename = head[len("/work write "):].strip()
-        if not filename or len(body.encode("utf-8")) > MAX_FILE:
-            raise ValueError("Missing filename or file contents exceed limit.")
-        return "write", filename, body
-    parts = command.strip().split(maxsplit=2)
-    if len(parts) < 2:
+    head, separator, body = command.partition("\n")
+    words = head.strip().split(maxsplit=2)
+    if len(words) < 2:
         raise ValueError("Use /work help.")
-    op = parts[1]
-    value = parts[2] if len(parts) > 2 else ""
-    if op not in ("help", "list", "read", "run", "fetch"):
-        raise ValueError("Allowed: help, list, read, write, run, fetch.")
-    return op, value, ""
+    op = words[1]
+    value = words[2] if len(words) > 2 else ""
+    if op in ("write", "append", "replace"):
+        if not separator or not value:
+            raise ValueError("Provide a filename, newline, then contents.")
+        if len(body.encode("utf-8")) > MAX_FILE:
+            raise ValueError("Input exceeds 160 KB limit.")
+    elif op == "python":
+        if not separator or not body.strip() or len(body.encode("utf-8")) > 16000:
+            raise ValueError("Provide a newline and up to 16 KB of Python.")
+    elif op not in ("help", "info", "list", "tree", "search", "read",
+                    "run", "fetch", "zip", "delete"):
+        raise ValueError("Allowed: help, info, list, tree, search, read, write, append, replace, delete, run, python, fetch, zip.")
+    return op, value, body
 
 def execute(command):
     op, val, body = parse(command)
     WORKSPACE.mkdir(exist_ok=True)
     if op == "help":
-        return ("### Owner-only remote workspace 🛠️\n\n"
-                "/work list [directory]\n"
-                "/work read path/to/file.txt\n"
-                "/work write path/to/file.py followed by NEWLINE and contents\n"
-                "/work run path/to/file.py (Python 3.12, no network, 45s limit)\n"
-                "/work fetch https://raw.githubusercontent.com/... local/file.txt\n\n"
-                "All paths are relative to workspace/. Changed files are committed "
-                "back to the repository. No arbitrary shell execution or private URLs.")
+        return ("### Agent workspace 🛠️\n\n"
+                "/work info — file count, limits, capabilities\n"
+                "/work list [folder] — immediate children\n"
+                "/work tree [folder] — recursive file tree\n"
+                "/work search KEYWORD — find text across workspace files\n"
+                "/work read path.txt — inspect text\n"
+                "/work write path.txt + NEWLINE + text — create or overwrite\n"
+                "/work append path.txt + NEWLINE + text — add to text file\n"
+                "/work replace path.txt + NEWLINE + JSON — exact text replacement\n"
+                "/work delete path.txt — remove a file\n"
+                "/work run file.py [arguments] — execute saved script\n"
+                "/work python + NEWLINE + Python code — execute inline\n"
+                "/work fetch HTTPS_URL output.txt — fetch public file\n"
+                "/work zip [output.zip] [folder] — create downloadable project archive\n\n"
+                'Replace JSON: {"find":"old","replace":"new"}; add "all":true for every occurrence.\n'
+                "All paths are inside workspace/. Files persist via Git commits. "
+                "Python runs offline in a restricted container. Workspace is public.")
+    if op == "info":
+        files = [p for p in WORKSPACE.rglob("*") if p.is_file() and not p.is_symlink()]
+        return ("### Workspace status 🐸\n\n"
+                + f"Files: {len(files)}; size: {sum(p.stat().st_size for p in files):,} bytes\n"
+                + "Python 3.12; 45 seconds, 384 MB RAM, one CPU, network-disabled.\n"
+                + "Text operations: 160 KB per file. Search: 500 files/60 hits. ZIP: 300 files/10 MB.\n"
+                + "Persistent files committed to the public GitHub repository; no container secrets.")
     if op == "list":
         folder = resolve(val)
         if not folder.is_dir():
@@ -74,12 +94,96 @@ def execute(command):
         rows = sorted(folder.iterdir(), key=lambda x: (not x.is_dir(), x.name.lower()))
         lines = [("DIR  " if p.is_dir() else "FILE ") + p.name for p in rows[:120]]
         return "### workspace/" + (val or "") + "\n\n" + "\n".join(lines or ["(empty)"])
+    if op == "tree":
+        folder = resolve(val)
+        if not folder.is_dir():
+            raise ValueError("Not a directory.")
+        lines = []
+        for p in sorted(folder.rglob("*")):
+            if len(lines) >= 200:
+                lines.append("…tree limited to 200 entries.")
+                break
+            label = "LINK " if p.is_symlink() else "DIR  " if p.is_dir() else "FILE "
+            lines.append(label + p.relative_to(WORKSPACE).as_posix())
+        return "### Workspace tree 🌳\n\n" + "\n".join(lines or ["(empty)"])
+    if op == "search":
+        needle = val.strip()
+        if not needle or len(needle) > 120:
+            raise ValueError("Provide a keyword of 1–120 characters.")
+        matches = []
+        scanned = 0
+        for f in sorted(WORKSPACE.rglob("*")):
+            if scanned >= 500 or len(matches) >= 60:
+                break
+            if f.is_symlink() or not f.is_file() or f.stat().st_size > MAX_FILE:
+                continue
+            scanned += 1
+            data = f.read_bytes()
+            if b"\x00" in data[:1024]:
+                continue
+            for lineno, line in enumerate(data.decode("utf-8", errors="replace").splitlines(), 1):
+                if needle.casefold() in line.casefold():
+                    matches.append(f"{f.relative_to(WORKSPACE).as_posix()}:{lineno}: {line[:200]}")
+                if len(matches) >= 60:
+                    break
+        limited = "\n\nSearch limit reached." if scanned >= 500 or len(matches) >= 60 else ""
+        return f"### Search: {needle} 🔎\n\n" + "\n".join(matches or ["No matches."]) + limited
     if op == "read":
         f = resolve(val, expect_file=True)
         if not f.is_file() or f.stat().st_size > MAX_FILE:
             raise ValueError("File missing or too large to read.")
         text = f.read_text(encoding="utf-8", errors="replace")
         return "### workspace/" + val + "\n\n" + "~~~text\n" + text[:20000] + "\n~~~"
+    if op in ("append", "replace"):
+        f = resolve(val, expect_file=True)
+        if op == "append":
+            existing = f.read_text(encoding="utf-8") if f.exists() else ""
+            updated = existing + body
+        else:
+            if not f.is_file():
+                raise ValueError("File does not exist.")
+            options = json.loads(body)
+            if not isinstance(options, dict):
+                raise ValueError("Expected JSON object.")
+            old, new = options.get("find"), options.get("replace")
+            if not isinstance(old, str) or not old or not isinstance(new, str):
+                raise ValueError("JSON requires a nonempty find string and replace string.")
+            existing = f.read_text(encoding="utf-8")
+            n = existing.count(old)
+            if n < 1:
+                raise ValueError("Exact search text not found.")
+            if n != 1 and options.get("all") is not True:
+                raise ValueError(f"Found {n} occurrences. Use all:true to replace every occurrence.")
+            updated = existing.replace(old, new, -1 if options.get("all") is True else 1)
+        if len(updated.encode("utf-8")) > MAX_FILE:
+            raise ValueError("Result would exceed 160 KB.")
+        f.parent.mkdir(parents=True, exist_ok=True)
+        f.write_text(updated, encoding="utf-8")
+        return f"{op.title()} succeeded: workspace/{val} ({len(updated.encode('utf-8'))} bytes)."
+    if op == "delete":
+        f = resolve(val, expect_file=True)
+        if not f.is_file():
+            raise ValueError("Only existing files can be deleted.")
+        f.unlink()
+        return "Deleted workspace/" + val
+    if op == "zip":
+        pieces = shlex.split(val)
+        if len(pieces) > 2:
+            raise ValueError("Use /work zip [output.zip] [source-directory].")
+        f = resolve(pieces[0] if pieces else "artifacts/workspace-snapshot.zip", expect_file=True)
+        folder = resolve(pieces[1] if len(pieces) == 2 else "")
+        if f.suffix != ".zip" or not folder.is_dir():
+            raise ValueError("Output must be a .zip file; source must be a directory.")
+        sources = [p for p in sorted(folder.rglob("*"))
+                   if p.is_file() and not p.is_symlink() and p != f
+                   and p.resolve().is_relative_to(WORKSPACE.resolve())]
+        if len(sources) > 300 or sum(p.stat().st_size for p in sources) > 10_000_000:
+            raise ValueError("ZIP limited to 300 files and 10 MB uncompressed.")
+        f.parent.mkdir(parents=True, exist_ok=True)
+        with zipfile.ZipFile(f, "w", zipfile.ZIP_DEFLATED) as z:
+            for p in sources:
+                z.write(p, p.relative_to(folder).as_posix())
+        return f"Created workspace/{f.relative_to(WORKSPACE).as_posix()} with {len(sources)} files ({f.stat().st_size} bytes)."
     if op == "write":
         f = resolve(val, expect_file=True)
         if len(val) > 180:
@@ -87,11 +191,17 @@ def execute(command):
         f.parent.mkdir(parents=True, exist_ok=True)
         f.write_text(body, encoding="utf-8")
         return "Wrote workspace/" + val + " (" + str(len(body.encode())) + " bytes)."
-    if op == "run":
-        f = resolve(val, expect_file=True)
-        if f.suffix != ".py" or not f.is_file():
-            raise ValueError("Only existing Python .py files in workspace can run.")
-        relative = f.relative_to(WORKSPACE).as_posix()
+    if op in ("run", "python"):
+        args = shlex.split(val) if op == "run" else []
+        if op == "run":
+            if not args or len(args) > 16 or len(val) > 1000:
+                raise ValueError("Use /work run path/to/script.py [arguments].")
+            f = resolve(args[0], expect_file=True)
+            if f.suffix != ".py" or not f.is_file():
+                raise ValueError("Only existing Python .py files in workspace can run.")
+            relative = f.relative_to(WORKSPACE).as_posix()
+        else:
+            relative = "(inline)"
         cmd = ["docker", "run", "--rm", "--network", "none", "--read-only",
                "--pids-limit", "64", "--memory", "384m", "--cpus", "1",
                "--security-opt", "no-new-privileges",
@@ -99,13 +209,14 @@ def execute(command):
                "--tmpfs", "/tmp:rw,nosuid,nodev,size=32m",
                "-v", str(WORKSPACE.resolve()) + ":/workspace:rw",
                "-w", "/workspace", "python:3.12-slim",
-               "python", "-I", "-B", relative]
+               "python", "-I", "-B"]
+        cmd += [relative, *args[1:]] if op == "run" else ["-c", body]
         try:
             result = subprocess.run(cmd, capture_output=True, text=True,
                                     timeout=45, check=False)
         except subprocess.TimeoutExpired:
             return "Execution timed out; 45-second runner limit."
-        return ("### Run workspace/" + relative + "\n\n"
+        return ("### Run " + relative + "\n\n"
                 "Exit code: " + str(result.returncode) + "\n\n"
                 "STDOUT:\n~~~text\n" + result.stdout[:13000] + "\n~~~\n\n"
                 "STDERR:\n~~~text\n" + result.stderr[:7000] + "\n~~~")
