@@ -193,7 +193,7 @@ class HarnessTests(unittest.TestCase):
         (self.work/"main.py").write_text("print('ok')\n")
         with patch.object(h.subprocess,"run",return_value=MagicMock(returncode=0,stdout="ok",stderr="")) as run:
             h.execute("/work run main.py --name Alice")
-        self.assertEqual(run.call_args.args[0][-4:],["main.py","--name","Alice"][-4:])
+        self.assertEqual(run.call_args.args[0][-3:],["main.py","--name","Alice"])
 
     def test_zip_creates_readable_project_archive(self):
         import zipfile
