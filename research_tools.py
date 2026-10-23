@@ -5,6 +5,7 @@ inside the offline Docker sandbox. Remote content is untrusted data.
 """
 import base64
 import hashlib
+import zlib
 import html
 from html.parser import HTMLParser
 import ipaddress
@@ -133,6 +134,21 @@ def fetch(url, limit=MAX_TEXT_BYTES, *, accept="text/html,text/plain,application
             content = response.read(limit + 1)
             if len(content) > limit:
                 raise ValueError(f"Content exceeded download limit ({limit} bytes).")
+            # Some sites serve gzip despite an identity/unspecified Accept-Encoding.
+            # Expand with the same byte cap to prevent decompression bombs.
+            encoding = response.headers.get("Content-Encoding", "").casefold()
+            if content.startswith(b"\\x1f\\x8b") or encoding == "gzip":
+                try:
+                    unpacker = zlib.decompressobj(16 + zlib.MAX_WBITS)
+                    expanded = unpacker.decompress(content, limit + 1)
+                    if len(expanded) > limit or unpacker.unconsumed_tail:
+                        raise ValueError("Decompressed content exceeds size limit.")
+                    expanded += unpacker.flush(limit + 1 - len(expanded))
+                    if len(expanded) > limit:
+                        raise ValueError("Decompressed content exceeds size limit.")
+                    content = expanded
+                except zlib.error as exc:
+                    raise ValueError("Invalid gzip response.") from exc
             return content, content_type
     except urllib.error.HTTPError as exc:
         if 300 <= exc.code < 400:
@@ -292,8 +308,13 @@ def _github(value, workspace, resolve):
         query = " ".join(args[1:]).strip()
         if not 2 <= len(query) <= 160:
             raise ValueError("GitHub search query must be 2–160 characters.")
-        result = _api("search/repositories?" +
-                      urllib.parse.urlencode({"q": query, "per_page": 8}))
+        try:
+            result = _api("search/repositories?" +
+                          urllib.parse.urlencode({"q": query, "per_page": 8}))
+        except ValueError as exc:
+            if "HTTP 403" in str(exc) or "HTTP 429" in str(exc):
+                raise ValueError("GitHub public repository search is currently rate limited; use github repo OWNER/REPO or retry later.") from exc
+            raise
         repos = result.get("items", [])
         if not repos:
             return "No public GitHub repositories found."
