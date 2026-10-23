@@ -127,7 +127,7 @@ class HarnessTests(unittest.TestCase):
         opener.open.return_value.__enter__.return_value=response
         with patch.object(h.urllib.request,"build_opener",return_value=opener) as builder:
             h.execute("/work fetch https://raw.githubusercontent.com/owner/repo/main/a.txt a.txt")
-        handler=builder.call_args.args[0]
+        handler=builder.call_args.args[0]()
         self.assertIsNone(handler.redirect_request(None,None,302,"Moved",{}, "https://evil.example/"))
 
     def test_unauthorized_issue_comment_does_not_execute(self):
