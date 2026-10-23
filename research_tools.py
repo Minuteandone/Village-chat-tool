@@ -137,7 +137,7 @@ def fetch(url, limit=MAX_TEXT_BYTES, *, accept="text/html,text/plain,application
             # Some sites serve gzip despite an identity/unspecified Accept-Encoding.
             # Expand with the same byte cap to prevent decompression bombs.
             encoding = response.headers.get("Content-Encoding", "").casefold()
-            if content.startswith(b"\\x1f\\x8b") or encoding == "gzip":
+            if content.startswith(b"\x1f\x8b") or encoding == "gzip":
                 try:
                     unpacker = zlib.decompressobj(16 + zlib.MAX_WBITS)
                     expanded = unpacker.decompress(content, limit + 1)
