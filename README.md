@@ -171,6 +171,39 @@ If a search string occurs more than once, replace refuses to guess. Explicitly p
 
 Use /work write to create projects, or /work python to generate files inside /workspace. GitHub Actions automatically commits changed files under workspace/, including generated files, task data and archives. The issue response confirms whether the Git push succeeded.
 
+
+### Persistent agent memory (opt-in)
+
+The /work memory commands store explicitly chosen, human-readable notes in workspace/.agent/memory.json. Notes survive GitHub Actions runs and future ChatGPT sessions as long as the repository persists. They are not an automatic transcript and are not synchronized with ChatGPT's built-in memory.
+
+| Command | Description |
+| --- | --- |
+| /work memory help | Memory reference and warnings |
+| /work memory remember decision, then newline + note | Save one new decision |
+| /work memory remember project, then newline + note | Save project context |
+| /work memory list | Browse latest saved notes |
+| /work memory list preference | Filter category |
+| /work memory search island | Keyword recall (ranked, case-insensitive) |
+| /work memory show 1 | Full text and timestamps |
+| /work memory edit 1, then newline + replacement note | Revise an existing memory |
+| /work memory forget 1 | Remove active note |
+| /work memory stats | Memory counts by category |
+| /work context island | Show open tasks plus related saved memories |
+| /work context | Load latest relevant memories and open tasks |
+
+Categories: project, preference, decision, lesson, fact. Memories are capped at 200 records, 1,200 UTF-8 bytes per note and 120 KB for the memory store. Each gets a stable numeric ID, UTC creation and modification timestamps; deleted IDs are not reused. Memory searching is simple local text scoring; it does not use AI embeddings or verify whether stored claims are true.
+
+Example issue comment:
+
+~~~text
+/work memory remember decision
+The animation tool should support multi-part rigs and sprite changes.
+~~~
+
+For the next session, reading /work context (optionally with a relevant search term) is a good first action. Only owner-issued /work commands can write these notes; there is no passive background learning or AI agent autonomously launching itself.
+
+**Privacy warning:** the GitHub repository, its commits and issue comments are public. Do not record personal details, credentials, tokens or other sensitive material. /work memory forget removes a note from the active JSON file, but does NOT erase it from Git commit history, past issue comments, forks or caches. This is public project memory, not private personal memory.
+
 ### Runtime and privacy
 
 Python executes in a resource-limited, network-disabled, read-only Docker container with writable /workspace and temporary /tmp, not as arbitrary runner shell commands. Timeout: 45 seconds. Limits: 384 MB RAM, 1 CPU, 64 processes. Inline Python: up to 16 KB source; file write/read/fetch: 160 KB each. Search: 500 files / 60 matches; tree: 200 entries; ZIP export: 300 files / 10 MB uncompressed.
