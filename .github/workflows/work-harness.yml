@@ -23,7 +23,7 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
       - name: Offline harness tests
-        run: python3 -m unittest discover -s tests -p 'test_work_harness.py' -v
+        run: python3 -m unittest discover -s tests -v
       - name: Execute restricted workspace command
         shell: bash
         run: |
