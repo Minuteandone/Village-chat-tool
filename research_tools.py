@@ -166,6 +166,8 @@ def save(workspace, resolve, filename, data, *, max_bytes=MAX_DOWNLOAD_BYTES):
     if len(data) > max_bytes:
         raise ValueError("File exceeds allowed size.")
     target = resolve(filename, expect_file=True)
+    if ".agent" in target.relative_to(workspace).parts:
+        raise ValueError("Web/GitHub downloads cannot overwrite internal agent state.")
     if target.suffix.lower() not in ALLOWED_DOWNLOAD_SUFFIXES:
         raise ValueError("Download file extension is unsupported.")
     if len(str(target.relative_to(workspace))) > 180:
@@ -226,8 +228,8 @@ def _ref(ref):
     return ref
 
 
-def _api(path):
-    data, _ = fetch("https://api.github.com/" + path, MAX_TEXT_BYTES,
+def _api(path, limit=MAX_TEXT_BYTES):
+    data, _ = fetch("https://api.github.com/" + path, limit,
                     accept="application/vnd.github+json")
     try:
         return json.loads(data)
@@ -267,7 +269,7 @@ def _github(value, workspace, resolve):
                 f"Size (KB): {doc.get('size')}\nURL: {doc.get('html_url')}")
     if op == "tree" and len(args) in (2, 3):
         ref = _ref(args[2] if len(args) == 3 else "HEAD")
-        doc = _api(base + "/git/trees/" + urllib.parse.quote(ref, safe="") + "?recursive=1")
+        doc = _api(base + "/git/trees/" + urllib.parse.quote(ref, safe="") + "?recursive=1", 4_000_000)
         nodes = doc.get("tree", [])
         if not isinstance(nodes, list):
             raise ValueError("GitHub tree not available.")
@@ -279,10 +281,21 @@ def _github(value, workspace, resolve):
         out_path = args[3] if op == "download" else None
         ref = args[4] if op == "download" and len(args) == 5 else (
             args[3] if op == "file" and len(args) == 4 else "HEAD")
-        content, meta = _gh_file(repo, file_path, ref)
         if op == "download":
+            # Raw GitHub handles public binary files much larger than the contents API.
+            # Resolve HEAD into the repository default branch for stable raw URLs.
+            if ref == "HEAD":
+                ref = _api(base).get("default_branch", "main")
+            ref = _ref(ref)
+            encoded_path = "/".join(urllib.parse.quote(p, safe="") for p in file_path.split("/"))
+            if (not file_path or file_path.startswith("/") or ".." in Path(file_path).parts
+                    or "\\\\" in file_path):
+                raise ValueError("Invalid repository file path.")
+            source = "https://raw.githubusercontent.com/" + repo + "/" + urllib.parse.quote(ref, safe="/") + "/" + encoded_path
+            content, _ = fetch(source, MAX_DOWNLOAD_BYTES)
             location = save(workspace, resolve, out_path, content)
-            return f"Downloaded {repo}/{file_path} ({len(content)} bytes) to {location}.\nSource: {meta.get('html_url')}"
+            return f"Downloaded {repo}/{file_path} ({len(content)} bytes) to {location}.\\nSource: {source}"
+        content, meta = _gh_file(repo, file_path, ref)
         if b"\x00" in content[:2048]:
             raise ValueError("Binary file: use github download.")
         text = content.decode("utf-8", errors="replace")
@@ -316,6 +329,9 @@ def run(workspace, resolve, value):
         if command == "search":
             engine, results = web_search(arg)
             data = {"query": arg, "engine": engine, "results": results}
+            last = workspace / ".agent" / "research-last.json"
+            last.parent.mkdir(parents=True, exist_ok=True)
+            last.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             digest = hashlib.sha256(arg.encode()).hexdigest()[:12]
             location = save(workspace, resolve, "research/searches/" + digest + ".json",
                             (json.dumps(data, indent=2, ensure_ascii=False) + "\n").encode())
@@ -325,6 +341,25 @@ def run(workspace, resolve, value):
                 if result.get("snippet"):
                     lines.append("   " + result["snippet"])
             return "\n".join(lines)
+        if command == "open":
+            args = arg.split()
+            if len(args) not in (1, 2) or not args[0].isdecimal():
+                raise ValueError("Use /work web open RESULT_NUMBER [output.txt].")
+            last = workspace / ".agent" / "research-last.json"
+            if not last.is_file() or last.is_symlink():
+                raise ValueError("No saved web results. Run /work web search first.")
+            saved = json.loads(last.read_text(encoding="utf-8"))
+            index = int(args[0])
+            matches = saved.get("results", [])
+            if not 1 <= index <= len(matches):
+                raise ValueError("Result number is outside the saved search results.")
+            url = matches[index - 1]["url"]
+            text = "Source: " + url + "\n\n" + display_page(url)
+            digest = hashlib.sha256(saved["query"].encode()).hexdigest()[:12]
+            filename = args[1] if len(args) == 2 else f"research/pages/{digest}-{index}.txt"
+            dest = save(workspace, resolve, filename, text[:MAX_TEXT_BYTES].encode(),
+                        max_bytes=MAX_TEXT_BYTES)
+            return f"### Web result #{index} 📄\nSource: {url}\nSaved: {dest}\n\n" + text[:12000]
         if command in ("get", "download"):
             args = arg.split()
             if len(args) not in (1, 2):
@@ -343,7 +378,7 @@ def run(workspace, resolve, value):
             data, ctype = fetch(url, MAX_DOWNLOAD_BYTES)
             location = save(workspace, resolve, args[1], data)
             return f"Downloaded {len(data)} bytes to {location}.\nSource: {url}\nContent type: {ctype}"
-        raise ValueError("Use /work web search|get|download.")
+        raise ValueError("Use /work web search|open|get|download.")
     if mode == "research":
         engine, results = web_search(rest)
         selection = results[0]
