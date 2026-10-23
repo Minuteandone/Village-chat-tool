@@ -3,44 +3,54 @@
   "engine": "Bing RSS",
   "results": [
     {
-      "title": "Casablanca (1942) - Technical specifications - IMDb",
-      "url": "https://www.imdb.com/title/tt0034583/technical/",
-      "snippet": "Mono (RCA Sound System) Color Black and White Aspect ratio 1.37 : 1 Camera Mitchell BNC"
+      "title": "Our Documentation | Python.org",
+      "url": "https://www.python.org/doc/",
+      "snippet": "Browse the docs online or download a copy of your own. Python's documentation, tutorials, and guides are constantly evolving. Get started here, or scroll down for documentation broken out by type and subject. See also Documentation Releases by Version."
     },
     {
-      "title": "Casablanca (1942) Technical Specifications » ShotOnWhat?",
-      "url": "https://shotonwhat.com/casablanca-1942",
-      "snippet": "The movie Casablanca, released in 1942 and directed by Michael Curtiz, was shot on film using Mitchell BNC Camera with Arthur Edeson as cinematographer and editing by Owen Marks."
+      "title": "The Python Tutorial — Python 3.15.1 documentation",
+      "url": "https://docs.python.org/3/tutorial/index.html",
+      "snippet": "Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming."
     },
     {
-      "title": "Casablanca (1942) - bluscreens",
-      "url": "https://www.bluscreens.net/casablanca.html",
-      "snippet": "These screen captures should only serve as an indication of the movie's picture quality and may not be truly representative of it. Please take note that the screen captures can contain spoilers, nudity and violence."
+      "title": "Python 3.15.1 documentation",
+      "url": "https://docs.python.org/",
+      "snippet": "This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License."
     },
     {
-      "title": "Casablanca UHD Review - Home Theater Forum",
-      "url": "https://www.hometheaterforum.com/casablanca-uhd-review/",
-      "snippet": "First and foremost – would the theater be able to screen it in its original Academy aspect ratio (1.37:1) or be forced to crop to either 1.85:1 or worse, 2:1 (all but one screen at the complex had fixed 2:1 screens)? Luckily, Casablanca was projected and presented in its full 1.37:1 aspect ratio."
+      "title": "Welcome to Python.org",
+      "url": "https://www.python.org/",
+      "snippet": "Experienced programmers in any other language can pick up Python very quickly, and beginners find the clean syntax and indentation structure easy to learn. Whet your appetite with our Python overview."
     },
     {
-      "title": "Casablanca (1942) - Movie Stills and Screencaps at Cinematic Freeze",
-      "url": "https://www.cinematicfreeze.com/casablanca-1942-stills/",
-      "snippet": "Read my review of Casablanca. Actors: Humphrey Bogart, Ingrid Bergman, Paul Henreid, Claude Rains, Conrad Veidt, Sydney Greenstreet, Peter Lorre, Dooley Wilson. Director: Michael Curtiz Year: 1942 Cinematographer: Arthur Edeson Origin: American Cinema Aspect Ratio: 1.37:1 Genre: Drama & Romance"
+      "title": "Documentation - Python Software Foundation Wiki Server",
+      "url": "https://wiki.python.org/python/Documentation.html",
+      "snippet": "Start here if you're new to Python or are considering trying Python after using other languages. If you are developing a particular kind of program or library, you might wish to study some related material. See the Developer's Guide. Please see DocumentationDiscussion."
     },
     {
-      "title": "Amazon.com: Casablanca : Mischa Auer, Leon Belasco, Ingrid Bergman ...",
-      "url": "https://www.amazon.com/Casablanca-Humphrey-Bogart/dp/B002VWNIAY",
-      "snippet": "Product details Aspect Ratio ‏ : ‎ 1.33:1 MPAA rating ‏ : ‎ NR (Not Rated) Product Dimensions ‏ : ‎ 7.75 x 5.5 x 0.5 inches; 2.08 ounces Item model number ‏ : ‎ 44158833288 Director ‏ : ‎ Michael Curtiz Media Format ‏ : ‎ Color, DVD, Full Screen, Widescreen Run time ‏ : ‎ 142 minutes"
+      "title": "Python Documentation - Python Wiki",
+      "url": "https://wiki.python.org/moin/PythonDocumentation",
+      "snippet": "For current documentation, see python.org. Python’s documentation is found online at docs.python.org, including all current translations. Older versions of the standard documentation are kept available as well, since many users have to maintain code for older versions of the interpreter as well."
     },
     {
-      "title": "Film & Cinema Aspect Ratios - Complete Guide",
-      "url": "https://aspectratiocalculator.com/film-aspect-ratios/",
-      "snippet": "This guide covers every major aspect ratio used in cinema, from the nearly square Academy ratio of the 1930s to the ultra-wide formats that dominate modern blockbusters."
+      "title": "Getting started - Python Developer's Guide",
+      "url": "https://devguide.python.org/documentation/start-documenting/index.html",
+      "snippet": "The involvement of the community takes many forms, from authoring to bug reports to just plain complaining when the documentation could be more complete or easier to use. This section is aimed at authors and potential authors of documentation for Python."
     },
     {
-      "title": "Casablanca – Colorized Humphrey Bogart, Ingrid Bergman, Paul Henreid ...",
-      "url": "https://www.abbeyflicks.com/products/casak",
-      "snippet": "Casablanca – Colorized (DVD) 1942 Shown in original aspect ratio 1.37:1 Approx. 102 min. Playable in North America (the US, Canada, Mexico, etc.) Starring: Humphrey Bogart, Ingrid Bergman, Paul Henreid, Claude Rains, Conrad Veidt, Sydney Greenstreet, Peter Lorre."
+      "title": "Python Tutorial - W3Schools",
+      "url": "https://www.w3schools.com/python/",
+      "snippet": "Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, Python, PHP, Bootstrap, Java, XML and more."
+    },
+    {
+      "title": "Python Developer's Guide | Python.org",
+      "url": "https://test.python.org/dev/",
+      "snippet": "Python Developer's Guide Python's Developer Guide can be found at https://devguide.python.org. The pieces of documentation hosted here are: PEPs (Python Enhancement Proposals) Buildbots Python.org maintenance and administration"
+    },
+    {
+      "title": "Python documentation by version | Python.org",
+      "url": "https://test.python.org/doc/versions/",
+      "snippet": "Use the list below to select a version to view. For unreleased (in development) documentation, see In development versions. The latest, and unreleased, documentation for versions of Python still under development:"
     }
   ]
 }
