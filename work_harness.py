@@ -55,16 +55,50 @@ def parse(command):
         if not separator or not body.strip() or len(body.encode("utf-8")) > 16000:
             raise ValueError("Provide a newline and up to 16 KB of Python.")
     elif op not in ("help", "info", "list", "tree", "search", "read",
-                    "run", "fetch", "zip", "delete"):
+                    "run", "fetch", "zip", "delete", "task", "tasks"):
         raise ValueError("Allowed: help, info, list, tree, search, read, write, append, replace, delete, run, python, fetch, zip.")
     return op, value, body
 
 def execute(command):
     op, val, body = parse(command)
     WORKSPACE.mkdir(exist_ok=True)
+    if op in ("tasks", "task"):
+        file = WORKSPACE / ".agent" / "tasks.json"
+        tasks = json.loads(file.read_text(encoding="utf-8")) if file.exists() else []
+        if not isinstance(tasks, list):
+            raise ValueError("Malformed persistent task queue.")
+        if op == "tasks":
+            return "### Agent tasks 📋\n\n" + (
+                "\n".join(f"{'✅' if t['done'] else '⬜'} #{t['id']}: {t['text']}"
+                          for t in tasks[-100:])
+                or "(No tasks. Add one with /work task add DESCRIPTION)")
+        command, _, arg = val.partition(" ")
+        arg = arg.strip()
+        if command == "add":
+            if not 1 <= len(arg) <= 240 or len(tasks) >= 200:
+                raise ValueError("Task text must be 1–240 characters; max 200 tasks.")
+            task_id = max((int(t["id"]) for t in tasks), default=0) + 1
+            tasks.append({"id": task_id, "text": arg, "done": False})
+            response = f"Added task #{task_id}: {arg}"
+        elif command in ("done", "reopen"):
+            if not arg.isdecimal():
+                raise ValueError("Expected numeric task ID.")
+            match = next((t for t in tasks if int(t["id"]) == int(arg)), None)
+            if match is None:
+                raise ValueError("Task not found.")
+            match["done"] = (command == "done")
+            response = f"Task #{arg} marked {'complete' if match['done'] else 'open'}."
+        else:
+            raise ValueError("Use /work task add DESCRIPTION, done ID, or reopen ID.")
+        file.parent.mkdir(parents=True, exist_ok=True)
+        file.write_text(json.dumps(tasks, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        return response + " Saved in workspace/.agent/tasks.json."
     if op == "help":
         return ("### Agent workspace 🛠️\n\n"
                 "/work info — file count, limits, capabilities\n"
+                "/work tasks — see persistent task queue\n"
+                "/work task add DESCRIPTION — save a goal\n"
+                "/work task done ID / reopen ID — update a task\n"
                 "/work list [folder] — immediate children\n"
                 "/work tree [folder] — recursive file tree\n"
                 "/work search KEYWORD — find text across workspace files\n"
