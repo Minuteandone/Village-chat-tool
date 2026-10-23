@@ -11,6 +11,7 @@ import re
 import subprocess
 import shlex
 import zipfile
+import agent_memory
 import urllib.parse
 import urllib.request
 
@@ -55,13 +56,26 @@ def parse(command):
         if not separator or not body.strip() or len(body.encode("utf-8")) > 16000:
             raise ValueError("Provide a newline and up to 16 KB of Python.")
     elif op not in ("help", "info", "list", "tree", "search", "read",
-                    "run", "fetch", "zip", "delete", "task", "tasks"):
-        raise ValueError("Allowed: help, info, list, tree, search, read, write, append, replace, delete, run, python, fetch, zip.")
+                    "run", "fetch", "zip", "delete", "task", "tasks", "memory", "context"):
+        raise ValueError("Allowed: help, info, context, memory, tasks, task, list, tree, search, read, write, append, replace, delete, run, python, fetch, zip.")
     return op, value, body
+
+def separator_is_present(command):
+    return "\n" in command
 
 def execute(command):
     op, val, body = parse(command)
     WORKSPACE.mkdir(exist_ok=True)
+    if op == "memory":
+        return agent_memory.handle(WORKSPACE, val, body, has_newline=separator_is_present(command))
+    if op == "context":
+        if len(val) > 120:
+            raise ValueError("Context filter must be at most 120 characters.")
+        task_path = WORKSPACE / ".agent" / "tasks.json"
+        tasks = json.loads(task_path.read_text(encoding="utf-8")) if task_path.exists() else []
+        if not isinstance(tasks, list):
+            raise ValueError("Task queue must be a list.")
+        return agent_memory.context(WORKSPACE, tasks, val)
     if op in ("tasks", "task"):
         file = WORKSPACE / ".agent" / "tasks.json"
         tasks = json.loads(file.read_text(encoding="utf-8")) if file.exists() else []
@@ -96,6 +110,11 @@ def execute(command):
     if op == "help":
         return ("### Agent workspace 🛠️\n\n"
                 "/work info — file count, limits, capabilities\n"
+                "/work context [query] — load tasks + relevant memories\n"
+                "/work memory help — memory commands, categories, cautions\n"
+                "/work memory remember CATEGORY + NEWLINE + note\n"
+                "/work memory search QUERY / list / show ID\n"
+                "/work memory edit ID + NEWLINE + note / forget ID\n"
                 "/work tasks — see persistent task queue\n"
                 "/work task add DESCRIPTION — save a goal\n"
                 "/work task done ID / reopen ID — update a task\n"
