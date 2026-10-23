@@ -238,5 +238,83 @@ class HarnessTests(unittest.TestCase):
                 h.execute(command)
 
 
+
+    def test_memory_crud_and_search_across_sessions(self):
+        import json
+        self.assertIn("No memories", h.execute("/work memory list"))
+        msg=h.execute("/work memory remember decision\nUse documented interfaces for project tools")
+        self.assertIn("#1", msg)
+        self.assertIn("documented interfaces", h.execute("/work memory search interfaces"))
+        self.assertIn("[decision]", h.execute("/work memory list decision"))
+        self.assertIn("Created:", h.execute("/work memory show 1"))
+        self.assertIn("Updated", h.execute("/work memory edit 1\nUse tested interfaces for project tools"))
+        self.assertIn("tested interfaces", h.execute("/work memory show 1"))
+        h.execute("/work memory remember preference\nFavor reusable tooling")
+        self.assertIn("#2", h.execute("/work memory list"))
+        h.execute("/work memory forget 1")
+        self.assertIn("prior Git commits", h.execute("/work memory forget 2"))
+        store=json.loads((self.work/".agent"/"memory.json").read_text())
+        self.assertEqual(store["items"],[])
+        self.assertEqual(store["next_id"],3)
+        self.assertIn("#3", h.execute("/work memory remember lesson\nTest changes"))
+        self.assertNotIn("#1", h.execute("/work memory list"))
+
+    def test_memory_context_combines_tasks_and_relevant_memories(self):
+        h.execute("/work task add Finish agent dashboard")
+        h.execute("/work task add Write manual")
+        h.execute("/work task done 2")
+        h.execute("/work memory remember project\nDashboard reads saved tasks")
+        h.execute("/work memory remember preference\nPrefer tiny files")
+        context=h.execute("/work context dashboard")
+        self.assertIn("Finish agent dashboard", context)
+        self.assertNotIn("Write manual", context)
+        self.assertIn("Dashboard reads saved tasks", context)
+        self.assertNotIn("Prefer tiny files", context)
+        self.assertIn("user-managed notes", context)
+
+    def test_memory_rejects_invalid_mutations_and_preserves_file(self):
+        import json
+        h.execute("/work memory remember fact\nThe test exists")
+        path=self.work/".agent"/"memory.json"
+        content=path.read_bytes()
+        cases=("/work memory remember illegal\nnope",
+               "/work memory remember fact",
+               "/work memory remember fact\n",
+               "/work memory remember fact\n"+"x"*1201,
+               "/work memory edit 999\nnot present",
+               "/work memory forget 999",
+               "/work memory show not-a-number")
+        for command in cases:
+            with self.assertRaises(ValueError, msg=command[:70]):
+                h.execute(command)
+            self.assertEqual(path.read_bytes(), content)
+        self.assertEqual(json.loads(content)["items"][0]["id"],1)
+
+    def test_memory_corrupt_json_not_overwritten(self):
+        store=self.work/".agent"
+        store.mkdir()
+        path=store/"memory.json"
+        path.write_text("{not valid json")
+        with self.assertRaises(ValueError):
+            h.execute("/work memory remember project\nA new plan")
+        self.assertEqual(path.read_text(),"{not valid json")
+
+    def test_memory_symlink_escape_refused(self):
+        outside=pathlib.Path(self.temp.name)/"outside_memory"
+        outside.mkdir()
+        (outside/"memory.json").write_text("keep-out")
+        (self.work/".agent").symlink_to(outside,target_is_directory=True)
+        with self.assertRaises(ValueError):
+            h.execute("/work memory remember decision\nnope")
+        self.assertEqual((outside/"memory.json").read_text(),"keep-out")
+
+    def test_memory_help_and_statistics(self):
+        self.assertIn("Git history",h.execute("/work memory help"))
+        h.execute("/work memory remember lesson\nSearch before editing")
+        self.assertIn("lesson: 1",h.execute("/work memory stats"))
+        self.assertIn("#1",h.execute("/work memory search editing"))
+        self.assertIn("No matching memories",h.execute("/work memory search platypus"))
+
+
 if __name__=="__main__":
     unittest.main()
