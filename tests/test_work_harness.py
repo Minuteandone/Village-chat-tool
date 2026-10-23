@@ -143,5 +143,81 @@ class HarnessTests(unittest.TestCase):
                 execute.assert_not_called()
 
 
+
+    def test_info_and_tree(self):
+        (self.work/"nested").mkdir()
+        (self.work/"nested"/"item.txt").write_text("hello")
+        self.assertIn("Files:",h.execute("/work info"))
+        self.assertIn("nested/item.txt",h.execute("/work tree"))
+
+    def test_search_case_insensitive_and_line_number(self):
+        (self.work/"notes.txt").write_text("alpha\nFindMe right here\n")
+        output=h.execute("/work search findme")
+        self.assertIn("notes.txt:2:",output)
+        self.assertIn("No matches.",h.execute("/work search absent"))
+
+    def test_append_and_exact_replace(self):
+        h.execute("/work write notes.txt\nfirst")
+        h.execute("/work append notes.txt\nsecond")
+        self.assertEqual((self.work/"notes.txt").read_text(),"firstsecond")
+        h.execute('/work replace notes.txt\n{"find":"first","replace":"new"}')
+        self.assertEqual((self.work/"notes.txt").read_text(),"newsecond")
+        with self.assertRaises(ValueError):
+            h.execute('/work replace notes.txt\n{"find":"absent","replace":"xxx"}')
+
+    def test_replace_rejects_ambiguous_edits(self):
+        h.execute("/work write lines.txt\nfoo foo")
+        with self.assertRaises(ValueError):
+            h.execute('/work replace lines.txt\n{"find":"foo","replace":"bar"}')
+        self.assertEqual((self.work/"lines.txt").read_text(),"foo foo")
+        h.execute('/work replace lines.txt\n{"find":"foo","replace":"bar","all":true}')
+        self.assertEqual((self.work/"lines.txt").read_text(),"bar bar")
+
+    def test_delete_specific_file(self):
+        h.execute("/work write temp.txt\nx")
+        h.execute("/work delete temp.txt")
+        self.assertFalse((self.work/"temp.txt").exists())
+        with self.assertRaises(ValueError):
+            h.execute("/work delete missing.txt")
+
+    def test_inline_python_sandbox(self):
+        fake=MagicMock(returncode=0,stdout="inline ok",stderr="")
+        with patch.object(h.subprocess,"run",return_value=fake) as run:
+            out=h.execute("/work python\nprint('inline ok')")
+        self.assertIn("inline ok",out)
+        args=run.call_args.args[0]
+        self.assertEqual(args[-3:],["-B","-c","print('inline ok')"])
+        self.assertEqual(args[args.index("--network")+1],"none")
+
+    def test_python_arguments_to_saved_script(self):
+        (self.work/"main.py").write_text("print('ok')\n")
+        with patch.object(h.subprocess,"run",return_value=MagicMock(returncode=0,stdout="ok",stderr="")) as run:
+            h.execute("/work run main.py --name Alice")
+        self.assertEqual(run.call_args.args[0][-4:],["main.py","--name","Alice"][-4:])
+
+    def test_zip_creates_readable_project_archive(self):
+        import zipfile
+        (self.work/"src").mkdir()
+        (self.work/"src"/"example.py").write_text("print(1)")
+        out=h.execute("/work zip artifacts/project.zip src")
+        self.assertIn("Created",out)
+        with zipfile.ZipFile(self.work/"artifacts"/"project.zip") as z:
+            self.assertEqual(z.namelist(),["example.py"])
+            self.assertEqual(z.read("example.py"),b"print(1)")
+
+    def test_no_write_through_outside_symlink_with_new_commands(self):
+        outside=pathlib.Path(self.temp.name)/"outside2"
+        outside.mkdir()
+        (outside/"secret.txt").write_text("private")
+        (self.work/"escape").symlink_to(outside,target_is_directory=True)
+        with self.assertRaises(ValueError):
+            h.execute("/work append escape/secret.txt\nbad")
+        with self.assertRaises(ValueError):
+            h.execute('/work replace escape/secret.txt\n{"find":"private","replace":"oops"}')
+        with self.assertRaises(ValueError):
+            h.execute("/work zip escape/test.zip")
+        self.assertEqual((outside/"secret.txt").read_text(),"private")
+
+
 if __name__=="__main__":
     unittest.main()
