@@ -188,5 +188,34 @@ class ResearchToolsTests(unittest.TestCase):
         self.assertIn("search/repositories?", api.call_args.args[0])
 
 
+
+    def test_gzip_html_response_is_decoded_before_text_extraction(self):
+        import gzip
+        content=gzip.compress(b"<html><title>Compressed</title><p>Readable text</p></html>")
+        response=MagicMock()
+        response.headers={"Content-Type": "text/html", "Content-Encoding": "gzip"}
+        response.read.return_value=content
+        opener=MagicMock()
+        opener.open.return_value.__enter__.return_value=response
+        with patch.object(tools, "validate_url"):
+            with patch.object(tools.urllib.request, "build_opener", return_value=opener):
+                data,ctype=tools.fetch("https://example.org/", limit=1000)
+        self.assertTrue(data.startswith(b"<html>"))
+        self.assertIn(b"Readable text",data)
+
+    def test_gzip_decompression_limit(self):
+        import gzip
+        compressed=gzip.compress(b"x"*2000)
+        response=MagicMock()
+        response.headers={"Content-Type": "text/plain", "Content-Encoding": "gzip"}
+        response.read.return_value=compressed
+        opener=MagicMock()
+        opener.open.return_value.__enter__.return_value=response
+        with patch.object(tools, "validate_url"):
+            with patch.object(tools.urllib.request, "build_opener", return_value=opener):
+                with self.assertRaises(ValueError):
+                    tools.fetch("https://example.org/", limit=100)
+
+
 if __name__ == "__main__":
     unittest.main()
