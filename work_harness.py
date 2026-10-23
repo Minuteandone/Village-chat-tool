@@ -12,6 +12,7 @@ import subprocess
 import shlex
 import zipfile
 import agent_memory
+import research_tools
 import urllib.parse
 import urllib.request
 
@@ -56,8 +57,8 @@ def parse(command):
         if not separator or not body.strip() or len(body.encode("utf-8")) > 16000:
             raise ValueError("Provide a newline and up to 16 KB of Python.")
     elif op not in ("help", "info", "list", "tree", "search", "read",
-                    "run", "fetch", "zip", "delete", "task", "tasks", "memory", "context"):
-        raise ValueError("Allowed: help, info, context, memory, tasks, task, list, tree, search, read, write, append, replace, delete, run, python, fetch, zip.")
+                    "run", "fetch", "zip", "delete", "task", "tasks", "memory", "context", "web", "github", "research", "tools"):
+        raise ValueError("Allowed: help, tools, web, github, research, info, context, memory, tasks, task, list, tree, search, read, write, append, replace, delete, run, python, fetch, zip.")
     return op, value, body
 
 def separator_is_present(command):
@@ -66,6 +67,19 @@ def separator_is_present(command):
 def execute(command):
     op, val, body = parse(command)
     WORKSPACE.mkdir(exist_ok=True)
+    if op in ("web", "github", "research"):
+        return research_tools.run(WORKSPACE, resolve, op + " " + val)
+    if op == "tools":
+        return ("### Connected tool hub 🔗\n\n"
+                "Web: /work web search QUERY; /work web get URL [output.txt]; "
+                "/work web download URL output.ext\n"
+                "GitHub: /work github repo OWNER/REPO; /work github tree OWNER/REPO [REF]; "
+                "/work github file OWNER/REPO PATH [REF]; "
+                "/work github download OWNER/REPO PATH OUTPUT [REF]; "
+                "/work github archive OWNER/REPO OUTPUT.zip [REF]\n"
+                "Research: /work research QUERY (searches, retrieves and saves a snapshot)\n"
+                "Files saved under workspace/ can be read, searched, processed by offline Python "
+                "and packed with /work zip. See README for complete syntax.")
     if op == "memory":
         return agent_memory.handle(WORKSPACE, val, body, has_newline=separator_is_present(command))
     if op == "context":
@@ -110,6 +124,10 @@ def execute(command):
     if op == "help":
         return ("### Agent workspace 🛠️\n\n"
                 "/work info — file count, limits, capabilities\n"
+                "/work tools — connected web/GitHub/research command hub\n"
+                "/work web search QUERY / get URL [FILE] / download URL FILE\n"
+                "/work github repo|tree|file|download|archive ...\n"
+                "/work research QUERY — save an end-to-end research snapshot\n"
                 "/work context [query] — load tasks + relevant memories\n"
                 "/work memory help — memory commands, categories, cautions\n"
                 "/work memory remember CATEGORY + NEWLINE + note\n"
