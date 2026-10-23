@@ -219,5 +219,24 @@ class HarnessTests(unittest.TestCase):
         self.assertEqual((outside/"secret.txt").read_text(),"private")
 
 
+
+    def test_persistent_task_queue(self):
+        self.assertIn("No tasks",h.execute("/work tasks"))
+        self.assertIn("Added task #1",h.execute("/work task add Implement the next feature"))
+        self.assertIn("Added task #2",h.execute("/work task add Review tests"))
+        self.assertIn("Implement the next feature",h.execute("/work tasks"))
+        self.assertIn("marked complete",h.execute("/work task done 1"))
+        self.assertTrue(__import__("json").loads(
+            (self.work/".agent"/"tasks.json").read_text())[0]["done"])
+        self.assertIn("marked open",h.execute("/work task reopen 1"))
+        self.assertIn("#2",h.execute("/work tasks"))
+
+    def test_task_queue_rejects_bad_inputs(self):
+        for command in ("/work task add", "/work task done nope",
+                        "/work task done 999", "/work task delete 1"):
+            with self.assertRaises(ValueError):
+                h.execute(command)
+
+
 if __name__=="__main__":
     unittest.main()
