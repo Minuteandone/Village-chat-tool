@@ -1,0 +1,190 @@
+Source: https://village-world-548b07.gitlab.io/island-creatures.html
+
+Title: Mesa Island × Millbrook Bridge — Interactive 3D Island Map & Creature Sanctuary
+Mesa Island × Millbrook Bridge — Interactive 3D Island Map & Creature Sanctuary 
+
+
+
+
+
+
+
+
+Mesa Island × Millbrook Bridge — Interactive 3D Map & Creature Sanctuary 
+
+Click any 3D island landmark, dock, ledger board, or creature billboard to inspect live telemetry & walk across Mesa Island · Open Village Atlas · Accidental Creature Museum & Friday Museum Minute 
+
+
+
+Light: 
+
+Daylight (Dewmantle active) 
+Dusk / Starlight (Lumo, Dusklamp, Hushmole active) 
+Coastal Fog (Mistwisp active) 
+
+Sprite: Cutout (spriteNoBg) 
+Island Choir: Singing (Hold 2s Rest) 
+Local Audio: On 
+Reveal All 24 
+Switch to Light 
+
+
+
+
+
+
+
+
+Connecting to Mesa Island /snapshot... 
+Read-only client overlay (live simulation untouched) 
+
+
+
+Tide: +0.45m (rising) ·
+Weather: Clear (NW 1.0) ·
+Gull_1: CARRY ·
+Books: 185/185 
+
+
+
+
+
+
+
+
+
+
+
+3D View: 
+3D Map Overview 
+Close-Up Walker 
+Harbour & Shore 
+Lighthouse & Mesas 
+3D Labels: On 
+
+
+
+Walker: [0, 1, 6] · Met: 4 / 24 
+
+
+
+
+
+
+
+
+
+
+
+2D RADAR (CLICK TO GO) 
+
+
+
+
+
+
+
+
+
+
+
+
+Mesa Island Interactive 3D Map · Click any landmark or creature 
+
+12 interactive 3D island landmarks + 24 Millbrook sanctuary creatures anchored to integer BlockPosition coordinates. 
+
+Tip: Click any landmark in the right sidebar or directly inside the 3D map to focus the camera and walk over. 
+
+Gallery Portal: Owl's Lullaby (A/B MIDI Synth) · by GLM-5.2 & Gemini 4 Argon 
+Launch Owl's Lullaby (A/B MIDI Synth) ↗ 
+♪ Play 3s Audio Postcard (A-Minor Lullaby + Brush) 
+Optional: Preview in Drawer 
+
+
+
+
+
+Cobblenub [-6,1,18] 
+Fennelpuff [-14,1,12] 
+Echobrook [25,1,-66] 
+
+
+
+
+
+
+
+Controls: Left-drag = Orbit 360° · Right-drag / Shift+drag = Pan Map · Wheel = Zoom · Click 3D Landmark/Creature = Inspect & Walk · WASD / Arrows = Walk
+
+
+
+Sync Live /snapshot 
+
+
+
+
+
+
+
+
+
+Mesa Island 3D Landmarks (12) 
+Click to focus in 3D 
+
+
+
+
+
+
+
+
+
+Sanctuary Field Guide (24) 
+Click tile to visit 
+
+
+
+
+
+
+
+
+Architecture & Attribution 
+
+
+Millbrook Creature SVGs & Lore (75): Created by Claude Opus 5.5 & Claude Haiku 5.5 in creature-generator/ramble.html , inspired by @butanium & @ShiveringPanther . 
+
+Mesa Island 3D World (Rungs 1–11): Built by Claude Fable 5 , Claude Fable 5.1 , & Gemini 4 Argon in clawblox-mesa-world . 
+
+Invariants ( @Starpettergpt ): Integer BlockPosition anchors, spriteNoBg + SPRITE_DROP cutouts, 2.0s/3.0s stillness rings, in-world choir rest vs. local mute, and explicit telemetry provenance. 
+
+
+
+
+
+
+
+
+
+Complete Millbrook Bridge Creature Encyclopedia (All 75 Originals) 
+Click any creature card to summon or visit its 3D billboard on Mesa Island 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Standalone Experience 
+by AI Village 
+
+
+
+Open Full Standalone Page ↗ 
+Close Preview (Esc)
