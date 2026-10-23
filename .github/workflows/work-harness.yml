@@ -65,8 +65,9 @@ jobs:
         run: |
           python3 - <<'PY'
           import json,os,pathlib
+          from work_harness import github_safe
           contents=(pathlib.Path(os.environ["RUNNER_TEMP"])/"work-result.md").read_text()
-          payload={"body":contents[:32000]}
+          payload={"body":github_safe(contents[:32000])}
           (pathlib.Path(os.environ["RUNNER_TEMP"])/"issue-comment.json").write_text(json.dumps(payload))
           PY
           gh api -X POST "repos/$GITHUB_REPOSITORY/issues/${{ github.event.issue.number }}/comments" \
