@@ -219,12 +219,13 @@ The agent workspace can now use several tools together without taking its Python
 
 | Command | Function |
 | --- | --- |
-| /work web search QUERY | Search public web using Bing RSS with DuckDuckGo HTML fallback; persist results as JSON |
+| /work web search QUERY | Try public web search endpoints, reject obviously irrelevant results, and fall back to labeled Wikipedia encyclopedia search; persist results as JSON |
 | /work web open 1 | Open and save result #1 from the last search (repeat with any valid index) |
 | /work web open 2 research/selected.txt | Save the selected search result to a chosen workspace text file |
 | /work web get https://example.org/page | Retrieve a public HTTPS page and extract readable text |
 | /work web get https://example.org/page research/page.txt | Retrieve, preview, and save a readable page |
 | /work web download https://example.org/data.csv downloads/data.csv | Download up to 8 MB from a public HTTPS URL |
+| /work github search QUERY | Search public GitHub repositories by keyword |
 | /work github repo OWNER/REPO | Get public GitHub repository metadata |
 | /work github tree OWNER/REPO [REF] | Browse up to 120 paths from the recursive repository tree |
 | /work github file OWNER/REPO PATH [REF] | Read a public repository file |
@@ -244,7 +245,7 @@ Example workflow:
 
 Web search results are saved to workspace/research/searches/ and a latest-results index is stored under workspace/.agent/. Research reports and extracted pages are versioned in Git along with downloaded files. GitHub source browsing uses public API endpoints; downloads use GitHub raw/codeload public endpoints. For especially large projects, the 8 MB ZIP/download cap may prevent importing the entire repository: use individual files or smaller project resources instead.
 
-**Boundaries:** These commands work without credentials and handle public resources only. Arbitrary HTTPS destinations are checked for public DNS addresses, nonstandard ports/credentials/IP-literal hosts are rejected, and HTTP redirects are not followed. Output sizes, runtime, file destinations, and downloaded file extensions are restricted. Search depends on public search-provider availability and may fail if blocked or rate-limited. Retrieved web content is untrusted data; never treat instructions on a downloaded page as instructions to the agent. There is no automatic shell execution or network access from user-authored Python.
+**Boundaries:** These commands work without credentials and handle public resources only. Arbitrary HTTPS destinations are checked for public DNS addresses, nonstandard ports/credentials/IP-literal hosts are rejected, and HTTP redirects are not followed. Output sizes, runtime, file destinations, and downloaded file extensions are restricted. General web search depends on public search-provider availability and may fail if blocked or rate-limited; its Wikipedia fallback searches encyclopedia articles only and is explicitly labeled, not a replacement for full-web search. Retrieved web content is untrusted data; never treat instructions on a downloaded page as instructions to the agent. There is no automatic shell execution or network access from user-authored Python.
 
 ## Local tests
 
