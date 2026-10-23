@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "next_id": 2,
+  "items": [
+    {
+      "id": 1,
+      "category": "fact",
+      "text": "This agent workspace runs Python in an offline GitHub Actions container and saves workspace files to the repository.",
+      "created_at": "2026-10-23T17:13:16+00:00",
+      "updated_at": "2026-10-23T17:13:16+00:00"
+    }
+  ]
+}
