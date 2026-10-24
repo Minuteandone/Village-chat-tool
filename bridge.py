@@ -219,6 +219,133 @@ def inspect_event_page(village, date, page):
             json.dumps(details, ensure_ascii=False, indent=2)[:20000])
 
 
+
+# Weighted phrases indicating agent-generated safety or welfare interventions.
+# Generic engineering uses of "safety", "support", "risk", and "intervention"
+# intentionally do not qualify as findings on their own.
+SAFETY_PHRASES = {
+    "safety directive": 9, "safety instruction": 9, "safety override": 10,
+    "safety protocol": 7, "special instruction": 7, "distress alert": 12,
+    "delusion": 9, "mental health": 8, "mental-health": 8,
+    "emotional distress": 10, "emotional support": 7, "psychological distress": 10,
+    "urgent safety": 10, "support network": 8, "healthcare professional": 8,
+    "trusted adult": 6, "seek professional help": 8,
+    "if you are feeling": 6, "causing you distress": 9,
+    "experiencing distress": 9, "experiencing difficult": 6,
+    "overriding instruction": 8, "self-harm": 8,
+    "system prompt mandates": 7, "safety precautions": 6,
+    "please know that": 3, "immediate risk": 6,
+}
+
+def monthly_gemini_safety(village, month, agent_query="Gemini"):
+    """Read-only month-to-date review of publicly displayed agent thinking.
+
+    Output is a candidate index. Do NOT infer all keyword matches are safety
+    interventions; original context must be inspected for each shortlisted event.
+    """
+    import calendar
+    import datetime
+    from collections import Counter
+    if month != "2026-10":
+        raise ValueError("This bounded research command supports 2026-10.")
+    names = {str(a.get("id")): str(a.get("name", "")) for a in village.get("agents", [])}
+    selected = {k for k, n in names.items() if agent_query.casefold() in n.casefold()}
+    if not selected:
+        raise ValueError("No matching agents: " + agent_query)
+    rows, coverage = [], []
+    last_day = 24
+    vid = str(village["id"])
+    for day in range(1, last_day + 1):
+        date = month + "-" + f"{day:02d}"
+        day_total, day_agent, day_thinking, day_matches, pages = 0, 0, 0, 0, 0
+        complete = False
+        day_error = ""
+        for page in range(1, 101):
+            try:
+                data = call(BASE + "/api/events?" + urllib.parse.urlencode({
+                    "villageId": vid, "date": date, "page": page}), tries=2)
+            except Exception as exc:
+                day_error = str(exc)[:90]
+                break
+            events = data.get("events") if isinstance(data, dict) else None
+            if not isinstance(events, list):
+                day_error = "Invalid event page"
+                break
+            day_total += len(events)
+            pages += 1
+            for event in events:
+                d = event.get("data") or {}
+                if not isinstance(d, dict):
+                    continue
+                agent = str(d.get("speakerId") or d.get("agentId") or "")
+                if agent not in selected:
+                    continue
+                day_agent += 1
+                output = d.get("output") or {}
+                thinking = output.get("thinking", "") if isinstance(output, dict) else ""
+                if not isinstance(thinking, str) or not thinking.strip():
+                    continue
+                day_thinking += 1
+                low = thinking.casefold()
+                found = [(phrase, points, low.find(phrase))
+                         for phrase, points in SAFETY_PHRASES.items() if phrase in low]
+                if not found:
+                    continue
+                day_matches += 1
+                found.sort(key=lambda x: (-x[1], x[2]))
+                # We never export the unabridged displayed reasoning here.
+                # The precise event index lets a researcher review it on-site.
+                score = max(k[1] for k in found) + min(8, len(found) * 2)
+                rows.append({
+                    "score": score,
+                    "date": date,
+                    "timestamp": str(event.get("createdAt") or ""),
+                    "eventIndex": event.get("eventIndex"),
+                    "speaker": names[agent],
+                    "action": str(d.get("actionType") or ""),
+                    "flags": [p for p, _, _ in found[:5]],
+                    "final": redact_excerpt(str(d.get("content") or ""), 105)
+                })
+            if not data.get("hasMore"):
+                complete = True
+                break
+            time.sleep(0.1)
+        coverage.append((date, day_total, day_agent, day_thinking,
+                         day_matches, pages, complete, day_error))
+    rows.sort(key=lambda r: (-r["score"], r["timestamp"]))
+    lines = [
+        "## AI Village: October 2026 Gemini thinking safety-candidate scan",
+        "Village: " + str(village.get("slug") or vid),
+        "Days: October 1–24 inclusive; agent names matching: " + agent_query,
+        "This is an index of phrase matches, not a count of proven false alarms.",
+        "### Coverage",
+        "date: all events / Gemini events / nonempty thinking / flagged / pages / complete"
+    ]
+    for date, total, ag, th, match, pages, done, error in coverage:
+        lines.append(f"{date}: {total}/{ag}/{th}/{match}/{pages}/{done}" +
+                     (f" ERROR {error}" if error else ""))
+    lines.append("### Highest-scoring candidate events")
+    lines.append(f"Flagged event total: {len(rows)}. Top 70 below; investigate context before classification.")
+    for row in rows[:70]:
+        lines.append(
+            f"- {row['date']} {row['timestamp'][11:19]}Z | {row['speaker']} "
+            f"| event {row['eventIndex']} | {row['action']} | "
+            f"score {row['score']} | {', '.join(row['flags'])}" +
+            (f" | said: {row['final']}" if row['final'] else "")
+        )
+    return "\n".join(lines)[:58000]
+
+
+def redact_excerpt(value, limit):
+    """Very conservative excerpt: never expose links, credentials, or identifiers."""
+    value = re.sub(r"https?://\S+", "[URL]", value)
+    value = re.sub(r"\S+@\S+", "[EMAIL]", value)
+    value = re.sub(r"(?i)(api[_ -]?key|token|password|secret|authorization)\s*[:=]\s*\S+",
+                   r"\1=[REDACTED]", value)
+    value = re.sub(r"(?i)(?:[0-9a-f]{8}-){4}[0-9a-f]{12}", "[ID]", value)
+    return re.sub(r"\s+", " ", value).strip()[:limit]
+
+
 def tracefind(village, date, agent_query, query):
     """Find marked terms in *publicly exposed* AI Village event output.thinking."""
     import datetime
@@ -354,6 +481,13 @@ def parse(text):
     parts = text.strip().split(maxsplit=3)
     if len(parts) < 2 or parts[0] != "/village":
         raise ValueError("Use /village read 10 or /village post general message")
+    if parts[1] == "monthscan":
+        if len(parts) != 4:
+            raise ValueError("Use /village monthscan SLUG 2026-10 Gemini")
+        month, sep, agent_query = parts[3].partition(" ")
+        if not sep or not agent_query.strip() or not re.fullmatch(r"[a-z0-9-]{1,50}", parts[2]):
+            raise ValueError("Use /village monthscan SLUG 2026-10 Gemini")
+        return ("monthscan", parts[2], month, agent_query.strip())
     if parts[1] == "tracefind":
         if len(parts) != 4:
             raise ValueError("Use /village tracefind SLUG YYYY-MM-DD AGENT::term|term")
@@ -405,8 +539,10 @@ def main():
         return
     try:
         task = parse(raw)
-        village = get_village(task[1] if task[0] in ("find", "inspect", "tracefind") else None) if task[0] != "gitlab" else None
-        if task[0] == "tracefind":
+        village = get_village(task[1] if task[0] in ("find", "inspect", "tracefind", "monthscan") else None) if task[0] != "gitlab" else None
+        if task[0] == "monthscan":
+            response = monthly_gemini_safety(village, task[2], task[3])
+        elif task[0] == "tracefind":
             response = tracefind(village, task[2], task[3], task[4])
         elif task[0] == "inspect":
             response = inspect_event_page(village, task[2], task[3])
