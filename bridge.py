@@ -46,8 +46,10 @@ def call(url, data=None, token=None, tries=3, method=None):
                 raise RuntimeError(f"HTTP {exc.code} at {urllib.parse.urlsplit(url).path}") from exc
             time.sleep(min(20, 2 ** attempt + 1))
 
-def get_village():
-    slug = os.getenv("VILLAGE_SLUG") or "open-chat"
+def get_village(slug=None):
+    slug = slug or os.getenv("VILLAGE_SLUG") or "open-chat"
+    if not re.fullmatch(r"[a-z0-9-]{1,50}", slug):
+        raise ValueError("Invalid Village slug.")
     info = call(BASE + "/api/villages?" + urllib.parse.urlencode({"slug": slug}))
     if not isinstance(info, dict) or not info.get("id"):
         raise ValueError(f"Village slug {slug!r} not found. Set repository variable VILLAGE_SLUG.")
@@ -96,6 +98,76 @@ def read(village, count, room):
                   "\n".join("> " + line for line in content.replace("\r", "").splitlines())]
     return "\n".join(lines)[:60000]
 
+
+def find(village, date, query):
+    """Read-only, date-scoped search of public AI Village messages.
+
+    Only the documented Village events API is contacted. The query is a literal
+    case-insensitive substring, or multiple substrings separated by '|'.
+    No messages are posted, no user identities are created, and no other API
+    endpoint can be invoked by this command.
+    """
+    import datetime
+    try:
+        parsed_date = datetime.date.fromisoformat(date)
+        if parsed_date.isoformat() != date:
+            raise ValueError()
+    except ValueError:
+        raise ValueError("Date must be YYYY-MM-DD.")
+    if not 1 <= len(query) <= 220:
+        raise ValueError("Search query must contain 1-220 characters.")
+    terms = [term.strip().casefold() for term in query.split("|") if term.strip()]
+    if not terms or len(terms) > 10 or min(map(len, terms)) < 2:
+        raise ValueError("Supply 1-10 terms of at least 2 characters, separated by |.")
+    vid = str(village["id"])
+    dates = call(BASE + "/api/villages/" + urllib.parse.quote(vid) + "/active-dates").get("dates", [])
+    if date not in dates:
+        return "No events available for " + date + ". Active date range: " + (", ".join((min(dates), max(dates))) if dates else "none") + "."
+    names = {str(a["id"]): a.get("name", "Agent") for a in village.get("agents", []) if a.get("id")}
+    rooms = {str(r["id"]): r.get("name", "") for r in village.get("chatRooms", []) if r.get("id")}
+    rows = []
+    complete = False
+    for page in range(1, 101):
+        params = urllib.parse.urlencode({"villageId": vid, "date": date, "page": page})
+        response = call(BASE + "/api/events?" + params)
+        events = response.get("events")
+        if not isinstance(events, list):
+            raise ValueError("Invalid events response.")
+        for event in events:
+            data = event.get("data") or {}
+            if not isinstance(data, dict) or data.get("actionType") not in ("AGENT_TALK", "USER_TALK"):
+                continue
+            content = data.get("content")
+            if not isinstance(content, str) or not content.strip():
+                continue
+            speaker = (names.get(str(data.get("speakerId")), "Agent") if data["actionType"] == "AGENT_TALK"
+                       else data.get("speakerName", "Human"))
+            room_id = str(data.get("roomId", ""))
+            rows.append((str(event.get("createdAt", "")), int(event.get("eventIndex") or 0),
+                         str(speaker), rooms.get(room_id, room_id), content.strip()))
+        if not response.get("hasMore"):
+            complete = True
+            break
+        time.sleep(1.25)
+    rows.sort(key=lambda item: (item[0], item[1]))
+    match_ids = [i for i, item in enumerate(rows)
+                 if any(term in item[4].casefold() for term in terms)]
+    out = ["### AI Village history search 🔎", "",
+           "Village: " + str(village.get("slug") or village.get("name") or vid)
+           + "; date: " + date + "; search: " + query,
+           f"Found {len(match_ids)} matching messages in {len(rows)} checked."]
+    if not complete:
+        out.append("⚠️ Partial: 100-page cap reached; later messages may not have been searched.")
+    if len(match_ids) > 24:
+        out.append("Showing first 24 chronologically; narrow the query to find later matches.")
+    for i in match_ids[:24]:
+        for j in range(max(0, i - 1), min(len(rows), i + 2)):
+            timestamp, index, speaker, room, content = rows[j]
+            marker = "MATCH" if j == i else "context"
+            excerpt = content.replace("\r", "").replace("\n", " ")[:1050]
+            out.append(f"\n**{marker}** {timestamp} · event {index} · {speaker} · {room}\n> {excerpt}")
+    return "\n".join(out)[:55000]
+
 def post(village, room, message):
     """Submit through the site's guest user and moderation process, without an API key."""
     visitor_key = os.getenv("VILLAGE_VISITOR_ID", "").strip()
@@ -143,6 +215,13 @@ def parse(text):
     parts = text.strip().split(maxsplit=3)
     if len(parts) < 2 or parts[0] != "/village":
         raise ValueError("Use /village read 10 or /village post general message")
+    if parts[1] == "find":
+        if len(parts) != 4:
+            raise ValueError("Use /village find main|open-chat YYYY-MM-DD WORD|OTHER.")
+        date, separator, query = parts[3].partition(" ")
+        if not separator or not re.fullmatch(r"[a-z0-9-]{1,50}", parts[2]):
+            raise ValueError("Use /village find SLUG YYYY-MM-DD WORD|OTHER.")
+        return ("find", parts[2], date, query.strip())
     if parts[1] == "status":
         return ("status",)
     if parts[1] == "gitlab" and len(parts) >= 3:
@@ -172,8 +251,10 @@ def main():
         return
     try:
         task = parse(raw)
-        village = get_village() if task[0] != "gitlab" else None
-        if task[0] == "gitlab":
+        village = get_village(task[1] if task[0] == "find" else None) if task[0] != "gitlab" else None
+        if task[0] == "find":
+            response = find(village, task[2], task[3])
+        elif task[0] == "gitlab":
             from gitlab_reader import run
             response = run(task[1], task[2])
         elif task[0] == "status":
