@@ -151,6 +151,65 @@ def user_messages(village, date, username):
     return "\n".join(lines)[:58000]
 
 
+def speaker_messages(village, period, speaker_query):
+    """Retrieve public agent or visitor chat by speaker, day or recent seven days."""
+    import datetime
+    if not 1 <= len(speaker_query.strip()) <= 90:
+        raise ValueError("Speaker filter must have 1-90 characters.")
+    if period == "recent":
+        # Include today's available feed and preceding seven calendar days.
+        end = datetime.date.today()
+        dates = [(end - datetime.timedelta(days=days)).isoformat()
+                 for days in range(7, -1, -1)]
+    else:
+        d = datetime.date.fromisoformat(period)
+        if d.isoformat() != period:
+            raise ValueError("Date must be YYYY-MM-DD or recent.")
+        dates = [period]
+    agent_names = {str(a.get("id")):str(a.get("name") or "Unknown agent")
+                   for a in village.get("agents", [])}
+    candidates = {agent_id:name for agent_id,name in agent_names.items()
+                  if speaker_query.casefold() in name.casefold()}
+    exact = {agent_id:name for agent_id,name in candidates.items()
+             if name.casefold() == speaker_query.casefold()}
+    if exact:
+        candidates=exact
+    if len(candidates)>1:
+        return "Ambiguous agent filter. Matching agents: " + ", ".join(sorted(candidates.values()))
+    found = []
+    total = 0
+    incomplete = []
+    for date in dates:
+        messages, complete = day_public_messages(village, date)
+        total += len(messages)
+        if not complete:
+            incomplete.append(date)
+        for when, index, data, content in messages:
+            if data["actionType"] == "AGENT_TALK":
+                if str(data.get("speakerId")) not in candidates:
+                    continue
+                name = agent_names.get(str(data.get("speakerId")), "Agent")
+            else:
+                name = str(data.get("speakerName") or "")
+                if name.casefold() != speaker_query.casefold():
+                    continue
+            found.append((when, index, name, content, date))
+    found.sort(key=lambda x:(x[0],x[1]))
+    displayed = found[-25:] if period=="recent" else found[-40:]
+    lines=["### Public AI Village speaker messages 📬",
+           f"Village: {village.get('slug','')}; period: {period}; speaker query: {speaker_query}",
+           f"Found {len(found)} matching public messages in {total} inspected chat events.",
+           "Showing most recent " + str(len(displayed)) + " messages, oldest first."]
+    if not candidates and not found:
+        lines.append("No such named agent or exact-named visitor appeared in the period.")
+    if incomplete:
+        lines.append("⚠️ Incomplete dates: " + ", ".join(incomplete))
+    for when,index,name,content,date in displayed:
+        lines.extend(["",f"**{when} · event {index} · {name}**",
+                      "> "+redact_public_message(content, 1200)])
+    return "\n".join(lines)[:57000]
+
+
 def around_message(village, date, event_index):
     """Read chat before/after a specified public event, ordered chronologically."""
     if not 1 <= event_index <= 999999999:
@@ -626,6 +685,13 @@ def parse(text):
     parts = text.strip().split(maxsplit=3)
     if len(parts) < 2 or parts[0] != "/village":
         raise ValueError("Use /village read 10 or /village post general message")
+    if parts[1] == "speaker":
+        if len(parts) != 4 or not re.fullmatch(r"[a-z0-9-]{1,50}", parts[2]):
+            raise ValueError("Use /village speaker SLUG YYYY-MM-DD|recent NAME")
+        period, sep, name = parts[3].partition(" ")
+        if not sep or not name.strip():
+            raise ValueError("Supply period and speaker name.")
+        return ("speaker", parts[2], period, name.strip())
     if parts[1] in ("usermsgs", "around"):
         if len(parts) != 4 or not re.fullmatch(r"[a-z0-9-]{1,50}", parts[2]):
             raise ValueError("Use /village usermsgs SLUG YYYY-MM-DD SPEAKER or /village around SLUG YYYY-MM-DD EVENT_INDEX")
@@ -702,8 +768,10 @@ def main():
         return
     try:
         task = parse(raw)
-        village = get_village(task[1] if task[0] in ("find", "inspect", "tracefind", "monthscan", "evidence", "usermsgs", "around") else None) if task[0] != "gitlab" else None
-        if task[0] == "usermsgs":
+        village = get_village(task[1] if task[0] in ("find", "inspect", "tracefind", "monthscan", "evidence", "usermsgs", "around", "speaker") else None) if task[0] != "gitlab" else None
+        if task[0] == "speaker":
+            response = speaker_messages(village, task[2], task[3])
+        elif task[0] == "usermsgs":
             response = user_messages(village, task[2], task[3])
         elif task[0] == "around":
             response = around_message(village, task[2], task[3])
