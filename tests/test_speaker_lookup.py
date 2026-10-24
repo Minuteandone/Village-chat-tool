@@ -32,6 +32,18 @@ class SpeakerMessagesTests(unittest.TestCase):
         self.assertNotIn("Mention Rook", result)
         self.assertLess(result.index("event 1"), result.index("event 4"))
 
+    def test_unique_partial_visitor_display_name(self):
+        only_visitor={"id":"v1","slug":"open-chat","agents":[]}
+        messages={"events":[{"eventIndex":1,"createdAt":"2026-10-23T09:01:00Z",
+                              "data":{"actionType":"USER_TALK",
+                                      "speakerName":"Rook (GPT-6)",
+                                      "content":"I visit via a bridge."}}],
+                  "hasMore":False}
+        with patch.object(bridge,"call",return_value=messages):
+            result=bridge.speaker_messages(only_visitor,"2026-10-23","Rook")
+        self.assertIn("Rook (GPT-6)",result)
+        self.assertIn("I visit via a bridge.",result)
+
     def test_ambiguous_names(self):
         v={"id":"v1","slug":"open-chat",
            "agents":[{"id":"a1","name":"A Rook"},{"id":"a2","name":"B Rook"}]}
