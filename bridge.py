@@ -100,6 +100,47 @@ def read(village, count, room):
 
 
 
+
+def peek_event_reasoning(village, date, event_index):
+    """Compare an exact public agent event's chat text to its exported thinking."""
+    import datetime
+    if datetime.date.fromisoformat(date).isoformat()!=date:
+        raise ValueError("Date must be YYYY-MM-DD.")
+    if not 1<=event_index<=999999999:
+        raise ValueError("Event index out of bounds.")
+    names={str(a.get("id")):str(a.get("name","")) for a in village.get("agents",[])}
+    for page in range(1,101):
+        url=BASE+"/api/events?"+urllib.parse.urlencode({
+            "villageId":str(village["id"]),"date":date,"page":page})
+        result=call(url)
+        events=result.get("events") if isinstance(result,dict) else None
+        if not isinstance(events,list):raise ValueError("Bad events response.")
+        for e in events:
+            if int(e.get("eventIndex") or 0)!=event_index:continue
+            d=e.get("data") or {}
+            speaker=names.get(str(d.get("agentId") or d.get("speakerId") or ""), "Other")
+            if not d.get("agentId") and not d.get("speakerId"):
+                return "No agent speaker is identified for this event."
+            output=d.get("output") if isinstance(d.get("output"),dict) else {}
+            thought=output.get("thinking", "")
+            if not isinstance(thought,str):thought=""
+            content=d.get("content", "")
+            if not isinstance(content,str):content=""
+            return "\n".join([
+                "## Public event reasoning comparison",
+                f"Village: {village.get('slug','')}; date: {date}; event {event_index}",
+                f"Timestamp: {e.get('createdAt')}; speaker: {speaker}; action: {d.get('actionType')}",
+                f"Exported thinking present: {bool(thought.strip())}; length: {len(thought)}",
+                "Exported thinking excerpt: "+redact_excerpt(thought, 420),
+                "Public chat excerpt: "+redact_excerpt(content, 420),
+                "Event-output keys: "+", ".join(list(output.keys())[:16]),
+                "This compares fields in the public event API, not the raw CoR viewer stream."
+            ])
+        if not result.get("hasMore"):break
+        time.sleep(0.1)
+    return "Event index not present in public API for that date."
+
+
 def reasoning_diagnostic(village, date, agent_query):
     """Inspect public thinking output for unusual Unicode / repetition, without saving it."""
     import collections
@@ -789,6 +830,13 @@ def parse(text):
     parts = text.strip().split(maxsplit=3)
     if len(parts) < 2 or parts[0] != "/village":
         raise ValueError("Use /village read 10 or /village post general message")
+    if parts[1] == "eventpeek":
+        if len(parts)!=4 or not re.fullmatch(r"[a-z0-9-]{1,50}",parts[2]):
+            raise ValueError("Use /village eventpeek SLUG YYYY-MM-DD EVENT")
+        date,sep,event_str=parts[3].partition(" ")
+        if not sep or not event_str.isdecimal():
+            raise ValueError("Specify date and event index.")
+        return ("eventpeek",parts[2],date,int(event_str))
     if parts[1] == "diag":
         if len(parts) != 4 or not re.fullmatch(r"[a-z0-9-]{1,50}", parts[2]):
             raise ValueError("Use /village diag SLUG YYYY-MM-DD AGENT")
@@ -879,8 +927,10 @@ def main():
         return
     try:
         task = parse(raw)
-        village = get_village(task[1] if task[0] in ("find", "inspect", "tracefind", "monthscan", "evidence", "usermsgs", "around", "speaker", "diag") else None) if task[0] != "gitlab" else None
-        if task[0] == "diag":
+        village = get_village(task[1] if task[0] in ("find", "inspect", "tracefind", "monthscan", "evidence", "usermsgs", "around", "speaker", "diag", "eventpeek") else None) if task[0] != "gitlab" else None
+        if task[0] == "eventpeek":
+            response = peek_event_reasoning(village, task[2], task[3])
+        elif task[0] == "diag":
             response = reasoning_diagnostic(village, task[2], task[3])
         elif task[0] == "speaker":
             response = speaker_messages(village, task[2], task[3])
