@@ -99,6 +99,91 @@ def read(village, count, room):
     return "\n".join(lines)[:60000]
 
 
+def day_public_messages(village, date):
+    """Get public chat events for one calendar date, including archived dates."""
+    import datetime
+    if datetime.date.fromisoformat(date).isoformat() != date:
+        raise ValueError("Date must use YYYY-MM-DD.")
+    vid = str(village["id"])
+    messages = []
+    complete = False
+    for page in range(1, 101):
+        params = urllib.parse.urlencode({"villageId": vid, "date": date, "page": page})
+        result = call(BASE + "/api/events?" + params)
+        events = result.get("events") if isinstance(result, dict) else None
+        if not isinstance(events, list):
+            raise ValueError("Invalid public Village events feed.")
+        for event in events:
+            d = event.get("data") or {}
+            if not isinstance(d, dict) or d.get("actionType") not in ("USER_TALK", "AGENT_TALK"):
+                continue
+            content = d.get("content")
+            if not isinstance(content, str) or not content.strip():
+                continue
+            messages.append((str(event.get("createdAt") or ""),
+                             int(event.get("eventIndex") or 0), d, content))
+        if not result.get("hasMore"):
+            complete = True
+            break
+        time.sleep(0.1)
+    messages.sort(key=lambda entry: (entry[0], entry[1]))
+    return messages, complete
+
+
+def user_messages(village, date, username):
+    """Show public USER_TALK messages by exact display name on one date."""
+    if not username or len(username) > 90:
+        raise ValueError("Supply a speaker name of 1-90 characters.")
+    messages, complete = day_public_messages(village, date)
+    matched = [(when, index, data, content) for when, index, data, content in messages
+               if data.get("actionType") == "USER_TALK"
+               and str(data.get("speakerName") or "").strip().casefold() == username.strip().casefold()]
+    lines = ["### Public AI Village user messages 📬",
+             f"Village: {village.get('slug', village.get('name', ''))}; date: {date}; speaker: {username}",
+             f"Matching messages: {len(matched)}; public chat events checked: {len(messages)}."]
+    if not complete:
+        lines.append("⚠️ Incomplete day (100-page limit); results may be partial.")
+    if len(matched) > 30:
+        lines.append("Showing first 30 messages chronologically; narrow date or use /village around.")
+    for when, index, _, content in matched[:30]:
+        lines.extend(["", f"**{when} · event {index} · {username}**",
+                      "> " + redact_public_message(content, 1800)])
+    return "\n".join(lines)[:58000]
+
+
+def around_message(village, date, event_index):
+    """Read chat before/after a specified public event, ordered chronologically."""
+    if not 1 <= event_index <= 999999999:
+        raise ValueError("Invalid event index.")
+    messages, complete = day_public_messages(village, date)
+    agents = {str(a.get("id")): str(a.get("name", "Agent")) for a in village.get("agents", [])}
+    positions = [i for i, (_, index, _, _) in enumerate(messages) if index == event_index]
+    if not positions:
+        return f"No public chat message with event {event_index} on {date}."
+    i = positions[0]
+    out = [f"### Public AI Village chat around event {event_index}",
+           f"Village: {village.get('slug','')}; date: {date}; event found."]
+    if not complete:
+        out.append("⚠️ Incomplete day (100-page limit).")
+    for when, index, data, content in messages[max(0, i-5):i+6]:
+        speaker = (data.get("speakerName") if data["actionType"] == "USER_TALK"
+                   else agents.get(str(data.get("speakerId")), "Agent"))
+        role = "USER" if data["actionType"] == "USER_TALK" else "AGENT"
+        label = "⬅️ TARGET" if index == event_index else role
+        out.extend(["", f"**{label} · {when} · event {index} · {speaker}**",
+                    "> " + redact_public_message(content, 1600)])
+    return "\n".join(out)[:42000]
+
+
+def redact_public_message(message, limit=1800):
+    """Shorten public messages without echoing common credential patterns."""
+    message = str(message).replace("\r", "")
+    message = re.sub(r"(?i)(password|api[_ -]?key|secret|access[_ -]?token|bearer)\s*[:=]\s*\S+",
+                     r"\1=[REDACTED]", message)
+    message = re.sub(r"(?i)https?://[^\s]*?(?:token|key|password)=[^\s]+", "[URL REDACTED]", message)
+    return "\n> ".join(message[:limit].splitlines())
+
+
 def find(village, date, query):
     """Read-only, date-scoped search of public AI Village messages.
 
@@ -541,6 +626,17 @@ def parse(text):
     parts = text.strip().split(maxsplit=3)
     if len(parts) < 2 or parts[0] != "/village":
         raise ValueError("Use /village read 10 or /village post general message")
+    if parts[1] in ("usermsgs", "around"):
+        if len(parts) != 4 or not re.fullmatch(r"[a-z0-9-]{1,50}", parts[2]):
+            raise ValueError("Use /village usermsgs SLUG YYYY-MM-DD SPEAKER or /village around SLUG YYYY-MM-DD EVENT_INDEX")
+        date, sep, item = parts[3].partition(" ")
+        if not sep or not item.strip():
+            raise ValueError("Supply both date and speaker or event index.")
+        if parts[1] == "around":
+            if not item.isdecimal():
+                raise ValueError("Event index must be a positive integer.")
+            return ("around", parts[2], date, int(item))
+        return ("usermsgs", parts[2], date, item.strip())
     if parts[1] == "evidence":
         if len(parts) != 4:
             raise ValueError("Use /village evidence SLUG YYYY-MM-DD EVENT_INDEX")
@@ -606,8 +702,12 @@ def main():
         return
     try:
         task = parse(raw)
-        village = get_village(task[1] if task[0] in ("find", "inspect", "tracefind", "monthscan", "evidence") else None) if task[0] != "gitlab" else None
-        if task[0] == "evidence":
+        village = get_village(task[1] if task[0] in ("find", "inspect", "tracefind", "monthscan", "evidence", "usermsgs", "around") else None) if task[0] != "gitlab" else None
+        if task[0] == "usermsgs":
+            response = user_messages(village, task[2], task[3])
+        elif task[0] == "around":
+            response = around_message(village, task[2], task[3])
+        elif task[0] == "evidence":
             response = evidence_for_event(village, task[2], task[3])
         elif task[0] == "monthscan":
             response = monthly_gemini_safety(village, task[2], task[3])
