@@ -363,9 +363,8 @@ def tracefind(village, date, agent_query, query):
         return "No matching agent names in this village. Available Gemini names: " + ", ".join(
             name for name in names.values() if "gemini" in name.casefold())
     vid = str(village["id"])
-    dates = call(BASE + "/api/villages/" + urllib.parse.quote(vid) + "/active-dates").get("dates", [])
-    if date not in dates:
-        return "No events available on that date."
+    # Older archived dates remain readable through /api/events even when they
+    # are absent from the rolling /active-dates list.
     matches = []
     checked, with_thinking, relevant_events = 0, 0, 0
     complete = False
