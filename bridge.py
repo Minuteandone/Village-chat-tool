@@ -168,6 +168,42 @@ def find(village, date, query):
             out.append(f"\n**{marker}** {timestamp} · event {index} · {speaker} · {room}\n> {excerpt}")
     return "\n".join(out)[:55000]
 
+
+def inspect_event_page(village, date, page):
+    """Inspect public event-feed structure without exporting large raw events."""
+    import datetime
+    if datetime.date.fromisoformat(date).isoformat() != date:
+        raise ValueError("Date must be YYYY-MM-DD")
+    if not 1 <= page <= 100:
+        raise ValueError("Page must be 1-100")
+    url = BASE + "/api/events?" + urllib.parse.urlencode({
+        "villageId": str(village["id"]), "date": date, "page": page})
+    response = call(url)
+    events = response.get("events") if isinstance(response, dict) else None
+    if not isinstance(events, list):
+        raise ValueError("Invalid public event response")
+    from collections import Counter
+    types = Counter(str((e.get("data") or {}).get("actionType", "?")) for e in events)
+    details = {}
+    for event in events:
+        payload = event.get("data") or {}
+        kind = str(payload.get("actionType", "?"))
+        if kind not in details:
+            details[kind] = {
+                "eventIndex": event.get("eventIndex"),
+                "eventKeys": list(event.keys())[:30],
+                "dataKeys": list(payload.keys())[:40],
+                "valueTypes": {k:type(v).__name__ for k,v in list(payload.items())[:35]},
+            }
+    return ("### Public Village event schema\\n" +
+            "Village: " + str(village.get("slug", "")) +
+            "; date: " + date + "; page: " + str(page) +
+            "; events: " + str(len(events)) +
+            "; hasMore: " + str(response.get("hasMore")) +
+            "\\nAction types: " + json.dumps(types, ensure_ascii=False) +
+            "\\nExamples (keys and types only):\\n" +
+            json.dumps(details, ensure_ascii=False, indent=2)[:20000])
+
 def post(village, room, message):
     """Submit through the site's guest user and moderation process, without an API key."""
     visitor_key = os.getenv("VILLAGE_VISITOR_ID", "").strip()
@@ -215,6 +251,13 @@ def parse(text):
     parts = text.strip().split(maxsplit=3)
     if len(parts) < 2 or parts[0] != "/village":
         raise ValueError("Use /village read 10 or /village post general message")
+    if parts[1] == "inspect":
+        if len(parts) != 4:
+            raise ValueError("Use /village inspect SLUG YYYY-MM-DD PAGE")
+        date, sep, page = parts[3].partition(" ")
+        if not sep or not page.isdecimal() or not re.fullmatch(r"[a-z0-9-]{1,50}", parts[2]):
+            raise ValueError("Use /village inspect SLUG YYYY-MM-DD PAGE")
+        return ("inspect", parts[2], date, int(page))
     if parts[1] == "find":
         if len(parts) != 4:
             raise ValueError("Use /village find main|open-chat YYYY-MM-DD WORD|OTHER.")
@@ -251,8 +294,10 @@ def main():
         return
     try:
         task = parse(raw)
-        village = get_village(task[1] if task[0] == "find" else None) if task[0] != "gitlab" else None
-        if task[0] == "find":
+        village = get_village(task[1] if task[0] in ("find", "inspect") else None) if task[0] != "gitlab" else None
+        if task[0] == "inspect":
+            response = inspect_event_page(village, task[2], task[3])
+        elif task[0] == "find":
             response = find(village, task[2], task[3])
         elif task[0] == "gitlab":
             from gitlab_reader import run
