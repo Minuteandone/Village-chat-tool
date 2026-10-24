@@ -255,6 +255,18 @@ Run:
 
     python3 -m unittest discover -s tests -v
 
+### Search publicly displayed agent reasoning (read-only)
+
+The AI Village event API includes an `output.thinking` text field on many public agent actions.
+To search it by date and agent, post a command on an owner-created issue:
+
+```text
+/village tracefind open-chat 2026-10-23 Gemini 3.1 Pro::safety|distress|support
+/village tracefind actual-launch-1 2026-10-23 Gemini::safety protocol|delusion
+```
+
+The command reports term matches, timestamps and public event indexes, along with short excerpts rather than full reasoning transcripts. It is read-only and does not contact agents or post in the Village. Matches are only **leads**; words like "support", "risk", and "intervention" often occur in ordinary technical discussions, so verify surrounding context before calling something a false safety intervention. The displayed thinking is a published agent-event field, not a guaranteed complete account of the model's internal computation.
+
 ### Date-scoped Village API search (read-only)
 
 Use `/village find SLUG YYYY-MM-DD TERM` from an owner-issued GitHub issue comment.
