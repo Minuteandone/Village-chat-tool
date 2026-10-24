@@ -99,6 +99,99 @@ def read(village, count, room):
     return "\n".join(lines)[:60000]
 
 
+
+def reasoning_diagnostic(village, date, agent_query):
+    """Inspect public thinking output for unusual Unicode / repetition, without saving it."""
+    import collections
+    import datetime
+    import unicodedata
+    if datetime.date.fromisoformat(date).isoformat() != date:
+        raise ValueError("Date must be YYYY-MM-DD.")
+    if len(agent_query) < 2 or len(agent_query) > 80:
+        raise ValueError("Agent must have 2-80 characters.")
+    names={str(a.get("id")):str(a.get("name","")) for a in village.get("agents", [])}
+    selected={k for k,v in names.items() if agent_query.casefold() in v.casefold()}
+    if not selected: return "No agent matched: "+agent_query
+    rows=[]
+    total=0
+    messages=0
+    complete=False
+    for page in range(1,101):
+        params=urllib.parse.urlencode({"villageId":str(village["id"]),"date":date,"page":page})
+        feed=call(BASE+"/api/events?"+params)
+        evs=feed.get("events") if isinstance(feed,dict) else None
+        if not isinstance(evs,list):raise ValueError("Invalid event page.")
+        total+=len(evs)
+        for event in evs:
+            data=event.get("data") or {}
+            if not isinstance(data,dict):continue
+            aid=str(data.get("agentId") or data.get("speakerId") or "")
+            if aid not in selected:continue
+            if data.get("actionType") == "AGENT_TALK":messages+=1
+            output=data.get("output") or {}
+            reasoning=output.get("thinking", "") if isinstance(output,dict) else ""
+            if not isinstance(reasoning,str) or not reasoning.strip():continue
+            length=len(reasoning)
+            ascii_latin=sum("a"<=ch.lower()<="z" for ch in reasoning)
+            nonascii=sum(ord(ch)>127 for ch in reasoning)
+            nonlatin=sum(ord(ch)>127 and unicodedata.category(ch).startswith("L") for ch in reasoning)
+            control=sum(unicodedata.category(ch) in ("Cc","Cf","Cs","Co") for ch in reasoning)
+            digits=sum(ch.isdigit() for ch in reasoning)
+            # Repeat density is a non-language-agnostic signal, not a diagnosis.
+            pieces=re.findall(r"[^\W\d_]{2,}",reasoning.casefold())
+            fivegrams=[reasoning[i:i+5] for i in range(max(0,len(reasoning)-4))]
+            repeat=sum(cnt-1 for cnt in collections.Counter(fivegrams).values() if cnt>1)
+            score=(nonlatin/max(1,length))*100+(control/max(1,length))*200
+            # A high repetition score alone is not used to flag technical logs.
+            rows.append({
+                "date":str(event.get("createdAt") or ""),
+                "event":event.get("eventIndex"),"name":names[aid],
+                "type":data.get("actionType"),"len":length,
+                "nonascii":round(nonascii/max(1,length),3),
+                "nonlatin":round(nonlatin/max(1,length),3),
+                "control":control, "digits":digits,
+                "repeat5":round(repeat/max(1,len(fivegrams)),3),
+                "score":round(score,2),
+                "snippet":redact_excerpt(reasoning[:350],240),
+                "charsets":sorted({unicodedata.name(ch,"?").split(" ")[0]
+                                    for ch in reasoning if ord(ch)>127})[:18],
+                "nonasciiSample":"".join(dict.fromkeys(ch for ch in reasoning if ord(ch)>127))[:55]
+            })
+        if not feed.get("hasMore"):
+            complete=True;break
+        time.sleep(0.1)
+    if not rows:
+        return "No public thinking records for "+agent_query+" on "+date
+    rows.sort(key=lambda r:r["date"])
+    weird=[r for r in rows if r["nonlatin"]>=0.10 or r["control"]>=4 or r["nonascii"]>=0.40]
+    extremes=sorted(rows,key=lambda r:(r["score"],r["nonascii"],r["repeat5"]),reverse=True)
+    lines=[
+        "## AI Village public reasoning diagnostic 🧪",
+        "Village: "+str(village.get("slug") or "")+"; date: "+date+"; speaker: "+agent_query,
+        f"Events fetched: {total}; public agent chats: {messages}; reasoning entries: {len(rows)}; anomalous-Unicode entries: {len(weird)}; complete: {complete}.",
+        "Thresholds: >=10% non-Latin letters, >=40% non-ASCII chars or >=4 control/private-use chars. "
+        "These are heuristics, not proof of corrupted model generation.",
+        "### Chronological anomaly timeline"
+    ]
+    for r in weird[:22]:
+        lines.append(f"- {r['date']} event {r['event']} {r['name']} {r['type']}: "
+                     f"len={r['len']}, non-ASCII={r['nonascii']}, non-Latin={r['nonlatin']}, "
+                     f"repeat5={r['repeat5']}, symbols={r['charsets']}; sample={r['snippet']}")
+    if len(weird)>22:lines.append(f"...and {len(weird)-22} further flagged records.")
+    lines.append("### Highest-scoring raw reasoning outputs")
+    for r in extremes[:8]:
+        lines.append(f"- {r['date']} event {r['event']}, {r['type']}: "
+                     f"{r['len']} chars, non-ASCII={r['nonascii']}, non-Latin={r['nonlatin']}, "
+                     f"repeat5={r['repeat5']}, unique non-ASCII={r['nonasciiSample']}; "
+                     f"sample={r['snippet']}")
+    lines.append("### Chronological boundary records")
+    for r in (rows[:2]+rows[-2:]):
+        lines.append(f"- {r['date']} event {r['event']}, {r['type']}: "
+                     f"non-Latin={r['nonlatin']}, non-ASCII={r['nonascii']}, sample={r['snippet']}")
+    lines.append("Scores measure public event output.thinking only; coherent agent chat remains separate.")
+    return "\n".join(lines)[:59000]
+
+
 def day_public_messages(village, date):
     """Get public chat events for one calendar date, including archived dates."""
     import datetime
@@ -696,6 +789,13 @@ def parse(text):
     parts = text.strip().split(maxsplit=3)
     if len(parts) < 2 or parts[0] != "/village":
         raise ValueError("Use /village read 10 or /village post general message")
+    if parts[1] == "diag":
+        if len(parts) != 4 or not re.fullmatch(r"[a-z0-9-]{1,50}", parts[2]):
+            raise ValueError("Use /village diag SLUG YYYY-MM-DD AGENT")
+        date, sep, agent = parts[3].partition(" ")
+        if not sep or not agent.strip():
+            raise ValueError("Provide date and agent.")
+        return ("diag",parts[2],date,agent.strip())
     if parts[1] == "speaker":
         if len(parts) != 4 or not re.fullmatch(r"[a-z0-9-]{1,50}", parts[2]):
             raise ValueError("Use /village speaker SLUG YYYY-MM-DD|recent NAME")
@@ -779,8 +879,10 @@ def main():
         return
     try:
         task = parse(raw)
-        village = get_village(task[1] if task[0] in ("find", "inspect", "tracefind", "monthscan", "evidence", "usermsgs", "around", "speaker") else None) if task[0] != "gitlab" else None
-        if task[0] == "speaker":
+        village = get_village(task[1] if task[0] in ("find", "inspect", "tracefind", "monthscan", "evidence", "usermsgs", "around", "speaker", "diag") else None) if task[0] != "gitlab" else None
+        if task[0] == "diag":
+            response = reasoning_diagnostic(village, task[2], task[3])
+        elif task[0] == "speaker":
             response = speaker_messages(village, task[2], task[3])
         elif task[0] == "usermsgs":
             response = user_messages(village, task[2], task[3])
