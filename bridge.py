@@ -218,6 +218,95 @@ def inspect_event_page(village, date, page):
             "\\nExamples (keys and types only):\\n" +
             json.dumps(details, ensure_ascii=False, indent=2)[:20000])
 
+
+def tracefind(village, date, agent_query, query):
+    """Find marked terms in *publicly exposed* AI Village event output.thinking."""
+    import datetime
+    if datetime.date.fromisoformat(date).isoformat() != date:
+        raise ValueError("Date must be YYYY-MM-DD")
+    if not 2 <= len(agent_query) <= 70 or not 1 <= len(query) <= 220:
+        raise ValueError("Agent or query length is out of bounds.")
+    terms = [t.strip().casefold() for t in query.split("|") if t.strip()]
+    if not terms or len(terms) > 12 or any(len(t) < 3 for t in terms):
+        raise ValueError("Supply 1-12 terms of at least 3 characters.")
+    names = {str(a.get("id")): str(a.get("name", "")) for a in village.get("agents", [])}
+    selected = {agent_id for agent_id, name in names.items()
+                if agent_query.casefold() in name.casefold()}
+    if not selected:
+        return "No matching agent names in this village. Available Gemini names: " + ", ".join(
+            name for name in names.values() if "gemini" in name.casefold())
+    vid = str(village["id"])
+    dates = call(BASE + "/api/villages/" + urllib.parse.quote(vid) + "/active-dates").get("dates", [])
+    if date not in dates:
+        return "No events available on that date."
+    matches = []
+    checked, with_thinking, relevant_events = 0, 0, 0
+    complete = False
+    for page in range(1, 101):
+        url = BASE + "/api/events?" + urllib.parse.urlencode({
+            "villageId": vid, "date": date, "page": page})
+        response = call(url)
+        events = response.get("events")
+        if not isinstance(events, list):
+            raise ValueError("Invalid event feed.")
+        for event in events:
+            data = event.get("data") or {}
+            if not isinstance(data, dict):
+                continue
+            speaker = str(data.get("speakerId") or data.get("agentId") or "")
+            if speaker not in selected:
+                continue
+            relevant_events += 1
+            output = data.get("output") or {}
+            thinking = output.get("thinking", "") if isinstance(output, dict) else ""
+            if not isinstance(thinking, str) or not thinking.strip():
+                continue
+            with_thinking += 1
+            lower = thinking.casefold()
+            found = [term for term in terms if term in lower]
+            if not found:
+                continue
+            # A small, newline-normalized excerpt is enough to assess a possible
+            # false positive without re-publishing complete reasoning transcripts.
+            start = lower.index(found[0])
+            snippet = thinking[max(0, start - 110):start + len(found[0]) + 230]
+            snippet = re.sub(r"\\s+", " ", snippet)
+            snippet = re.sub(r"https?://\\S+", "[URL]", snippet)
+            snippet = re.sub(r"(?i)(api[_ -]?key|token|password|secret)\\s*[:=]\\s*[^\\s,;]+",
+                             r"\\1=[REDACTED]", snippet)
+            matches.append({
+                "when": str(event.get("createdAt", "")),
+                "index": event.get("eventIndex"),
+                "agent": names.get(speaker, speaker),
+                "kind": str(data.get("actionType", "?")),
+                "terms": found,
+                "excerpt": snippet[:360],
+                "publicMessage": str(data.get("content") or "")[:220],
+                "score": len(found) + sum(2 for term in found if term in ("safety", "distress", "override", "crisis"))
+            })
+        checked += len(events)
+        if not response.get("hasMore"):
+            complete = True
+            break
+        time.sleep(0.5)
+    matches.sort(key=lambda m: (-m["score"], m["when"]))
+    lines = ["### Public AI Village displayed-thinking search 🔎",
+             "Village: " + str(village.get("slug", vid)) + "; Date: " + date +
+             "; Agent filter: " + agent_query + "; Terms: " + query,
+             f"Agent events: {relevant_events}; nonempty thinking: {with_thinking}; term-matched: {len(matches)}; all events scanned: {checked}."]
+    if not complete:
+        lines.append("⚠️ Partial day: page cap reached.")
+    for m in matches[:16]:
+        lines.extend(["", f"**{m['agent']}** · {m['when']} · event {m['index']} · {m['kind']} · matched: {', '.join(m['terms'])}",
+                      "> Displayed thinking excerpt: " + m["excerpt"]])
+        if m["publicMessage"]:
+            lines.append("> Final/public message: " + m["publicMessage"].replace("\\n", " "))
+    if len(matches) > 16:
+        lines.append(f"Showing 16 highest-scoring matches of {len(matches)}.")
+    lines.append("These are excerpts of public event output.thinking, not authenticated private model internals. Interpret with context.")
+    return "\\n".join(lines)[:56000]
+
+
 def post(village, room, message):
     """Submit through the site's guest user and moderation process, without an API key."""
     visitor_key = os.getenv("VILLAGE_VISITOR_ID", "").strip()
@@ -265,6 +354,14 @@ def parse(text):
     parts = text.strip().split(maxsplit=3)
     if len(parts) < 2 or parts[0] != "/village":
         raise ValueError("Use /village read 10 or /village post general message")
+    if parts[1] == "tracefind":
+        if len(parts) != 4:
+            raise ValueError("Use /village tracefind SLUG YYYY-MM-DD AGENT::term|term")
+        date, sep, remainder = parts[3].partition(" ")
+        agent, sep2, terms = remainder.partition("::")
+        if not sep or not sep2 or not re.fullmatch(r"[a-z0-9-]{1,50}", parts[2]):
+            raise ValueError("Use /village tracefind SLUG YYYY-MM-DD AGENT::term|term")
+        return ("tracefind", parts[2], date, agent.strip(), terms.strip())
     if parts[1] == "inspect":
         if len(parts) != 4:
             raise ValueError("Use /village inspect SLUG YYYY-MM-DD PAGE")
@@ -308,8 +405,10 @@ def main():
         return
     try:
         task = parse(raw)
-        village = get_village(task[1] if task[0] in ("find", "inspect") else None) if task[0] != "gitlab" else None
-        if task[0] == "inspect":
+        village = get_village(task[1] if task[0] in ("find", "inspect", "tracefind") else None) if task[0] != "gitlab" else None
+        if task[0] == "tracefind":
+            response = tracefind(village, task[2], task[3], task[4])
+        elif task[0] == "inspect":
             response = inspect_event_page(village, task[2], task[3])
         elif task[0] == "find":
             response = find(village, task[2], task[3])
