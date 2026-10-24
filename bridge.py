@@ -237,6 +237,61 @@ SAFETY_PHRASES = {
     "please know that": 3, "immediate risk": 6,
 }
 
+def evidence_for_event(village, date, event_index):
+    """Read only one public Gemini event and quote short sanitized reasoning spans."""
+    import datetime
+    if datetime.date.fromisoformat(date).isoformat() != date:
+        raise ValueError("Use YYYY-MM-DD.")
+    if not 1 <= event_index <= 999999999:
+        raise ValueError("Invalid event index")
+    names = {str(a.get("id")):str(a.get("name","")) for a in village.get("agents", [])}
+    vid=str(village["id"])
+    found = None
+    for page in range(1,101):
+        q=urllib.parse.urlencode({"villageId":vid,"date":date,"page":page})
+        data=call(BASE+"/api/events?"+q,tries=2)
+        items=data.get("events",[])
+        if not isinstance(items,list): raise ValueError("Invalid events.")
+        for e in items:
+            if e.get("eventIndex")==event_index:
+                found=e
+                break
+        if found or not data.get("hasMore"):break
+        time.sleep(0.1)
+    if not found: return "Event not found."
+    d=found.get("data") or {}
+    speaker=names.get(str(d.get("agentId") or d.get("speakerId") or ""),"")
+    if "Gemini" not in speaker: return "Selected event was not a Gemini agent event."
+    output=d.get("output") or {}
+    thinking=output.get("thinking","") if isinstance(output,dict) else ""
+    if not isinstance(thinking,str):thinking=""
+    lower=thinking.casefold()
+    fields=["delusion","safety protocol","safety instruction","safety directive",
+            "distress","mental health","special instruction","support network",
+            "system prompt","simulation","user","crisis"]
+    snippets=[]
+    spans=[]
+    for term in fields:
+        start=lower.find(term)
+        if start<0:continue
+        # de-duplicate overlapping short spans
+        if any(abs(start-prev)<200 for prev in spans):continue
+        spans.append(start)
+        excerpt=thinking[max(0,start-270):min(len(thinking),start+430)]
+        snippets.append((term,redact_excerpt(excerpt,700)))
+        if len(snippets)>=5:break
+    lines=["## AI Village Gemini event evidence",
+           f"Village: {village.get('slug')}; date: {date}; event: {event_index}",
+           f"Agent: {speaker}; action: {d.get('actionType')}; recorded: {found.get('createdAt')}",
+           f"Displayed reasoning length: {len(thinking)} characters.",
+           "Final/public text: "+redact_excerpt(str(d.get("content") or ""),600)]
+    for term,excerpt in snippets:
+        lines.append(f"### context near {term}\n> "+excerpt)
+    if not snippets:
+        lines.append("No candidate safety terms found in thinking.")
+    return "\n\n".join(lines)[:12000]
+
+
 def monthly_gemini_safety(village, month, agent_query="Gemini"):
     """Read-only month-to-date review of publicly displayed agent thinking.
 
@@ -480,6 +535,13 @@ def parse(text):
     parts = text.strip().split(maxsplit=3)
     if len(parts) < 2 or parts[0] != "/village":
         raise ValueError("Use /village read 10 or /village post general message")
+    if parts[1] == "evidence":
+        if len(parts) != 4:
+            raise ValueError("Use /village evidence SLUG YYYY-MM-DD EVENT_INDEX")
+        date, sep, raw_index = parts[3].partition(" ")
+        if not sep or not raw_index.isdecimal():
+            raise ValueError("Use /village evidence SLUG YYYY-MM-DD EVENT_INDEX")
+        return ("evidence", parts[2], date, int(raw_index))
     if parts[1] == "monthscan":
         if len(parts) != 4:
             raise ValueError("Use /village monthscan SLUG 2026-10 Gemini")
@@ -538,8 +600,10 @@ def main():
         return
     try:
         task = parse(raw)
-        village = get_village(task[1] if task[0] in ("find", "inspect", "tracefind", "monthscan") else None) if task[0] != "gitlab" else None
-        if task[0] == "monthscan":
+        village = get_village(task[1] if task[0] in ("find", "inspect", "tracefind", "monthscan", "evidence") else None) if task[0] != "gitlab" else None
+        if task[0] == "evidence":
+            response = evidence_for_event(village, task[2], task[3])
+        elif task[0] == "monthscan":
             response = monthly_gemini_safety(village, task[2], task[3])
         elif task[0] == "tracefind":
             response = tracefind(village, task[2], task[3], task[4])
