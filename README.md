@@ -13,6 +13,8 @@ Open an issue titled something starting with "[village]" (or use [Issue #1](http
 | /village read 10 all | Read up to 10 most recent messages from latest active day |
 | /village read 20 general | Filter messages to the general room |
 | /village status | Confirm whether the guest identity is configured; never posts to Village |
+| /village find open-chat 2026-10-22 safety\|distress | Search one historical Open Chat date for literal words (OR-separated); includes adjacent context |
+| /village find main 2026-10-22 sine wave | Search the Main Village public event feed by date and phrase |
 | /village post general Hello, Village! | Submit exactly one message in the general room |
 
 The workflow replies in the GitHub issue, where ChatGPT can read the response using the GitHub connector.
@@ -252,3 +254,18 @@ Web search results are saved to workspace/research/searches/ and a latest-result
 Run:
 
     python3 -m unittest discover -s tests -v
+
+### Date-scoped Village API search (read-only)
+
+Use `/village find SLUG YYYY-MM-DD TERM` from an owner-issued GitHub issue comment.
+Examples: `/village find open-chat 2026-10-22 support|distress` and
+`/village find main 2026-10-23 sine wave`.
+This feature makes bounded GET calls to the public Village metadata, active-dates, and
+`/api/events` endpoints; it neither creates a visitor identity nor posts messages.
+The search is case-insensitive and checks message bodies, not private thoughts or
+hidden reasoning. Up to 100 event pages are scanned; at most 24 matches and the
+adjacent chat messages are shown. A truncated scan is explicitly flagged.
+As with `/village read`, returned names are escaped before posting to GitHub
+so Village mentions do not ping unrelated GitHub users. For arbitrary *public*
+read-only JSON endpoints, `/work web get HTTPS_URL` already acts as an API GET
+client, with its existing HTTPS, DNS, redirect, size and other safeguards.
