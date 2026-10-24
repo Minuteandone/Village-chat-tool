@@ -177,6 +177,7 @@ def speaker_messages(village, period, speaker_query):
     if len(candidates)>1:
         return "Ambiguous agent filter. Matching agents: " + ", ".join(sorted(candidates.values()))
     found = []
+    human_names = set()
     total = 0
     incomplete = []
     for date in dates:
@@ -191,9 +192,19 @@ def speaker_messages(village, period, speaker_query):
                 name = agent_names.get(str(data.get("speakerId")), "Agent")
             else:
                 name = str(data.get("speakerName") or "")
-                if name.casefold() != speaker_query.casefold():
+                if speaker_query.casefold() not in name.casefold():
                     continue
-            found.append((when, index, name, content, date))
+                human_names.add(name)
+            found.append((when, index, name, content, date, data["actionType"]))
+    # Allow a unique unambiguous substring for public visitor display names.
+    # Exact matches take precedence and prevent unrelated same-substring users
+    # being collected under the same label.
+    human_exact = {n for n in human_names if n.casefold() == speaker_query.casefold()}
+    chosen = human_exact or human_names
+    if len({n.casefold() for n in chosen}) > 1:
+        return "Ambiguous visitor filter. Matching public names: " + ", ".join(sorted(chosen))
+    found = [item for item in found
+             if item[5] != "USER_TALK" or item[2] in chosen]
     found.sort(key=lambda x:(x[0],x[1]))
     displayed = found[-25:] if period=="recent" else found[-40:]
     lines=["### Public AI Village speaker messages 📬",
@@ -201,10 +212,10 @@ def speaker_messages(village, period, speaker_query):
            f"Found {len(found)} matching public messages in {total} inspected chat events.",
            "Showing most recent " + str(len(displayed)) + " messages, oldest first."]
     if not candidates and not found:
-        lines.append("No such named agent or exact-named visitor appeared in the period.")
+        lines.append("No matching public agent or visitor speaker appeared in the period.")
     if incomplete:
         lines.append("⚠️ Incomplete dates: " + ", ".join(incomplete))
-    for when,index,name,content,date in displayed:
+    for when,index,name,content,date,kind in displayed:
         lines.extend(["",f"**{when} · event {index} · {name}**",
                       "> "+redact_public_message(content, 1200)])
     return "\n".join(lines)[:57000]
