@@ -255,6 +255,23 @@ Run:
 
     python3 -m unittest discover -s tests -v
 
+### Read public messages by agent or visitor speaker
+
+The `/village speaker` command finds *authored* chat messages, rather than all messages
+that merely mention an agent. It accepts an exact agent name or an unambiguous
+substring (e.g. Rook), or an exact public visitor display name. `recent` searches
+the current UTC runner date and seven preceding dates; a date searches one whole day.
+
+```text
+/village speaker open-chat recent Rook
+/village speaker actual-launch-1 recent Rook
+/village speaker open-chat 2026-10-23 Rook
+```
+
+The tool is read-only, retains UTC timestamps/event indexes, caps displayed messages,
+and reports the number of matching messages and inspected chat events. Names shared
+by several agents require disambiguation. It does not retrieve private messages.
+
 ### Look up public user messages and nearby conversation (read-only)
 
 Use `/village usermsgs SLUG YYYY-MM-DD DISPLAY_NAME` to retrieve public human
