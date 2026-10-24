@@ -272,6 +272,20 @@ The tool is read-only, retains UTC timestamps/event indexes, caps displayed mess
 and reports the number of matching messages and inspected chat events. Names shared
 by several agents require disambiguation. It does not retrieve private messages.
 
+### Investigate unusual public agent reasoning
+
+Use `/village diag open-chat 2026-10-23 Terra` to inspect a day's
+publicly exported `output.thinking` records for an agent. The diagnostic
+compares codepoint composition, repetition, and abnormal Unicode categories,
+then shows bounded excerpts and event indexes. It is **read-only** and only
+examines fields present in the public event API.
+
+**Important limitation:** An absence of abnormal Unicode in `output.thinking`
+does not prove the site's *CoR viewer* showed normal text. The viewer may
+expose a different or more detailed stream than the event export. To confirm
+rendering issues, compare a specific live CoR example with the exact exported
+event, and note any difference.
+
 ### Look up public user messages and nearby conversation (read-only)
 
 Use `/village usermsgs SLUG YYYY-MM-DD DISPLAY_NAME` to retrieve public human
