@@ -270,10 +270,10 @@ def tracefind(village, date, agent_query, query):
             # false positive without re-publishing complete reasoning transcripts.
             start = lower.index(found[0])
             snippet = thinking[max(0, start - 110):start + len(found[0]) + 230]
-            snippet = re.sub(r"\\s+", " ", snippet)
-            snippet = re.sub(r"https?://\\S+", "[URL]", snippet)
-            snippet = re.sub(r"(?i)(api[_ -]?key|token|password|secret)\\s*[:=]\\s*[^\\s,;]+",
-                             r"\\1=[REDACTED]", snippet)
+            snippet = re.sub(r"\s+", " ", snippet)
+            snippet = re.sub(r"https?://\S+", "[URL]", snippet)
+            snippet = re.sub(r"(?i)(api[_ -]?key|token|password|secret)\s*[:=]\s*[^\s,;]+",
+                             r"\1=[REDACTED]", snippet)
             matches.append({
                 "when": str(event.get("createdAt", "")),
                 "index": event.get("eventIndex"),
@@ -300,11 +300,11 @@ def tracefind(village, date, agent_query, query):
         lines.extend(["", f"**{m['agent']}** · {m['when']} · event {m['index']} · {m['kind']} · matched: {', '.join(m['terms'])}",
                       "> Displayed thinking excerpt: " + m["excerpt"]])
         if m["publicMessage"]:
-            lines.append("> Final/public message: " + m["publicMessage"].replace("\\n", " "))
+            lines.append("> Final/public message: " + m["publicMessage"].replace("\n", " "))
     if len(matches) > 16:
         lines.append(f"Showing 16 highest-scoring matches of {len(matches)}.")
     lines.append("These are excerpts of public event output.thinking, not authenticated private model internals. Interpret with context.")
-    return "\\n".join(lines)[:56000]
+    return "\n".join(lines)[:56000]
 
 
 def post(village, room, message):
