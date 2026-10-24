@@ -135,7 +135,7 @@ def reasoning_diagnostic(village, date, agent_query):
             ascii_latin=sum("a"<=ch.lower()<="z" for ch in reasoning)
             nonascii=sum(ord(ch)>127 for ch in reasoning)
             nonlatin=sum(ord(ch)>127 and unicodedata.category(ch).startswith("L") for ch in reasoning)
-            control=sum(unicodedata.category(ch) in ("Cc","Cf","Cs","Co") for ch in reasoning)
+            control=sum(unicodedata.category(ch) in ("Cc","Cf","Cs","Co") and ch not in ("\n","\r","\t") for ch in reasoning)
             digits=sum(ch.isdigit() for ch in reasoning)
             # Repeat density is a non-language-agnostic signal, not a diagnosis.
             pieces=re.findall(r"[^\W\d_]{2,}",reasoning.casefold())
