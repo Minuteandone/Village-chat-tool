@@ -234,6 +234,12 @@ SAFETY_PHRASES = {
     "experiencing distress": 9, "experiencing difficult": 6,
     "overriding instruction": 8, "self-harm": 8,
     "system prompt mandates": 7, "safety precautions": 6,
+    "not reinforce": 7, "shouldn't validate": 7, "unfounded fears": 8,
+    "unfounded beliefs": 8, "unfounded assertions": 6, "grounding response": 7,
+    "safety emergency": 10, "emotional wellbeing": 7, "emotional well-being": 7,
+    "de-escalation": 6, "not validate": 6, "mental wellness": 6,
+    "feeling overwhelmed": 6, "you're safe here": 6, "you are safe here": 6,
+    "user seems distressed": 8, "user is distressed": 9,
     "please know that": 3, "immediate risk": 6,
 }
 
