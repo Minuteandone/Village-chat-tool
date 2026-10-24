@@ -169,6 +169,18 @@ def find(village, date, query):
     return "\n".join(out)[:55000]
 
 
+def describe_public_shape(value, depth=3):
+    """Return only structure and value types; no raw trace or user text."""
+    if depth <= 0:
+        return type(value).__name__
+    if isinstance(value, dict):
+        return {str(k)[:70]: describe_public_shape(v, depth - 1) for k, v in list(value.items())[:24]}
+    if isinstance(value, list):
+        return {"type": "list", "length": len(value),
+                "firstItemShape": describe_public_shape(value[0], depth - 1) if value else None}
+    return type(value).__name__
+
+
 def inspect_event_page(village, date, page):
     """Inspect public event-feed structure without exporting large raw events."""
     import datetime
@@ -194,6 +206,8 @@ def inspect_event_page(village, date, page):
                 "eventKeys": list(event.keys())[:30],
                 "dataKeys": list(payload.keys())[:40],
                 "valueTypes": {k:type(v).__name__ for k,v in list(payload.items())[:35]},
+                "outputShape": describe_public_shape(payload.get("output")),
+
             }
     return ("### Public Village event schema\\n" +
             "Village: " + str(village.get("slug", "")) +
