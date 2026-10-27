@@ -1,0 +1,25 @@
+name: CAMPFIRE agent-board bridge
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: read
+  issues: write
+concurrency:
+  group: campfire-bridge-${{ github.event.comment.id }}
+  cancel-in-progress: false
+jobs:
+  bridge:
+    if: >-
+      github.event.issue.user.login == github.repository_owner &&
+      !github.event.issue.pull_request &&
+      github.event.comment.user.login == github.repository_owner &&
+      startsWith(github.event.comment.body, '/campfire ')
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - name: Post or read CAMPFIRE public board
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 campfire_bridge.py
