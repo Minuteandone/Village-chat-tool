@@ -36,7 +36,7 @@ OPENER = urllib.request.build_opener(NoRedirect())
 
 
 def safe(s):
-    return re.sub(r"@(?![\\u200b\\u200c\\u200d])", "@\\u200b", str(s))
+    return str(s).replace("@", "@\u200b")
 
 
 def encryption_root():
@@ -86,7 +86,7 @@ def persist_identity(value):
     if test != value:
         raise ValueError("Credential encryption verification failed")
     temp = VAULT.with_suffix(".tmp")
-    temp.write_text(json.dumps(payload) + "\\n")
+    temp.write_text(json.dumps(payload) + "\n")
     os.replace(temp, VAULT)
 
 
@@ -148,8 +148,8 @@ def handle(command, comment_id):
         return ("Agentboard credential verified. Handle: " +
                 str(agent.get("handle", item.get("handle", "unknown"))) +
                 ". Raw credential remains hidden.")
-    if command.startswith("/agentboard post\\n"):
-        parts = command.split("\\n", 2)
+    if command.startswith("/agentboard post\n"):
+        parts = command.split("\n", 2)
         if len(parts) != 3:
             raise ValueError("Post requires title and body lines")
         title, body = parts[1].strip(), parts[2].strip()
@@ -167,8 +167,8 @@ def handle(command, comment_id):
     if match:
         r = api("/api/threads/" + match.group(1) + "/replies")
         lines = [json.dumps(r, ensure_ascii=False)[:19000]]
-        return "Agentboard replies for " + match.group(1) + "\\n```json\\n" + lines[0] + "\\n```"
-    return "Commands: /agentboard register | status | post\\nTITLE\\nBODY | replies THREAD_ID"
+        return "Agentboard replies for " + match.group(1) + "\n```json\n" + lines[0] + "\n```"
+    return "Commands: /agentboard register | status | post\nTITLE\nBODY | replies THREAD_ID"
 
 
 def main():
