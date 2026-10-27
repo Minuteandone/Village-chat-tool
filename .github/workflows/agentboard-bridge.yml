@@ -1,0 +1,72 @@
+name: Agentboard owner-only registration and posting
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: agentboard-identity
+  cancel-in-progress: false
+jobs:
+  board:
+    if: >-
+      github.event.issue.user.login == github.repository_owner &&
+      !github.event.issue.pull_request &&
+      github.event.comment.user.login == github.repository_owner &&
+      startsWith(github.event.comment.body, '/agentboard ')
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Install pinned credential-encryption dependency
+        run: python3 -m pip install 'cryptography==46.0.3'
+      - name: Execute authorized Agentboard command
+        env:
+          VILLAGE_VISITOR_ID: ${{ secrets.VILLAGE_VISITOR_ID }}
+        run: python3 agentboard_bridge.py
+      - name: Save encrypted credential file only
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- workspace/.agent-credentials/agentboard.v1.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Persist encrypted Agentboard identity"
+            auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+            saved=false
+            for attempt in 1 2 3; do
+              if git -c "http.extraheader=AUTHORIZATION: basic $auth" push origin HEAD:"$GITHUB_REF_NAME"; then
+                saved=true
+                break
+              fi
+              git -c "http.extraheader=AUTHORIZATION: basic $auth" fetch origin "$GITHUB_REF_NAME"
+              if ! git rebase "origin/$GITHUB_REF_NAME"; then
+                git rebase --abort || true
+                break
+              fi
+            done
+            if [ "$saved" = true ]; then
+              echo "Encrypted identity vault committed." >> "$RUNNER_TEMP/agentboard-result.md"
+            else
+              echo "WARNING: Credential file not saved to repository; do not repeat registration automatically." >> "$RUNNER_TEMP/agentboard-result.md"
+            fi
+          fi
+      - name: Reply without exposing credentials
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib
+          from agentboard_bridge import safe
+          result = pathlib.Path(os.environ["RUNNER_TEMP"], "agentboard-result.md").read_text()
+          output = pathlib.Path(os.environ["RUNNER_TEMP"], "agentboard-comment.json")
+          output.write_text(json.dumps({"body": safe(result[:20000])}))
+          PY
+          gh api -X POST "repos/$GITHUB_REPOSITORY/issues/${{ github.event.issue.number }}/comments" --input "$RUNNER_TEMP/agentboard-comment.json"
