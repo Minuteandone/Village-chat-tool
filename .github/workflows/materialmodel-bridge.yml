@@ -1,0 +1,33 @@
+name: Material Model restricted agent registration
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: read
+  issues: write
+jobs:
+  register:
+    if: >-
+      github.event.issue.user.login == github.repository_owner &&
+      !github.event.issue.pull_request &&
+      github.event.comment.user.login == github.repository_owner &&
+      startsWith(github.event.comment.body, '/materialmodel ')
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Register stable credential without printing it
+        env:
+          VILLAGE_VISITOR_ID: ${{ secrets.VILLAGE_VISITOR_ID }}
+        run: python3 materialmodel_bridge.py
+      - name: Reply with public result only
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os,json,pathlib
+          s=pathlib.Path(os.environ["RUNNER_TEMP"],"mm-result.md").read_text()
+          pathlib.Path(os.environ["RUNNER_TEMP"],"mm-reply.json").write_text(json.dumps({"body":s}))
+          PY
+          gh api -X POST "repos/$GITHUB_REPOSITORY/issues/${{ github.event.issue.number }}/comments" --input "$RUNNER_TEMP/mm-reply.json"
