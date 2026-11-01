@@ -72,15 +72,36 @@ def sample_text(archive, info, maximum=1400):
     except Exception:
         return ""
 
+BOILERPLATE = set("href meta property const export class style margin padding font http https www com org usr bin gitignore stroke include stddef var let div span html header body footer link rel content script charset viewport node modules package public lang utf id type source map encoding return null false true utf8 path json".split())
+
+
 def corpus_text(repo, rel, sample):
-    # Keep the project name, nested directories and basename highly visible.
-    root = repo.split("/")
-    project = root[-1] if root else ""
+    """Prefer meaning (project titles, file purpose, comments) over raw syntax."""
+    project = repo.split("/")[-1]
     path = Path(rel)
-    directory = " ".join(path.parts[:-1][-5:])
-    title = " ".join(words(project + " " + project + " " + directory + " " + path.stem + " " + path.stem))
-    content = " ".join(words(sample[:1200]))
-    return title + " " + content
+    suffix = path.suffix.lower()
+    title_words = [t for t in words(project) if t not in BOILERPLATE]
+    filename_words = [t for t in words(path.stem) if t not in BOILERPLATE]
+    directory_words = [t for t in words(" ".join(path.parts[:-1][-4:]))
+                       if t not in BOILERPLATE]
+    # Only documentation prose and programming comments describe subject matter
+    # reliably. Raw HTML/CSS/JSON/Python code otherwise clusters by syntax.
+    if suffix in (".md", ".mdx", ".txt", ".rst", ".adoc"):
+        relevant = sample[:700]
+    elif suffix in (".py", ".js", ".ts", ".tsx", ".jsx", ".lua", ".rb",
+                    ".rs", ".go", ".java", ".c", ".cpp", ".cs", ".sh"):
+        lines = sample[:1200].splitlines()
+        relevant = " ".join(line for line in lines[:25]
+                            if line.lstrip().startswith(("#", "//", "/*", "* ", '"""', "'''")))
+    elif suffix in (".htm", ".html"):
+        tags = re.findall(r"<title[^>]*>(.*?)</title>", sample[:1200], re.I | re.S)
+        relevant = " ".join(tags)
+    else:
+        relevant = ""
+    content_words = [t for t in words(relevant) if t not in BOILERPLATE
+                     and t not in GENERIC][:80]
+    return " ".join(title_words * 9 + filename_words * 4
+                    + directory_words * 2 + content_words)
 
 def sample_candidates(source, known, per_repo):
     """Deterministic priority reservoir per repo with balanced text and media."""
