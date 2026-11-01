@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/sort-village-files.yml
+      - tools/sort_village_files_by_topic.py
 permissions:
   contents: read
   actions: read
