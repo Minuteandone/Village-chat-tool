@@ -212,35 +212,41 @@ def discover(source, manifest, per_repo):
     repo_default = {repo: votes.most_common(1)[0][0] for repo, votes in repo_votes.items()}
     return learned, repo_default, chosen_k, quality, len(samples), [(k, round(score, 4)) for _, k, _, _, score in trials]
 
-def identify(repo, relative, excerpt, topics, repo_default):
-    """Rapid, file-level inference from signature learned by LSA clustering."""
+def make_topic_index(topics):
+    """Inverted signatures make file-level inference practical at 2.6M files."""
+    inverted = collections.defaultdict(list)
+    for topic in topics:
+        for term in topic["signature"]:
+            inverted[term["term"]].append(
+                (topic["cluster_id"], max(0.02, term["weight"]))
+            )
+    return dict(inverted)
+
+
+def identify(repo, relative, excerpt, topic_index, repo_default):
+    """File-level scoring using the lexicon learned by latent clustering."""
     title = repo.split("/")[-1]
     path = Path(relative)
-    # Uses both word and two-word phrases, preserving discovered collocations.
     def featurize(s):
         w = words(s)
         c = collections.Counter(w)
         c.update(" ".join(w[i:i+2]) for i in range(len(w)-1))
         return c
-    name_features = featurize(title + " " + path.stem)
-    path_features = featurize(str(path.parent))
-    content_features = featurize(excerpt[:1400])
-    scores = []
-    for topic in topics:
-        total = 0.
-        for record in topic["signature"]:
-            term = record["term"]
-            weight = max(0.02, record["weight"])
-            total += weight * (3.0 * min(2, name_features[term])
-                               + 1.6 * min(2, path_features[term])
-                               + 0.25 * min(3, content_features[term]))
-        scores.append(total)
-    preferred = int(np.argmax(scores))
-    best = scores[preferred]
-    if best <= 0:
-        preferred = repo_default.get(repo, preferred)
-    # Source type is recorded to distinguish predictions from fallback.
-    return preferred, round(best, 4), "lexicon" if best > 0 else "repo_fallback"
+    scores = collections.defaultdict(float)
+    for features, scalar in (
+        (featurize(title + " " + path.stem), 3.0),
+        (featurize(str(path.parent)), 1.6),
+        (featurize(excerpt[:1400]), 0.25),
+    ):
+        for term, count in features.items():
+            hits = topic_index.get(term, ())
+            if hits:
+                for cluster_id, weight in hits:
+                    scores[cluster_id] += weight * scalar * min(3, count)
+    if scores:
+        selected = max(scores, key=scores.get)
+        return selected, round(scores[selected], 4), "lexicon"
+    return repo_default.get(repo, 0), 0.0, "repo_fallback"
 
 def sort_files(source, manifest, topics, repo_default, output):
     output.mkdir(parents=True, exist_ok=True)
@@ -251,6 +257,7 @@ def sort_files(source, manifest, topics, repo_default, output):
     sizes = collections.Counter()
     method_counts = collections.Counter()
     errors = []
+    topic_index = make_topic_index(topics)
     from contextlib import ExitStack
     with ExitStack() as stack:
         targets = {t["cluster_id"]: stack.enter_context(
@@ -271,7 +278,7 @@ def sort_files(source, manifest, topics, repo_default, output):
                     continue
                 repo, relative = located
                 excerpt = sample_text(source, info, 1400)
-                cluster_id, score, method = identify(repo, relative, excerpt, topics, repo_default)
+                cluster_id, score, method = identify(repo, relative, excerpt, topic_index, repo_default)
                 topic = topics[cluster_id]
                 try:
                     with source.open(info) as original, targets[cluster_id].open(
