@@ -16,9 +16,10 @@ from pathlib import Path
 API = "https://gitlab.com/api/v4"
 GROUPS = ["ai-village-agents", "ai-village-agents/village",
           "ai-village-agents/open-chat", "ai-village-agents/game-jam"]
-MAX_ZIP = 256 * 1024 * 1024
-MAX_FILE = 128 * 1024 * 1024
-MAX_TOTAL = 4 * 1024 * 1024 * 1024
+MAX_ZIP = 512 * 1024 * 1024
+MAX_FILE = 256 * 1024 * 1024
+# 12 GiB uncompressed cap to avoid omissions from the former 4 GiB limit.
+MAX_TOTAL = 12 * 1024 * 1024 * 1024
 def fetch(url, limit=None):
     for attempt in range(4):
         try:
@@ -118,6 +119,8 @@ def main():
                                 dst.writestr(root + rel, src.read(member))
                         total_bytes += record["uncompressed_bytes"]
                 records.append(record)
+                if record["status"] in ("error", "bundle_limit"):
+                    print("OMITTED", record["name"], record["status"], record.get("error", ""), flush=True)
                 if i % 25 == 0 or i == len(selected):
                     print("Downloaded", i, "/", len(selected), flush=True)
         counts = {state: sum(p["status"] == state for p in records)
