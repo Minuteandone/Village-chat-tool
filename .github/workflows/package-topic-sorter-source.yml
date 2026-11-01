@@ -7,6 +7,7 @@ on:
       - tools/discover_village_topics.py
       - tools/online_all_file_topics.py
       - .github/workflows/online-all-file-topics.yml
+      - .github/workflows/online-all-files-with-argon.yml
 permissions:
   contents: read
 jobs:
@@ -23,7 +24,8 @@ jobs:
             tools/online_all_file_topics.py \
             .github/workflows/discover-village-topics.yml \
             .github/workflows/sort-village-files.yml \
-            .github/workflows/online-all-file-topics.yml
+            .github/workflows/online-all-file-topics.yml \
+            .github/workflows/online-all-files-with-argon.yml
       - uses: actions/upload-artifact@v4
         with:
           name: ai-village-sorting-source-zip
