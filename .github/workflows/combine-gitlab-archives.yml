@@ -1,0 +1,64 @@
+name: Combine AI Village GitLab archives (excluding atlas)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/combine-gitlab-archives.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  combine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reclaim runner disk space for large archive
+        run: |
+          echo "Before cleanup:"
+          df -h .
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/hostedtoolcache
+          echo "After cleanup:"
+          df -h .
+      - name: Fetch original completed archive
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 41327050023
+          artifact-ids: 13092600571
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: input/main
+      - name: Fetch recovered 429 and large-project archives
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 41328846868
+          artifact-ids: 13092023726,13092382600,13092253540
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          merge-multiple: true
+          path: input/recoveries
+      - name: Fetch verification of branchless repositories
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 41329076750
+          artifact-ids: 13092631999
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: input/audit
+      - name: Merge in place and confirm all 2741 expected projects
+        run: |
+          df -h .
+          python3 -m py_compile tools/merge_gitlab_archives.py
+          python3 tools/merge_gitlab_archives.py \
+            --base input/main/ai-village-gitlab-public.zip \
+            --patch429 input/recoveries/gitlab-recovery-429.zip \
+            --lumen input/recoveries/gitlab-recovery-lumen-series.zip \
+            --videos input/recoveries/gitlab-recovery-village-videos.zip \
+            --audit input/audit/gitlab-404-branch-verification.zip \
+            --output output/ai-village-gitlab-2741-excluding-argon.zip
+          df -h .
+      - name: Upload unified ZIP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-gitlab-2741-excluding-argon
+          path: output/ai-village-gitlab-2741-excluding-argon.zip
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14
