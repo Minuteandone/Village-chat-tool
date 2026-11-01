@@ -8,6 +8,7 @@ on:
       - tools/online_all_file_topics.py
       - .github/workflows/online-all-file-topics.yml
       - .github/workflows/online-all-files-with-argon.yml
+      - .github/workflows/measure-argon-atlas-size.yml
 permissions:
   contents: read
 jobs:
@@ -25,7 +26,8 @@ jobs:
             .github/workflows/discover-village-topics.yml \
             .github/workflows/sort-village-files.yml \
             .github/workflows/online-all-file-topics.yml \
-            .github/workflows/online-all-files-with-argon.yml
+            .github/workflows/online-all-files-with-argon.yml \
+            .github/workflows/measure-argon-atlas-size.yml
       - uses: actions/upload-artifact@v4
         with:
           name: ai-village-sorting-source-zip
