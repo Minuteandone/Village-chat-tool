@@ -119,8 +119,27 @@ def metadata_404(path, record):
             record["branch_has_entries"] = bool(tree)
             record["status"] = "nonempty_archive_404" if tree else "branch_with_empty_tree"
         except urllib.error.HTTPError as exc:
-            record["status"] = "branch_metadata_failed"
-            record["detail"] = "HTTP " + str(exc.code)
+            record["tree_lookup_http"] = exc.code
+            if exc.code != 404:
+                record["status"] = "branch_metadata_failed"
+                record["detail"] = "HTTP " + str(exc.code)
+                return
+            # A tree 404 does not prove emptiness. List branches instead.
+            try:
+                branches = gitlab_json(
+                    "/projects/" + str(p["id"]) + "/repository/branches",
+                    {"per_page": 1},
+                )
+                if not isinstance(branches, list):
+                    record["status"] = "invalid_branch_list_response"
+                elif not branches:
+                    record["status"] = "no_branches"
+                else:
+                    record["status"] = "branches_exist_but_tree_404"
+                    record["sample_branch"] = branches[0].get("name")
+            except urllib.error.HTTPError as branches_exc:
+                record["status"] = "branch_list_unavailable"
+                record["detail"] = "HTTP " + str(branches_exc.code)
     except urllib.error.HTTPError as exc:
         record["status"] = "project_metadata_failed"
         record["detail"] = "HTTP " + str(exc.code)
