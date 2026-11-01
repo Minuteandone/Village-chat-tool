@@ -1,0 +1,49 @@
+name: AI Village self-discovered topics (experimental)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/discover-village-topics.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  discover:
+    name: Learn topics from repository samples (no large ZIP exports)
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install local topic-modeling tools
+        run: |
+          python3 -m pip install --disable-pip-version-check 'scikit-learn>=1.5,<2' 'numpy>=1.26,<3'
+          python3 -m py_compile tools/discover_village_topics.py
+      - name: Download the 2741-repository combined archive
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 41331003002
+          artifact-ids: 13093532239
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: input
+      - name: Discover original topics with no preset labels
+        run: |
+          python3 tools/discover_village_topics.py \
+            --input input/ai-village-gitlab-2741-excluding-argon/ai-village-gitlab-2741-excluding-argon.zip \
+            --output output/learned \
+            --sample-per-repo 22 \
+            --discovery-only
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path("output/learned/LEARNED_TOPICS.json").read_text())
+          assert len(p["topics"]) >= 3
+          assert len({t["slug"] for t in p["topics"]}) == len(p["topics"])
+          print("VALIDATION OK:", p["number_of_discovered_categories"], "data-learned topics")
+          PY
+      - name: Upload generated category catalogue
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-self-discovered-topic-catalogue
+          path: output/learned/LEARNED_TOPICS.json
+          if-no-files-found: error
+          retention-days: 14
