@@ -1,145 +1,127 @@
 #!/usr/bin/env python3
-"""Combine publicly accessible AI Village GitLab default-branch snapshots into a ZIP."""
-import concurrent.futures
+"""Download public AI Village GitLab repositories into one ZIP.
+
+No arbitrary per-source ZIP limit, per-file limit, or combined uncompressed-size
+cap. Archives are streamed to temporary disk files and entries are streamed into
+the final ZIP to keep memory consumption bounded. Physical disk/artifact limits
+still apply.
+"""
+import collections
 import datetime
-import io
 import json
-import os
-import random
-import time
+import shutil
+import tempfile
 import urllib.error
 import urllib.parse
-import urllib.request
 import zipfile
 from pathlib import Path
 
-API = "https://gitlab.com/api/v4"
+from recover_gitlab_archives import API, gitlab_json, gitlab_request, checked_archive_member
+
 GROUPS = ["ai-village-agents", "ai-village-agents/village",
           "ai-village-agents/open-chat", "ai-village-agents/game-jam"]
-MAX_ZIP = 512 * 1024 * 1024
-MAX_FILE = 256 * 1024 * 1024
-# 12 GiB uncompressed cap to avoid omissions from the former 4 GiB limit.
-MAX_TOTAL = 12 * 1024 * 1024 * 1024
-def fetch(url, limit=None):
-    for attempt in range(4):
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": "AI-Village-Public-Archiver/1.0"})
-            with urllib.request.urlopen(req, timeout=75) as response:
-                data = response.read(limit + 1 if limit is not None else -1)
-                if limit is not None and len(data) > limit:
-                    raise ValueError("source ZIP exceeds archive-size limit")
-                return data
-        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as exc:
-            if getattr(exc, "code", None) in (401, 403, 404) or attempt == 3:
-                raise
-            time.sleep(2 ** attempt * 2 + random.random())
+
 
 def discover():
     discovered = {}
-    successes = 0
+    completed_groups = []
+    failed_groups = []
     for group in GROUPS:
+        page = 1
         try:
-            page = 1
             while page <= 1000:
-                query = urllib.parse.urlencode({"include_subgroups": "true",
-                     "simple": "true", "per_page": 100, "page": page})
-                url = API + "/groups/" + urllib.parse.quote(group, safe="") + "/projects?" + query
-                entries = json.loads(fetch(url))
+                entries = gitlab_json(
+                    "/groups/" + urllib.parse.quote(group, safe="") + "/projects",
+                    {"include_subgroups": "true", "simple": "true", "per_page": 100, "page": page},
+                )
                 if not isinstance(entries, list):
-                    raise ValueError("Invalid project-list response")
-                successes += 1
-                for p in entries:
-                    if p.get("visibility") == "public":
-                        discovered[p["id"]] = p
+                    raise ValueError("Invalid project listing")
+                for project in entries:
+                    if project.get("visibility") == "public":
+                        discovered[project["id"]] = project
                 print("Discover", group, "page", page, "items", len(entries), flush=True)
                 if len(entries) < 100:
                     break
                 page += 1
+            completed_groups.append(group)
         except Exception as exc:
-            print("Discovery failed:", group, str(exc)[:170], flush=True)
-    if successes == 0:
-        raise RuntimeError("No GitLab groups could be enumerated")
-    return sorted(discovered.values(), key=lambda p: p.get("path_with_namespace", ""))
+            failed_groups.append({"group": group, "error": str(exc)[:240]})
+            print("Discovery error for", group, str(exc)[:200], flush=True)
+    if not completed_groups:
+        raise RuntimeError("No GitLab groups were enumerated successfully")
+    return sorted(discovered.values(), key=lambda p: p.get("path_with_namespace", "")), failed_groups
 
-def eligible(project):
-    # No keyword-based exclusions: preserve every discoverable public project.
-    return project.get("visibility") == "public"
 
-def download(project):
+def export_project(project, target):
+    name = project["path_with_namespace"]
     branch = project.get("default_branch")
-    record = {"id": project["id"], "name": project.get("path_with_namespace", ""),
-              "url": project.get("web_url", ""), "branch": branch,
-              "status": "unknown"}
-    if not branch or project.get("empty_repo"):
+    record = {"id": project["id"], "name": name,
+              "url": project.get("web_url", ""), "branch": branch}
+    if project.get("empty_repo") or not branch:
         record["status"] = "empty"
-        return record, None
+        return record
     params = urllib.parse.urlencode({"sha": branch, "include_lfs_blobs": "false"})
-    url = API + "/projects/" + str(project["id"]) + "/repository/archive.zip?" + params
+    endpoint = API + "/projects/" + str(project["id"]) + "/repository/archive.zip?" + params
     try:
-        payload = fetch(url, MAX_ZIP)
-        with zipfile.ZipFile(io.BytesIO(payload)) as zf:
-            for member in zf.infolist():
-                if member.is_dir():
-                    continue
-                rel = "/".join(member.filename.split("/")[1:])
-                if not rel or rel.startswith("/") or ".." in rel.split("/") or "\\" in rel:
-                    raise ValueError("Invalid path in downloaded ZIP")
-                if member.file_size > MAX_FILE:
-                    raise ValueError("Source contains oversized file")
-            record["uncompressed_bytes"] = sum(x.file_size for x in zf.infolist() if not x.is_dir())
-            record["file_count"] = sum(not x.is_dir() for x in zf.infolist())
-        record["status"] = "downloaded"
-        return record, payload
+        with tempfile.TemporaryDirectory() as work:
+            tempzip = Path(work) / "gitlab-source.zip"
+            # Retry 429 and transient errors. Do not load ZIP bytes into memory.
+            gitlab_request(endpoint, save_to=tempzip, archive=False)
+            nfiles, nbytes = 0, 0
+            with zipfile.ZipFile(tempzip, "r") as source:
+                for info in source.infolist():
+                    relative = checked_archive_member(info)
+                    if relative is None:
+                        continue
+                    with source.open(info) as src, target.open(
+                        "repositories/" + name + "/" + relative,
+                        mode="w", force_zip64=True,
+                    ) as dest:
+                        shutil.copyfileobj(src, dest, length=1024 * 1024)
+                    nfiles += 1
+                    nbytes += info.file_size
+            record.update({"status": "downloaded", "files": nfiles,
+                           "uncompressed_bytes": nbytes,
+                           "source_zip_bytes": tempzip.stat().st_size})
     except Exception as exc:
-        record["status"] = "error"
-        record["error"] = (type(exc).__name__ + ": " + str(exc))[:220]
-        return record, None
+        record.update({"status": "error", "error": (type(exc).__name__ + ": " + str(exc))[:240]})
+    return record
+
 
 def main():
-    all_projects = discover()
-    selected = [p for p in all_projects if eligible(p)]
-    print("Public projects", len(all_projects), "eligible", len(selected), flush=True)
+    projects, failed_groups = discover()
+    print("Public projects", len(projects), "eligible", len(projects), flush=True)
     output = Path("output/ai-village-gitlab-public.zip")
     output.parent.mkdir(parents=True, exist_ok=True)
-    records, total_bytes = [], 0
+    records = []
     with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED,
-                         compresslevel=6, allowZip64=True) as dst:
-        with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
-            for i, (record, payload) in enumerate(pool.map(download, selected), 1):
-                if payload:
-                    if record["uncompressed_bytes"] + total_bytes > MAX_TOTAL:
-                        record["status"] = "bundle_limit"
-                    else:
-                        with zipfile.ZipFile(io.BytesIO(payload)) as src:
-                            root = "repositories/" + record["name"] + "/"
-                            for member in src.infolist():
-                                if member.is_dir():
-                                    continue
-                                rel = "/".join(member.filename.split("/")[1:])
-                                dst.writestr(root + rel, src.read(member))
-                        total_bytes += record["uncompressed_bytes"]
-                records.append(record)
-                if record["status"] in ("error", "bundle_limit"):
-                    print("OMITTED", record["name"], record["status"], record.get("error", ""), flush=True)
-                if i % 25 == 0 or i == len(selected):
-                    print("Downloaded", i, "/", len(selected), flush=True)
-        counts = {state: sum(p["status"] == state for p in records)
-                  for state in ("downloaded", "error", "empty", "bundle_limit")}
-        manifest = {"generated_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
-                    "scope": "Public AI Village GitLab projects (root and subgroups)",
-                    "note": "Default branch snapshots only; private repositories, Git history, and LFS binaries are not included. No keyword-based project exclusions.",
-                    "public_projects_found": len(all_projects),
-                    "counts": counts, "projects": records}
-        dst.writestr("MANIFEST.json", json.dumps(manifest, indent=2))
-        dst.writestr("README.txt", "AI Village public GitLab repositories; default-branch file snapshots.\n"
-                     "Browse repositories/ for files and MANIFEST.json for all included and failed records.\n"
-                     "Not a Git history, private repository, or Git LFS export.\n")
-    summary = os.getenv("GITHUB_STEP_SUMMARY")
-    if summary:
-        with open(summary, "a", encoding="utf-8") as handle:
-            handle.write("## GitLab archive\n\n" + json.dumps(counts) +
-                         f"\n\nPublic found: {len(all_projects)}; output bytes: {output.stat().st_size}.\n")
+                         compresslevel=1, allowZip64=True) as target:
+        for index, project in enumerate(projects, 1):
+            record = export_project(project, target)
+            records.append(record)
+            if record["status"] == "error":
+                print("OMITTED", record["name"], record["error"], flush=True)
+            if index % 25 == 0 or index == len(projects):
+                print("Processed", index, "/", len(projects),
+                      "success", sum(r["status"] == "downloaded" for r in records),
+                      flush=True)
+        counts = dict(collections.Counter(r["status"] for r in records))
+        manifest = {
+            "generated_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+            "scope": "Discoverable public AI Village GitLab projects",
+            "note": "Default-branch files; no Git history or LFS blobs. No artificial size exclusions. Disk and GitHub artifact limits still apply.",
+            "public_projects_found": len(projects),
+            "failed_group_enumerations": failed_groups,
+            "counts": counts, "projects": records,
+        }
+        target.writestr("MANIFEST.json", json.dumps(manifest, indent=2))
+        target.writestr("README.txt", "Public AI Village GitLab default-branch snapshots.\n"
+                         "See MANIFEST.json for included, empty, and failed repositories.\n")
     print("ARCHIVE", output, "bytes", output.stat().st_size, "counts", counts, flush=True)
+    if summary := __import__("os").environ.get("GITHUB_STEP_SUMMARY"):
+        with open(summary, "a", encoding="utf-8") as file:
+            file.write("## AI Village archive\n\n" + json.dumps(counts) +
+                       f"\n\nPublic projects: {len(projects)}; ZIP bytes: {output.stat().st_size}\n")
 
 if __name__ == "__main__":
     main()
