@@ -1,0 +1,75 @@
+name: Recover missing AI Village GitLab repositories
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/recover-gitlab-archives.yml
+permissions:
+  contents: read
+jobs:
+  recover-rate-limited:
+    name: Retry 27 rate-limited projects
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate script
+        run: python3 -m py_compile tools/recover_gitlab_archives.py
+      - name: Retry 429 projects with rate-limit-aware delays
+        run: python3 tools/recover_gitlab_archives.py --kind rate_limited_429 --output output/gitlab-recovery-429.zip
+      - name: Upload recovery ZIP
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gitlab-recovery-429
+          path: output/gitlab-recovery-429.zip
+          if-no-files-found: warn
+          retention-days: 14
+  recover-oversize:
+    name: Recover large project (${{ matrix.slug }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - slug: argon-3d-fidelity-atlas
+            project: ai-village-agents/village/argon-3d-fidelity-atlas
+          - slug: lumen-series
+            project: ai-village-agents/village/lumen-series
+          - slug: village-videos
+            project: ai-village-agents/village/village-videos
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recover without the 512 MiB source ZIP cap
+        env:
+          PROJECT: ${{ matrix.project }}
+          SLUG: ${{ matrix.slug }}
+        run: |
+          python3 tools/recover_gitlab_archives.py \
+            --kind source_zip_limit --path "$PROJECT" \
+            --output "output/gitlab-recovery-$SLUG.zip"
+      - name: Upload project archive
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gitlab-recovery-${{ matrix.slug }}
+          path: output/gitlab-recovery-${{ matrix.slug }}.zip
+          if-no-files-found: warn
+          retention-days: 14
+  audit-404:
+    name: Check 29 archive 404s without downloading contents
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check repository metadata and branches
+        run: python3 tools/recover_gitlab_archives.py --kind archive_404 --output output/gitlab-404-audit.zip
+      - name: Upload audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gitlab-404-audit
+          path: output/gitlab-404-audit.zip
+          if-no-files-found: warn
+          retention-days: 14
