@@ -1,0 +1,142 @@
+name: AI Village same-model topics with Argon 3D atlas
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/online-all-files-with-argon.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  atlas-smoke-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare Python
+        run: |
+          python3 -m pip install --disable-pip-version-check 'scikit-learn>=1.5,<2' 'numpy>=1.26,<3' joblib
+          python3 -m py_compile tools/online_all_file_topics.py
+      - name: Test combined-archive learning with the recovered Atlas format
+        run: |
+          mkdir -p scratch
+          python3 - <<'PY'
+          import json,zipfile
+          from pathlib import Path
+          base_manifest={"projects":[],"represented_project_count":8,"archived_project_count":8}
+          with zipfile.ZipFile("scratch/base.zip","w") as base:
+              for group in ["sailing","stories","research","poetry","music","science","games","news"]:
+                  repo="ai-village-agents/village/"+group
+                  base_manifest["projects"].append({"name":repo})
+                  for i in range(20):
+                      base.writestr(f"repositories/{repo}/docs/{group}-{i}.md",
+                                    f"# {group} analysis\nThe {group} notes and methods. "*16)
+              base.writestr("COMBINED_MANIFEST.json",json.dumps(base_manifest))
+          atlas="ai-village-agents/village/argon-3d-fidelity-atlas"
+          with zipfile.ZipFile("scratch/atlas.zip","w") as addon:
+              for i in range(20):
+                  addon.writestr(f"repositories/{atlas}/docs/atlas-{i}.md",
+                                "# Argon atlas 3d fidelity mesh geometry observations. "*17)
+              addon.writestr("MANIFEST.json",json.dumps({"results":[{"path":atlas,"status":"archived","files":20}]}))
+          print("Synthetic 160 base files + 20 Argon files")
+          PY
+          python3 tools/online_all_file_topics.py \
+            --input scratch/base.zip --atlas-recovery scratch/atlas.zip \
+            --output scratch/sorted \
+            --microclusters 8 --merge-distance 0.25 --batch-size 32
+          python3 - <<'PY'
+          import json,csv,zipfile
+          from pathlib import Path
+          root=Path("scratch/sorted")
+          d=json.loads((root/"LEARNED_TOPICS.json").read_text())
+          rows=list(csv.DictReader((root/"FILE_INDEX.csv").open()))
+          assert d["training_file_count"] == d["assigned_file_count"] == 180
+          assert d["atlas_file_count"] == 20
+          assert d["included_project_count"] == 9
+          assert len(rows) == len({r["original_archive_path"] for r in rows}) == 180
+          assert len([r for r in rows if "argon-3d-fidelity-atlas" in r["repository"]]) == 20
+          names=[]
+          for z in (root/"categories").glob("*.zip"):
+              with zipfile.ZipFile(z) as f:
+                  names.extend(x.filename for x in f.infolist())
+          assert len(names) == len(set(names)) == 180
+          print("PASS: every original and Atlas file trained, predicted, and preserved")
+          PY
+  full-with-argon:
+    needs: atlas-smoke-test
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare free disk space and classifier dependencies
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/hostedtoolcache
+          python3 -m pip install --disable-pip-version-check 'scikit-learn>=1.5,<2' 'numpy>=1.26,<3' joblib
+          df -h .
+      - name: Download base 2741-repository archive
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 41331003002
+          artifact-ids: 13093532239
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: input/base
+      - name: Download separately recovered Argon atlas
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 41329270125
+          artifact-ids: 13094482821
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: input/atlas
+      - name: Check both ZIP archives and storage before training
+        run: |
+          df -h .
+          find input -type f -printf "%p: %s bytes\n"
+          python3 - <<'PY'
+          from pathlib import Path
+          import zipfile
+          paths=list(Path("input").rglob("*.zip"))
+          print("ZIPs:",[(str(p),p.stat().st_size) for p in paths])
+          assert len(paths)==2,paths
+          for p in paths:
+              with zipfile.ZipFile(p) as z:
+                  assert z.testzip() is None if p.stat().st_size < 100000 else z.namelist()
+          PY
+      - name: Train and classify every file across both ZIPs with one fitted model
+        run: |
+          python3 tools/online_all_file_topics.py \
+            --input input/base/ai-village-gitlab-2741-excluding-argon/ai-village-gitlab-2741-excluding-argon.zip \
+            --atlas-recovery input/atlas/gitlab-atlas-retry/gitlab-atlas-retry.zip \
+            --output output/online-with-argon \
+            --microclusters 48 --merge-distance 0.42 \
+            --batch-size 1024 --text-bytes 4096
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path("output/online-with-argon/LEARNED_TOPICS.json").read_text())
+          assert x["atlas_file_count"]>0
+          assert x["included_project_count"]==2742
+          assert x["training_file_count"]==x["assigned_file_count"]==2639172+x["atlas_file_count"]
+          assert sum(t["files"] for t in x["topics"])==x["assigned_file_count"]
+          print("VERIFIED",x["training_file_count"],"all-project files,",
+                x["atlas_file_count"],"of which came from Argon,",
+                x["learned_final_topic_count"],"learned topics")
+          PY
+          df -h .
+      - name: Upload complete learned topic inventory and the model itself
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-with-argon-model-and-index
+          path: |
+            output/online-with-argon/LEARNED_TOPICS.json
+            output/online-with-argon/TRAINED_MODEL.joblib
+            output/online-with-argon/FILE_INDEX.csv
+          if-no-files-found: error
+          retention-days: 14
+      - name: Upload all automatically discovered category ZIPs including Argon
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-with-argon-category-zips
+          path: output/online-with-argon/categories/*.zip
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14
