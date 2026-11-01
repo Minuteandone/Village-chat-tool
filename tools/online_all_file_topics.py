@@ -55,6 +55,76 @@ CAMEL = re.compile(r"(?<=[a-z])(?=[A-Z])")
 EXCLUDE = "ai-village-agents/village/argon-3d-fidelity-atlas"
 
 
+
+class CombinedArchives:
+    """Read two ZIP64 exports as one source without making a 40+ GB merged ZIP.
+
+    All ZipInfo references retain their owning ZipFile. Atlas is checked against
+    its recovery manifest and is the only supplemental project allowed.
+    """
+    def __init__(self, base_file, atlas_file=None):
+        self.base = zipfile.ZipFile(base_file, "r", allowZip64=True)
+        self.atlas = None
+        try:
+            self.manifest = json.loads(self.base.read("COMBINED_MANIFEST.json"))
+            self._infos = list(self.base.infolist())
+            self.atlas_member_count = 0
+            self.atlas_bytes = 0
+            self.atlas_ids = set()
+            if atlas_file is not None:
+                self.atlas = zipfile.ZipFile(atlas_file, "r", allowZip64=True)
+                meta = json.loads(self.atlas.read("MANIFEST.json"))
+                matches = [r for r in meta.get("results", []) if r.get("path") == EXCLUDE
+                           and r.get("status") == "archived"]
+                if len(matches) != 1 or len(meta.get("results", [])) != 1:
+                    raise ValueError("Argon recovery manifest is not a successful one-project archive")
+                if any(row.get("name") == EXCLUDE for row in self.manifest["projects"]):
+                    raise ValueError("Atlas already exists in base manifest: refusing duplication")
+                prefix = "repositories/" + EXCLUDE + "/"
+                atlas_infos = self.atlas.infolist()
+                bad = [z.filename for z in atlas_infos
+                       if z.filename.startswith("repositories/") and not z.filename.startswith(prefix)]
+                if bad:
+                    raise ValueError(f"Unexpected repository in Atlas recovery archive: {bad[:3]}")
+                members = [z for z in atlas_infos if not z.is_dir() and z.filename.startswith(prefix)]
+                if not members:
+                    raise ValueError("Atlas ZIP did not contain repository files")
+                if matches[0].get("files") != len(members):
+                    raise ValueError("Atlas member count differs from recovery manifest")
+                self.atlas_ids = {id(info) for info in atlas_infos}
+                self._infos.extend(members)
+                self.atlas_member_count = len(members)
+                self.atlas_bytes = sum(z.file_size for z in members)
+                self.manifest["projects"].append({"name": EXCLUDE, "status": "archived",
+                                                   "source": "argon_recovered_large_archive"})
+                self.manifest["represented_project_count"] = len(self.manifest["projects"])
+                self.manifest["archived_project_count"] = self.manifest.get("archived_project_count", 2712) + 1
+                print("ARGON INCLUDED", self.atlas_member_count, "files;",
+                      self.atlas_bytes, "uncompressed bytes;",
+                      "combined projects", self.manifest["represented_project_count"], flush=True)
+        except Exception:
+            self.close()
+            raise
+
+    def infolist(self):
+        return self._infos
+
+    def open(self, info, mode="r"):
+        if self.atlas is not None and id(info) in self.atlas_ids:
+            return self.atlas.open(info, mode=mode)
+        return self.base.open(info, mode=mode)
+
+    def close(self):
+        if self.atlas is not None:
+            self.atlas.close()
+        self.base.close()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_value, tb):
+        self.close()
+
 def text_tokens(value):
     return [w for w in WORD.findall(CAMEL.sub(" ", value.lower())) if w not in BORING]
 
@@ -132,8 +202,8 @@ def inventory(archive, manifest):
             skipped.append(info.filename)
             continue
         repo, _ = match
-        if repo == EXCLUDE:
-            raise ValueError("Deliberately excluded Atlas repository was found in archive")
+        if repo == EXCLUDE and getattr(archive, "atlas", None) is None:
+            raise ValueError("Atlas unexpectedly found without --atlas-recovery")
         by_repo[repo].append(i)
     if skipped:
         raise RuntimeError(f"{len(skipped)} unmatched repository file paths: {skipped[:3]}")
@@ -315,6 +385,8 @@ def classify_all(archive, positions, by_repo, known, vectorizer, model,
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=Path, required=True)
+    parser.add_argument("--atlas-recovery", type=Path, default=None,
+                        help="Successful standalone Argon recovery ZIP; all files added to training and sorting")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--microclusters", type=int, default=48)
     parser.add_argument("--merge-distance", type=float, default=0.42)
@@ -322,8 +394,10 @@ def main():
     parser.add_argument("--text-bytes", type=int, default=4096)
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
-    with zipfile.ZipFile(args.input, "r", allowZip64=True) as archive:
-        manifest = json.loads(archive.read("COMBINED_MANIFEST.json"))
+    with CombinedArchives(args.input, args.atlas_recovery) as archive:
+        manifest = archive.manifest
+        atlas_files = archive.atlas_member_count
+        atlas_bytes = archive.atlas_bytes
         positions, by_repo, expected, known = inventory(archive, manifest)
         if expected < args.microclusters:
             parser.error("microclusters exceed the available file count")
@@ -347,6 +421,10 @@ def main():
         "generated_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "description": "Streaming unsupervised clustering trained on and used to predict every archived file",
         "input": args.input.name,
+        "supplemental_atlas": args.atlas_recovery.name if args.atlas_recovery else None,
+        "atlas_file_count": atlas_files,
+        "atlas_uncompressed_bytes": atlas_bytes,
+        "included_project_count": manifest["represented_project_count"],
         "training_file_count": trained,
         "assigned_file_count": assigned,
         "text_prefix_inspected_count": text_read,
