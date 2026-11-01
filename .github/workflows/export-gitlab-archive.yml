@@ -1,10 +1,6 @@
 name: Export AI Village GitLab repositories
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - tools/export_gitlab_archives.py
-      - .github/workflows/export-gitlab-archive.yml
 permissions:
   contents: read
 jobs:
