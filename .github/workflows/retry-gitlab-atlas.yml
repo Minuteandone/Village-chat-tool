@@ -1,0 +1,28 @@
+name: Retry large AI Village atlas repository
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/retry-gitlab-atlas.yml
+permissions:
+  contents: read
+jobs:
+  atlas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Retry the large atlas archive using disk streaming and a longer timeout
+        run: |
+          python3 tools/recover_gitlab_archives.py \
+            --kind source_zip_limit \
+            --path ai-village-agents/village/argon-3d-fidelity-atlas \
+            --output output/gitlab-atlas-retry.zip
+      - name: Upload result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gitlab-atlas-retry
+          path: output/gitlab-atlas-retry.zip
+          if-no-files-found: warn
+          retention-days: 14
