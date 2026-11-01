@@ -1,0 +1,25 @@
+name: Audit AI Village GitLab exclusions (metadata only)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - tools/audit_gitlab_exclusions.py
+      - .github/workflows/audit-gitlab-exclusions.yml
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test exclusion regex against GitLab project metadata
+        run: python3 tools/audit_gitlab_exclusions.py
+      - name: Upload metadata-only report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gitlab-exclusions-metadata-audit
+          path: output/gitlab-exclusion-audit.json
+          if-no-files-found: warn
+          retention-days: 7
