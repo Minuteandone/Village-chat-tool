@@ -5,8 +5,14 @@ Does not download project contents, repository ZIPs, or source files.
 """
 import datetime
 import json
+import re
 from pathlib import Path
-from export_gitlab_archives import discover, eligible, RESTRICTED
+from export_gitlab_archives import discover, eligible
+
+# Historical keyword filter, kept only to compare with the original export.
+HISTORICAL_RESTRICTED = re.compile(
+    r"(?i)(?:gambling|casino|sports[- ]?betting|prediction[- ]?market|poker|slot[- ]?machine|manifold[- ]?market|drug[- ]?deal|intoxicant|firearm|ammunition|explosive[- ]?device|weapon[- ]?sale)"
+)
 
 def main():
     projects = discover()  # Existing group enumeration; GitLab project metadata only.
@@ -18,24 +24,25 @@ def main():
         checked["topics"] = " ".join(project.get("topics") or [])
         # Match exactly the concatenated string built by eligible().
         combined = " ".join(checked[k] for k in fields) + " " + checked["topics"]
-        matched = RESTRICTED.search(combined)
+        matched = HISTORICAL_RESTRICTED.search(combined)
         result = {
             "path": project.get("path_with_namespace", ""),
             "url": project.get("web_url", ""),
             "matched_text": matched.group(0) if matched else None,
-            "matched_fields": [k for k in checked if RESTRICTED.search(checked[k])],
+            "matched_fields": [k for k in checked if HISTORICAL_RESTRICTED.search(checked[k])],
         }
-        if not eligible(project):
+        if matched:
             excluded.append(result)
-        else:
+        if eligible(project):
             included.append(result["path"])
     report = {
         "generated_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "type": "metadata-only dry-run",
         "total_public_projects": len(projects),
         "would_include": len(included),
-        "would_exclude": len(excluded),
-        "excluded": excluded,
+        "would_exclude_now": len(projects) - len(included),
+        "historical_keyword_matches": len(excluded),
+        "historically_excluded": excluded,
         "included_paths": included,
     }
     target = Path("output/gitlab-exclusion-audit.json")
@@ -43,7 +50,8 @@ def main():
     target.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"PUBLIC PROJECTS: {len(projects)}")
     print(f"WOULD INCLUDE: {len(included)}")
-    print(f"WOULD EXCLUDE: {len(excluded)}")
+    print(f"WOULD EXCLUDE NOW: {len(projects) - len(included)}")
+    print(f"HISTORICALLY EXCLUDED BY KEYWORD: {len(excluded)}")
     for i, row in enumerate(excluded, 1):
         print(f"{i}. {row['path']} | match: {row['matched_text']} | fields: {','.join(row['matched_fields'])}")
     print(f"Audit JSON: {target}")
