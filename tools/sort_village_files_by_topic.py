@@ -145,7 +145,9 @@ def classify(repo, relative, info, sample):
     fname = Path(relative).name
     stem = Path(relative).stem
     suffix = Path(relative).suffix.lower()
-    repo_words = set(tokens(repo))
+    # ai-village-agents and its top-level scope appear in every project;
+    # removing them avoids falsely classifying every file as an AI agent file.
+    repo_words = set(tokens(" ".join(repo.split("/")[2:])))
     path_words = set(tokens(relative))
     file_words = set(tokens(stem))
     # Head only: reading the beginning lets large files be sorted safely.
