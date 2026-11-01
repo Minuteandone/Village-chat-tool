@@ -1,0 +1,225 @@
+name: Sort AI Village files into topic ZIPs
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/sort-village-files.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check classifier using a synthetic mini archive
+        run: |
+          python3 -m py_compile tools/sort_village_files_by_topic.py
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, zipfile
+          base=Path("scratch");base.mkdir(exist_ok=True)
+          files = {
+            "ai-village-agents/village/questgame/combat.py": "player inventory sword quest dungeon gameplay",
+            "ai-village-agents/open-chat/forecast-bot/prices.py": "economic forecasting market prediction price trends",
+            "ai-village-agents/village/cinema/film.mp4": "fake data only in a video file",
+            "ai-village-agents/village/notes/README.md": "a general reference document",
+          }
+          manifest={"represented_project_count":4,"archived_project_count":4,
+                   "excluded_project":"ai-village-agents/village/argon-3d-fidelity-atlas",
+                   "projects":[{"name":x.rsplit("/",1)[0]} for x in files]}
+          with zipfile.ZipFile(base/"mini.zip","w") as z:
+              z.writestr("COMBINED_MANIFEST.json",json.dumps(manifest))
+              for path,content in files.items():
+                  z.writestr("repositories/"+path,content)
+          PY
+          python3 tools/sort_village_files_by_topic.py --input scratch/mini.zip --output scratch/sorted
+          python3 - <<'PY'
+          import csv, json, zipfile
+          r=json.load(open("scratch/sorted/TOPIC_REPORT.json"))
+          assert r["total_files_sorted"]==4, r
+          assert r["error_count"]==0, r
+          x=list(csv.DictReader(open("scratch/sorted/FILE_INDEX.csv")))
+          assert len(x)==4
+          assert next(p for p in x if p["original_archive_path"].endswith("film.mp4"))["topic"]=="video-animation"
+          assert next(p for p in x if p["original_archive_path"].endswith("combat.py"))["topic"]=="games-simulations"
+          print("SMOKE TEST PASSED", {item["topic"]:item["repository_relative_path"] for item in x})
+          PY
+  categorize:
+    needs: smoke-test
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - name: Free disk space
+        run: |
+          df -h .
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/hostedtoolcache
+          df -h .
+      - name: Download combined 2741-project ZIP
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 41331003002
+          artifact-ids: 13093532239
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: input
+      - name: Sort every file by name path type and content
+        run: |
+          python3 tools/sort_village_files_by_topic.py \
+            --input input/ai-village-gitlab-2741-excluding-argon/ai-village-gitlab-2741-excluding-argon.zip \
+            --output output/topics
+          df -h .
+      - name: Upload searchable index and category report
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-index-and-report
+          path: |
+            output/topics/FILE_INDEX.csv
+            output/topics/TOPIC_REPORT.json
+          compression-level: 6
+          retention-days: 14
+      - name: Upload ai-agents ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-ai-agents
+          path: output/topics/categories/ai-agents.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload machine-learning ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-machine-learning
+          path: output/topics/categories/machine-learning.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload games-simulations ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-games-simulations
+          path: output/topics/categories/games-simulations.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload web-apps ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-web-apps
+          path: output/topics/categories/web-apps.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload messaging-collaboration ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-messaging-collaboration
+          path: output/topics/categories/messaging-collaboration.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload economics-markets ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-economics-markets
+          path: output/topics/categories/economics-markets.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload science-research ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-science-research
+          path: output/topics/categories/science-research.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload history-archives ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-history-archives
+          path: output/topics/categories/history-archives.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload education-learning ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-education-learning
+          path: output/topics/categories/education-learning.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload creative-writing ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-creative-writing
+          path: output/topics/categories/creative-writing.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload music-audio ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-music-audio
+          path: output/topics/categories/music-audio.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload visual-art-3d ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-visual-art-3d
+          path: output/topics/categories/visual-art-3d.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload video-animation ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-video-animation
+          path: output/topics/categories/video-animation.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload data-datasets ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-data-datasets
+          path: output/topics/categories/data-datasets.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload developer-tools ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-developer-tools
+          path: output/topics/categories/developer-tools.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload testing-prototypes ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-testing-prototypes
+          path: output/topics/categories/testing-prototypes.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload documents-reference ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-documents-reference
+          path: output/topics/categories/documents-reference.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
+      - name: Upload miscellaneous ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-topic-miscellaneous
+          path: output/topics/categories/miscellaneous.zip
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
