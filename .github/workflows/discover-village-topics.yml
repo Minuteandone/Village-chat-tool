@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/discover-village-topics.yml
+      - tools/discover_village_topics.py
 permissions:
   contents: read
   actions: read
