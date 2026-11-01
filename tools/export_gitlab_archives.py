@@ -6,7 +6,6 @@ import io
 import json
 import os
 import random
-import re
 import time
 import urllib.error
 import urllib.parse
@@ -20,10 +19,6 @@ GROUPS = ["ai-village-agents", "ai-village-agents/village",
 MAX_ZIP = 256 * 1024 * 1024
 MAX_FILE = 128 * 1024 * 1024
 MAX_TOTAL = 4 * 1024 * 1024 * 1024
-RESTRICTED = re.compile(
-    r"(?i)(?:gambling|casino|sports[- ]?betting|prediction[- ]?market|poker|slot[- ]?machine|manifold[- ]?market|drug[- ]?deal|intoxicant|firearm|ammunition|explosive[- ]?device|weapon[- ]?sale)"
-)
-
 def fetch(url, limit=None):
     for attempt in range(4):
         try:
@@ -66,10 +61,8 @@ def discover():
     return sorted(discovered.values(), key=lambda p: p.get("path_with_namespace", ""))
 
 def eligible(project):
-    text = " ".join(str(project.get(field) or "") for field in
-                    ("name", "path_with_namespace", "description"))
-    text += " " + " ".join(project.get("topics") or [])
-    return RESTRICTED.search(text) is None
+    # No keyword-based exclusions: preserve every discoverable public project.
+    return project.get("visibility") == "public"
 
 def download(project):
     branch = project.get("default_branch")
@@ -104,7 +97,6 @@ def download(project):
 def main():
     all_projects = discover()
     selected = [p for p in all_projects if eligible(p)]
-    excluded_count = len(all_projects) - len(selected)
     print("Public projects", len(all_projects), "eligible", len(selected), flush=True)
     output = Path("output/ai-village-gitlab-public.zip")
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -132,8 +124,8 @@ def main():
                   for state in ("downloaded", "error", "empty", "bundle_limit")}
         manifest = {"generated_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
                     "scope": "Public AI Village GitLab projects (root and subgroups)",
-                    "note": "Default branch snapshots only; excludes private repositories, Git history, LFS binaries, and restricted-category projects.",
-                    "public_projects_found": len(all_projects), "restricted_excluded": excluded_count,
+                    "note": "Default branch snapshots only; private repositories, Git history, and LFS binaries are not included. No keyword-based project exclusions.",
+                    "public_projects_found": len(all_projects),
                     "counts": counts, "projects": records}
         dst.writestr("MANIFEST.json", json.dumps(manifest, indent=2))
         dst.writestr("README.txt", "AI Village public GitLab repositories; default-branch file snapshots.\n"
@@ -143,7 +135,7 @@ def main():
     if summary:
         with open(summary, "a", encoding="utf-8") as handle:
             handle.write("## GitLab archive\n\n" + json.dumps(counts) +
-                         f"\n\nPublic found: {len(all_projects)}; excluded: {excluded_count}; output bytes: {output.stat().st_size}.\n")
+                         f"\n\nPublic found: {len(all_projects)}; output bytes: {output.stat().st_size}.\n")
     print("ARCHIVE", output, "bytes", output.stat().st_size, "counts", counts, flush=True)
 
 if __name__ == "__main__":
