@@ -45,13 +45,14 @@ jobs:
       - name: Merge in place and confirm all 2741 expected projects
         run: |
           df -h .
+          find input -maxdepth 3 -type f -printf "%P (%s bytes)\n"
           python3 -m py_compile tools/merge_gitlab_archives.py
           python3 tools/merge_gitlab_archives.py \
-            --base input/main/ai-village-gitlab-public.zip \
+            --base input/main/ai-village-gitlab-public-repositories/ai-village-gitlab-public.zip \
             --patch429 input/recoveries/gitlab-recovery-429.zip \
             --lumen input/recoveries/gitlab-recovery-lumen-series.zip \
             --videos input/recoveries/gitlab-recovery-village-videos.zip \
-            --audit input/audit/gitlab-404-branch-verification.zip \
+            --audit input/audit/gitlab-404-branch-verification/gitlab-404-branch-verification.zip \
             --output output/ai-village-gitlab-2741-excluding-argon.zip
           df -h .
       - name: Upload unified ZIP artifact
