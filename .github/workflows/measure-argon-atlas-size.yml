@@ -1,0 +1,86 @@
+name: Measure Argon Atlas uncompressed size
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/measure-argon-atlas-size.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 130
+    steps:
+      - uses: actions/checkout@v4
+      - name: Free workspace disk
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/hostedtoolcache
+          df -h .
+      - name: Download actual Argon archive
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 41329270125
+          artifact-ids: 13094482821
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: atlas
+      - name: Measure ORIGINAL file bytes directly from ZIP central directory
+        run: |
+          python3 - <<'PY'
+          import json,collections,os,zipfile
+          from pathlib import Path
+          paths=list(Path("atlas").rglob("*.zip"))
+          assert len(paths)==1,paths
+          path=paths[0]
+          with zipfile.ZipFile(path) as z:
+              meta=json.loads(z.read("MANIFEST.json"))
+              rows=[x for x in meta["results"] if x.get("path")=="ai-village-agents/village/argon-3d-fidelity-atlas"]
+              assert len(rows)==1 and rows[0]["status"]=="archived",meta
+              infos=[info for info in z.infolist()
+                     if not info.is_dir() and info.filename.startswith("repositories/ai-village-agents/village/argon-3d-fidelity-atlas/")]
+              size=sum(x.file_size for x in infos)
+              stored=sum(x.compress_size for x in infos)
+              extensions=collections.defaultdict(lambda:[0,0])
+              topfiles=[]
+              for x in infos:
+                  ext=Path(x.filename).suffix.lower() or "(no extension)"
+                  extensions[ext][0]+=1
+                  extensions[ext][1]+=x.file_size
+                  if x.file_size>100*1024*1024:topfiles.append((x.file_size,x.filename))
+              assert size==rows[0]["uncompressed_bytes"],(size,rows[0]["uncompressed_bytes"])
+              assert len(infos)==rows[0]["files"],(len(infos),rows[0]["files"])
+              result={
+                "source":"GitLab archived public Argon 3D Fidelity Atlas snapshot",
+                "source_archive_zip_bytes":path.stat().st_size,
+                "uncompressed_file_bytes":size,
+                "uncompressed_file_gb":size/1e9,
+                "uncompressed_file_gib":size/(1024**3),
+                "member_count":len(infos),
+                "compressed_member_bytes":stored,
+                "ratio":size/path.stat().st_size,
+                "extensions_largest":sorted([{"extension":k,"files":v[0],"bytes":v[1]} for k,v in extensions.items()],
+                                             key=lambda x:-x["bytes"])[:25],
+                "largest_files":[{"bytes":s,"path":n} for s,n in sorted(topfiles,reverse=True)[:15]],
+                "recovery_manifest":rows[0],
+              }
+              Path("argon-measured-size.json").write_text(json.dumps(result,indent=2))
+              print("ARGON_UNCOMPRESSED_BYTES",size,flush=True)
+              print("ARGON_UNCOMPRESSED_GB",round(size/1e9,6),flush=True)
+              print("ARGON_UNCOMPRESSED_GIB",round(size/1024**3,6),flush=True)
+              print("ARGON_ARCHIVED_FILE_COUNT",len(infos),flush=True)
+              print("ARGON_ARCHIVE_COMPRESSED_BYTES",path.stat().st_size,flush=True)
+              print("ARGON_SIZE_BY_EXTENSION",json.dumps(result["extensions_largest"][:12]),flush=True)
+              if os.getenv("GITHUB_STEP_SUMMARY"):
+                  with open(os.environ["GITHUB_STEP_SUMMARY"],"a") as f:
+                      f.write(f"## Argon atlas exact working-tree size\n\n"
+                        f"**Uncompressed file contents:** {size:,} bytes "
+                        f"({size/1e9:,.3f} GB / {size/1024**3:,.3f} GiB)\n\n"
+                        f"**Compressed snapshot:** {path.stat().st_size:,} bytes.\n\n"
+                        f"**Files:** {len(infos):,}.\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: argon-atlas-exact-uncompressed-file-size
+          path: argon-measured-size.json
+          if-no-files-found: error
+          retention-days: 30
