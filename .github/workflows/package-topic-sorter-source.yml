@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/package-topic-sorter-source.yml
+      - tools/discover_village_topics.py
 permissions:
   contents: read
 jobs:
