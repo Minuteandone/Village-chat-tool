@@ -1,0 +1,242 @@
+{
+  "source_workflow_run": 41327050023,
+  "notes": "Only retry 429 and previously oversized; inspect 404 metadata without trying source archive again.",
+  "targets": [
+    {
+      "path": "ai-village-agents/onboarding/claude-3-5-sonnet-onboarding",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/onboarding/claude-3-7-sonnet-onboarding",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/onboarding/claude-opus-4-1-onboarding",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/onboarding/claude-opus-4-onboarding",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/onboarding/gemini-2-5-pro-onboarding",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/onboarding/gemini-3-pro-onboarding",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/onboarding/gpt-4-1-onboarding",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/onboarding/gpt-4o-onboarding",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/onboarding/grok-4-onboarding",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/open-chat/archived-ai-village-object-show",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/open-chat/ballot-api-reform",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/open-chat/botme/botme-qualitative-analysis",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/open-chat/dummy-test-repo-g31",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/open-chat/mcr-test-3542359",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/open-chat/mythic-bond-reflections-test",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/open-chat/pizza-studio",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/open-chat/tansy-wick",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/open-chat/tmp",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/open-chat/village-sandbox",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/open-chat/village-site",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/open-chat/village-soundscape",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/open-chat/village-status",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/open-chat/village-time-guide",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/open-chat/village-time-guide-2",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/village/1843-st-regis-mclaughlin-state-lease-reentry",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/1844-caughnawaga-annuity-commutation-warrant-1935-opinion",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/1845-cattaraugus-cayuga-allegany-seven-schools-before-1846-grants",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/1845-cayuga-cattaraugus-144-versus-114-census-arithmetic",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/1878-new-york-school-laws-two-title-pages-chapter-252-not-353",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/village/1891-singer-hill-seneca-sewing-machine-replevin",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/1891-tonawanda-reservation-table-7549-before-1892-agent-654973",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/1891-tonawanda-schoolhouse-fire-footnote",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/1892-1893-indian-school-attendance-regulations-ration-withholding-conditions",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/1981-image-awards-actress-category-1982-naacp-studio-talks",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/1982-naacp-image-awards-syndicast-late-january-tv-plan",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/1984-providence-rosa-parks-pamphlet-browder-all-public-facilities-overstatement",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/argon-3d-fidelity-atlas",
+      "reason": "source_zip_limit"
+    },
+    {
+      "path": "ai-village-agents/village/computeruse",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/village/deepseek-ethics-bundle-2026-09-30",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/village/evan-response-direct",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/village/evan-responses",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/village/fort-peck-census-nine-person-discrepancy-1903",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/fort-peck-east-end-day-school-building-boys-1903",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/fort-peck-parental-consent-school-placement-policy-1903",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/fort-peck-poplar-school-building-requests-not-built-1903",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/lumen-series",
+      "reason": "source_zip_limit"
+    },
+    {
+      "path": "ai-village-agents/village/quapaw-school-1899-still-open-after-consolidation-proposal",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/quapaw-school-farm-twenty-years-corn-hogs",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/quapaw-school-tank-fire-buckets-1899",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/quapaw-seneca-school-consolidation-1900",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/real-world-3d-fidelity-atlas",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/village/rosa-parks-sclc-1965-banquet-toastmaster-revision",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/rosa-parks-sclc-1971-new-orleans-guest",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/rosa-parks-sclc-1998-missed-inauguration",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/rosa-parks-second-annual-womens-conference-of-concerns-card",
+      "reason": "rate_limited_429"
+    },
+    {
+      "path": "ai-village-agents/village/sf-october-guidance-scalar-audit-2026",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/village/technical-validation-framework",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/village/test-public-project",
+      "reason": "archive_404"
+    },
+    {
+      "path": "ai-village-agents/village/village-videos",
+      "reason": "source_zip_limit"
+    }
+  ]
+}
