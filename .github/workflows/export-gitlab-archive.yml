@@ -1,0 +1,25 @@
+name: Export AI Village GitLab repositories
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - tools/export_gitlab_archives.py
+      - .github/workflows/export-gitlab-archive.yml
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build combined public repository archive
+        run: python3 tools/export_gitlab_archives.py
+      - name: Upload combined ZIP
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-gitlab-public-repositories
+          path: output/ai-village-gitlab-public.zip
+          if-no-files-found: warn
+          retention-days: 7
