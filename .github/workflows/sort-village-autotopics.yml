@@ -1,0 +1,63 @@
+name: AI Village ZIPs from automatically discovered topics
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/sort-village-autotopics.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  sort:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare disk and install topic tools
+        run: |
+          df -h .
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/hostedtoolcache
+          python3 -m pip install --disable-pip-version-check 'scikit-learn>=1.5,<2' 'numpy>=1.26,<3'
+          python3 -m py_compile tools/discover_village_topics.py
+          df -h .
+      - name: Download original 2741-repository combined ZIP
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 41331003002
+          artifact-ids: 13093532239
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: input
+      - name: Learn categories and sort all repository files into discovered-topic ZIPs
+        run: |
+          python3 tools/discover_village_topics.py \
+            --input input/ai-village-gitlab-2741-excluding-argon/ai-village-gitlab-2741-excluding-argon.zip \
+            --output output/auto-topics \
+            --sample-per-repo 22
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path("output/auto-topics/LEARNED_TOPICS.json").read_text())
+          assert p["assigned_file_count"] == 2639172, p["assigned_file_count"]
+          assert p["number_of_discovered_categories"] >= 3
+          assert sum(t["assigned_file_count"] for t in p["topics"]) == p["assigned_file_count"]
+          print("SUCCESS",p["assigned_file_count"],"files in",p["number_of_discovered_categories"],"learned ZIP categories")
+          PY
+          df -h .
+      - name: Upload generated topic inventory and indexed file assignments
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-auto-topic-inventory
+          path: |
+            output/auto-topics/LEARNED_TOPICS.json
+            output/auto-topics/FILE_INDEX.csv
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 14
+      - name: Upload all independently named topic ZIPs (one wrapper artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-village-self-discovered-category-zips
+          path: output/auto-topics/categories/*.zip
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14
