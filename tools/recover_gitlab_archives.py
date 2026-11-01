@@ -58,7 +58,7 @@ def gitlab_request(url, save_to=None, archive=False):
             req = urllib.request.Request(
                 url, headers={"User-Agent": USER_AGENT, "Accept": "*/*"}, method="GET"
             )
-            with urllib.request.urlopen(req, timeout=240) as response:
+            with urllib.request.urlopen(req, timeout=900) as response:
                 if save_to is not None:
                     with open(save_to, "wb") as output:
                         shutil.copyfileobj(response, output, length=1024 * 1024)
@@ -210,7 +210,7 @@ def main():
             else:
                 recover(item["path"], record, destination)
             records.append(record)
-            print(f"{i}/{len(matching)} {record['path']} => {record['status']}", flush=True)
+            print(f"{i}/{len(matching)} {record['path']} => {record['status']}", record.get("error", ""), flush=True)
         counts = dict(collections.Counter(record["status"] for record in records))
         report = {
             "source_run": manifest["source_workflow_run"],
