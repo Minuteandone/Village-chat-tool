@@ -1,0 +1,50 @@
+name: One-shot MSM dated server-data public XML diff
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+  issues: write
+jobs:
+  diff:
+    if: >-
+      github.event.issue.number == 3 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.user.login == github.repository_owner &&
+      github.event.comment.user.login == github.repository_owner &&
+      github.event.comment.body == '/msm-xml-dated-diff'
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Compare archived XML file metadata across dates
+        run: |
+          python3 workspace/msm-investigation/msm_dated_server_data_diff.py > "$RUNNER_TEMP/msm-diff.txt" 2>&1
+          head -c 11000 "$RUNNER_TEMP/msm-diff.txt"
+      - name: Save derived JSON report
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add workspace/msm-investigation/msm-dated-server-data-file-diff.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Diff historical My Singing Monsters server-data XML snapshots"
+            auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+            git -c "http.extraheader=AUTHORIZATION: basic $auth" push origin HEAD:main
+          fi
+      - name: Notify issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])
+          text=(p/'msm-diff.txt').read_text(errors='replace') if (p/'msm-diff.txt').exists() else 'No output'
+          (p/'message.json').write_text(json.dumps({'body':'### Dated server-data XML snapshot filename comparison\n\n'+text[:10000]}))
+          PY
+          gh api -X POST "repos/$GITHUB_REPOSITORY/issues/3/comments" --input "$RUNNER_TEMP/message.json"
