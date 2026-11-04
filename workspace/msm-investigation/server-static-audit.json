@@ -1,0 +1,1243 @@
+{
+  "archive_url": "https://archive.org/download/monster-game-server/monster-game-server.zip",
+  "verified_sha1": "df086c9ca4581733f73f2e8aaea1408382232e4d",
+  "archive_bytes": 15170251,
+  "java_count": 155,
+  "selected_classes": {
+    "BreedingLookup.java": {
+      "bytes": 11003,
+      "methods": [
+        "init",
+        "add",
+        "getBreedingResult",
+        "getMonsterBreedWeightContribution",
+        "getDatabaseBreedingComboResult",
+        "findTotalProbability",
+        "probabilityWithTorches"
+      ]
+    },
+    "MemoryMinigameFunctions.java": {
+      "bytes": 1409,
+      "methods": [
+        "canPlayMemoryMinigame",
+        "getMemoryMinigameUserData"
+      ]
+    },
+    "Monster.java": {
+      "bytes": 11203,
+      "methods": [
+        "specialCollectionRate",
+        "getNames",
+        "generateRandomMonsterName",
+        "getGenes",
+        "setTimeToFillSec",
+        "getTimeToFillSec",
+        "isSeasonalMonster",
+        "isDipster",
+        "getCompleteData",
+        "isBoxMonsterType",
+        "getBoxRequirements",
+        "initGoldBoxMonsterRequirements",
+        "isLegendaryMonster",
+        "isGoldUpgradeMonster",
+        "isEtherealMonster",
+        "getGoldBoxMonsterRequirements",
+        "getGoldRareBoxMonsterRequirements",
+        "getLikes",
+        "getDislikes",
+        "getLevel",
+        "getMonsterID",
+        "coinRate",
+        "etherealRate",
+        "beds",
+        "upgradesTo",
+        "getLinkTitle",
+        "getLinkAddress",
+        "setLinkTitle",
+        "setLinkAddress",
+        "setLastUpdated",
+        "isValidMonsterForVersionFromId",
+        "isTrackedUncommon"
+      ]
+    },
+    "MonsterLookup.java": {
+      "bytes": 1646,
+      "methods": [
+        "init",
+        "add",
+        "get",
+        "getFromEntityId",
+        "iterator"
+      ]
+    },
+    "MonsterRareData.java": {
+      "bytes": 331,
+      "methods": []
+    },
+    "PromoLookup.java": {
+      "bytes": 452,
+      "methods": [
+        "init",
+        "add",
+        "get"
+      ]
+    },
+    "QuestLookup.java": {
+      "bytes": 3825,
+      "methods": [
+        "init",
+        "getDefaultTutorialQuests",
+        "getById",
+        "getByName",
+        "getValues"
+      ]
+    },
+    "ScratchTicketFunctions.java": {
+      "bytes": 11034,
+      "methods": [
+        "initializeScratchOff",
+        "getScaledPrizeAmounts",
+        "scaleScratchReward",
+        "roundToHundreds",
+        "getAlternativeMonsterScratch",
+        "getPossibleRare"
+      ]
+    },
+    "ShortenedFuzingList.java": {
+      "bytes": 642,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ]
+    },
+    "TribalQuestLookup.java": {
+      "bytes": 1063,
+      "methods": [
+        "init",
+        "getValues"
+      ]
+    },
+    "GameStateHandler.java": {
+      "bytes": 592850,
+      "methods": [
+        "handleClientRequest",
+        "getPromotions",
+        "deleteComposerTemplate",
+        "saveComposerTemplate",
+        "saveComposerTrack",
+        "dailyLoginBuyback",
+        "diamondsRequiredToComplete",
+        "updateDisplayName",
+        "redeemCode",
+        "transferCode",
+        "adminGetCodes",
+        "serverQuestEvent",
+        "buyEgg",
+        "transferEgg",
+        "sellEgg",
+        "adminHatchNonEgg",
+        "hatchEgg",
+        "hatchingSpeedUp",
+        "feedMonster",
+        "muteMonster",
+        "flipMonster",
+        "moveMonster",
+        "sellMonster",
+        "collectSpecialFromMonster",
+        "collectFromMonster",
+        "nameMonster",
+        "tribalFeedMonster",
+        "adminNameMonster",
+        "adminBoxActivateMonster",
+        "adminFinishedEdit",
+        "boxActivateMonster",
+        "boxPurchaseFillCost",
+        "adminBoxPurchaseFill",
+        "boxPurchaseFill",
+        "boxAddEgg",
+        "boxAddUnderlingEgg",
+        "adminBoxMonsterToggle",
+        "boxAddMonster",
+        "adminBoxToggleMonster",
+        "sendMonsterHome",
+        "deleteParentData",
+        "deleteAssociatedGoldMonster",
+        "testBreeding",
+        "adminQASelectBreedEgg",
+        "breedMonsters",
+        "finishBreeding",
+        "breedingSpeedUp",
+        "processAdminNeighborChangeMsg",
+        "processAdminMultiNeighborChangeMsg",
+        "processMultiNeighborChangeMsg",
+        "generateMonsterHappinessUpdate",
+        "updateMonsterHappiness",
+        "calculateHappiness",
+        "triggerNeighborQuest",
+        "adminChangeUserHappiness",
+        "buyIsland",
+        "changeIsland",
+        "adminPlaceOnGoldIsland",
+        "placeOnGoldIsland",
+        "saveIslandWarpSpeed",
+        "placeOnTribal",
+        "adminSwapTribalMonster",
+        "islandHasTribalMonster",
+        "playerInOtherTribe",
+        "cancelTribeInvite",
+        "declineAllTribeInvites",
+        "cancelTribeRequest",
+        "sendTribeRequest",
+        "sendTribeInvite",
+        "joinTribe",
+        "leaveTribeRequest",
+        "kickTribeRequest",
+        "updateTribeName",
+        "updateIslandName",
+        "refreshTribeRequests",
+        "getRequests",
+        "buyStructure",
+        "addHappyTreeEffects",
+        "moveStructure",
+        "sellStructure",
+        "adminPutDecorationInStorage",
+        "putDecorationInStorage",
+        "adminPutBuddyInFuzer",
+        "putBuddyInFuzer",
+        "adminRemoveDecorationFromStorage",
+        "removeDecorationFromStorage",
+        "adminRemoveBuddyFromFuzer",
+        "removeBuddyFromFuzer",
+        "adminPutMonsterInStorage",
+        "putMonsterInStorage",
+        "adminRemoveMonsterFromStorage",
+        "removeMonsterFromStorage",
+        "megaMonsterMessage",
+        "getTorchGifts",
+        "adminUnlightTorch",
+        "getFriendTorchInfo",
+        "lightTorch",
+        "lightOwnTorch",
+        "adminLightUserTorch",
+        "lightFriendTorch",
+        "startUpgradeStructure",
+        "finishUpgradeStructure",
+        "finishStructure",
+        "flipStructure",
+        "structureSpeedUp",
+        "muteStructure",
+        "startObstacle",
+        "clearObstacle",
+        "clearObstacleSpeedUp",
+        "startBaking",
+        "finishBaking",
+        "bakingSpeedUp",
+        "startFuzing",
+        "finishFuzing",
+        "adminFinishFuzing",
+        "fuzingSpeedUp",
+        "collectFromMine",
+        "questEvent",
+        "solveQuestForUser",
+        "handleQuestEvent",
+        "processNewQuestStatus",
+        "processCompletionEventsAsQuestEvents",
+        "giveNextQuests",
+        "crazyQuestArrayContainsNewQuestId",
+        "questRead",
+        "questCollect",
+        "updateAchievementStatus",
+        "saveAchievement",
+        "createAchievementFromQuest",
+        "processUnclaimedPurchases",
+        "processUncollectedOfferRewards",
+        "processUncollectedGlobalAchRewards",
+        "convertCurrency",
+        "convertDiamondsToCoins",
+        "convertCoinsToEthCurrency",
+        "convertDiamondsToEthCurrency",
+        "convertEthToDiamondsCurrency",
+        "giveMeShit",
+        "viewThirdPartyAd",
+        "viewThirdPartyVideoAd",
+        "adminPurchaseBuyback",
+        "purchaseBuyback",
+        "getFriends",
+        "getRandomTribes",
+        "collectInviteReward",
+        "getFriendVisitData",
+        "getRandomVisitData",
+        "visitSpecificFriendIsland",
+        "setFriendAsFav",
+        "makeMyFriendAFav",
+        "incrTorchesILitCount",
+        "getTribalIslandData",
+        "getRankedIslandData",
+        "loadTopStages",
+        "getIslandRank",
+        "hasRatedIsland",
+        "rateIsland",
+        "loadTopTribes",
+        "getFriendData",
+        "loadFriendsWithFavs",
+        "getMessages",
+        "deleteMessage",
+        "addBbbIdReferral",
+        "completeOffer",
+        "updatePaywall",
+        "goDeeper",
+        "playerHasScratchOff",
+        "playScratchOff",
+        "collectScratchOffPrize",
+        "retrieveMemoryGameGameSettings",
+        "requestFlipMinigameCost",
+        "requestMemoryMinigameCurrentCost",
+        "purchaseFlipGame",
+        "generateFlipPrize",
+        "purchaseMemoryGame",
+        "collectMemoryGamePrize",
+        "collectFlipGamePrize",
+        "addFriend",
+        "removeFriend",
+        "syncFriends",
+        "adminRefreshAll",
+        "getCcu",
+        "logDiamondUsage",
+        "logStarpowerUsage",
+        "getAdminVisitData",
+        "adminMoveUsersMonster",
+        "adminMoveUsersStructure",
+        "adminDestroyUsersMonster",
+        "adminDestroyUsersStructure",
+        "adminSellEgg",
+        "adminBuyEgg",
+        "adminHatchEgg",
+        "adminBuyStructure",
+        "adminBuyIsland",
+        "adminChangeIsland",
+        "adminDestroyIsland",
+        "adminFeedMonster",
+        "adminFinishUpgradeStructure",
+        "adminStartBaking",
+        "adminBakingSpeedUp",
+        "adminStartFuzing",
+        "adminFuzingSpeedUp",
+        "adminBreedingSpeedUp",
+        "adminRemoveBreeding",
+        "adminFinishBreeding",
+        "adminClearObstacleSpeedUp",
+        "adminHatchingSpeedUp",
+        "adminStructureSpeedUp",
+        "adminGetUserQuestInfo",
+        "adminCompleteUserQuest",
+        "adminGiveMeShit",
+        "adminFlipMonster",
+        "adminFlipStructure",
+        "adminKickUser",
+        "getGeneDB",
+        "getTorchGfxDB",
+        "getVersionData",
+        "getMonsterDB",
+        "getStructureDB",
+        "getIslandDB",
+        "getLevelDB",
+        "getScratchOffsDB",
+        "getStoreDB",
+        "getStoreDBv2",
+        "getStickerDB",
+        "retroActiveQuests",
+        "getQuestInfo",
+        "getReplacementStoreStructures",
+        "getTimedEventInfo",
+        "getRareMonsterData",
+        "getMonsterIsland2IslandMapData",
+        "getPlayerInfo",
+        "requestNextRelicReset",
+        "collectDailyReward",
+        "confirmGoalsComplete"
+      ]
+    },
+    "MSMExtension.java": {
+      "bytes": 110110,
+      "methods": [
+        "initGameSettings",
+        "CurrentDBTime",
+        "getInstance",
+        "getScratchOffs",
+        "isDevServer",
+        "scratchOffPrizeSupportedByServerVer",
+        "init",
+        "sendVersionError",
+        "adminCreatePlayerByBBBID",
+        "updateLastLogin",
+        "checkQuestDataForErrors",
+        "isAValidQuest",
+        "createPlayerByBBBID",
+        "createPlayerByID",
+        "createPlayerWithUserRecord",
+        "initializePlayerQuestData",
+        "initializePlayerAchievementData",
+        "initializePlayerGroupsFromUserGroupsTable",
+        "initializeAdvertisementGroup",
+        "initializePlayerScratchTicketData",
+        "initializePlayerIslands",
+        "initializePlayerAds",
+        "initializePlayerMusic",
+        "setupPlayerScratchData",
+        "setupPlayerPromotions",
+        "initializePlayerScientificRevenue",
+        "loadPlayerIslandData",
+        "loadPlayerTribalIslandData",
+        "createPlayerIsland",
+        "createTribalIsland",
+        "joinTribalIsland",
+        "sendPlayerState",
+        "sendQuests",
+        "sendErrorResponse",
+        "sendAdminMessage",
+        "savePlayer",
+        "savePlayerQuests",
+        "savePlayerIsland",
+        "destroy",
+        "loadAndCacheStaticData",
+        "processUnclaimedPurchases",
+        "addScientificRevenueUserTag",
+        "updateScientificRevenueUserTags",
+        "updateTapjoyUserTags",
+        "processUncollectedOfferRewards",
+        "sendGameSettings",
+        "logMessage",
+        "loadGameSettings",
+        "send",
+        "updateSocialUsers"
+      ]
+    },
+    "MSMServerEventHandler.java": {
+      "bytes": 25910,
+      "methods": [
+        "handleLoginData",
+        "userJoinZone",
+        "CreateNewPlayer",
+        "CreateNewBbbIdDbEntry",
+        "CreateNewPlayerDbEntry",
+        "initializeNewPlayerGroups",
+        "initializeFirstIsland",
+        "initializeEmptyQuests",
+        "addUserToInitialGroupsTable",
+        "selectTutorialGroupForNewUser",
+        "selectNoAdvertisementGroupForNewUser",
+        "selectScientificRevenueGroupForNewUser",
+        "selectAdvertisement2018GroupForNewUser",
+        "addUserToGroupTable",
+        "userHasNewerDataThanClientVersion",
+        "getClientLastUpdateVersion",
+        "userLogin",
+        "userLogout",
+        "userDisconnect",
+        "userReconnectSuccess",
+        "userReconnectTry",
+        "send"
+      ]
+    },
+    "PlayerEgg.java": {
+      "bytes": 5205,
+      "methods": [
+        "initFromSFSObject",
+        "getData",
+        "toSFSObject",
+        "toString",
+        "getID",
+        "getType",
+        "getParentID",
+        "setParentID",
+        "getStructureID",
+        "getPreviousName",
+        "getPrevPermaMega",
+        "getTimeRemaining",
+        "getInitialTimeRemaining",
+        "finishHatchingNow",
+        "getCompletionTime",
+        "getStartTime",
+        "reduceHatchingTimeByVideo"
+      ]
+    },
+    "PlayerFuzeBuddy.java": {
+      "bytes": 4507,
+      "methods": [
+        "initStaticData",
+        "initFromSFSObject",
+        "getData",
+        "toSFSObject",
+        "toString",
+        "getStructureID",
+        "getTimeRemaining",
+        "getInitialTimeRemaining",
+        "finishNow",
+        "getCompletionTime",
+        "getStartTime",
+        "getCreate",
+        "getR",
+        "getY",
+        "getB",
+        "reduceFuzingTimeByVideo"
+      ]
+    },
+    "PlayerIsland.java": {
+      "bytes": 55138,
+      "methods": [
+        "toString",
+        "initFromSFSObject",
+        "toSFSObject",
+        "soldMonsterTypes",
+        "initStructures",
+        "initMonsters",
+        "initTribalRequests",
+        "initTribalIslandData",
+        "initTribalQuests",
+        "addChiefData",
+        "getTribalIslandData",
+        "getTribalRequests",
+        "initMonstersFromJson",
+        "initSoldMonstersFromJson",
+        "initStructuresFromJson",
+        "initEggs",
+        "initBreeding",
+        "initBaking",
+        "initFuzeBuddies",
+        "initTorches",
+        "fixMonsterLevels",
+        "checkForInvalidData",
+        "initBuyback",
+        "initLastBred",
+        "setLastPlayerLevel",
+        "setGiMappings",
+        "getIslandMonsterData",
+        "getIslandStructureData",
+        "getIslandVolatileData",
+        "getName",
+        "getID",
+        "getUser",
+        "getType",
+        "getIndex",
+        "getTribalID",
+        "getDateCreated",
+        "getLikes",
+        "getDislikes",
+        "getWarpSpeed",
+        "setWarpSpeed",
+        "isGoldIsland",
+        "isRegularIsland",
+        "isShugaIsland",
+        "isEtherealIsland",
+        "isTribalIsland",
+        "isUnderlingIsland",
+        "isComposerIsland",
+        "isCelestialIsland",
+        "isFireIsland",
+        "getMonsters",
+        "getMonsterByID",
+        "changeMonsterID",
+        "addMonster",
+        "removeMonster",
+        "addToSoldMonsters",
+        "getStructures",
+        "getStructureByID",
+        "addStructure",
+        "removeStructure",
+        "hasMax",
+        "hasHappinessTree",
+        "hasStructure",
+        "numStructuresOfEntTypeOnIsland",
+        "getNextStructureId",
+        "getMonsterBaseBuildTimeForIsland",
+        "getBreeding",
+        "getBreedings",
+        "getBreedCompletionTimeForIsland",
+        "testBreed",
+        "getAvailableEmptyBreedingStructure",
+        "getBusyBreedingStructure",
+        "startNewBreed",
+        "makeNewBreeding",
+        "getBreedResult",
+        "setBreeding",
+        "removeBreeding",
+        "breedingFull",
+        "finishBreeding",
+        "getEgg",
+        "getEggs",
+        "getHatchCompletionTimeForIsland",
+        "addNewEggToIsland",
+        "getAvailableEmptyNursery",
+        "makeNewScratchWinEgg",
+        "makeNewISFSEgg",
+        "setEgg",
+        "removeEgg",
+        "numNurseries",
+        "numBreedingStructures",
+        "eggsFull",
+        "nurseryHasEgg",
+        "getBaking",
+        "getLitTorches",
+        "getBakingByStructureId",
+        "getFuzerBuddies",
+        "getFuzerBuddyByStructureId",
+        "getEggByStructureId",
+        "getBreedingByStructureId",
+        "getBakingByID",
+        "addBaking",
+        "removeBaking",
+        "getNextBakingId",
+        "getFuzeBuddyByID",
+        "addFuzeBuddy",
+        "removeFuzeBuddy",
+        "getNextEggId",
+        "getNextBreedingId",
+        "getNextLitTorchId",
+        "getBuyback",
+        "setBuyback",
+        "hasBuyback",
+        "removeBuyback",
+        "getLastBredUserMonster1",
+        "getLastBredUserMonster2",
+        "setLastBred",
+        "lastBredToSFSObject",
+        "canPlace",
+        "hasMonster",
+        "getWarehouse",
+        "getHotel",
+        "getNumDecorationsInStorage",
+        "getFuzer",
+        "getNumBuddiesInFuzer",
+        "getNumMonstersInStorage",
+        "getNumMonsterBedsInStorage",
+        "bedsAvailable",
+        "getMine",
+        "nurseryStructureSpeedMod",
+        "breedingStructureSpeedMod",
+        "getLitTorchData",
+        "removeLitTorch",
+        "lightTorch",
+        "clearOutOldTorchData",
+        "torchExpired",
+        "getNumLitTorchesOnIsland",
+        "getNumTorchesOnIsland",
+        "isALastBredMonster",
+        "testBreeding"
+      ]
+    },
+    "PlayerMonster.java": {
+      "bytes": 38267,
+      "methods": [
+        "GetRandom",
+        "CachedCollectionTypes",
+        "getCurrencyStrFromType",
+        "createMonsterSFS",
+        "startEggTimer",
+        "eggTimerStart",
+        "collectionOfDyingFetuses",
+        "resetEggTimer",
+        "clearRottenEggs",
+        "initDefaultValues",
+        "initFromSFSObject",
+        "toSFSObject",
+        "DebuggingIslandSet",
+        "toSFSObjectWithoutBoxData",
+        "getMegaSFS",
+        "toString",
+        "getName",
+        "getID",
+        "getType",
+        "getLastCollectedTime",
+        "getLevel",
+        "getParentID",
+        "getTimesFed",
+        "getCollectedCoins",
+        "getCollectedEth",
+        "getCollectedDiamonds",
+        "getCollectedFood",
+        "getCollectedStarpower",
+        "getXPosition",
+        "getYPosition",
+        "getVolume",
+        "getHappiness",
+        "getMuted",
+        "getFlip",
+        "levelUp",
+        "setLevel",
+        "getGoldIslandData",
+        "removeGoldIslandData",
+        "getParentIslandData",
+        "markForDeletion",
+        "inHotel",
+        "setID",
+        "setParentID",
+        "setPosition",
+        "setVolume",
+        "setHappiness",
+        "resetTimesFed",
+        "setName",
+        "toggleMute",
+        "toggleFlip",
+        "setFlip",
+        "feed",
+        "tribalFeed",
+        "setGoldIslandData",
+        "setParentIslandData",
+        "isInactiveBoxMonster",
+        "setBoxMonsterData",
+        "isPermaMega",
+        "megaEnable",
+        "isMega",
+        "isDailyMega",
+        "dailyMegaExpired",
+        "makeMega",
+        "getBoxMonsterPossessedEggs",
+        "getRemainingMonsterTypes",
+        "adminRemoveEgg",
+        "addEgg",
+        "hasNumOfEgg",
+        "numBoxReqsOfTypeReqd",
+        "getBoxRequirements",
+        "boxMonsterBuyPossessedEggsPrice",
+        "boxMonsterSellingPrice",
+        "hasAllRequiredEggs",
+        "needsEgg",
+        "activateBoxMonster",
+        "CurrentCollectionType",
+        "getRandomUnderlingCollectionMin",
+        "resetUnderlingCurrencyType",
+        "validCollectionType",
+        "validRandomTime",
+        "stashCurrency",
+        "GetRandomCollectionType",
+        "collectCurrency",
+        "getEntityId",
+        "setInHotel",
+        "resetLastCollection",
+        "getGoldMonster"
+      ]
+    },
+    "MSMAdminCatchUnreleasedAccount.java": {
+      "bytes": 4763,
+      "methods": [
+        "cancelSchedule",
+        "run",
+        "clearUnreleasedAcccount"
+      ]
+    }
+  },
+  "other_java_files": [
+    "AccountNotFoundException.java",
+    "Advertisement2018Group.java",
+    "AdvertisementGroup.java",
+    "AuthTokenUpdateTask.java",
+    "BBBServerExtension.java",
+    "BBBToken.java",
+    "BaseGroup.java",
+    "BatchingSNSWorker.java",
+    "BrandedAdvertisementGroup.java",
+    "BreedAvailabilityEvent.java",
+    "BreedProbabilityChangeEvent.java",
+    "BreedingCombination.java",
+    "ByteBuffer.java",
+    "CDL.java",
+    "CacheWrapper.java",
+    "CloudWatchReporter.java",
+    "Code.java",
+    "CodeLookup.java",
+    "Cookie.java",
+    "CookieList.java",
+    "CooldownCounter.java",
+    "CurrencyAvailabilityEvent.java",
+    "CurrencyAvailabilityList.java",
+    "CurrencyGroup.java",
+    "CurrencySalesEvent.java",
+    "CurrencySalesList.java",
+    "CustomSerializingTranscoder.java",
+    "DbWrapper.java",
+    "DoubleBuffer.java",
+    "EC2Metadata.java",
+    "Encryption.java",
+    "Entity.java",
+    "EntityAvailList.java",
+    "EntityAvailabilityEvent.java",
+    "EntitySalesEvent.java",
+    "EntitySalesList.java",
+    "FacebookAuthenticationException.java",
+    "Gene.java",
+    "GeneLookup.java",
+    "GooglePlayEvents.java",
+    "HTTP.java",
+    "HTTPTokener.java",
+    "Helpers.java",
+    "HttpPost.java",
+    "ITimedEventTypeList.java",
+    "InitialPlayerIslandData.java",
+    "InvalidPlayerException.java",
+    "Island.java",
+    "IslandLookup.java",
+    "IslandSalesEvent.java",
+    "IslandSalesList.java",
+    "IslandTorch.java",
+    "JSONArray.java",
+    "JSONException.java",
+    "JSONML.java",
+    "JSONObject.java",
+    "JSONString.java",
+    "JSONStringer.java",
+    "JSONTokener.java",
+    "JSONWriter.java",
+    "KeyedTimedEventTypeList.java",
+    "Level.java",
+    "LevelLookup.java",
+    "LitPlayerTorch.java",
+    "MSMCommandLogging.java",
+    "MSMCommands.java",
+    "MSMMonsterLinksReloadTask.java",
+    "MSMServerStatusTask.java",
+    "MSMStats.java",
+    "Mail.java",
+    "MailLookup.java",
+    "MailUpdateTask.java",
+    "MegafySale.java",
+    "MegafySaleList.java",
+    "MetricCost.java",
+    "MetricsRequest.java",
+    "MetricsSessionTask.java",
+    "MigBase64.java",
+    "Misc.java",
+    "MonsterCommonToRareMapping.java",
+    "MonsterIslandData.java",
+    "MonsterIslandToIslandMapping.java",
+    "MonsterMegaData.java",
+    "MsmSession.java",
+    "NoAccountUserBindingFoundException.java",
+    "NoAdvertisementGroup.java",
+    "PermalightTorchSale.java",
+    "PermalightTorchSaleList.java",
+    "Player.java",
+    "PlayerAchievement.java",
+    "PlayerActiveIslandStats.java",
+    "PlayerBaking.java",
+    "PlayerBreeding.java",
+    "PlayerBuyback.java",
+    "PlayerIslandFactory.java",
+    "PlayerQuest.java",
+    "PlayerStructure.java",
+    "Promo.java",
+    "SFSHelpers.java",
+    "SNSWorker.java",
+    "ScientificRevenue.java",
+    "ScientificRevenueGroup.java",
+    "SegmentationGroup.java",
+    "ServerEventHandler.java",
+    "ShortenedFuzing.java",
+    "ShutdownHookThread.java",
+    "SnsWrapper.java",
+    "SqsWrapper.java",
+    "StarAvailList.java",
+    "StarAvailabilityEvent.java",
+    "StarSalesEvent.java",
+    "StarSalesList.java",
+    "Sticker.java",
+    "StickerLookup.java",
+    "StoreCurrencyLookup.java",
+    "StoreGroupsLookup.java",
+    "StoreItemsLookup.java",
+    "StoreReplacementItem.java",
+    "StoreReplacements.java",
+    "Structure.java",
+    "StructureLookup.java",
+    "Test.java",
+    "TimedEvent.java",
+    "TimedEventList.java",
+    "TimedEventListBuilder.java",
+    "TimedEventTypeList.java",
+    "TooManyRecordsReturned.java",
+    "TorchLookup.java",
+    "TutorialGroup.java",
+    "UpdateActiveTimedEvents.java",
+    "UserGroup.java",
+    "UserNotFoundException.java",
+    "VersionData.java",
+    "VersionInfo.java",
+    "WebHelper.java",
+    "XML.java",
+    "XMLTokener.java"
+  ],
+  "sql_schemas": [
+    {
+      "file": "my_singing_monsters_clean_20120810.sql",
+      "tables": [
+        "ads_in_house",
+        "breeding_combinations",
+        "entities",
+        "game_settings",
+        "island_monsters",
+        "island_structures",
+        "islands",
+        "level_xp",
+        "monster_levels",
+        "monsters",
+        "quest_types",
+        "quests",
+        "store_currency",
+        "store_groups",
+        "store_items",
+        "structure_levels",
+        "structures",
+        "user_apple_purchases",
+        "user_baking",
+        "user_breeding",
+        "user_contact_info",
+        "user_eggs",
+        "user_friends",
+        "user_inhouse_ads",
+        "user_islands",
+        "user_messages",
+        "user_monsters",
+        "user_quests",
+        "user_structures",
+        "users"
+      ],
+      "insert_statement_counts": {
+        "ads_in_house": 1,
+        "breeding_combinations": 1,
+        "entities": 1,
+        "game_settings": 1,
+        "island_monsters": 1,
+        "island_structures": 1,
+        "islands": 1,
+        "level_xp": 1,
+        "monster_levels": 1,
+        "monsters": 1,
+        "quest_types": 1,
+        "quests": 1,
+        "store_currency": 1,
+        "store_groups": 1,
+        "store_items": 1,
+        "structures": 1,
+        "user_breeding": 1,
+        "user_islands": 1,
+        "user_quests": 1,
+        "user_structures": 1,
+        "users": 1
+      }
+    },
+    {
+      "file": "tribal_date_updated.sql",
+      "tables": [],
+      "insert_statement_counts": {}
+    }
+  ],
+  "comment_flag_count": 43,
+  "comment_flags": [
+    {
+      "file": "BBBToken.java",
+      "line": 55,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "MigBase64.java",
+      "line": 17,
+      "markers": [
+        "TEMPORARY"
+      ]
+    },
+    {
+      "file": "MigBase64.java",
+      "line": 19,
+      "markers": [
+        "TEMPORARY"
+      ]
+    },
+    {
+      "file": "MigBase64.java",
+      "line": 20,
+      "markers": [
+        "TEMPORARY"
+      ]
+    },
+    {
+      "file": "MigBase64.java",
+      "line": 30,
+      "markers": [
+        "TEMPORARY"
+      ]
+    },
+    {
+      "file": "MigBase64.java",
+      "line": 457,
+      "markers": [
+        "TEMPORARY"
+      ]
+    },
+    {
+      "file": "TutorialGroup.java",
+      "line": 44,
+      "markers": [
+        "DISABLED"
+      ]
+    },
+    {
+      "file": "ScratchTicketFunctions.java",
+      "line": 181,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "ScratchTicketFunctions.java",
+      "line": 184,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 2625,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 3006,
+      "markers": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 5018,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 6303,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 7535,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 7688,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 9183,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 9440,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 9699,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 10172,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 10810,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 10868,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 10886,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 10898,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 16393,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 16454,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 16559,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 16648,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 16730,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 16784,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 16839,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 16992,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 17068,
+      "markers": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 17093,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "MSMExtension.java",
+      "line": 2789,
+      "markers": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "MSMExtension.java",
+      "line": 2795,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "MSMServerEventHandler.java",
+      "line": 667,
+      "markers": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "MSMServerEventHandler.java",
+      "line": 678,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "Player.java",
+      "line": 1155,
+      "markers": [
+        "UNUSED"
+      ]
+    },
+    {
+      "file": "PlayerAchievement.java",
+      "line": 95,
+      "markers": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "PlayerIsland.java",
+      "line": 1680,
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "PlayerMonster.java",
+      "line": 1169,
+      "markers": [
+        "HACK",
+        "TESTING"
+      ]
+    },
+    {
+      "file": "PlayerQuest.java",
+      "line": 268,
+      "markers": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "PlayerStructure.java",
+      "line": 89,
+      "markers": [
+        "FIXME"
+      ]
+    }
+  ],
+  "file_years": {
+    "2020": 188
+  },
+  "inspected_at_utc": "2026-11-04T01:02:11.339544+00:00",
+  "safety": "Only names/metadata; no extracted code, SQL records, credentials, or connection details."
+}
