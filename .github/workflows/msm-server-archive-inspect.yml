@@ -1,0 +1,67 @@
+name: One-shot public MSM server archive provenance inspection
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+  issues: write
+jobs:
+  inspect:
+    if: >-
+      github.event.issue.number == 3 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.user.login == github.repository_owner &&
+      github.event.comment.user.login == github.repository_owner &&
+      github.event.comment.body == '/msm-server-archive-inspect'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Inspect public ZIP content without executing or publishing extracted files
+        shell: bash
+        run: |
+          set +e
+          python3 workspace/msm-investigation/inspect_monster_game_server.py > "$RUNNER_TEMP/inspection.log" 2>&1
+          ec=$?
+          echo "Inspector exit status: $ec"
+          tail -n 130 "$RUNNER_TEMP/inspection.log"
+          echo "$ec" > "$RUNNER_TEMP/inspection-exit.txt"
+      - name: Persist only inventory and redacted textual evidence
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for p in workspace/msm-investigation/monster-game-server-inspection.json workspace/msm-investigation/monster-game-server-inspection.md; do
+            if [[ -f "$p" ]]; then git add -- "$p"; fi
+          done
+          if ! git diff --cached --quiet; then
+            git commit -m "Record public monster-game-server archive file inventory and provenance"
+            auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+            git -c "http.extraheader=AUTHORIZATION: basic $auth" push origin HEAD:main
+          fi
+      - name: Post compact summary in investigation issue
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib,re
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])
+          raw=(p/'inspection.log').read_text(errors='replace') if (p/'inspection.log').exists() else 'No log.'
+          lines=raw.splitlines()
+          wanted=[]
+          for line in lines:
+              if any(s in line for s in ('Verified archive','Types:','Code cues:','Selected docs:','Full tree:','Inspector exit status')):
+                  wanted.append(line[:400])
+          for line in lines[-45:]:
+              if len(line)<500 and len(wanted)<100:wanted.append(line)
+          body='### MSM server archive inspection: public ZIP inventory and authorship clues\n\nNo archive code was executed. Metadata summaries are in workspace/msm-investigation.\n\n~~~text\n'+'\n'.join(wanted)[:14000]+'\n~~~'
+          (p/'post.json').write_text(json.dumps({'body':body}))
+          PY
+          gh api -X POST "repos/$GITHUB_REPOSITORY/issues/3/comments" --input "$RUNNER_TEMP/post.json"
