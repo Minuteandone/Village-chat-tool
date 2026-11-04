@@ -2,7 +2,9 @@
   "korean": {
     "verified_sha1": "2e41a71fdc59be8d4904316adee168c686367e6e",
     "bytes": 51720835,
-    "aapt_badging": [],
+    "aapt_badging": [
+      "package: name='com.yodo1.msm.kr' versionCode='13' versionName='1.0.9' platformBuildVersionName='4.4.2-1456859' platformBuildVersionCode='19'"
+    ],
     "file_count": 2565,
     "extensions": {
       ".xml": 717,
@@ -475,7 +477,9 @@
   "chinese": {
     "verified_sha1": "e5dad967088db4318616f26b642d81080b31931f",
     "bytes": 113810411,
-    "aapt_badging": [],
+    "aapt_badging": [
+      "package: name='com.yodo1.MySingingMonsters.uc' versionCode='151' versionName='1.5.0'"
+    ],
     "file_count": 2661,
     "extensions": {
       ".mf": 1,
