@@ -12,7 +12,8 @@ The original ZIP contains `my_singing_monsters_clean_20120810.sql`. The evidence
 Static scan identified the following conventional MySQL dump structure:
 
 - Header includes `MySQL dump`.
-- Header includes a MySQL server version field: **5.5.20**.
+- Dump utility: **mysqldump 10.13**, client distribution **MySQL 5.5.24**, compiled for **Linux x86_64**.
+- Header independently identifies the **MySQL server version 5.5.20**. Client tool and database server versions are distinct.
 - 30 table-structure sections and 30 table-data sections.
 - A completion marker recording **2012-08-10 22:58:59** (no verifiable timezone).
 - Header does **not** identify phpMyAdmin or Adminer.
@@ -41,7 +42,11 @@ Safe static scan of first-party Java files found AWS-related usages categorized 
 - **S3** cloud storage
 - **ElastiCache/Memcached** caching
 
-Importantly, searching the two SQL files found **zero literal occurrences** of `Amazon` or `AWS`. AWS is in the Java backend and its dependencies, not in the 2012 SQL dump.
+**Correction:** The SQL dump's standard `Host:` header contains a genuine-formatted **Amazon RDS DNS endpoint** in **`us-east-1`**, with database name **`my_singing_monsters`**. This was verified directly in the public archived SQL by a corrected static scanner. Earlier scans misleadingly returned zero *standalone word* occurrences of `Amazon` or `AWS` because `amazonaws.com` contains those strings as substrings rather than separate words. Do not interpret those zero counts as meaning the SQL lacks Amazon references. For security, the full historical endpoint is intentionally omitted from this report.
+
+**Interpretation:** This is direct evidence that the dump was *labelled as exported from an AWS RDS database*, rather than merely packaged with AWS Java libraries. It materially strengthens its provenance as server-side data, but dump headers are editable and this does not independently prove original studio authorship or that the dump came from a live production database. The mysqldump Linux client could have run somewhere other than AWS; the RDS host identifies the database being accessed, not necessarily the machine that generated the backup.
+
+AWS confirms this hostname format: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToInstance.EndpointAndPort.html
 
 The versions' published dates are independently documented:
 - AWS SDK for Java 1.5.0: **July 8, 2013**. Source: https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk/1.5.0
