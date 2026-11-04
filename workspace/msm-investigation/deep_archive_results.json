@@ -1,0 +1,508 @@
+{
+  "generated_utc": "2026-11-04T00:35:35.550056+00:00",
+  "scope": "Public game preservation metadata only; original binary archives remain in runner temporary storage",
+  "metadata_source": "https://archive.org/metadata/msm_official_guide_dlcs",
+  "pc_2021": {
+    "index": "https://debugging.games/Windows",
+    "status": "completed",
+    "entries": [
+      {
+        "title": "[WIN] My Singing Monsters [Manifest 2046132612292651817] [2021-05-18] .7z",
+        "requested_url": "https://debugging.games/_files/Windows/[WIN] My Singing Monsters [Manifest 2046132612292651817] [2021-05-18] .7z",
+        "error": "InvalidURL: URL can't contain control characters. '/_files/Windows/[WIN] My Singing Monsters [Manifest 2046132612292651817] [2021-05-18] .7z' (found at least ' ')"
+      },
+      {
+        "title": "[WIN] My Singing Monsters [Manifest 4651787433336000098] [2021-04-21].7z",
+        "requested_url": "https://debugging.games/_files/Windows/[WIN] My Singing Monsters [Manifest 4651787433336000098] [2021-04-21].7z",
+        "error": "InvalidURL: URL can't contain control characters. '/_files/Windows/[WIN] My Singing Monsters [Manifest 4651787433336000098] [2021-04-21].7z' (found at least ' ')"
+      }
+    ],
+    "index_matches": [
+      {
+        "text": "[WIN] My Singing Monsters [Manifest 2046132612292651817] [2021-05-18] .7z",
+        "href": "/_files/Windows/[WIN] My Singing Monsters [Manifest 2046132612292651817] [2021-05-18] .7z"
+      },
+      {
+        "text": "[WIN] My Singing Monsters [Manifest 4651787433336000098] [2021-04-21].7z",
+        "href": "/_files/Windows/[WIN] My Singing Monsters [Manifest 4651787433336000098] [2021-04-21].7z"
+      }
+    ]
+  },
+  "guide_dlc_bundles": [
+    {
+      "path": "dlc/1280 (1.3.0)/android/Server",
+      "bytes_expected": 1220,
+      "archive_sha1": "56d86aff5b49cffe85756e93a34788b78cad5676",
+      "bytes": 1220,
+      "sha1_verified": true,
+      "config_lines": [
+        "UnityFS\u0000\u0000\u0000\u0000\u00065.x.x\u00002017.4.3f1\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004�\u0000\u0000\u0000A\u0000\u0000\u0000[\u0000\u0000\u0000C",
+        "\u0000\u0001\u0000�\u0001\u0000\u0000\u0012H\u0000\u0000\u0004R\u0000A\u000e\u0000\b",
+        "\u0000\u0000\u001a\u0000�\u0018\u0000\u0004CAB-b256187ebdb96f35466cb698edc0a6fd\u0000]\u0000\u0000\b\u0000\u0000\u0000`/\u0012Y�-ț�9_+[���\"0�;�,�kI�&��&W��h�=j��&N\u0011\u0001T\u000e_�ޟR",
+        "X�a]���o���F)�\"�B��\u0011���|+6�\u0001?���\u0015Q���6/jP�xI�Z�%Q �\u000e�������\t_B��m�",
+        "�T\u0000\u0018q���!�$%�\bH�^�6�����\u0018̵J�×�",
+        "QuM��[!Ì�",
+        "\u000e2�x\u0002�'xQ�q���`a�K�Rb�ٹ��,qX�!v���E8�A\u001aSCxn=����2\u0001\u0011\u001fQ�'",
+        "�Z\u0016�S",
+        "�",
+        "���`�ţ�\u0001�Q�d�OQBm�H2��Y\u001b�XJ���JL�Tk�",
+        "�\\�a8ZۇO\u0006��f�35�����2\u0018$�m�\u0005����|TtL$G�b@\u001a�\u0002���@\b���=4",
+        "S��s+l",
+        "惘[^�ĭ���=b<\u0002\u0000A=�yjfL�\t��u|\u0006��~)�<�ӭZ\u0003q�",
+        "��C/\u0012���e�\u000f�lc\u0004��͈T[&���O��i�2\u000e�b�M\u000f\u0007W�\u0003��?��quPVF�\u0007��9#��pWQ�ǈ������CX�$��JĀ\u0011G��̿�*�⺸$�$ 8",
+        "��\u001a��3\u0003�\u0005�H\b*\u0011�\u0010��@�\u0000!Ph\u0007��\u00037\u0002wb��ߴ����q���x�M�����u\u001bB",
+        "��B�8D��rٖ�f\u0002��^\u0006�:�\u0017#�!�)�!�Y!f\u0010t���\u000e��\u001b\u0001�pް�*���\u001f?������\u001aȱ�\u0012p��",
+        "zh",
+        "�\u001f�,�\u0016���m�M�Eh>�Ԙ��F�Lty��M`�����X^4)ڼ<L���E",
+        "���",
+        "�ͣח����8�\u001f��\tH�\u0001\u0007�1c�\u000e�3",
+        "",
+        "[XK�'\"��b�;�$kh�\u001bR\".W�r[\u0016?�\u001b`\u0019.���2�\u0019�8a��ȴJ�po�{a���ש!�+ ]MH��/�\u0017댱�u4��<ܚ�j�\u0003�:Y�T��Ɩ�\u0002փ\u00116\u0014)&�`\u0006\u001f�l�tI�ޖ��>�q�5C\u0017\u0019\u0018�[�\u0012",
+        "\u000e�v��fI�AP����R��k3{",
+        "�pb�\"O۝",
+        "��UZ_�_�\b�nl\u0004"
+      ],
+      "url_hosts": []
+    },
+    {
+      "path": "dlc/1280 (1.3.0)/android/data.unity3d",
+      "bytes_expected": 49999,
+      "archive_sha1": "47049251cb7a1e63dd904d1ac47ec2a6b920a333",
+      "bytes": 49999,
+      "sha1_verified": true,
+      "unity_object_count": 5,
+      "unity_types": {
+        "MonoScript": 2,
+        "MonoBehaviour": 2,
+        "AssetBundle": 1
+      },
+      "objects_named_or_text": [
+        {
+          "type": "MonoScript",
+          "name": "UISettings"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "UISettings"
+        },
+        {
+          "type": "AssetBundle",
+          "name": "data.unity3d"
+        },
+        {
+          "type": "MonoScript",
+          "name": "AllData"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "AllData"
+        }
+      ]
+    },
+    {
+      "path": "dlc/1280 (1.3.0)/android/localization.unity3d",
+      "bytes_expected": 8715,
+      "archive_sha1": "ad2b9a60c4b32c4482f8e127130d10131e8268d9",
+      "bytes": 8715,
+      "sha1_verified": true,
+      "unity_object_count": 13,
+      "unity_types": {
+        "MonoBehaviour": 8,
+        "MonoScript": 4,
+        "AssetBundle": 1
+      },
+      "objects_named_or_text": [
+        {
+          "type": "MonoBehaviour",
+          "name": "de"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "it"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "settings"
+        },
+        {
+          "type": "MonoScript",
+          "name": "BBBMasterText"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "_master_text"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "localization"
+        },
+        {
+          "type": "MonoScript",
+          "name": "BBBLanguageData"
+        },
+        {
+          "type": "MonoScript",
+          "name": "BBBLocalizerSettings"
+        },
+        {
+          "type": "AssetBundle",
+          "name": "localization.unity3d"
+        },
+        {
+          "type": "MonoScript",
+          "name": "BBBLocalizerConfig"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "es"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "fr"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "en"
+        }
+      ]
+    },
+    {
+      "path": "dlc/1280 (1.3.0)/android/master.unity3d",
+      "bytes_expected": 351855,
+      "archive_sha1": "5e28318ad7ab32a6909931fdf1039c99da8aa347",
+      "bytes": 351855,
+      "sha1_verified": true,
+      "unity_object_count": 5,
+      "unity_types": {
+        "MonoBehaviour": 2,
+        "MonoScript": 2,
+        "AssetBundle": 1
+      },
+      "objects_named_or_text": [
+        {
+          "type": "MonoBehaviour",
+          "name": "GlobalBundleData"
+        },
+        {
+          "type": "MonoScript",
+          "name": "GlobalBundleData"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "GlobalLookupData"
+        },
+        {
+          "type": "AssetBundle",
+          "name": "master.unity3d"
+        },
+        {
+          "type": "MonoScript",
+          "name": "GlobalLookupData"
+        }
+      ]
+    },
+    {
+      "path": "dlc/1383 (sept 26 2019)/android/Server",
+      "bytes_expected": 1252,
+      "archive_sha1": "9657cc7996c359d128c1a3c864b342c03c0ecb47",
+      "bytes": 1252,
+      "sha1_verified": true,
+      "config_lines": [
+        "UnityFS\u0000\u0000\u0000\u0000\u00065.x.x\u00002017.4.22f1\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004�\u0000\u0000\u0000A\u0000\u0000\u0000[\u0000\u0000\u0000C",
+        "\u0000\u0001\u0000�\u0001\u0000\u0000\u0012|\u0000\u0000\u0004q\u0000A\u000e\u0000\b",
+        "\u0000\u0000\u001a\u0000�\u0018\u0000\u0004CAB-b256187ebdb96f35466cb698edc0a6fd\u0000]\u0000\u0000\b\u0000\u0000\u0000`/\u001aW�/�o\u0000Zq?��c*�}�c�������",
+        "U�\u0012�K߄P\u001a�B�\u0014J\u0016Ip�m#z��̢���v_Z>�\u0013�=Y��6i�0��=�&�j]���!cn\u0012K�������Q0E���X\u0012s�z�ٝ*�������2��l�)\u0012&ck��t�hNɟ$(UY&�b�����-��\b�",
+        "�U��{\u0002\u0014\u0013Y2{x�ʦ��",
+        "�����\u000e�W�˳�v�\u001a��1�",
+        "\u0012HԴ��7�[!\"� �u",
+        ")R�\u0002˰����\u0006H\u0002�K�?�E5��{d��L���m�%�^�&�vd#�",
+        "�+��5\u0019U{�&��\u0016\"�\u000fK�`~�6\u0017�8�0ޮ��6��\u0000;I�\u0012��ޭ���P�z\u0001.^P��-�?�'\u000f$z4�$�\u0001��窦�\u0004QU�;�T�K�>eS�>9���",
+        "n��\tk��R",
+        ";��b\u0017t59���",
+        "� �656d=��\u0007l��d��4�'�\u001b\u001f\\",
+        "J�����믰(K���A�o\u0002إ",
+        "�H8�48e]��YҤzM�S\u0004b�О�c\t\u0001Q�\u0018�~W@[���v�WKK����;���ޕz�q�J��F�QT\u0006���Β���Q�Z",
+        "�����٥K\u0017T",
+        "�>",
+        "��w\u0019�Y�~�0,8H�یY!ݪ6�Cy",
+        "^k.��\u0013�w\u0000V��p�$����{&��.�5\u0012���nmQ:e",
+        "G��gx[w�V��m�j\u0011cQ��\u0010�7����<o�\u0019��O�J\u000e��G�o���\u0016W�n��Z�a����.-K�*F�;\u0000)�l�����\u0001��RM�n�ۤp\"C�\u0012ߪ_\"",
+        "\u0006kR�\u00029\t_\u0012��WԿ�\b� ��Mx�P",
+        "�k�8�\u0013y��ޞ{B:c?�դ��.���k�u~Y 7����<������g\t��!^4~Y��O�\u000e1�\u0000�ak+\tY�ªكUc\u001b\u001b��5$\u0011j�Փ��P�Q]�\u0005",
+        "q�Prf�;��",
+        "�\u0002ۃ�>bt�搁�՝=�ޡ5�9N'����\u0016�\u001b�D�����l�c}�����V��M���8��l��-\u0005Cf�`ًиʐ����i8�!d�:�a�@�ɞ\u0013��r����<M+�T�W{����7��C�\u0000���':c0��[��O�S$4",
+        "ҋ \u0016x���e0�1e�7\u0005��~\u0011m&w\"�i�㬿��F�@��Z���p*���\u0002��5n�l��N1�Wu��Q�L\u001b>� ,j��ھ�\u000fT'\u000f\u0014��m$K\"&B�,�)\u000e�",
+        "�\u0010�2/;�À;O��"
+      ],
+      "url_hosts": []
+    },
+    {
+      "path": "dlc/1383 (sept 26 2019)/android/data.unity3d",
+      "bytes_expected": 62490,
+      "archive_sha1": "efbbcb73d6d9a163743db8837d0b894e3c7ddb02",
+      "bytes": 62490,
+      "sha1_verified": true,
+      "unity_object_count": 5,
+      "unity_types": {
+        "MonoScript": 2,
+        "MonoBehaviour": 2,
+        "AssetBundle": 1
+      },
+      "objects_named_or_text": [
+        {
+          "type": "MonoScript",
+          "name": "UISettings"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "UISettings"
+        },
+        {
+          "type": "AssetBundle",
+          "name": "data.unity3d"
+        },
+        {
+          "type": "MonoScript",
+          "name": "AllData"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "AllData"
+        }
+      ]
+    },
+    {
+      "path": "dlc/1383 (sept 26 2019)/android/master.unity3d",
+      "bytes_expected": 488287,
+      "archive_sha1": "6eb937923accd270eae4dfb0091209efd3f5c864",
+      "bytes": 488287,
+      "sha1_verified": true,
+      "unity_object_count": 5,
+      "unity_types": {
+        "MonoBehaviour": 2,
+        "MonoScript": 2,
+        "AssetBundle": 1
+      },
+      "objects_named_or_text": [
+        {
+          "type": "MonoBehaviour",
+          "name": "GlobalBundleData"
+        },
+        {
+          "type": "MonoScript",
+          "name": "GlobalBundleData"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "GlobalLookupData"
+        },
+        {
+          "type": "AssetBundle",
+          "name": "master.unity3d"
+        },
+        {
+          "type": "MonoScript",
+          "name": "GlobalLookupData"
+        }
+      ]
+    },
+    {
+      "path": "dlc/1383 (sept 26 2019)/android/static_data.unity3d",
+      "bytes_expected": 905,
+      "archive_sha1": "669f27908169b5a7c244f8d10fe90614f8fbde26",
+      "bytes": 905,
+      "sha1_verified": true,
+      "unity_object_count": 3,
+      "unity_types": {
+        "MonoBehaviour": 2,
+        "AssetBundle": 1
+      },
+      "objects_named_or_text": [
+        {
+          "type": "MonoBehaviour",
+          "name": "staticinfo_ACD_scups"
+        },
+        {
+          "type": "AssetBundle",
+          "name": "static_data.unity3d"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "staticinfo_ABC_reedling"
+        }
+      ]
+    },
+    {
+      "path": "dlc/1428 (oct 23 2019)/android/Server",
+      "bytes_expected": 1253,
+      "archive_sha1": "4db494a789bc4b4d6c06f8338fb996b12693fb3c",
+      "bytes": 1253,
+      "sha1_verified": true,
+      "config_lines": [
+        "UnityFS\u0000\u0000\u0000\u0000\u00065.x.x\u00002017.4.22f1\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004�\u0000\u0000\u0000A\u0000\u0000\u0000[\u0000\u0000\u0000C",
+        "\u0000\u0001\u0000�\u0001\u0000\u0000\u0012|\u0000\u0000\u0004r\u0000A\u000e\u0000\b",
+        "\u0000\u0000\u001a\u0000�\u0018\u0000\u0004CAB-b256187ebdb96f35466cb698edc0a6fd\u0000]\u0000\u0000\b\u0000\u0000\u0000`/\u001aW�/�o\u0000Zq?��c*�}�c�������",
+        "U�\u0012�K߄P\u001a�B�\u0014J\u0016Ip�m#z��̢���v_Z>�\u0013�=Y��6i�0��=�&�j]���!cn\u0012K�������Q0E���X\u0012s�z�ٝ*�������2��l�)\u0012&ck��t�hNɟ$(UY&�b�����-��\b�",
+        "�U��{\u0002\u0014\u0013Y2{x�ʦ��",
+        "�����\u000e�W�˳�v�\u001a��1�",
+        "\u0012HԴ��7�[!\"� �u",
+        ")R�\u0002˰����\u0006H\u0002�K�?�E5��{d��L���m�%�^�&�vd#�",
+        "�+��5\u0019U{�&��\u0016\"�\u000fK�`~�6\u0017�8�0ޮ��6��\u0000;I�\u0012��ޭ���P�z\u0001.^P��-�?�'\u000f$z4�$�\u0001��窦�\u0004QU�;�T�K�>eS�>9���",
+        "n��\tk��R",
+        ";��b\u0017t59���",
+        "� �656d=��\u0007l��d��4�'�\u001b\u001f\\",
+        "J�����믰(K���A�o\u0002إ",
+        "�H8�48e]��YҤzM�S\u0004b�О�c\t\u0001Q�\u0018�~W@[���v�WKK����;���ޕz�q�J��F�QT\u0006���Β���Q�Z",
+        "�����٥K\u0017T",
+        "�>",
+        "��w\u0019�Y�~�0,8H�یY!ݪ6�Cy",
+        "^k.��\u0013�w\u0000V��p�$����{&��.�5\u0012���nmQ:e",
+        "G��gx[w�V��m�j\u0011cQ��\u0010�7����<o�\u0019��O�J\u000e��G�o���\u0016W�n��Z�a����.-K�*F�;\u0000)�l�����\u0001��RM�n�ۤp\"C�\u0012ߪ_\"",
+        "\u0006kR�\u00029\t_\u0012��WԿ�\b� ��Mx�P",
+        "�k�8�\u0013y��ޞ{B:c?�դ��.���k�u~Y 7����<������g\t��!^4~Y��O�\u000e1�\u0000�ak+\tY�ªكUc\u001b\u001b��5$\u0011j�Փ��P�Q]�\u0005",
+        "q�Prf�;��",
+        "�\u0002ۃ�>bt�搁�՝=�ޡ5�9N'����\u0016�\u001b�D�����l�c}�����V��M���8��l��-\u0005Cf�`ًиʐ����i8�!d�:�a�@�ɞ\u0013��r����<M+�T�W{����7��C�\u0000���':c0�5",
+        "�\u0015�ɂ�2�\u0017�Z���#Yd��E!�N����S�ף��.7\u0012�\u0015�}���U��\"�zh0m",
+        "\u001f涶}��.V�\u0016\u0010�q���5�3@ҼG'�%�d\u001b5UIE�V�\u0015��Ř�.���\u0016������\"�s�D\bUD\u000e<��x/("
+      ],
+      "url_hosts": []
+    },
+    {
+      "path": "dlc/1428 (oct 23 2019)/android/data.unity3d",
+      "bytes_expected": 62708,
+      "archive_sha1": "053609cb805e25dc4b8a1a4ef69f7f9b88adccb2",
+      "bytes": 62708,
+      "sha1_verified": true,
+      "unity_object_count": 5,
+      "unity_types": {
+        "MonoScript": 2,
+        "MonoBehaviour": 2,
+        "AssetBundle": 1
+      },
+      "objects_named_or_text": [
+        {
+          "type": "MonoScript",
+          "name": "UISettings"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "UISettings"
+        },
+        {
+          "type": "AssetBundle",
+          "name": "data.unity3d"
+        },
+        {
+          "type": "MonoScript",
+          "name": "AllData"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "AllData"
+        }
+      ]
+    },
+    {
+      "path": "dlc/1428 (oct 23 2019)/android/localization.unity3d",
+      "bytes_expected": 10791,
+      "archive_sha1": "7fa63edbb41714b385bc9567281f6b83595b7c6c",
+      "bytes": 10791,
+      "sha1_verified": true,
+      "unity_object_count": 13,
+      "unity_types": {
+        "MonoBehaviour": 8,
+        "MonoScript": 4,
+        "AssetBundle": 1
+      },
+      "objects_named_or_text": [
+        {
+          "type": "MonoBehaviour",
+          "name": "de"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "it"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "settings"
+        },
+        {
+          "type": "MonoScript",
+          "name": "BBBMasterText"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "_master_text"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "localization"
+        },
+        {
+          "type": "MonoScript",
+          "name": "BBBLanguageData"
+        },
+        {
+          "type": "MonoScript",
+          "name": "BBBLocalizerSettings"
+        },
+        {
+          "type": "AssetBundle",
+          "name": "localization.unity3d"
+        },
+        {
+          "type": "MonoScript",
+          "name": "BBBLocalizerConfig"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "es"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "fr"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "en"
+        }
+      ]
+    },
+    {
+      "path": "dlc/1428 (oct 23 2019)/android/master.unity3d",
+      "bytes_expected": 492866,
+      "archive_sha1": "2af7a3902fed9ee87d380a470244dcf1fbaeb910",
+      "bytes": 492866,
+      "sha1_verified": true,
+      "unity_object_count": 5,
+      "unity_types": {
+        "MonoBehaviour": 2,
+        "MonoScript": 2,
+        "AssetBundle": 1
+      },
+      "objects_named_or_text": [
+        {
+          "type": "MonoBehaviour",
+          "name": "GlobalBundleData"
+        },
+        {
+          "type": "MonoScript",
+          "name": "GlobalBundleData"
+        },
+        {
+          "type": "AssetBundle",
+          "name": "master.unity3d"
+        },
+        {
+          "type": "MonoScript",
+          "name": "GlobalLookupData"
+        },
+        {
+          "type": "MonoBehaviour",
+          "name": "GlobalLookupData"
+        }
+      ]
+    }
+  ]
+}
