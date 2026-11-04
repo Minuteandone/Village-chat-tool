@@ -1,0 +1,4642 @@
+{
+  "game_java_files": 110,
+  "source_sha1": "df086c9ca4581733f73f2e8aaea1408382232e4d",
+  "files": [
+    {
+      "class": "BreedingCombination",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/BreedingCombination.java",
+      "lines": 64,
+      "methods": [
+        "getMonster1",
+        "getMonster2",
+        "getResult",
+        "getProbability",
+        "getModifier",
+        "getData"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "BreedingLookup.java",
+          "occurrences": 12
+        }
+      ]
+    },
+    {
+      "class": "BreedingLookup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/BreedingLookup.java",
+      "lines": 267,
+      "methods": [
+        "init",
+        "add",
+        "getBreedingResult",
+        "getMonsterBreedWeightContribution",
+        "getDatabaseBreedingComboResult",
+        "findTotalProbability",
+        "probabilityWithTorches"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "Code",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Code.java",
+      "lines": 145,
+      "methods": [
+        "getCodeID",
+        "getAdvertiserID",
+        "getGameID",
+        "getAdvertismentID",
+        "getCampaignID",
+        "getPromoCode",
+        "getCodeLimit",
+        "getRewards",
+        "getRewardText",
+        "getClaimCount",
+        "getStartDate",
+        "getEndDate",
+        "getChecksum",
+        "getExtra",
+        "getCode"
+      ],
+      "referenced_in_other_files": 4,
+      "references": [
+        {
+          "file": "HTTP.java",
+          "occurrences": 6
+        },
+        {
+          "file": "CodeLookup.java",
+          "occurrences": 5
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "CodeLookup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/CodeLookup.java",
+      "lines": 69,
+      "methods": [
+        "init",
+        "add",
+        "decrypt",
+        "getCodes"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 4
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "Entity",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Entity.java",
+      "lines": 419,
+      "methods": [
+        "getEntityId",
+        "getRequirements",
+        "getLevelData",
+        "getBuildTimeMs",
+        "ethSellingPrice",
+        "coinSellingPrice",
+        "timedSaleNow",
+        "getTimedSaleCostCoins",
+        "getTimedSaleCostDiamonds",
+        "getTimedSaleCostEth",
+        "getTimedSaleCostKeys",
+        "getTimedSaleCostRelics",
+        "getTimedSaleCostStarpower",
+        "getTimedSaleCost",
+        "getCurrencyCost",
+        "getSecondaryCurrencyCost",
+        "getCostCoins",
+        "getCostEth",
+        "getCostDiamonds",
+        "getCostKeys",
+        "getCostStarpower",
+        "getCostRelics",
+        "getCostSaleOld",
+        "getXp",
+        "getViewInMarket",
+        "getViewInStarmarket",
+        "isPremium",
+        "minVersion",
+        "getData",
+        "getExtraData",
+        "getName",
+        "toString",
+        "supportedByClient",
+        "canPurchaseFromStore",
+        "userAllowedToPurchase",
+        "getLevelUnlocked",
+        "getLastChanged"
+      ],
+      "referenced_in_other_files": 8,
+      "references": [
+        {
+          "file": "Monster.java",
+          "occurrences": 1
+        },
+        {
+          "file": "Structure.java",
+          "occurrences": 1
+        },
+        {
+          "file": "EntityAvailabilityEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "EntitySalesEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "StarAvailabilityEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "StarSalesEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 8
+        },
+        {
+          "file": "PlayerBuyback.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "Gene",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Gene.java",
+      "lines": 48,
+      "methods": [
+        "getGeneLetter",
+        "getGeneGraphic",
+        "getData",
+        "minVersion",
+        "supportedByClient"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "GeneLookup.java",
+          "occurrences": 5
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 4
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "GeneLookup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/GeneLookup.java",
+      "lines": 27,
+      "methods": [
+        "init",
+        "add",
+        "get",
+        "iterator"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "Advertisement2018Group",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/Advertisement2018Group.java",
+      "lines": 35,
+      "methods": [
+        "toString",
+        "initStaticData",
+        "getGroupToAssign"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "UserGroup.java",
+          "occurrences": 1
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        },
+        {
+          "file": "MSMServerEventHandler.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "AdvertisementGroup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/AdvertisementGroup.java",
+      "lines": 124,
+      "methods": [
+        "initStaticData",
+        "AdvertisementGroupsExist",
+        "getGroupToAssign",
+        "toString",
+        "level",
+        "chance"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "UserGroup.java",
+          "occurrences": 1
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 4
+        }
+      ]
+    },
+    {
+      "class": "BaseGroup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/BaseGroup.java",
+      "lines": 184,
+      "methods": [
+        "supportsLevel",
+        "supportsVersion",
+        "supportsPlatform",
+        "getChance",
+        "determineGroup",
+        "toString"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "Advertisement2018Group.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "BrandedAdvertisementGroup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/BrandedAdvertisementGroup.java",
+      "lines": 16,
+      "methods": [],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "UserGroup.java",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "class": "CurrencyGroup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/CurrencyGroup.java",
+      "lines": 31,
+      "methods": [
+        "toString",
+        "currencyName"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "UserGroup.java",
+          "occurrences": 2
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "NoAdvertisementGroup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/NoAdvertisementGroup.java",
+      "lines": 73,
+      "methods": [
+        "initStaticData",
+        "getGroupToAssign",
+        "toString",
+        "chance"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "UserGroup.java",
+          "occurrences": 1
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        },
+        {
+          "file": "MSMServerEventHandler.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "ScientificRevenueGroup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/ScientificRevenueGroup.java",
+      "lines": 147,
+      "methods": [
+        "initStaticData",
+        "getGroupToAssign",
+        "getActiveGroup",
+        "getBBBControlGroup",
+        "getSRControlGroup",
+        "supportsVersion",
+        "supportsPlatform",
+        "supportsClient",
+        "toString"
+      ],
+      "referenced_in_other_files": 5,
+      "references": [
+        {
+          "file": "UserGroup.java",
+          "occurrences": 1
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 4
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 5
+        },
+        {
+          "file": "MSMServerEventHandler.java",
+          "occurrences": 1
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "TutorialGroup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/TutorialGroup.java",
+      "lines": 124,
+      "methods": [
+        "initStaticData",
+        "TutorialGroupsExist",
+        "getGroupToAssign",
+        "getInitialQuests",
+        "CallIslandInitializationFunction",
+        "clientTutorial",
+        "chance",
+        "toString"
+      ],
+      "referenced_in_other_files": 7,
+      "references": [
+        {
+          "file": "UserGroup.java",
+          "occurrences": 1
+        },
+        {
+          "file": "QuestLookup.java",
+          "occurrences": 4
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        },
+        {
+          "file": "MSMServerEventHandler.java",
+          "occurrences": 3
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 8
+        },
+        {
+          "file": "PlayerIslandFactory.java",
+          "occurrences": 4
+        }
+      ]
+    },
+    {
+      "class": "UserGroup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/UserGroup.java",
+      "lines": 198,
+      "methods": [
+        "create",
+        "id",
+        "type",
+        "toString",
+        "getGroupById",
+        "add",
+        "print"
+      ],
+      "referenced_in_other_files": 11,
+      "references": [
+        {
+          "file": "Advertisement2018Group.java",
+          "occurrences": 1
+        },
+        {
+          "file": "AdvertisementGroup.java",
+          "occurrences": 2
+        },
+        {
+          "file": "BaseGroup.java",
+          "occurrences": 1
+        },
+        {
+          "file": "BrandedAdvertisementGroup.java",
+          "occurrences": 1
+        },
+        {
+          "file": "CurrencyGroup.java",
+          "occurrences": 1
+        },
+        {
+          "file": "NoAdvertisementGroup.java",
+          "occurrences": 1
+        },
+        {
+          "file": "ScientificRevenueGroup.java",
+          "occurrences": 1
+        },
+        {
+          "file": "TutorialGroup.java",
+          "occurrences": 2
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 3
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 8
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 11
+        }
+      ]
+    },
+    {
+      "class": "Island",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Island.java",
+      "lines": 260,
+      "methods": [
+        "getID",
+        "getType",
+        "getData",
+        "minVersion",
+        "maxVersion",
+        "getMonsters",
+        "getMaxVersionedMonsters",
+        "hasMonster",
+        "getCastleStructureId",
+        "lastChanged",
+        "getCoinCost",
+        "getStarpowerCost",
+        "getDiamondCost",
+        "timedSaleNow",
+        "getTimedSaleCostCoins",
+        "getTimedSaleCostDiamonds",
+        "getTimedSaleCost",
+        "supportedByClient",
+        "getValidIslandDataForUser"
+      ],
+      "referenced_in_other_files": 9,
+      "references": [
+        {
+          "file": "IslandLookup.java",
+          "occurrences": 4
+        },
+        {
+          "file": "ScratchTicketFunctions.java",
+          "occurrences": 2
+        },
+        {
+          "file": "IslandSalesEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 15
+        },
+        {
+          "file": "GooglePlayEvents.java",
+          "occurrences": 3
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 4
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 1
+        },
+        {
+          "file": "PlayerActiveIslandStats.java",
+          "occurrences": 1
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "class": "IslandLookup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/IslandLookup.java",
+      "lines": 27,
+      "methods": [
+        "init",
+        "add",
+        "get"
+      ],
+      "referenced_in_other_files": 9,
+      "references": [
+        {
+          "file": "Entity.java",
+          "occurrences": 1
+        },
+        {
+          "file": "MonsterIslandToIslandMapping.java",
+          "occurrences": 3
+        },
+        {
+          "file": "ScratchTicketFunctions.java",
+          "occurrences": 1
+        },
+        {
+          "file": "IslandSalesEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 15
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 2
+        },
+        {
+          "file": "PlayerIslandFactory.java",
+          "occurrences": 3
+        },
+        {
+          "file": "PlayerStructure.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "IslandTorch",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/IslandTorch.java",
+      "lines": 30,
+      "methods": [
+        "getIsland",
+        "getTorchGraphic",
+        "getData"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "TorchLookup.java",
+          "occurrences": 5
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 3
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "Level",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Level.java",
+      "lines": 29,
+      "methods": [
+        "getLevel",
+        "getXp",
+        "getData"
+      ],
+      "referenced_in_other_files": 5,
+      "references": [
+        {
+          "file": "CacheWrapper.java",
+          "occurrences": 2
+        },
+        {
+          "file": "LevelLookup.java",
+          "occurrences": 4
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 3
+        },
+        {
+          "file": "GooglePlayEvents.java",
+          "occurrences": 1
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "LevelLookup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/LevelLookup.java",
+      "lines": 23,
+      "methods": [
+        "init",
+        "add",
+        "get"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 6
+        }
+      ]
+    },
+    {
+      "class": "Mail",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Mail.java",
+      "lines": 227,
+      "methods": [
+        "toSFSObject",
+        "getID",
+        "getTitle",
+        "getShortTitle",
+        "getMessage",
+        "getSender",
+        "getIcon",
+        "getAttachment",
+        "getStartDate",
+        "getEndDate",
+        "getRepeatMode",
+        "getRepeatCount",
+        "getCurRepeat",
+        "setCurRepeat",
+        "getExpiry",
+        "getUrgentFlag",
+        "getEnabledFlag",
+        "getSegmentation",
+        "getBBBID"
+      ],
+      "referenced_in_other_files": 4,
+      "references": [
+        {
+          "file": "MailLookup.java",
+          "occurrences": 8
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 2
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 22
+        },
+        {
+          "file": "MailUpdateTask.java",
+          "occurrences": 13
+        }
+      ]
+    },
+    {
+      "class": "MailLookup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MailLookup.java",
+      "lines": 89,
+      "methods": [
+        "init",
+        "get",
+        "getValidValues",
+        "inSegment",
+        "updateMail"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 2
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 5
+        },
+        {
+          "file": "MailUpdateTask.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "MemoryMinigameFunctions",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MemoryMinigameFunctions.java",
+      "lines": 43,
+      "methods": [
+        "canPlayMemoryMinigame",
+        "getMemoryMinigameUserData"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 6
+        }
+      ]
+    },
+    {
+      "class": "Monster",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Monster.java",
+      "lines": 380,
+      "methods": [
+        "specialCollectionRate",
+        "getNames",
+        "generateRandomMonsterName",
+        "getGenes",
+        "setTimeToFillSec",
+        "getTimeToFillSec",
+        "isSeasonalMonster",
+        "isDipster",
+        "getCompleteData",
+        "isBoxMonsterType",
+        "getBoxRequirements",
+        "initGoldBoxMonsterRequirements",
+        "isLegendaryMonster",
+        "isGoldUpgradeMonster",
+        "isEtherealMonster",
+        "getGoldBoxMonsterRequirements",
+        "getGoldRareBoxMonsterRequirements",
+        "getLikes",
+        "getDislikes",
+        "getLevel",
+        "getMonsterID",
+        "coinRate",
+        "etherealRate",
+        "beds",
+        "upgradesTo",
+        "getLinkTitle",
+        "getLinkAddress",
+        "setLinkTitle",
+        "setLinkAddress",
+        "setLastUpdated",
+        "isValidMonsterForVersionFromId",
+        "isTrackedUncommon"
+      ],
+      "referenced_in_other_files": 15,
+      "references": [
+        {
+          "file": "BreedingCombination.java",
+          "occurrences": 6
+        },
+        {
+          "file": "BreedingLookup.java",
+          "occurrences": 13
+        },
+        {
+          "file": "Entity.java",
+          "occurrences": 1
+        },
+        {
+          "file": "Island.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MonsterLookup.java",
+          "occurrences": 11
+        },
+        {
+          "file": "ScratchTicketFunctions.java",
+          "occurrences": 1
+        },
+        {
+          "file": "SegmentationGroup.java",
+          "occurrences": 3
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 36
+        },
+        {
+          "file": "GooglePlayEvents.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 10
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 25
+        },
+        {
+          "file": "PlayerIslandFactory.java",
+          "occurrences": 2
+        },
+        {
+          "file": "PlayerMonster.java",
+          "occurrences": 14
+        },
+        {
+          "file": "MSMMonsterLinksReloadTask.java",
+          "occurrences": 3
+        },
+        {
+          "file": "MSMStats.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "MonsterCommonToRareMapping",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterCommonToRareMapping.java",
+      "lines": 72,
+      "methods": [
+        "sfsData",
+        "init",
+        "add",
+        "isRare",
+        "commonToRareMapGet",
+        "rareToCommonMapContainsKey",
+        "rareToCommonMapGet"
+      ],
+      "referenced_in_other_files": 6,
+      "references": [
+        {
+          "file": "BreedingLookup.java",
+          "occurrences": 9
+        },
+        {
+          "file": "Monster.java",
+          "occurrences": 1
+        },
+        {
+          "file": "ScratchTicketFunctions.java",
+          "occurrences": 1
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 19
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        },
+        {
+          "file": "PlayerMonster.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "MonsterIslandData",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterIslandData.java",
+      "lines": 14,
+      "methods": [],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "MonsterIslandToIslandMapping.java",
+          "occurrences": 18
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "MonsterIslandToIslandMapping",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterIslandToIslandMapping.java",
+      "lines": 124,
+      "methods": [
+        "sfsData",
+        "setSFSData",
+        "init",
+        "add",
+        "get",
+        "monsterTeleportsToIslandAs",
+        "monsterTeleportsFromIslandAs",
+        "monsterSourceGivenDestIsland"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 7
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 4
+        }
+      ]
+    },
+    {
+      "class": "MonsterLookup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterLookup.java",
+      "lines": 58,
+      "methods": [
+        "init",
+        "add",
+        "get",
+        "getFromEntityId",
+        "iterator"
+      ],
+      "referenced_in_other_files": 19,
+      "references": [
+        {
+          "file": "BreedingCombination.java",
+          "occurrences": 3
+        },
+        {
+          "file": "BreedingLookup.java",
+          "occurrences": 3
+        },
+        {
+          "file": "Island.java",
+          "occurrences": 1
+        },
+        {
+          "file": "Monster.java",
+          "occurrences": 1
+        },
+        {
+          "file": "ScratchTicketFunctions.java",
+          "occurrences": 2
+        },
+        {
+          "file": "SegmentationGroup.java",
+          "occurrences": 3
+        },
+        {
+          "file": "EntityAvailabilityEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "EntitySalesEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "StarAvailabilityEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "StarSalesEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 70
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 9
+        },
+        {
+          "file": "PlayerBreeding.java",
+          "occurrences": 2
+        },
+        {
+          "file": "PlayerEgg.java",
+          "occurrences": 2
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 5
+        },
+        {
+          "file": "PlayerIslandFactory.java",
+          "occurrences": 2
+        },
+        {
+          "file": "PlayerMonster.java",
+          "occurrences": 15
+        },
+        {
+          "file": "MSMMonsterLinksReloadTask.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMStats.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "MonsterRareData",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterRareData.java",
+      "lines": 17,
+      "methods": [],
+      "referenced_in_other_files": 4,
+      "references": [
+        {
+          "file": "BreedingLookup.java",
+          "occurrences": 4
+        },
+        {
+          "file": "MonsterCommonToRareMapping.java",
+          "occurrences": 9
+        },
+        {
+          "file": "ScratchTicketFunctions.java",
+          "occurrences": 1
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "MsmSession",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MsmSession.java",
+      "lines": 29,
+      "methods": [],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "MSMServerEventHandler.java",
+          "occurrences": 3
+        },
+        {
+          "file": "MSMStats.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "Promo",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Promo.java",
+      "lines": 83,
+      "methods": [
+        "getID",
+        "getType",
+        "getIcon",
+        "getSheet",
+        "getURL",
+        "getStartDate",
+        "getEndDate",
+        "getData"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "PromoLookup.java",
+          "occurrences": 4
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 3
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "PromoLookup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/PromoLookup.java",
+      "lines": 23,
+      "methods": [
+        "init",
+        "add",
+        "get"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 3
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 4
+        }
+      ]
+    },
+    {
+      "class": "QuestLookup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/QuestLookup.java",
+      "lines": 116,
+      "methods": [
+        "init",
+        "getDefaultTutorialQuests",
+        "getById",
+        "getByName",
+        "getValues"
+      ],
+      "referenced_in_other_files": 4,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 2
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 7
+        },
+        {
+          "file": "PlayerQuest.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "ScientificRevenue",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/ScientificRevenue.java",
+      "lines": 926,
+      "methods": [
+        "initStaticData",
+        "debugLog",
+        "validOfferWallPlatform",
+        "getCachedOffer",
+        "getUpdatedOffer",
+        "doWebRequest",
+        "queryOfferWall",
+        "getDBOfferWall",
+        "updateDBOfferWall",
+        "toSFSObject",
+        "getKeys",
+        "getKeys2",
+        "getStartTimeMillis",
+        "getStartTimeSec",
+        "isControlGroup",
+        "getGroupId",
+        "getGroupCurrency",
+        "putOptionalString",
+        "fixSciencyString",
+        "getDuration",
+        "getLocale",
+        "getPaywallAdKeys",
+        "getPaywallAdKeys2",
+        "getPaymentWallPackageObject",
+        "removePaymentWall",
+        "preprocessPaymentWalls",
+        "getStoreCurrencyArray",
+        "getStoreGroupObject",
+        "getStoreGroupArray",
+        "getPaymentWallAd",
+        "getVirtualCurrencyItems",
+        "addSlotDuration",
+        "addSlotImage",
+        "addSlotCurrencies",
+        "getPaymentWallItems",
+        "getStoreItemsArray",
+        "convertOfferJSON"
+      ],
+      "referenced_in_other_files": 4,
+      "references": [
+        {
+          "file": "UserGroup.java",
+          "occurrences": 1
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 3
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 4
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 4
+        }
+      ]
+    },
+    {
+      "class": "ScratchTicketFunctions",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/ScratchTicketFunctions.java",
+      "lines": 294,
+      "methods": [
+        "initializeScratchOff",
+        "getScaledPrizeAmounts",
+        "scaleScratchReward",
+        "roundToHundreds",
+        "getAlternativeMonsterScratch",
+        "getPossibleRare"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 12
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "class": "SegmentationGroup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/SegmentationGroup.java",
+      "lines": 505,
+      "methods": [
+        "compare",
+        "getID",
+        "getName",
+        "getDescription",
+        "getDefinition"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "MailLookup.java",
+          "occurrences": 5
+        },
+        {
+          "file": "MailUpdateTask.java",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "class": "Sticker",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Sticker.java",
+      "lines": 42,
+      "methods": [
+        "getID",
+        "getData",
+        "minVersion",
+        "supportedByClient"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "StickerLookup.java",
+          "occurrences": 4
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 3
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "StickerLookup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StickerLookup.java",
+      "lines": 23,
+      "methods": [
+        "init",
+        "add",
+        "get"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "StoreCurrencyLookup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StoreCurrencyLookup.java",
+      "lines": 31,
+      "methods": [
+        "init",
+        "add",
+        "get",
+        "storeCurrencySupportedByServerVersion"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "ScientificRevenue.java",
+          "occurrences": 1
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 5
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "StoreGroupsLookup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StoreGroupsLookup.java",
+      "lines": 33,
+      "methods": [
+        "init",
+        "add",
+        "get",
+        "storeGroupSupportedByServerVersion"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "ScientificRevenue.java",
+          "occurrences": 1
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 5
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "StoreItemsLookup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StoreItemsLookup.java",
+      "lines": 33,
+      "methods": [
+        "init",
+        "add",
+        "get",
+        "storeItemSupportedByServerVersion"
+      ],
+      "referenced_in_other_files": 4,
+      "references": [
+        {
+          "file": "CurrencyAvailabilityEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "CurrencySalesEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 5
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "StoreReplacementItem",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StoreReplacementItem.java",
+      "lines": 33,
+      "methods": [
+        "ownsEnoughToMakeReplacement"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "StoreReplacements.java",
+          "occurrences": 8
+        }
+      ]
+    },
+    {
+      "class": "StoreReplacements",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StoreReplacements.java",
+      "lines": 86,
+      "methods": [
+        "Initialize",
+        "addReplacementItem",
+        "currentlyReplacesAnotherStoreItem",
+        "getValueEntityId",
+        "getData"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "Entity.java",
+          "occurrences": 1
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "Structure",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Structure.java",
+      "lines": 182,
+      "methods": [
+        "getExtra",
+        "getType",
+        "getXp",
+        "isNursery",
+        "isHappyTree",
+        "isBreeding",
+        "isBakery",
+        "isCastle",
+        "isMine",
+        "isDecoration",
+        "isObstacle",
+        "isHotel",
+        "isWarehouse",
+        "isTimeMachine",
+        "isRecordingStudio",
+        "isTorch",
+        "isBuddy",
+        "isFuzer",
+        "getID",
+        "getUpgradesTo"
+      ],
+      "referenced_in_other_files": 8,
+      "references": [
+        {
+          "file": "Entity.java",
+          "occurrences": 1
+        },
+        {
+          "file": "SegmentationGroup.java",
+          "occurrences": 3
+        },
+        {
+          "file": "StructureLookup.java",
+          "occurrences": 9
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 52
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        },
+        {
+          "file": "PlayerFuzeBuddy.java",
+          "occurrences": 4
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 14
+        },
+        {
+          "file": "PlayerStructure.java",
+          "occurrences": 12
+        }
+      ]
+    },
+    {
+      "class": "StructureLookup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StructureLookup.java",
+      "lines": 39,
+      "methods": [
+        "init",
+        "add",
+        "get",
+        "getFromEntityId",
+        "getNextUpgrade"
+      ],
+      "referenced_in_other_files": 10,
+      "references": [
+        {
+          "file": "SegmentationGroup.java",
+          "occurrences": 3
+        },
+        {
+          "file": "EntityAvailabilityEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "EntitySalesEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "StarAvailabilityEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "StarSalesEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 27
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        },
+        {
+          "file": "PlayerFuzeBuddy.java",
+          "occurrences": 2
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 15
+        },
+        {
+          "file": "PlayerStructure.java",
+          "occurrences": 16
+        }
+      ]
+    },
+    {
+      "class": "CurrencyAvailabilityList",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/CurrencyAvailabilityList.java",
+      "lines": 26,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "CurrencySalesList",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/CurrencySalesList.java",
+      "lines": 26,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "EntityAvailList",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/EntityAvailList.java",
+      "lines": 26,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "EntitySalesList",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/EntitySalesList.java",
+      "lines": 25,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "IslandSalesList",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/IslandSalesList.java",
+      "lines": 25,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "ITimedEventTypeList",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/ITimedEventTypeList.java",
+      "lines": 23,
+      "methods": [
+        "makeEvent",
+        "addEvent",
+        "remove",
+        "GetKey",
+        "timedEventNow",
+        "currentActiveOnKey"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "KeyedTimedEventTypeList.java",
+          "occurrences": 1
+        },
+        {
+          "file": "TimedEventTypeList.java",
+          "occurrences": 1
+        },
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 7
+        }
+      ]
+    },
+    {
+      "class": "KeyedTimedEventTypeList",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/KeyedTimedEventTypeList.java",
+      "lines": 126,
+      "methods": [
+        "addEvent",
+        "remove",
+        "timedEventNow",
+        "currentActiveOnKey"
+      ],
+      "referenced_in_other_files": 7,
+      "references": [
+        {
+          "file": "CurrencyAvailabilityList.java",
+          "occurrences": 1
+        },
+        {
+          "file": "CurrencySalesList.java",
+          "occurrences": 1
+        },
+        {
+          "file": "EntityAvailList.java",
+          "occurrences": 1
+        },
+        {
+          "file": "EntitySalesList.java",
+          "occurrences": 1
+        },
+        {
+          "file": "IslandSalesList.java",
+          "occurrences": 1
+        },
+        {
+          "file": "StarAvailList.java",
+          "occurrences": 1
+        },
+        {
+          "file": "StarSalesList.java",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "class": "MegafySaleList",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/MegafySaleList.java",
+      "lines": 24,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "PermalightTorchSaleList",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/PermalightTorchSaleList.java",
+      "lines": 24,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "ShortenedFuzingList",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/ShortenedFuzingList.java",
+      "lines": 24,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "StarAvailList",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/StarAvailList.java",
+      "lines": 25,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "StarSalesList",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/StarSalesList.java",
+      "lines": 25,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "TimedEventTypeList",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/TimedEventTypeList.java",
+      "lines": 93,
+      "methods": [
+        "addEvent",
+        "remove",
+        "timedEventNow",
+        "currentActiveOnKey"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "MegafySaleList.java",
+          "occurrences": 1
+        },
+        {
+          "file": "PermalightTorchSaleList.java",
+          "occurrences": 1
+        },
+        {
+          "file": "ShortenedFuzingList.java",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "class": "BreedAvailabilityEvent",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/BreedAvailabilityEvent.java",
+      "lines": 14,
+      "methods": [],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "BreedProbabilityChangeEvent",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/BreedProbabilityChangeEvent.java",
+      "lines": 14,
+      "methods": [],
+      "referenced_in_other_files": 0,
+      "references": []
+    },
+    {
+      "class": "CurrencyAvailabilityEvent",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/CurrencyAvailabilityEvent.java",
+      "lines": 61,
+      "methods": [
+        "getSaleItemId",
+        "equals",
+        "myStringRep"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "CurrencyAvailabilityList.java",
+          "occurrences": 6
+        }
+      ]
+    },
+    {
+      "class": "CurrencySalesEvent",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/CurrencySalesEvent.java",
+      "lines": 68,
+      "methods": [
+        "getSaleItemId",
+        "equals",
+        "myStringRep"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "CurrencySalesList.java",
+          "occurrences": 6
+        },
+        {
+          "file": "KeyedTimedEventTypeList.java",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "class": "EntityAvailabilityEvent",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/EntityAvailabilityEvent.java",
+      "lines": 59,
+      "methods": [
+        "getEntityId",
+        "equals",
+        "myStringRep"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "EntityAvailList.java",
+          "occurrences": 6
+        },
+        {
+          "file": "EntitySalesEvent.java",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "class": "EntitySalesEvent",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/EntitySalesEvent.java",
+      "lines": 229,
+      "methods": [
+        "Key",
+        "Value",
+        "isDefined",
+        "getEntityId",
+        "getDiscountType",
+        "getDiscountValue",
+        "setDiscountType",
+        "equals",
+        "myStringRep"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "Entity.java",
+          "occurrences": 4
+        },
+        {
+          "file": "EntitySalesList.java",
+          "occurrences": 6
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "class": "IslandSalesEvent",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/IslandSalesEvent.java",
+      "lines": 176,
+      "methods": [
+        "Key",
+        "Value",
+        "isDefined",
+        "getIslandId",
+        "getDiscountType",
+        "getDiscountValue",
+        "setDiscountType",
+        "equals",
+        "myStringRep"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "Island.java",
+          "occurrences": 7
+        },
+        {
+          "file": "IslandSalesList.java",
+          "occurrences": 6
+        }
+      ]
+    },
+    {
+      "class": "MegafySale",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/MegafySale.java",
+      "lines": 172,
+      "methods": [
+        "Key",
+        "Value",
+        "isDefined",
+        "getDiscountType",
+        "getDiscountValue",
+        "setDiscountType",
+        "equals",
+        "getSaleCost",
+        "myStringRep"
+      ],
+      "referenced_in_other_files": 4,
+      "references": [
+        {
+          "file": "MegafySaleList.java",
+          "occurrences": 6
+        },
+        {
+          "file": "TimedEvent.java",
+          "occurrences": 1
+        },
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 1
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "PermalightTorchSale",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/PermalightTorchSale.java",
+      "lines": 172,
+      "methods": [
+        "Key",
+        "Value",
+        "isDefined",
+        "getDiscountType",
+        "getDiscountValue",
+        "setDiscountType",
+        "equals",
+        "getSaleCost",
+        "myStringRep"
+      ],
+      "referenced_in_other_files": 4,
+      "references": [
+        {
+          "file": "PermalightTorchSaleList.java",
+          "occurrences": 6
+        },
+        {
+          "file": "TimedEvent.java",
+          "occurrences": 1
+        },
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 1
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "ShortenedFuzing",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/ShortenedFuzing.java",
+      "lines": 167,
+      "methods": [
+        "Key",
+        "Value",
+        "isDefined",
+        "getDecreaseType",
+        "getValue",
+        "equals",
+        "setDecreaseType",
+        "GetNewFuzeTime",
+        "myStringRep"
+      ],
+      "referenced_in_other_files": 4,
+      "references": [
+        {
+          "file": "ShortenedFuzingList.java",
+          "occurrences": 6
+        },
+        {
+          "file": "TimedEvent.java",
+          "occurrences": 1
+        },
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 1
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "class": "StarAvailabilityEvent",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/StarAvailabilityEvent.java",
+      "lines": 56,
+      "methods": [
+        "getEntityId",
+        "equals",
+        "myStringRep"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "StarAvailList.java",
+          "occurrences": 6
+        }
+      ]
+    },
+    {
+      "class": "StarSalesEvent",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/StarSalesEvent.java",
+      "lines": 166,
+      "methods": [
+        "Key",
+        "Value",
+        "isDefined",
+        "getEntityId",
+        "getDiscountType",
+        "getDiscountValue",
+        "setDiscountType",
+        "equals",
+        "myStringRep"
+      ],
+      "referenced_in_other_files": 4,
+      "references": [
+        {
+          "file": "Entity.java",
+          "occurrences": 6
+        },
+        {
+          "file": "StarSalesList.java",
+          "occurrences": 6
+        },
+        {
+          "file": "MegafySale.java",
+          "occurrences": 1
+        },
+        {
+          "file": "PermalightTorchSale.java",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "class": "TimedEvent",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEvent.java",
+      "lines": 136,
+      "methods": [
+        "Dispose",
+        "currentlyActive",
+        "getSfsObject",
+        "getId",
+        "getStartDate",
+        "getEndDate",
+        "getEventType",
+        "getTimedEventType",
+        "toString",
+        "myStringRep"
+      ],
+      "referenced_in_other_files": 20,
+      "references": [
+        {
+          "file": "Entity.java",
+          "occurrences": 3
+        },
+        {
+          "file": "Island.java",
+          "occurrences": 2
+        },
+        {
+          "file": "ITimedEventTypeList.java",
+          "occurrences": 4
+        },
+        {
+          "file": "KeyedTimedEventTypeList.java",
+          "occurrences": 4
+        },
+        {
+          "file": "TimedEventTypeList.java",
+          "occurrences": 4
+        },
+        {
+          "file": "BreedAvailabilityEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "BreedProbabilityChangeEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "CurrencyAvailabilityEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "CurrencySalesEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "EntityAvailabilityEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "EntitySalesEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "IslandSalesEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MegafySale.java",
+          "occurrences": 2
+        },
+        {
+          "file": "PermalightTorchSale.java",
+          "occurrences": 2
+        },
+        {
+          "file": "ShortenedFuzing.java",
+          "occurrences": 2
+        },
+        {
+          "file": "StarAvailabilityEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "StarSalesEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 3
+        },
+        {
+          "file": "TimedEventListBuilder.java",
+          "occurrences": 18
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "class": "TimedEventList",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEventList.java",
+      "lines": 186,
+      "methods": [
+        "Instance",
+        "init",
+        "activeEventsInNext24Hours",
+        "addNewEventFromDb",
+        "UpdateActiveTimedEvents",
+        "timedEventNow",
+        "addEvent",
+        "remove",
+        "GetListFromType"
+      ],
+      "referenced_in_other_files": 7,
+      "references": [
+        {
+          "file": "Entity.java",
+          "occurrences": 7
+        },
+        {
+          "file": "Island.java",
+          "occurrences": 3
+        },
+        {
+          "file": "TimedEvent.java",
+          "occurrences": 1
+        },
+        {
+          "file": "TimedEventListBuilder.java",
+          "occurrences": 1
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 6
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        },
+        {
+          "file": "UpdateActiveTimedEvents.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "TimedEventListBuilder",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEventListBuilder.java",
+      "lines": 210,
+      "methods": [
+        "activeEventsInNext24Hours",
+        "addNewEventFromDb",
+        "doErrorCheckingOnTimedEvent",
+        "UpdateActiveTimedEvents",
+        "removeFinishedEvents",
+        "addNewlyActiveEvents",
+        "addToActiveEvents",
+        "UpdateCachedSFSArrayOfEvents"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "TorchLookup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/TorchLookup.java",
+      "lines": 31,
+      "methods": [
+        "init",
+        "add",
+        "get",
+        "iterator"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 6
+        }
+      ]
+    },
+    {
+      "class": "TribalQuestLookup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/TribalQuestLookup.java",
+      "lines": 37,
+      "methods": [
+        "init",
+        "getValues"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "VersionData",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/VersionData.java",
+      "lines": 91,
+      "methods": [
+        "compare",
+        "init",
+        "add",
+        "getMaxServerVersionFromClientVersion",
+        "getMinClientVersionFromServerVersion"
+      ],
+      "referenced_in_other_files": 5,
+      "references": [
+        {
+          "file": "Entity.java",
+          "occurrences": 1
+        },
+        {
+          "file": "ScratchTicketFunctions.java",
+          "occurrences": 2
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 16
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 5
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "InvalidPlayerException",
+      "path": "src/com/bigbluebubble/mysingingmonsters/exceptions/InvalidPlayerException.java",
+      "lines": 13,
+      "methods": [],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "class": "GameStateHandler",
+      "path": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "lines": 17305,
+      "methods": [
+        "handleClientRequest",
+        "getPromotions",
+        "deleteComposerTemplate",
+        "saveComposerTemplate",
+        "saveComposerTrack",
+        "deleteMail",
+        "dailyLoginBuyback",
+        "diamondsRequiredToComplete",
+        "updateDisplayName",
+        "redeemCode",
+        "transferCode",
+        "adminGetCodes",
+        "serverQuestEvent",
+        "buyEgg",
+        "transferEgg",
+        "sellEgg",
+        "adminHatchNonEgg",
+        "hatchEgg",
+        "hatchingSpeedUp",
+        "feedMonster",
+        "muteMonster",
+        "flipMonster",
+        "moveMonster",
+        "sellMonster",
+        "collectSpecialFromMonster",
+        "collectFromMonster",
+        "nameMonster",
+        "tribalFeedMonster",
+        "adminNameMonster",
+        "adminBoxActivateMonster",
+        "adminFinishedEdit",
+        "boxActivateMonster",
+        "boxPurchaseFillCost",
+        "adminBoxPurchaseFill",
+        "boxPurchaseFill",
+        "boxAddEgg",
+        "boxAddUnderlingEgg",
+        "adminBoxMonsterToggle",
+        "boxAddMonster",
+        "adminBoxToggleMonster",
+        "sendMonsterHome",
+        "deleteParentData",
+        "deleteAssociatedGoldMonster",
+        "testBreeding",
+        "adminQASelectBreedEgg",
+        "breedMonsters",
+        "finishBreeding",
+        "breedingSpeedUp",
+        "processAdminNeighborChangeMsg",
+        "processAdminMultiNeighborChangeMsg",
+        "processMultiNeighborChangeMsg",
+        "generateMonsterHappinessUpdate",
+        "updateMonsterHappiness",
+        "calculateHappiness",
+        "triggerNeighborQuest",
+        "adminChangeUserHappiness",
+        "buyIsland",
+        "changeIsland",
+        "adminPlaceOnGoldIsland",
+        "placeOnGoldIsland",
+        "saveIslandWarpSpeed",
+        "placeOnTribal",
+        "adminSwapTribalMonster",
+        "islandHasTribalMonster",
+        "playerInOtherTribe",
+        "cancelTribeInvite",
+        "declineAllTribeInvites",
+        "cancelTribeRequest",
+        "sendTribeRequest",
+        "sendTribeInvite",
+        "joinTribe",
+        "leaveTribeRequest",
+        "kickTribeRequest",
+        "updateTribeName",
+        "updateIslandName",
+        "refreshTribeRequests",
+        "getRequests",
+        "buyStructure",
+        "addHappyTreeEffects",
+        "moveStructure",
+        "sellStructure",
+        "adminPutDecorationInStorage",
+        "putDecorationInStorage",
+        "adminPutBuddyInFuzer",
+        "putBuddyInFuzer",
+        "adminRemoveDecorationFromStorage",
+        "removeDecorationFromStorage",
+        "adminRemoveBuddyFromFuzer",
+        "removeBuddyFromFuzer",
+        "adminPutMonsterInStorage",
+        "putMonsterInStorage",
+        "adminRemoveMonsterFromStorage",
+        "removeMonsterFromStorage",
+        "megaMonsterMessage",
+        "getTorchGifts",
+        "adminUnlightTorch",
+        "getFriendTorchInfo",
+        "lightTorch",
+        "lightOwnTorch",
+        "adminLightUserTorch",
+        "lightFriendTorch",
+        "startUpgradeStructure",
+        "finishUpgradeStructure",
+        "finishStructure",
+        "flipStructure",
+        "structureSpeedUp",
+        "muteStructure",
+        "startObstacle",
+        "clearObstacle",
+        "clearObstacleSpeedUp",
+        "startBaking",
+        "finishBaking",
+        "bakingSpeedUp",
+        "startFuzing",
+        "finishFuzing",
+        "adminFinishFuzing",
+        "fuzingSpeedUp",
+        "collectFromMine",
+        "questEvent",
+        "solveQuestForUser",
+        "handleQuestEvent",
+        "processNewQuestStatus",
+        "processCompletionEventsAsQuestEvents",
+        "giveNextQuests",
+        "crazyQuestArrayContainsNewQuestId",
+        "questRead",
+        "questCollect",
+        "updateAchievementStatus",
+        "saveAchievement",
+        "createAchievementFromQuest",
+        "processUnclaimedPurchases",
+        "processUncollectedOfferRewards",
+        "processUncollectedGlobalAchRewards",
+        "bindAccountToGlobalAchievements",
+        "convertCurrency",
+        "convertDiamondsToCoins",
+        "convertCoinsToEthCurrency",
+        "convertDiamondsToEthCurrency",
+        "convertEthToDiamondsCurrency",
+        "giveMeShit",
+        "viewThirdPartyAd",
+        "viewThirdPartyVideoAd",
+        "sendFacebookHelp",
+        "handleFacebookHelpInstances",
+        "requestFacebookHelpPermissions",
+        "adminPurchaseBuyback",
+        "purchaseBuyback",
+        "collectFacebookReward",
+        "getFriends",
+        "getRandomTribes",
+        "collectInviteReward",
+        "getFriendVisitData",
+        "getRandomVisitData",
+        "visitSpecificFriendIsland",
+        "setFriendAsFav",
+        "makeMyFriendAFav",
+        "incrTorchesILitCount",
+        "getTribalIslandData",
+        "getRankedIslandData",
+        "loadTopStages",
+        "getIslandRank",
+        "hasRatedIsland",
+        "rateIsland",
+        "loadTopTribes",
+        "getFriendData",
+        "loadFriendsWithFavs",
+        "getMessages",
+        "deleteMessage",
+        "addBbbIdReferral",
+        "completeOffer",
+        "updatePaywall",
+        "goDeeper",
+        "playerHasScratchOff",
+        "playScratchOff",
+        "collectScratchOffPrize",
+        "retrieveMemoryGameGameSettings",
+        "requestFlipMinigameCost",
+        "requestMemoryMinigameCurrentCost",
+        "purchaseFlipGame",
+        "generateFlipPrize",
+        "purchaseMemoryGame",
+        "collectMemoryGamePrize",
+        "collectFlipGamePrize",
+        "addFriend",
+        "removeFriend",
+        "syncFriends",
+        "adminRefreshAll",
+        "getCcu",
+        "logDiamondUsage",
+        "logStarpowerUsage",
+        "getAdminVisitData",
+        "adminMoveUsersMonster",
+        "adminMoveUsersStructure",
+        "adminDestroyUsersMonster",
+        "adminDestroyUsersStructure",
+        "adminSellEgg",
+        "adminBuyEgg",
+        "adminHatchEgg",
+        "adminBuyStructure",
+        "adminBuyIsland",
+        "adminChangeIsland",
+        "adminDestroyIsland",
+        "adminFeedMonster",
+        "adminFinishUpgradeStructure",
+        "adminStartBaking",
+        "adminBakingSpeedUp",
+        "adminStartFuzing",
+        "adminFuzingSpeedUp",
+        "adminBreedingSpeedUp",
+        "adminRemoveBreeding",
+        "adminFinishBreeding",
+        "adminClearObstacleSpeedUp",
+        "adminHatchingSpeedUp",
+        "adminStructureSpeedUp",
+        "adminGetUserQuestInfo",
+        "adminCompleteUserQuest",
+        "adminGiveMeShit",
+        "adminFlipMonster",
+        "adminFlipStructure",
+        "adminKickUser",
+        "getGeneDB",
+        "getTorchGfxDB",
+        "getVersionData",
+        "getMonsterDB",
+        "getStructureDB",
+        "getIslandDB",
+        "getLevelDB",
+        "getScratchOffsDB",
+        "getStoreDB",
+        "getStoreDBv2",
+        "getStickerDB",
+        "retroActiveQuests",
+        "getQuestInfo",
+        "getReplacementStoreStructures",
+        "getTimedEventInfo",
+        "getRareMonsterData",
+        "getMonsterIsland2IslandMapData",
+        "getPlayerInfo",
+        "requestNextRelicReset",
+        "collectDailyReward",
+        "confirmGoalsComplete"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 216
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 14
+        },
+        {
+          "file": "PlayerMonster.java",
+          "occurrences": 4
+        }
+      ]
+    },
+    {
+      "class": "Helpers",
+      "path": "src/com/bigbluebubble/mysingingmonsters/Helpers.java",
+      "lines": 72,
+      "methods": [
+        "implode",
+        "decompressJsonDataField",
+        "compressJsonDataField"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 6
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "GooglePlayEvents",
+      "path": "src/com/bigbluebubble/mysingingmonsters/logging/GooglePlayEvents.java",
+      "lines": 154,
+      "methods": [
+        "sendEvent",
+        "reportLevel",
+        "reportIsland",
+        "reportMonsterBreed",
+        "reportMonsterBuy",
+        "reportFriend"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 4
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "MetricCost",
+      "path": "src/com/bigbluebubble/mysingingmonsters/logging/MetricCost.java",
+      "lines": 55,
+      "methods": [
+        "init",
+        "getResource",
+        "getAmount"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 10
+        },
+        {
+          "file": "MSMStats.java",
+          "occurrences": 6
+        }
+      ]
+    },
+    {
+      "class": "MSMCommandLogging",
+      "path": "src/com/bigbluebubble/mysingingmonsters/logging/MSMCommandLogging.java",
+      "lines": 210,
+      "methods": [
+        "logRequests",
+        "maxRequests",
+        "requestQueue",
+        "init",
+        "createClientRequestLog",
+        "addClientRequestLog",
+        "flushClientRequestLog",
+        "initClientRequestLog",
+        "sendClientRequestLog",
+        "debugLog",
+        "errorLog"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMServerEventHandler.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "MSMCommands",
+      "path": "src/com/bigbluebubble/mysingingmonsters/logging/MSMCommands.java",
+      "lines": 452,
+      "methods": [],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "MSMCommandLogging.java",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "class": "MSMExtension",
+      "path": "src/com/bigbluebubble/mysingingmonsters/MSMExtension.java",
+      "lines": 2867,
+      "methods": [
+        "initGameSettings",
+        "CurrentDBTime",
+        "getInstance",
+        "getScratchOffs",
+        "isDevServer",
+        "scratchOffPrizeSupportedByServerVer",
+        "init",
+        "sendVersionError",
+        "clearAllLockedAccounts",
+        "clearAdminsLockedAccounts",
+        "markAccountLockedForAdminEditing",
+        "kickUserFromAuth",
+        "resetAccountAccessTime",
+        "markAccountAdminEditingComplete",
+        "adminCreatePlayerByBBBID",
+        "updateLastLogin",
+        "checkQuestDataForErrors",
+        "isAValidQuest",
+        "createPlayerByBBBID",
+        "createPlayerByID",
+        "createPlayerWithUserRecord",
+        "initializePlayerQuestData",
+        "initializePlayerAchievementData",
+        "initializePlayerGroupsFromUserGroupsTable",
+        "initializeAdvertisementGroup",
+        "initializePlayerScratchTicketData",
+        "initializePlayerIslands",
+        "initializePlayerAds",
+        "initializePlayerMusic",
+        "setupPlayerScratchData",
+        "setupPlayerPromotions",
+        "initializePlayerScientificRevenue",
+        "loadPlayerIslandData",
+        "loadPlayerTribalIslandData",
+        "createPlayerIsland",
+        "createTribalIsland",
+        "joinTribalIsland",
+        "sendPlayerState",
+        "sendQuests",
+        "sendErrorResponse",
+        "sendAdminMessage",
+        "savePlayer",
+        "savePlayerQuests",
+        "savePlayerIsland",
+        "destroy",
+        "loadAndCacheStaticData",
+        "processUnclaimedPurchases",
+        "addScientificRevenueUserTag",
+        "updateScientificRevenueUserTags",
+        "updateTapjoyUserTags",
+        "processUncollectedOfferRewards",
+        "sendGameSettings",
+        "logMessage",
+        "loadGameSettings",
+        "send",
+        "updateSocialUsers"
+      ],
+      "referenced_in_other_files": 54,
+      "references": [
+        {
+          "file": "BreedingLookup.java",
+          "occurrences": 6
+        },
+        {
+          "file": "CodeLookup.java",
+          "occurrences": 2
+        },
+        {
+          "file": "Entity.java",
+          "occurrences": 4
+        },
+        {
+          "file": "Advertisement2018Group.java",
+          "occurrences": 2
+        },
+        {
+          "file": "AdvertisementGroup.java",
+          "occurrences": 8
+        },
+        {
+          "file": "NoAdvertisementGroup.java",
+          "occurrences": 2
+        },
+        {
+          "file": "ScientificRevenueGroup.java",
+          "occurrences": 3
+        },
+        {
+          "file": "TutorialGroup.java",
+          "occurrences": 7
+        },
+        {
+          "file": "UserGroup.java",
+          "occurrences": 3
+        },
+        {
+          "file": "Island.java",
+          "occurrences": 3
+        },
+        {
+          "file": "Mail.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MemoryMinigameFunctions.java",
+          "occurrences": 4
+        },
+        {
+          "file": "Monster.java",
+          "occurrences": 5
+        },
+        {
+          "file": "QuestLookup.java",
+          "occurrences": 3
+        },
+        {
+          "file": "ScientificRevenue.java",
+          "occurrences": 26
+        },
+        {
+          "file": "ScratchTicketFunctions.java",
+          "occurrences": 13
+        },
+        {
+          "file": "SegmentationGroup.java",
+          "occurrences": 2
+        },
+        {
+          "file": "Structure.java",
+          "occurrences": 4
+        },
+        {
+          "file": "KeyedTimedEventTypeList.java",
+          "occurrences": 3
+        },
+        {
+          "file": "TimedEventTypeList.java",
+          "occurrences": 3
+        },
+        {
+          "file": "IslandSalesEvent.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MegafySale.java",
+          "occurrences": 3
+        },
+        {
+          "file": "PermalightTorchSale.java",
+          "occurrences": 3
+        },
+        {
+          "file": "ShortenedFuzing.java",
+          "occurrences": 2
+        },
+        {
+          "file": "TimedEvent.java",
+          "occurrences": 4
+        },
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 3
+        },
+        {
+          "file": "TimedEventListBuilder.java",
+          "occurrences": 8
+        },
+        {
+          "file": "TorchLookup.java",
+          "occurrences": 2
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 109
+        },
+        {
+          "file": "Helpers.java",
+          "occurrences": 3
+        },
+        {
+          "file": "GooglePlayEvents.java",
+          "occurrences": 7
+        },
+        {
+          "file": "MSMCommandLogging.java",
+          "occurrences": 7
+        },
+        {
+          "file": "MSMServerEventHandler.java",
+          "occurrences": 30
+        },
+        {
+          "file": "LitPlayerTorch.java",
+          "occurrences": 4
+        },
+        {
+          "file": "MonsterMegaData.java",
+          "occurrences": 7
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 92
+        },
+        {
+          "file": "PlayerActiveIslandStats.java",
+          "occurrences": 8
+        },
+        {
+          "file": "PlayerBaking.java",
+          "occurrences": 5
+        },
+        {
+          "file": "PlayerBreeding.java",
+          "occurrences": 6
+        },
+        {
+          "file": "PlayerBuyback.java",
+          "occurrences": 2
+        },
+        {
+          "file": "PlayerEgg.java",
+          "occurrences": 6
+        },
+        {
+          "file": "PlayerFuzeBuddy.java",
+          "occurrences": 5
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 25
+        },
+        {
+          "file": "PlayerIslandFactory.java",
+          "occurrences": 8
+        },
+        {
+          "file": "PlayerMonster.java",
+          "occurrences": 35
+        },
+        {
+          "file": "PlayerQuest.java",
+          "occurrences": 2
+        },
+        {
+          "file": "PlayerStructure.java",
+          "occurrences": 12
+        },
+        {
+          "file": "ShutdownHookThread.java",
+          "occurrences": 4
+        },
+        {
+          "file": "AuthTokenUpdateTask.java",
+          "occurrences": 5
+        },
+        {
+          "file": "MailUpdateTask.java",
+          "occurrences": 8
+        },
+        {
+          "file": "MSMAdminCatchUnreleasedAccount.java",
+          "occurrences": 9
+        },
+        {
+          "file": "MSMMonsterLinksReloadTask.java",
+          "occurrences": 9
+        },
+        {
+          "file": "MSMServerStatusTask.java",
+          "occurrences": 5
+        },
+        {
+          "file": "MSMStats.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "MSMServerEventHandler",
+      "path": "src/com/bigbluebubble/mysingingmonsters/MSMServerEventHandler.java",
+      "lines": 683,
+      "methods": [
+        "handleLoginData",
+        "userJoinZone",
+        "CreateNewPlayer",
+        "CreateNewBbbIdDbEntry",
+        "CreateNewPlayerDbEntry",
+        "initializeNewPlayerGroups",
+        "initializeFirstIsland",
+        "initializeEmptyQuests",
+        "addUserToInitialGroupsTable",
+        "selectTutorialGroupForNewUser",
+        "selectNoAdvertisementGroupForNewUser",
+        "selectScientificRevenueGroupForNewUser",
+        "selectAdvertisement2018GroupForNewUser",
+        "addUserToGroupTable",
+        "userHasNewerDataThanClientVersion",
+        "getClientLastUpdateVersion",
+        "userLogin",
+        "userLogout",
+        "userDisconnect",
+        "userReconnectSuccess",
+        "userReconnectTry",
+        "send"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "InitialPlayerIslandData",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/InitialPlayerIslandData.java",
+      "lines": 15,
+      "methods": [],
+      "referenced_in_other_files": 4,
+      "references": [
+        {
+          "file": "TutorialGroup.java",
+          "occurrences": 3
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 2
+        },
+        {
+          "file": "PlayerIslandFactory.java",
+          "occurrences": 9
+        }
+      ]
+    },
+    {
+      "class": "LitPlayerTorch",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/LitPlayerTorch.java",
+      "lines": 152,
+      "methods": [
+        "resetTorchLight",
+        "resetTorchTime",
+        "initFromSFSObject",
+        "toSFSObject",
+        "getData",
+        "toString",
+        "getID",
+        "getStructureId",
+        "isPermalit",
+        "getCompletionTime",
+        "torchExpired"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 9
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 3
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 25
+        }
+      ]
+    },
+    {
+      "class": "MonsterMegaData",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/MonsterMegaData.java",
+      "lines": 148,
+      "methods": [
+        "initFromSFSObject",
+        "toSFSObject",
+        "isPermaMega",
+        "resetMega",
+        "resetTempMegaTime",
+        "megaExpired",
+        "enableMega",
+        "getData",
+        "toString"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "PlayerMonster.java",
+          "occurrences": 4
+        }
+      ]
+    },
+    {
+      "class": "Player",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/Player.java",
+      "lines": 3489,
+      "methods": [
+        "getEntityCostKey",
+        "SpecificCurrencyDiscountType",
+        "getCurrencyKey",
+        "getCurrencyTypeFromString",
+        "getSpecialCollectionTimer",
+        "setSpecialCollectionTimer",
+        "setDailyBonusToBeCollected",
+        "doFinalizeThings",
+        "collectPendingDailyReward",
+        "checkDailyLogin",
+        "buyDailyLoginStreak",
+        "clearDailyLoginStreak",
+        "getCurIslandTorchGifts",
+        "clearOutInvalidTorchGifts",
+        "canLightFriendTorchTimes",
+        "canLightFriendTorchNow",
+        "getNumLitTorches",
+        "torchLitFromTorchJsonObject",
+        "friendHasUnlitTorches",
+        "toSFSObject",
+        "addPlayerPropertyData",
+        "supportsNewDailyLogin",
+        "supportsDailyLoginBuyBack",
+        "getLastCommandTime",
+        "getLastCommand",
+        "setLastCommand",
+        "duplicateCommand",
+        "getMemoryGameTime",
+        "setMemoryGameTime",
+        "getPlayerId",
+        "getBbbId",
+        "getUserGameId",
+        "getData",
+        "setDisplayName",
+        "getDisplayName",
+        "toString",
+        "isAdmin",
+        "isDirty",
+        "setDirty",
+        "setSaveAllowed",
+        "saveAllowed",
+        "hasPromotionsAvailable",
+        "setPromotions",
+        "getPromotions",
+        "setOffer",
+        "getOffer",
+        "setFriendGift",
+        "getFriendGift",
+        "getCurrentRelicDiamondCost",
+        "getLastClaimedFreeScratchAd",
+        "getNextFreeScratchAd",
+        "getPendingDailyRewardType",
+        "getPendingDailyRewardAmount",
+        "getPendingRewardDay",
+        "claimFreeScratchWithAd",
+        "updateNextAdScratch",
+        "updateAdScratch",
+        "updateMail",
+        "expireMail",
+        "getValidMail",
+        "segmentationCheck",
+        "addNewMail",
+        "getNextReset",
+        "purchaseRelic",
+        "chargePlayer",
+        "paySecondaryCurrencySellingPrice",
+        "payEntitySellingPrice",
+        "canBuy",
+        "canFeed",
+        "hasSpeedUpCredit",
+        "getActualCoins",
+        "getActualDiamonds",
+        "getActualEthCurrency",
+        "getActualFood",
+        "getActualStarpower",
+        "getActualKeys",
+        "getActualRelics",
+        "getDailyRelicsCount",
+        "getLastRelicPurchase",
+        "getActualSpeedUpCredit",
+        "getTotalStarpower",
+        "getDisplayedCoins",
+        "getDisplayedDiamonds",
+        "getDisplayedKeys",
+        "getDisplayedEthCurrency",
+        "getDisplayedFood",
+        "getDisplayedRelics",
+        "getXp",
+        "getLevel",
+        "rewardXp",
+        "adjustCoins",
+        "adjustEthCurrency",
+        "adjustDiamonds",
+        "adjustKeys",
+        "adjustStarpower",
+        "adjustRelics",
+        "adjustFood",
+        "adjustSpeedUpCredit",
+        "calculateMonsterIndex",
+        "getNextMonsterIndex",
+        "hasNewerContent",
+        "hasBoxMonster",
+        "getMonsterIslandId",
+        "initIslands",
+        "getIslands",
+        "getIslandByID",
+        "addIsland",
+        "getActiveIslandId",
+        "getActiveIsland",
+        "setActiveIsland",
+        "getIslandByIslandIndex",
+        "calculateQuestIndex",
+        "getNextQuestIndex",
+        "hasCollectedQuest",
+        "hasActiveQuest",
+        "hasQuest",
+        "addCollectedQuest",
+        "getCollectedQuests",
+        "initQuests",
+        "giveInitialQuests",
+        "giveTutorialGroupSpecificQuests",
+        "addTutorialQuests",
+        "giveRetroactiveTriggeredQuests",
+        "addQuestEvents",
+        "removeQuestEvents",
+        "addQuest",
+        "questComplete",
+        "hasQuestGoal",
+        "hasQuestGoals",
+        "getQuests",
+        "getQuest",
+        "initAchievements",
+        "addAchievement",
+        "getAchievements",
+        "getAchievement",
+        "getNextScratchOffTime",
+        "setNextScratchOffTime",
+        "hasUnclaimedScratchOff",
+        "setUnclaimedScratchOff",
+        "getScratchPrize",
+        "setScratchPrize",
+        "getFacebookInviteReward",
+        "setFacebookInviteReward",
+        "getTwitterInviteReward",
+        "setTwitterInviteReward",
+        "getEmailInviteReward",
+        "setEmailInviteReward",
+        "getLastFacebookPostReward",
+        "setLastFacebookPostReward",
+        "cachedEarnedStarpower",
+        "calculateEarnedStarpower",
+        "compare",
+        "getInGamePurchaseCount",
+        "setInGamePurchaseCount",
+        "getInGamePurchaseAmountTotal",
+        "setInGamePurchaseAmountTotal",
+        "getThirdpartyAds",
+        "setThirdpartyAds",
+        "setThirdpartyVideoAds",
+        "hasMadePurchase",
+        "updateLastClientVersion",
+        "fixDailyLoginRewards",
+        "lastClientVersion",
+        "LastLoginTime",
+        "getDateCreatedTime",
+        "setHasDoneOffer",
+        "setLastCodeTime",
+        "getLastCodeTime",
+        "getExtraAdParamString",
+        "setDailySpeedUpCredit",
+        "getSpeedUpTypeFromString",
+        "refreshLastClaimedOn",
+        "updateSpeedUp",
+        "memberOfGroup",
+        "addToGroup",
+        "hasUnsavedGroups",
+        "getUnsavedGroups",
+        "markUnsavedGroups",
+        "getGroups",
+        "initGroups",
+        "cacheTutorialGroup",
+        "getTutorialGroup",
+        "clientTutorialSetup",
+        "memberOfGroupType",
+        "isSciency",
+        "isBranded",
+        "getPlatform",
+        "setPlatform",
+        "initMusic",
+        "deleteTrack",
+        "getTracks",
+        "getSongs",
+        "getMailbox",
+        "getActiveIslandStats"
+      ],
+      "referenced_in_other_files": 24,
+      "references": [
+        {
+          "file": "Entity.java",
+          "occurrences": 3
+        },
+        {
+          "file": "AdvertisementGroup.java",
+          "occurrences": 2
+        },
+        {
+          "file": "NoAdvertisementGroup.java",
+          "occurrences": 1
+        },
+        {
+          "file": "TutorialGroup.java",
+          "occurrences": 3
+        },
+        {
+          "file": "Island.java",
+          "occurrences": 1
+        },
+        {
+          "file": "MailLookup.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MemoryMinigameFunctions.java",
+          "occurrences": 4
+        },
+        {
+          "file": "ScratchTicketFunctions.java",
+          "occurrences": 14
+        },
+        {
+          "file": "SegmentationGroup.java",
+          "occurrences": 12
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 551
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 54
+        },
+        {
+          "file": "MSMServerEventHandler.java",
+          "occurrences": 13
+        },
+        {
+          "file": "LitPlayerTorch.java",
+          "occurrences": 1
+        },
+        {
+          "file": "MonsterMegaData.java",
+          "occurrences": 1
+        },
+        {
+          "file": "PlayerBaking.java",
+          "occurrences": 1
+        },
+        {
+          "file": "PlayerBreeding.java",
+          "occurrences": 1
+        },
+        {
+          "file": "PlayerBuyback.java",
+          "occurrences": 1
+        },
+        {
+          "file": "PlayerEgg.java",
+          "occurrences": 1
+        },
+        {
+          "file": "PlayerFuzeBuddy.java",
+          "occurrences": 1
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 1
+        },
+        {
+          "file": "PlayerIslandFactory.java",
+          "occurrences": 6
+        },
+        {
+          "file": "PlayerMonster.java",
+          "occurrences": 1
+        },
+        {
+          "file": "PlayerStructure.java",
+          "occurrences": 1
+        },
+        {
+          "file": "MSMStats.java",
+          "occurrences": 9
+        }
+      ]
+    },
+    {
+      "class": "PlayerAchievement",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerAchievement.java",
+      "lines": 130,
+      "methods": [
+        "initFromSFSObject",
+        "toSFSObject",
+        "toString",
+        "invalid",
+        "getID",
+        "achievementName",
+        "getUser",
+        "getUserQuest",
+        "getWrappedUserQuest",
+        "setFacebookPosted",
+        "facebookPosted",
+        "setGameCenterPosted",
+        "gameCenterPosted",
+        "setGooglePlayPosted",
+        "googlePlayPosted"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 4
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 9
+        }
+      ]
+    },
+    {
+      "class": "PlayerActiveIslandStats",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerActiveIslandStats.java",
+      "lines": 239,
+      "methods": [
+        "islandChanged",
+        "islandClosed",
+        "diamondChange",
+        "keysChange",
+        "relicsChange",
+        "coinChange",
+        "ethCurrencyChange",
+        "starpowerCurrencyChange",
+        "foodChange",
+        "speedUpCreditChange",
+        "flushEvent"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "Player.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "PlayerBaking",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerBaking.java",
+      "lines": 162,
+      "methods": [
+        "initFromSFSObject",
+        "toSFSObject",
+        "getData",
+        "toString",
+        "getID",
+        "setID",
+        "getStructureId",
+        "getParentID",
+        "setParentID",
+        "setStructureID",
+        "getTimeRemaining",
+        "getInitialTimeRemaining",
+        "finishBakingNow",
+        "getCompletionTime",
+        "getStartTime",
+        "reduceBakingTimeByVideo"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 26
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 18
+        }
+      ]
+    },
+    {
+      "class": "PlayerBreeding",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerBreeding.java",
+      "lines": 172,
+      "methods": [
+        "initFromSFSObject",
+        "getData",
+        "toSFSObject",
+        "toString",
+        "getID",
+        "getChildType",
+        "getParentID",
+        "getStructureID",
+        "setID",
+        "getTimeRemaining",
+        "getInitialTimeRemaining",
+        "finishBreedingNow",
+        "getCompletionTime",
+        "getStartTime",
+        "reduceBreedingByFacebookHelpTime",
+        "reduceBreedingTimeByVideo"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 17
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 37
+        }
+      ]
+    },
+    {
+      "class": "PlayerBuyback",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerBuyback.java",
+      "lines": 148,
+      "methods": [
+        "initFromSFSObject",
+        "toSFSObject",
+        "getID",
+        "getName",
+        "getLevel",
+        "getTimesFed",
+        "getExtraData",
+        "getMegaMonsterData",
+        "getCoinCost"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 4
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "class": "PlayerEgg",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerEgg.java",
+      "lines": 199,
+      "methods": [
+        "initFromSFSObject",
+        "getData",
+        "toSFSObject",
+        "toString",
+        "getID",
+        "getType",
+        "getParentID",
+        "setParentID",
+        "getStructureID",
+        "getPreviousName",
+        "getPrevPermaMega",
+        "getTimeRemaining",
+        "getInitialTimeRemaining",
+        "finishHatchingNow",
+        "reduceHatchByFacebookHelpTime",
+        "getCompletionTime",
+        "getStartTime",
+        "reduceHatchingTimeByVideo"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 21
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 38
+        }
+      ]
+    },
+    {
+      "class": "PlayerFuzeBuddy",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerFuzeBuddy.java",
+      "lines": 176,
+      "methods": [
+        "initStaticData",
+        "initFromSFSObject",
+        "getData",
+        "toSFSObject",
+        "toString",
+        "getStructureID",
+        "getTimeRemaining",
+        "getInitialTimeRemaining",
+        "finishNow",
+        "getCompletionTime",
+        "getStartTime",
+        "getCreate",
+        "getR",
+        "getY",
+        "getB",
+        "reduceFuzingTimeByVideo"
+      ],
+      "referenced_in_other_files": 4,
+      "references": [
+        {
+          "file": "ShortenedFuzing.java",
+          "occurrences": 2
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 34
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 2
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 16
+        }
+      ]
+    },
+    {
+      "class": "PlayerIsland",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerIsland.java",
+      "lines": 2007,
+      "methods": [
+        "toString",
+        "initFromSFSObject",
+        "toSFSObject",
+        "soldMonsterTypes",
+        "initStructures",
+        "initMonsters",
+        "initTribalRequests",
+        "initTribalIslandData",
+        "initTribalQuests",
+        "addChiefData",
+        "getTribalIslandData",
+        "getTribalRequests",
+        "initMonstersFromJson",
+        "initSoldMonstersFromJson",
+        "initStructuresFromJson",
+        "initEggs",
+        "initBreeding",
+        "initBaking",
+        "initFuzeBuddies",
+        "initTorches",
+        "fixMonsterLevels",
+        "checkForInvalidData",
+        "initBuyback",
+        "initLastBred",
+        "setLastPlayerLevel",
+        "setGiMappings",
+        "getIslandMonsterData",
+        "getIslandStructureData",
+        "getIslandVolatileData",
+        "getName",
+        "getID",
+        "getUser",
+        "getType",
+        "getIndex",
+        "getTribalID",
+        "getDateCreated",
+        "getLikes",
+        "getDislikes",
+        "getWarpSpeed",
+        "setWarpSpeed",
+        "isGoldIsland",
+        "isRegularIsland",
+        "isShugaIsland",
+        "isEtherealIsland",
+        "isTribalIsland",
+        "isUnderlingIsland",
+        "isComposerIsland",
+        "isCelestialIsland",
+        "isFireIsland",
+        "getMonsters",
+        "getMonsterByID",
+        "changeMonsterID",
+        "addMonster",
+        "removeMonster",
+        "addToSoldMonsters",
+        "getStructures",
+        "getStructureByID",
+        "addStructure",
+        "removeStructure",
+        "hasMax",
+        "hasHappinessTree",
+        "hasStructure",
+        "numStructuresOfEntTypeOnIsland",
+        "getNextStructureId",
+        "getMonsterBaseBuildTimeForIsland",
+        "getBreeding",
+        "getBreedings",
+        "getBreedCompletionTimeForIsland",
+        "testBreed",
+        "getAvailableEmptyBreedingStructure",
+        "getBusyBreedingStructure",
+        "startNewBreed",
+        "makeNewBreeding",
+        "getBreedResult",
+        "setBreeding",
+        "removeBreeding",
+        "breedingFull",
+        "finishBreeding",
+        "getAnyValidBreedForFacebookSpeedup",
+        "getEgg",
+        "getEggs",
+        "getHatchCompletionTimeForIsland",
+        "addNewEggToIsland",
+        "getAvailableEmptyNursery",
+        "makeNewScratchWinEgg",
+        "makeNewISFSEgg",
+        "setEgg",
+        "removeEgg",
+        "numNurseries",
+        "numBreedingStructures",
+        "eggsFull",
+        "nurseryHasEgg",
+        "getAnyValidEggForFacebookSpeedup",
+        "getBaking",
+        "getLitTorches",
+        "getBakingByStructureId",
+        "getFuzerBuddies",
+        "getFuzerBuddyByStructureId",
+        "getEggByStructureId",
+        "getBreedingByStructureId",
+        "getBakingByID",
+        "addBaking",
+        "removeBaking",
+        "getNextBakingId",
+        "getFuzeBuddyByID",
+        "addFuzeBuddy",
+        "removeFuzeBuddy",
+        "getNextEggId",
+        "getNextBreedingId",
+        "getNextLitTorchId",
+        "getBuyback",
+        "setBuyback",
+        "hasBuyback",
+        "removeBuyback",
+        "getLastBredUserMonster1",
+        "getLastBredUserMonster2",
+        "setLastBred",
+        "lastBredToSFSObject",
+        "canPlace",
+        "hasMonster",
+        "getWarehouse",
+        "getHotel",
+        "getNumDecorationsInStorage",
+        "getFuzer",
+        "getNumBuddiesInFuzer",
+        "getNumMonstersInStorage",
+        "getNumMonsterBedsInStorage",
+        "bedsAvailable",
+        "getMine",
+        "nurseryStructureSpeedMod",
+        "breedingStructureSpeedMod",
+        "getLitTorchData",
+        "removeLitTorch",
+        "lightTorch",
+        "clearOutOldTorchData",
+        "torchExpired",
+        "getNumLitTorchesOnIsland",
+        "getNumTorchesOnIsland",
+        "isALastBredMonster",
+        "testBreeding"
+      ],
+      "referenced_in_other_files": 11,
+      "references": [
+        {
+          "file": "BreedingLookup.java",
+          "occurrences": 5
+        },
+        {
+          "file": "Entity.java",
+          "occurrences": 3
+        },
+        {
+          "file": "SegmentationGroup.java",
+          "occurrences": 7
+        },
+        {
+          "file": "StoreReplacementItem.java",
+          "occurrences": 2
+        },
+        {
+          "file": "StoreReplacements.java",
+          "occurrences": 2
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 207
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 37
+        },
+        {
+          "file": "LitPlayerTorch.java",
+          "occurrences": 1
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 31
+        },
+        {
+          "file": "PlayerIslandFactory.java",
+          "occurrences": 8
+        },
+        {
+          "file": "PlayerMonster.java",
+          "occurrences": 20
+        }
+      ]
+    },
+    {
+      "class": "PlayerIslandFactory",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerIslandFactory.java",
+      "lines": 337,
+      "methods": [
+        "CreateIslandInitialStructures",
+        "CreateTutorialIsland",
+        "CreateBasicTutorialIsland",
+        "CreateBreedingTutorialIsland",
+        "CreateTypicalIsland",
+        "CreateComposerIsland",
+        "createCastle",
+        "createNursery",
+        "createBreedingStructure",
+        "createNoggin",
+        "createTutorialMammott",
+        "createComposerMammott",
+        "createMonster",
+        "createIslandObstacles",
+        "createStructure",
+        "createObstacle",
+        "createNoCompletionStructure"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "TutorialGroup.java",
+          "occurrences": 2
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "PlayerMonster",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerMonster.java",
+      "lines": 1317,
+      "methods": [
+        "GetRandom",
+        "CachedCollectionTypes",
+        "getCurrencyStrFromType",
+        "createMonsterSFS",
+        "startEggTimer",
+        "eggTimerStart",
+        "collectionOfDyingFetuses",
+        "resetEggTimer",
+        "clearRottenEggs",
+        "initDefaultValues",
+        "initFromSFSObject",
+        "toSFSObject",
+        "DebuggingIslandSet",
+        "toSFSObjectWithoutBoxData",
+        "getMegaSFS",
+        "toString",
+        "getName",
+        "getID",
+        "getType",
+        "getLastCollectedTime",
+        "getLevel",
+        "getParentID",
+        "getTimesFed",
+        "getCollectedCoins",
+        "getCollectedEth",
+        "getCollectedDiamonds",
+        "getCollectedFood",
+        "getCollectedStarpower",
+        "getXPosition",
+        "getYPosition",
+        "getVolume",
+        "getHappiness",
+        "getMuted",
+        "getFlip",
+        "levelUp",
+        "setLevel",
+        "getGoldIslandData",
+        "removeGoldIslandData",
+        "getParentIslandData",
+        "markForDeletion",
+        "inHotel",
+        "setID",
+        "setParentID",
+        "setPosition",
+        "setVolume",
+        "setHappiness",
+        "resetTimesFed",
+        "setName",
+        "toggleMute",
+        "toggleFlip",
+        "setFlip",
+        "feed",
+        "tribalFeed",
+        "setGoldIslandData",
+        "setParentIslandData",
+        "isInactiveBoxMonster",
+        "setBoxMonsterData",
+        "isPermaMega",
+        "megaEnable",
+        "isMega",
+        "isDailyMega",
+        "dailyMegaExpired",
+        "makeMega",
+        "getBoxMonsterPossessedEggs",
+        "getRemainingMonsterTypes",
+        "adminRemoveEgg",
+        "addEgg",
+        "hasNumOfEgg",
+        "numBoxReqsOfTypeReqd",
+        "getBoxRequirements",
+        "boxMonsterBuyPossessedEggsPrice",
+        "boxMonsterSellingPrice",
+        "hasAllRequiredEggs",
+        "needsEgg",
+        "activateBoxMonster",
+        "CurrentCollectionType",
+        "getRandomUnderlingCollectionMin",
+        "resetUnderlingCurrencyType",
+        "validCollectionType",
+        "validRandomTime",
+        "stashCurrency",
+        "GetRandomCollectionType",
+        "collectCurrency",
+        "getEntityId",
+        "setInHotel",
+        "resetLastCollection",
+        "getGoldMonster"
+      ],
+      "referenced_in_other_files": 8,
+      "references": [
+        {
+          "file": "Monster.java",
+          "occurrences": 4
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 182
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 9
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 16
+        },
+        {
+          "file": "PlayerBuyback.java",
+          "occurrences": 9
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 39
+        },
+        {
+          "file": "PlayerIslandFactory.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMStats.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "PlayerQuest",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerQuest.java",
+      "lines": 695,
+      "methods": [
+        "JSONParse",
+        "JSONCreate",
+        "lt",
+        "lte",
+        "ne",
+        "gte",
+        "gt",
+        "equal",
+        "getInitialSFSObject",
+        "invalid",
+        "toSFS",
+        "getType",
+        "getLog",
+        "getCompactJSON",
+        "markRead",
+        "isNew",
+        "collected",
+        "collect",
+        "isComplete",
+        "getId",
+        "getWrappedId",
+        "getDataId",
+        "getStatus",
+        "getUser",
+        "adminMarkStatusComplete",
+        "getName",
+        "getNext",
+        "getRewards",
+        "getGoals",
+        "onQuestEvent",
+        "Evaluate",
+        "consolodateStatusAfterUpdate",
+        "isValid",
+        "getGoalEvents"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 20
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 4
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 22
+        }
+      ]
+    },
+    {
+      "class": "PlayerStructure",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerStructure.java",
+      "lines": 517,
+      "methods": [
+        "getObstacleStructIdStartFromIslandIndex",
+        "initFromSFSObject",
+        "toSFSObject",
+        "toString",
+        "getLevel",
+        "getID",
+        "setID",
+        "getEntityId",
+        "getType",
+        "getStructureType",
+        "getParentID",
+        "getXPosition",
+        "getYPosition",
+        "getScale",
+        "getTimeRemaining",
+        "getInitialTimeRemaining",
+        "getR",
+        "getY",
+        "getB",
+        "getLastCollectionTime",
+        "getBuildingCompletedTime",
+        "finishBuildingNow",
+        "getDateCreated",
+        "isComplete",
+        "isUpgrading",
+        "toggleFlip",
+        "setFlip",
+        "getFlip",
+        "getMuted",
+        "isWarehouse",
+        "isNursery",
+        "isBreeding",
+        "isHotel",
+        "isTorch",
+        "isBuddy",
+        "isFuzer",
+        "inWarehouse",
+        "inFuzer",
+        "setParentID",
+        "setPosition",
+        "setBuildingCompletedTime",
+        "resetLastCollectionTime",
+        "setDateCreated",
+        "setSettings",
+        "setColor",
+        "setComplete",
+        "setUpgrading",
+        "setType",
+        "toggleMute",
+        "setInWarehouse",
+        "setInFuzer",
+        "startUpgradeStructure",
+        "finishUpgradeStructure",
+        "finishBuildingStructure",
+        "reduceStructureTimeByVideo",
+        "collectFromMine",
+        "storeDiamondsSoFar",
+        "clearStoredDiamonds"
+      ],
+      "referenced_in_other_files": 6,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 82
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 12
+        },
+        {
+          "file": "LitPlayerTorch.java",
+          "occurrences": 1
+        },
+        {
+          "file": "Player.java",
+          "occurrences": 1
+        },
+        {
+          "file": "PlayerIsland.java",
+          "occurrences": 55
+        },
+        {
+          "file": "PlayerIslandFactory.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "ShutdownHookThread",
+      "path": "src/com/bigbluebubble/mysingingmonsters/ShutdownHookThread.java",
+      "lines": 12,
+      "methods": [
+        "run"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "class": "AuthTokenUpdateTask",
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/AuthTokenUpdateTask.java",
+      "lines": 59,
+      "methods": [
+        "run"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "MailUpdateTask",
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/MailUpdateTask.java",
+      "lines": 127,
+      "methods": [
+        "run"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "MSMAdminCatchUnreleasedAccount",
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/MSMAdminCatchUnreleasedAccount.java",
+      "lines": 135,
+      "methods": [
+        "addAccountToCSRPermaLockPreventionList",
+        "resetAccountAccessTime",
+        "cancelSchedule",
+        "run",
+        "removeFromLockedAccountsList",
+        "clearUnreleasedAcccount"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 4
+        }
+      ]
+    },
+    {
+      "class": "MSMMonsterLinksReloadTask",
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/MSMMonsterLinksReloadTask.java",
+      "lines": 56,
+      "methods": [
+        "run"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "MSMServerStatusTask",
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/MSMServerStatusTask.java",
+      "lines": 134,
+      "methods": [
+        "run"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "MSMStats",
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/MSMStats.java",
+      "lines": 1023,
+      "methods": [
+        "run",
+        "trackNewUser",
+        "trackSession",
+        "trackPurchase",
+        "trackOffer",
+        "trackMonsterBuy",
+        "trackMonsterSell",
+        "trackMonsterBreeding",
+        "trackStructureBuy",
+        "trackStructureSell",
+        "trackIslandTransaction",
+        "trackSpend",
+        "trackReward",
+        "trackLevelUp",
+        "trackFacebookHelpRequest",
+        "trackFacebookHelpCollect",
+        "trackFacebookHelpSend",
+        "trackTorchGift",
+        "trackThirdPartyAdEvent",
+        "trackUserSFSError",
+        "trackSFSError",
+        "trackActiveIslandEvent",
+        "trackNewTribalIsland",
+        "trackTribalIslandRequest",
+        "trackTribalIslandQuit",
+        "trackTribalIslandJoin",
+        "trackTribalReqCancel",
+        "trackTribalMonsterPlaced",
+        "trackTribalIslandKick",
+        "trackComposerTemplateSaved",
+        "trackComposerDeletedTrack",
+        "trackComposerTrackSaved",
+        "trackIslandVisit",
+        "trackPlayerSaveError",
+        "trackFlipMinigameReward",
+        "trackScratchTicketReward",
+        "trackScratchTicketPlay",
+        "trackDailyLoginReward",
+        "trackSpeedupWithVideo",
+        "trackFriend",
+        "trackAddedToGroup",
+        "getTimestamp",
+        "trackBaking",
+        "trackMonsterLevelUp",
+        "trackMonsterCollectSpecial",
+        "TrackBoxAddMonster",
+        "TrackFillBoxMonster",
+        "sendUserEvent",
+        "sendPlayerEvent",
+        "sendEvent",
+        "extraSpeedupInfo",
+        "sendPlayerGroups"
+      ],
+      "referenced_in_other_files": 2,
+      "references": [
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 8
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "UpdateActiveTimedEvents",
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/UpdateActiveTimedEvents.java",
+      "lines": 22,
+      "methods": [
+        "schedule",
+        "run"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 3
+        },
+        {
+          "file": "TimedEventListBuilder.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 2
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "class": "BrandedAdvertisementGroup",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/BrandedAdvertisementGroup.java",
+      "lines": 16,
+      "methods": [],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "UserGroup.java",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "class": "MonsterIslandData",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterIslandData.java",
+      "lines": 14,
+      "methods": [],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "MonsterIslandToIslandMapping.java",
+          "occurrences": 18
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "MonsterRareData",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterRareData.java",
+      "lines": 17,
+      "methods": [],
+      "referenced_in_other_files": 4,
+      "references": [
+        {
+          "file": "BreedingLookup.java",
+          "occurrences": 4
+        },
+        {
+          "file": "MonsterCommonToRareMapping.java",
+          "occurrences": 9
+        },
+        {
+          "file": "ScratchTicketFunctions.java",
+          "occurrences": 1
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "class": "StoreReplacements",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StoreReplacements.java",
+      "lines": 86,
+      "methods": [
+        "Initialize",
+        "addReplacementItem",
+        "currentlyReplacesAnotherStoreItem",
+        "getValueEntityId",
+        "getData"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "Entity.java",
+          "occurrences": 1
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "BreedAvailabilityEvent",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/BreedAvailabilityEvent.java",
+      "lines": 14,
+      "methods": [],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "BreedProbabilityChangeEvent",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/BreedProbabilityChangeEvent.java",
+      "lines": 14,
+      "methods": [],
+      "referenced_in_other_files": 0,
+      "references": []
+    },
+    {
+      "class": "TimedEventListBuilder",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEventListBuilder.java",
+      "lines": 210,
+      "methods": [
+        "activeEventsInNext24Hours",
+        "addNewEventFromDb",
+        "doErrorCheckingOnTimedEvent",
+        "UpdateActiveTimedEvents",
+        "removeFinishedEvents",
+        "addNewlyActiveEvents",
+        "addToActiveEvents",
+        "UpdateCachedSFSArrayOfEvents"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "TimedEventList.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "MonsterMegaData",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/MonsterMegaData.java",
+      "lines": 148,
+      "methods": [
+        "initFromSFSObject",
+        "toSFSObject",
+        "isPermaMega",
+        "resetMega",
+        "resetTempMegaTime",
+        "megaExpired",
+        "enableMega",
+        "getData",
+        "toString"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "PlayerMonster.java",
+          "occurrences": 4
+        }
+      ]
+    },
+    {
+      "class": "PlayerIslandFactory",
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerIslandFactory.java",
+      "lines": 337,
+      "methods": [
+        "CreateIslandInitialStructures",
+        "CreateTutorialIsland",
+        "CreateBasicTutorialIsland",
+        "CreateBreedingTutorialIsland",
+        "CreateTypicalIsland",
+        "CreateComposerIsland",
+        "createCastle",
+        "createNursery",
+        "createBreedingStructure",
+        "createNoggin",
+        "createTutorialMammott",
+        "createComposerMammott",
+        "createMonster",
+        "createIslandObstacles",
+        "createStructure",
+        "createObstacle",
+        "createNoCompletionStructure"
+      ],
+      "referenced_in_other_files": 3,
+      "references": [
+        {
+          "file": "TutorialGroup.java",
+          "occurrences": 2
+        },
+        {
+          "file": "GameStateHandler.java",
+          "occurrences": 2
+        },
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "class": "MSMAdminCatchUnreleasedAccount",
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/MSMAdminCatchUnreleasedAccount.java",
+      "lines": 135,
+      "methods": [
+        "addAccountToCSRPermaLockPreventionList",
+        "resetAccountAccessTime",
+        "cancelSchedule",
+        "run",
+        "removeFromLockedAccountsList",
+        "clearUnreleasedAcccount"
+      ],
+      "referenced_in_other_files": 1,
+      "references": [
+        {
+          "file": "MSMExtension.java",
+          "occurrences": 4
+        }
+      ]
+    }
+  ],
+  "unreferenced": [
+    {
+      "class": "BreedProbabilityChangeEvent",
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/BreedProbabilityChangeEvent.java",
+      "lines": 14,
+      "methods": [],
+      "referenced_in_other_files": 0,
+      "references": []
+    }
+  ],
+  "note": "Static references only. Reflective/dynamic usages can escape this scan. No code contents or account data included."
+}
