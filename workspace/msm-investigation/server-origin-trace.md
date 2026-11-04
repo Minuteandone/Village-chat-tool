@@ -4,7 +4,7 @@ Investigation date: 2026-11-03 (US Eastern).
 
 ## Short conclusion
 
-**Best-supported lead:** the 2023 Internet Archive upload appears to contain a **GitHub-style source snapshot** of a repository named `monster-game-server`, probably at a snapshot whose embedded date is 2020-07-03. The precise repository owner, origin of the underlying source, and authorization to distribute it are **not established**.
+**Updated assessment after inspecting the ZIP header:** the upload has a Git-like folder name, but the ZIP has **no archive comment** and mixed July 2020 file / May 2021 directory timestamps. It could be a **repackaged copy of a Git-derived tree**; the exact packaging tool, hosting provider, original repository owner and author are **not established**. See `server-zip-comment-analysis.md`.
 
 ### Facts independently verified from the archive
 
@@ -17,7 +17,8 @@ Investigation date: 2026-11-03 (US Eastern).
 - Original ZIP filename is `monster-game-server.zip`, size **15,170,251 bytes**, SHA-1 `df086c9ca4581733f73f2e8aaea1408382232e4d`.
 - The ZIP's sole top-level directory is:
   `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84`
-- All **187 non-wordlist regular files examined** have the *same ZIP entry date* **July 3, 2020**.
+- The ZIP has **188 regular files** (including the excluded wordlist) with dates July 3, 2020 at **15:47:56–15:48:02**, and **27 directories** dated May 9, 2021 at **20:25:24–20:25:28**. These are local ZIP timestamps, not independently verified commit dates.
+- **ZIP-global comment: empty** (0 bytes; also confirmed directly in end-of-central-directory header). A normal native `git archive --format=zip` of a commit writes the commit ID there.
 - The ZIP contains a coherent Java server source tree and compiled JARs, plus the `my_singing_monsters_clean_20120810.sql` seed database. Later-era classes such as `Advertisement2018Group.java` make the idea of an untouched 2012 codebase untenable.
 
 ### Why the folder format matters
@@ -30,7 +31,7 @@ The Git project documents that archives of a commit normally use the commit time
 
 https://github.com/git/git/blob/master/Documentation/git-archive.adoc
 
-The directory name `monster-game-server-` followed by a 40-hex-digit identifier, combined with uniform internal timestamps, **strongly resembles a commit-specific GitHub ZIP**. In that case, the identifier is likely a full commit SHA and July 3, 2020 likely the commit timestamp. This is a high-confidence *format inference*, not a cryptographic validation that the hash is a real commit or was created by an authorized studio member.
+The directory name `monster-game-server-` followed by a 40-hex-digit identifier **resembles** the root prefix of a Git-hosted source snapshot, but that form is not specific to GitHub. Crucially, the ZIP lacks a commit comment and contains different timestamps for files versus directories, with a gap of ten months. These findings **weaken** the hypothesis that the surviving ZIP is an untouched `git archive` from a specific July 2020 commit. Its contents could have originated in Git and been **repacked later**; neither the original provider nor the meaning of the suffix has been cryptographically proven.
 
 ### Can we retrieve the old repository?
 
@@ -42,14 +43,14 @@ The old repository might have been deleted, renamed, made private, or not indexe
 
 ### Two different origin questions
 
-1. **Immediate origin of the Internet Archive ZIP:** likely a previously distributed GitHub-style project snapshot. Who downloaded it or passed it to the 2023 uploader remains unknown.
+1. **Immediate origin of the Internet Archive ZIP:** possibly a repackaged Git-derived source tree. Mixed timestamp groups and absence of an archive comment argue against identifying the exact ZIP as a direct native Git commit archive. Who packaged it and where it circulated before 2023 remain unknown.
 2. **Original source of the MSM server implementation:** its internal package names and gameplay-specific data suggest substantial historical MSM/BBB-derived backend code, not a tiny toy remake, but the original studio repository, employee authorship, and release authorization have **not** been independently authenticated. It may have been repackaged or modified in fan communities.
 
 ### What the upload does *not* prove
 
 - It does not prove the Big Blue Bubble official account uploaded this (the archive's `creator` field is self-reported).
 - It does not prove a malicious leak or security breach occurred.
-- It does not prove the source was publicly available on GitHub in 2020; a commit's timestamp is not the date it was publicly released.
+- It does not prove the source was publicly available on GitHub in 2020; the 2020 date is only an entry timestamp here, and **cannot be reliably called a commit timestamp**.
 - It does not prove the old repo still exists or that the owner of the 2023 Archive upload owned the source in 2020.
 - It does not prove the 2012-named SQL file was itself made in August 2012; it is an internal filename in a later snapshot.
 
@@ -65,3 +66,7 @@ Do not access private repos without permissions or attempt to use the archived c
 ## Research outputs
 
 The complete file-level assessment remains in `server-everything-summary.md`, `server-full-file-audit.json`, `server-full-file-index.csv`, and related scripts. The existing reports do not republish server code.
+
+## ZIP comment verification (new)
+
+Full inspected metadata: `server-zip-provenance.json`; explanation: `server-zip-comment-analysis.md`. ZIP-global comment length **0**, entry comments **0**, all ZIP creator-system values **0 (DOS convention)**, and **no extra fields**. This does not identify a service. Files and directories have different timestamp groups; do not claim an untouched 2020 snapshot.
