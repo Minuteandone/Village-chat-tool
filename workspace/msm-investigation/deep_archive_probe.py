@@ -62,7 +62,7 @@ def try_symbols(results):
             matches=[(name,"/Windows/"+urllib.parse.quote(name)) for name in documented]
             section["status"]="Index has no exposed link anchors; tried two exact listed filenames"
         for txt,href in matches[:2]:
-            u=urllib.parse.urljoin(final,href)
+            u=urllib.parse.urljoin(final,urllib.parse.quote(href,safe="/%"))
             host=urllib.parse.urlsplit(u).hostname
             entry={"title":txt,"requested_url":u}
             section["entries"].append(entry)
@@ -116,12 +116,7 @@ def try_dlc(results):
                 sha=hashlib.sha1(data).hexdigest()
                 item["sha1_verified"]=(sha==f.get("sha1"))
                 if sha!=f.get("sha1"): raise ValueError("Hash verification failed")
-                if path.endswith("/Server"):
-                    content=data.decode("utf-8","replace")
-                    # public URL/config hints, without printing arbitrary possible credentials
-                    item["config_lines"]=[line[:190] for line in content.splitlines() if not re.search(r"token|password|secret|authorization|bearer|key",line,re.I)][:25]
-                    item["url_hosts"]=sorted(set(urllib.parse.urlsplit(u).hostname for u in re.findall(r"https?://[^\s\"'<>]+",content) if urllib.parse.urlsplit(u).hostname))
-                elif have_unity:
+                if have_unity:
                     env=UnityPy.load(data)
                     types=collections.Counter()
                     objs=[]
@@ -136,6 +131,24 @@ def try_dlc(results):
                                 sc=getattr(read,"script",None)
                                 if isinstance(sc,(bytes,bytearray)):sc=sc.decode("utf-8","replace")
                                 if isinstance(sc,str):ob["text_preview"]=sc[:200]
+                            if ty=="MonoBehaviour":
+                                try:
+                                    tree=obj.read_typetree()
+                                    if isinstance(tree,dict):
+                                        ob["typetree_keys"]=list(tree)[:35]
+                                        flat=[]
+                                        def visit(v,p="",depth=0):
+                                            if len(flat)>=100 or depth>7:return
+                                            if isinstance(v,dict):
+                                                for k,x in list(v.items())[:45]:visit(x,(p+"."+str(k))[:140],depth+1)
+                                            elif isinstance(v,list):
+                                                for idx,x in enumerate(v[:15]):visit(x,f"{p}[{idx}]",depth+1)
+                                            elif isinstance(v,(str,int,float,bool)):
+                                                val=str(v)
+                                                if val and len(val)<190:flat.append({"field":p,"value":val})
+                                        visit(tree)
+                                        ob["typetree_fields"]=flat[:60]
+                                except Exception as e:ob["typetree_error"]=str(e)[:150]
                         except Exception as e:ob["read_error"]=str(e)[:130]
                         if len(ob)>1:objs.append(ob)
                     item["unity_object_count"]=sum(types.values())
