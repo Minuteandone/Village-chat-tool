@@ -1,0 +1,62 @@
+name: One-shot public MSM archive note inspection
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: read
+  issues: write
+jobs:
+  archive_note:
+    if: >-
+      github.event.issue.number == 3 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.user.login == github.repository_owner &&
+      github.event.comment.user.login == github.repository_owner &&
+      github.event.comment.body == '/msm-archive-note'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Read known public archive note with restricted redirects
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib, urllib.request, urllib.parse, re
+          u='https://archive.org/download/msm_official_guide_dlcs/missing%20prerelease%20files.txt'
+          class Redirect(urllib.request.HTTPRedirectHandler):
+              count=0
+              def redirect_request(self, req, fp, code, msg, headers, newurl):
+                  self.count+=1
+                  host=urllib.parse.urlsplit(newurl).hostname or ''
+                  if self.count>5 or (host!='archive.org' and not host.endswith('.us.archive.org')) or not newurl.startswith('https://'):
+                      raise ValueError('Archive redirect outside public archive host allowlist')
+                  return super().redirect_request(req,fp,code,msg,headers,newurl)
+          try:
+              with urllib.request.build_opener(Redirect()).open(urllib.request.Request(u,headers={'User-Agent':'MSM-public-archive-investigation/1.0'}), timeout=25) as resp:
+                  raw=resp.read(16385)
+                  if len(raw)>16384: raise ValueError('Public document exceeded 16 KiB')
+                  body=raw.decode('utf-8','replace')
+                  result={'status':'ok','source':u,'bytes':len(raw),'content':body}
+          except Exception as e:
+              result={'status':'error','error':type(e).__name__+': '+str(e)[:200]}
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])/'archive-note.json'
+          p.write_text(json.dumps(result,ensure_ascii=False))
+          print(json.dumps({k:v for k,v in result.items() if k!='content'}))
+          PY
+      - name: Post compact public document or error to owner issue
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib,re
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])
+          result=json.loads((p/'archive-note.json').read_text())
+          if result['status']=='ok':
+              data=result['content'][:15000]
+              data=re.sub(r'@(?![\u200b\u200c\u200d])','@\u200b',data)
+              body='### Public MSM Official Guide archive missing-prerelease note\n\n'+('Source: '+result['source'])+'\n\n'+'~~~text\n'+data+'\n~~~'
+          else:
+              body='### Public MSM archive note access check\n\n'+result['error']
+          (p/'post.json').write_text(json.dumps({'body':body}))
+          PY
+          gh api -X POST "repos/$GITHUB_REPOSITORY/issues/3/comments" --input "$RUNNER_TEMP/post.json"
