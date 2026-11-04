@@ -19,8 +19,8 @@ kinds = {
     "developer_admin": r"(^|[/_.-])admin([/_.-]|$)",
     "explicit_unused_or_beta": r"(^|[/_.-])(unused|beta|prototype|deprecated|scrapped)([/_.-]|$)",
     "dish_harmonizer_related": r"dish_harmonizer",
-    "monster_audio": r"^split_asset_pack/audio/music/.*\\.(ogg|mid)$",
-    "music_world_midi": r"^split_asset_pack/audio/music/world[0-9]+\\.mid$",
+    "monster_audio": r"^split_asset_pack/audio/music/.*\.(ogg|mid)$",
+    "music_world_midi": r"^split_asset_pack/audio/music/world[0-9]+\.mid$",
 }
 flagged = {}
 for category, pattern in kinds.items():
