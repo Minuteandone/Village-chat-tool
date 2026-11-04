@@ -1,0 +1,683 @@
+{
+  "created_utc": "2026-11-04T01:05:01.154014+00:00",
+  "source": "https://archive.org/download/monster-game-server/monster-game-server.zip",
+  "sql_schema_metadata": [
+    {
+      "name": "my_singing_monsters_clean_20120810.sql",
+      "size": 186500,
+      "schema": {
+        "ads_in_house": {
+          "column_count": 7,
+          "columns": [
+            "ad_id",
+            "image_url",
+            "link_url",
+            "start_date",
+            "end_date",
+            "impressions_per_user",
+            "enabled"
+          ],
+          "approx_record_count": 1
+        },
+        "breeding_combinations": {
+          "column_count": 6,
+          "columns": [
+            "breeding_combination_id",
+            "monster_1",
+            "monster_2",
+            "result",
+            "probability",
+            "last_changed"
+          ],
+          "approx_record_count": 1041
+        },
+        "entities": {
+          "column_count": 16,
+          "columns": [
+            "entity_id",
+            "entity_type",
+            "name",
+            "description",
+            "graphic",
+            "size_x",
+            "size_y",
+            "cost_coins",
+            "cost_diamonds",
+            "build_time",
+            "level",
+            "requirements",
+            "movable",
+            "last_changed",
+            "xp",
+            "y_offset"
+          ],
+          "approx_record_count": 146
+        },
+        "game_settings": {
+          "column_count": 4,
+          "columns": [
+            "id",
+            "setting",
+            "value",
+            "comment"
+          ],
+          "approx_record_count": 19
+        },
+        "island_monsters": {
+          "column_count": 4,
+          "columns": [
+            "island_monster_id",
+            "island",
+            "monster",
+            "instrument"
+          ],
+          "approx_record_count": 45
+        },
+        "island_structures": {
+          "column_count": 4,
+          "columns": [
+            "island_structure_id",
+            "island",
+            "structure",
+            "instrument"
+          ],
+          "approx_record_count": 15
+        },
+        "islands": {
+          "column_count": 12,
+          "columns": [
+            "island_id",
+            "name",
+            "description",
+            "graphic",
+            "genes",
+            "last_changed",
+            "cost_coins",
+            "cost_diamonds",
+            "midi",
+            "castle_structure_id",
+            "remix_url",
+            "enabled"
+          ],
+          "approx_record_count": 5
+        },
+        "level_xp": {
+          "column_count": 4,
+          "columns": [
+            "level",
+            "xp",
+            "max_bakeries",
+            "last_changed"
+          ],
+          "approx_record_count": 20
+        },
+        "monster_levels": {
+          "column_count": 7,
+          "columns": [
+            "monster_level_id",
+            "monster",
+            "level",
+            "food",
+            "coins",
+            "max_coins",
+            "last_changed"
+          ],
+          "approx_record_count": 465
+        },
+        "monsters": {
+          "column_count": 8,
+          "columns": [
+            "monster_id",
+            "entity",
+            "genes",
+            "beds",
+            "happiness",
+            "names",
+            "last_changed",
+            "level_up_xp"
+          ],
+          "approx_record_count": 31
+        },
+        "quest_types": {
+          "column_count": 6,
+          "columns": [
+            "type_id",
+            "name",
+            "sheet_id",
+            "image_id",
+            "last_changed",
+            "depricated"
+          ],
+          "approx_record_count": 6
+        },
+        "quests": {
+          "column_count": 12,
+          "columns": [
+            "id",
+            "name",
+            "description",
+            "type",
+            "goals",
+            "next",
+            "rewards",
+            "sheet",
+            "image",
+            "initial",
+            "visible",
+            "comment"
+          ],
+          "approx_record_count": 118
+        },
+        "store_currency": {
+          "column_count": 4,
+          "columns": [
+            "storecur_id",
+            "currency_name",
+            "starting_amount",
+            "last_changed"
+          ],
+          "approx_record_count": 4
+        },
+        "store_groups": {
+          "column_count": 5,
+          "columns": [
+            "storegroup_id",
+            "group_name",
+            "currency",
+            "group_title",
+            "last_changed"
+          ],
+          "approx_record_count": 3
+        },
+        "store_items": {
+          "column_count": 17,
+          "columns": [
+            "storeitem_id",
+            "item_name",
+            "item_title",
+            "item_desc",
+            "price",
+            "consumable",
+            "amount",
+            "sale_amount",
+            "max",
+            "group_id",
+            "currency_id",
+            "sheet_id",
+            "image_id",
+            "ios_platform_id",
+            "android_platform_id",
+            "last_changed",
+            "enabled"
+          ],
+          "approx_record_count": 18
+        },
+        "structure_levels": {
+          "column_count": 5,
+          "columns": [
+            "structure_level_id",
+            "structure",
+            "level",
+            "diamonds",
+            "max_diamonds"
+          ]
+        },
+        "structures": {
+          "column_count": 7,
+          "columns": [
+            "structure_id",
+            "structure_type",
+            "entity",
+            "upgrades_to",
+            "extra",
+            "last_changed",
+            "sound"
+          ],
+          "approx_record_count": 91
+        },
+        "user_apple_purchases": {
+          "column_count": 9,
+          "columns": [
+            "apple_purchase_id",
+            "user",
+            "transaction_id",
+            "resource",
+            "quantity",
+            "amount",
+            "sale_purchase",
+            "claimed_on",
+            "raw_data"
+          ]
+        },
+        "user_baking": {
+          "column_count": 6,
+          "columns": [
+            "user_baking_id",
+            "island",
+            "user_structure",
+            "food_count",
+            "started_at",
+            "finished_at"
+          ]
+        },
+        "user_breeding": {
+          "column_count": 7,
+          "columns": [
+            "user_breeding_id",
+            "island",
+            "monster_1",
+            "monster_2",
+            "new_monster",
+            "started_on",
+            "complete_on"
+          ],
+          "approx_record_count": 1
+        },
+        "user_contact_info": {
+          "column_count": 4,
+          "columns": "(not displayed: player records)"
+        },
+        "user_eggs": {
+          "column_count": 5,
+          "columns": [
+            "user_egg_id",
+            "island",
+            "monster",
+            "laid_on",
+            "hatches_on"
+          ]
+        },
+        "user_friends": {
+          "column_count": 2,
+          "columns": "(not displayed: player records)"
+        },
+        "user_inhouse_ads": {
+          "column_count": 4,
+          "columns": [
+            "id",
+            "user",
+            "ad",
+            "seen_on"
+          ]
+        },
+        "user_islands": {
+          "column_count": 5,
+          "columns": "(not displayed: player records)"
+        },
+        "user_messages": {
+          "column_count": 6,
+          "columns": "(not displayed: player records)"
+        },
+        "user_monsters": {
+          "column_count": 14,
+          "columns": "(not displayed: player records)"
+        },
+        "user_quests": {
+          "column_count": 6,
+          "columns": "(not displayed: player records)"
+        },
+        "user_structures": {
+          "column_count": 13,
+          "columns": "(not displayed: player records)"
+        },
+        "users": {
+          "column_count": 12,
+          "columns": "(not displayed: player records)"
+        }
+      }
+    },
+    {
+      "name": "tribal_date_updated.sql",
+      "size": 1026,
+      "schema": {}
+    }
+  ],
+  "development_marker_method_context": [
+    {
+      "file": "BBBToken.java",
+      "line": 55,
+      "nearest_method": "(class-level)",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "MigBase64.java",
+      "line": 17,
+      "nearest_method": "(class-level)",
+      "markers": [
+        "TEMPORARY"
+      ]
+    },
+    {
+      "file": "MigBase64.java",
+      "line": 19,
+      "nearest_method": "(class-level)",
+      "markers": [
+        "TEMPORARY"
+      ]
+    },
+    {
+      "file": "MigBase64.java",
+      "line": 20,
+      "nearest_method": "(class-level)",
+      "markers": [
+        "TEMPORARY"
+      ]
+    },
+    {
+      "file": "MigBase64.java",
+      "line": 30,
+      "nearest_method": "(class-level)",
+      "markers": [
+        "TEMPORARY"
+      ]
+    },
+    {
+      "file": "MigBase64.java",
+      "line": 457,
+      "nearest_method": "encodeToString",
+      "markers": [
+        "TEMPORARY"
+      ]
+    },
+    {
+      "file": "TutorialGroup.java",
+      "line": 44,
+      "nearest_method": "getGroupToAssign",
+      "markers": [
+        "DISABLED"
+      ]
+    },
+    {
+      "file": "ScratchTicketFunctions.java",
+      "line": 181,
+      "nearest_method": "getScaledPrizeAmounts",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "ScratchTicketFunctions.java",
+      "line": 184,
+      "nearest_method": "getScaledPrizeAmounts",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 2625,
+      "nearest_method": "hatchingSpeedUp",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 3006,
+      "nearest_method": "sellMonster",
+      "markers": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 5018,
+      "nearest_method": "breedingSpeedUp",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 6303,
+      "nearest_method": "sendTribeRequest",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 7535,
+      "nearest_method": "putDecorationInStorage",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 7688,
+      "nearest_method": "removeDecorationFromStorage",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 9183,
+      "nearest_method": "structureSpeedUp",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 9440,
+      "nearest_method": "clearObstacleSpeedUp",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 9699,
+      "nearest_method": "bakingSpeedUp",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 10172,
+      "nearest_method": "fuzingSpeedUp",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 10810,
+      "nearest_method": "processUncollectedOfferRewards",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 10868,
+      "nearest_method": "processUncollectedGlobalAchRewards",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 10886,
+      "nearest_method": "processUncollectedGlobalAchRewards",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 10898,
+      "nearest_method": "processUncollectedGlobalAchRewards",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 16393,
+      "nearest_method": "getGeneDB",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 16454,
+      "nearest_method": "getTorchGfxDB",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 16559,
+      "nearest_method": "getMonsterDB",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 16648,
+      "nearest_method": "getStructureDB",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 16730,
+      "nearest_method": "getIslandDB",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 16784,
+      "nearest_method": "getLevelDB",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 16839,
+      "nearest_method": "getScratchOffsDB",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 16992,
+      "nearest_method": "getStoreDB",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 17068,
+      "nearest_method": "getStoreDBv2",
+      "markers": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "GameStateHandler.java",
+      "line": 17093,
+      "nearest_method": "getStoreDBv2",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "MSMExtension.java",
+      "line": 2789,
+      "nearest_method": "send",
+      "markers": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "MSMExtension.java",
+      "line": 2795,
+      "nearest_method": "send",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "MSMServerEventHandler.java",
+      "line": 667,
+      "nearest_method": "send",
+      "markers": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "MSMServerEventHandler.java",
+      "line": 678,
+      "nearest_method": "send",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "Player.java",
+      "line": 1155,
+      "nearest_method": "toSFSObject",
+      "markers": [
+        "UNUSED"
+      ]
+    },
+    {
+      "file": "PlayerAchievement.java",
+      "line": 95,
+      "nearest_method": "getUserQuest",
+      "markers": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "PlayerIsland.java",
+      "line": 1680,
+      "nearest_method": "canPlace",
+      "markers": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "PlayerMonster.java",
+      "line": 1169,
+      "nearest_method": "stashCurrency",
+      "markers": [
+        "HACK",
+        "TESTING"
+      ]
+    },
+    {
+      "file": "PlayerQuest.java",
+      "line": 268,
+      "nearest_method": "getId",
+      "markers": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "PlayerStructure.java",
+      "line": 89,
+      "nearest_method": "initFromSFSObject",
+      "markers": [
+        "FIXME"
+      ]
+    }
+  ],
+  "notes": "Static analysis of archived game code. No database row values, account records or code source bodies exported."
+}
