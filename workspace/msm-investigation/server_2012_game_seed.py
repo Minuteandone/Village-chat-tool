@@ -63,7 +63,7 @@ for table in ALLOW:
       'structures':['structure_id','structure_type','entity','upgrades_to'],
       'breeding_combinations':['breeding_combination_id','monster_1','monster_2','result','probability'],
       'quests':['id','name','type','initial','visible'],
-      'quest_types':['id','name'],
+      'quest_types':['type_id','name','depricated'],
       'island_monsters':['island_monster_id','island','monster','instrument']
     }[table]
     indices=[cols.index(x) for x in chosen if x in cols]
@@ -73,9 +73,9 @@ for table in ALLOW:
         preview=records[:8];game[table]={'count':len(rows),'examples':preview,
               'nonzero_probability_count':sum(1 for x in records if (x.get('probability') not in (None,'0','0.0','0.00','0.000','NULL')))}
     elif table=='quests':
-        game[table]={'count':len(rows),'first':records[:25],'suspicious_names':[x for x in records if re.search('test|debug|dummy|placeholder|unused|legacy',x.get('name',''),re.I)][:40]}
+        game[table]={'count':len(rows),'first':records[:125],'suspicious_names':[x for x in records if re.search('test|debug|dummy|placeholder|unused|legacy',x.get('name',''),re.I)][:40]}
     elif table=='entities':
-        game[table]={'count':len(rows),'first':records[:50],'types':sorted(set(x.get('entity_type') or '' for x in records))}
+        game[table]={'count':len(rows),'first':records[:170],'types':sorted(set(x.get('entity_type') or '' for x in records))}
     else:
         game[table]={'count':len(rows),'records':records[:120]}
 game['analysed_at_utc']=datetime.datetime.now(datetime.timezone.utc).isoformat()
