@@ -80,7 +80,7 @@ for before,after in [("1280 (1.3.0)","1383 (sept 26 2019)"),
 (ROOT/"guide_catalog_diff.json").write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
 
 lines=["# My Singing Monsters Official Guide — extracted 2018/2019 data catalog comparison","",
-       "Source: "+result["source"],"","The Unity \`AllData\` and \`GlobalLookupData\` serialized objects were read and compared. Labels are internal data keys, not proof of scrapped content.",""]
+       "Source: "+result["source"],"","The Unity `AllData` and `GlobalLookupData` serialized objects were read and compared. Labels are internal data keys, not proof of scrapped content.",""]
 for v,data in result["versions"].items():
     lines+=["## "+v,"", "Embedded version: "+str(data.get("version_field")),""]
     if "error" in data:
@@ -93,8 +93,8 @@ for label,changes in result["diffs"].items():
     for kind,d in changes.items():
         lines+=[f"### {kind} ({d['before']} -> {d['after']})",""]
         lines+=["Added: "+str(len(d["added"]))+"; removed: "+str(len(d["removed"]))+" (first 150 entries max)",""]
-        for row in d["added"][:25]:lines+=["- Added: \`"+json.dumps(row,ensure_ascii=False)+"\`"]
-        for row in d["removed"][:25]:lines+=["- Removed: \`"+json.dumps(row,ensure_ascii=False)+"\`"]
+        for row in d["added"][:25]:lines+=["- Added: `"+json.dumps(row,ensure_ascii=False)+"`"]
+        for row in d["removed"][:25]:lines+=["- Removed: `"+json.dumps(row,ensure_ascii=False)+"`"]
         lines+=[""]
 lines+=["This compares compact record identifiers and names only. It does not prove changed assets are unreleased or cut."]
 (ROOT/"guide_catalog_diff.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
