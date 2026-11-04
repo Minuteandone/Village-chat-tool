@@ -1,0 +1,51 @@
+name: One-shot MSM Vita database/SFO/audio metadata
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+  issues: write
+jobs:
+  inspect:
+    if: >-
+      github.event.issue.number == 3 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.user.login == github.repository_owner &&
+      github.event.comment.user.login == github.repository_owner &&
+      github.event.comment.body == '/msm-vita-metadata'
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Inspect public PSVita SFO and read-only game database schema
+        run: |
+          set -euo pipefail
+          python3 workspace/msm-investigation/msm_vita_deep_metadata.py > "$RUNNER_TEMP/msm-vita.txt" 2>&1
+          head -c 8500 "$RUNNER_TEMP/msm-vita.txt"
+      - name: Commit metadata result only
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add workspace/msm-investigation/msm-vita-metadata-deep.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record archive-authentic Vita game metadata, SQLite table names and song formats"
+            auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+            git -c "http.extraheader=AUTHORIZATION: basic $auth" push origin HEAD:main
+          fi
+      - name: Reply
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib
+          p=pathlib.Path(os.environ["RUNNER_TEMP"])
+          t=(p/"msm-vita.txt").read_text(errors="replace") if (p/"msm-vita.txt").exists() else "No output"
+          (p/"msg.json").write_text(json.dumps({"body":"### PS Vita MSM archive database and SFO static check\n\n"+t[:10000]}))
+          PY
+          gh api -X POST "repos/$GITHUB_REPOSITORY/issues/3/comments" --input "$RUNNER_TEMP/msg.json"
