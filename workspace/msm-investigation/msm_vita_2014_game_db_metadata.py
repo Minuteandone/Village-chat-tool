@@ -58,6 +58,15 @@ with zipfile.ZipFile(io.BytesIO(raw)) as z:
         report["special_gene_mentions"].append({"table":table,"first_300_rows_matching_ABCDE":len(match),"examples":match[:8]})
       elif table=="island_monsters":
         report["island_monsters_preview"]={"columns":safe_cols,"sample":item[:20]}
+    report["monster_30_cross_references"]={}
+    for table in ["island_monsters","breeding_combinations","monster_island_2_island_map","store_items"]:
+      if table not in report["table_stats"]:continue
+      cols=[x["name"] for x in report["table_stats"][table]["columns"]]
+      cols=[x for x in cols if re.search(r"(?i)monster|result|parent|item|entity",x) and not re.search(r"(?i)user|account|secret",x)]
+      report["monster_30_cross_references"][table]={}
+      for col in cols:
+        count=con.execute('SELECT COUNT(*) FROM "'+table+'" WHERE CAST("'+col+'" AS TEXT)=?',("30",)).fetchone()[0]
+        report["monster_30_cross_references"][table][col]=count
     con.close()
 (ROOT/"msm-vita-2014-game-db-metadata.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
 print("VITA DB TABLES",json.dumps({k:v["rows"] for k,v in report["table_stats"].items()}))
