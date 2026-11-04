@@ -1,0 +1,1573 @@
+{
+  "archive_sha1": "4d4bdbb3c4d90aad6743dda8e55dd2ed95605ff8",
+  "db_bytes": 299008,
+  "table_stats": {
+    "achievement_ids": {
+      "rows": 17,
+      "columns": [
+        {
+          "name": "bbb_achieve_id",
+          "type": "TEXT"
+        },
+        {
+          "name": "google_achieve_id",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "breeding_combinations": {
+      "rows": 1200,
+      "columns": [
+        {
+          "name": "breeding_combination_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "monster_1",
+          "type": "INTEGER"
+        },
+        {
+          "name": "monster_2",
+          "type": "INTEGER"
+        },
+        {
+          "name": "result",
+          "type": "INTEGER"
+        },
+        {
+          "name": "probability",
+          "type": "INTEGER"
+        },
+        {
+          "name": "modifier",
+          "type": "REAL"
+        },
+        {
+          "name": "last_changed",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "entities": {
+      "rows": 296,
+      "columns": [
+        {
+          "name": "entity_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "entity_type",
+          "type": "TEXT"
+        },
+        {
+          "name": "name",
+          "type": "TEXT"
+        },
+        {
+          "name": "description",
+          "type": "TEXT"
+        },
+        {
+          "name": "keywords",
+          "type": "TEXT"
+        },
+        {
+          "name": "graphic",
+          "type": "TEXT"
+        },
+        {
+          "name": "size_x",
+          "type": "INTEGER"
+        },
+        {
+          "name": "size_y",
+          "type": "INTEGER"
+        },
+        {
+          "name": "cost_coins",
+          "type": "INTEGER"
+        },
+        {
+          "name": "cost_eth_currency",
+          "type": "INTEGER"
+        },
+        {
+          "name": "cost_diamonds",
+          "type": "INTEGER"
+        },
+        {
+          "name": "cost_sale",
+          "type": "INTEGER"
+        },
+        {
+          "name": "build_time",
+          "type": "INTEGER"
+        },
+        {
+          "name": "level",
+          "type": "INTEGER"
+        },
+        {
+          "name": "requirements",
+          "type": "TEXT"
+        },
+        {
+          "name": "movable",
+          "type": "INTEGER"
+        },
+        {
+          "name": "last_changed",
+          "type": "TEXT"
+        },
+        {
+          "name": "xp",
+          "type": "INTEGER"
+        },
+        {
+          "name": "y_offset",
+          "type": "INTEGER"
+        },
+        {
+          "name": "view_in_market",
+          "type": "INTEGER"
+        },
+        {
+          "name": "premium",
+          "type": "INTEGER"
+        },
+        {
+          "name": "min_server_version",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "game_settings": {
+      "rows": 127,
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "setting",
+          "type": "TEXT"
+        },
+        {
+          "name": "value",
+          "type": "TEXT"
+        },
+        {
+          "name": "comment",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "game_settings_offers": {
+      "rows": 8,
+      "columns": [
+        {
+          "name": "offer_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "name",
+          "type": "TEXT"
+        },
+        {
+          "name": "impressions",
+          "type": "INTEGER"
+        },
+        {
+          "name": "viewed",
+          "type": "INTEGER"
+        },
+        {
+          "name": "conversions",
+          "type": "INTEGER"
+        },
+        {
+          "name": "enabled",
+          "type": "INTEGER"
+        },
+        {
+          "name": "client_platform",
+          "type": "TEXT"
+        },
+        {
+          "name": "client_version",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "genes": {
+      "rows": 13,
+      "columns": [
+        {
+          "name": "gene_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "gene_letter",
+          "type": "TEXT"
+        },
+        {
+          "name": "gene_graphic",
+          "type": "TEXT"
+        },
+        {
+          "name": "last_changed",
+          "type": "TEXT"
+        },
+        {
+          "name": "min_server_version",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "island_monsters": {
+      "rows": 161,
+      "columns": [
+        {
+          "name": "island_monster_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "island",
+          "type": "INTEGER"
+        },
+        {
+          "name": "monster",
+          "type": "INTEGER"
+        },
+        {
+          "name": "instrument",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "island_structures": {
+      "rows": 37,
+      "columns": [
+        {
+          "name": "island_structure_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "island",
+          "type": "INTEGER"
+        },
+        {
+          "name": "structure",
+          "type": "INTEGER"
+        },
+        {
+          "name": "instrument",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "island_torches": {
+      "rows": 8,
+      "columns": [
+        {
+          "name": "island_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "torch_graphic",
+          "type": "TEXT"
+        },
+        {
+          "name": "last_changed",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "islands": {
+      "rows": 8,
+      "columns": [
+        {
+          "name": "island_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "name",
+          "type": "TEXT"
+        },
+        {
+          "name": "description",
+          "type": "TEXT"
+        },
+        {
+          "name": "graphic",
+          "type": "TEXT"
+        },
+        {
+          "name": "genes",
+          "type": "TEXT"
+        },
+        {
+          "name": "last_changed",
+          "type": "TEXT"
+        },
+        {
+          "name": "level",
+          "type": "INTEGER"
+        },
+        {
+          "name": "cost_coins",
+          "type": "INTEGER"
+        },
+        {
+          "name": "cost_diamonds",
+          "type": "INTEGER"
+        },
+        {
+          "name": "midi",
+          "type": "TEXT"
+        },
+        {
+          "name": "castle_structure_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "remix_url",
+          "type": "TEXT"
+        },
+        {
+          "name": "remix_url_2",
+          "type": "TEXT"
+        },
+        {
+          "name": "enabled",
+          "type": "INTEGER"
+        },
+        {
+          "name": "min_server_version",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "level_xp": {
+      "rows": 30,
+      "columns": [
+        {
+          "name": "level",
+          "type": "INTEGER"
+        },
+        {
+          "name": "xp",
+          "type": "INTEGER"
+        },
+        {
+          "name": "max_bakeries",
+          "type": "INTEGER"
+        },
+        {
+          "name": "last_changed",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "monster_island_2_island_map": {
+      "rows": 26,
+      "columns": [
+        {
+          "name": "source_island",
+          "type": "INTEGER"
+        },
+        {
+          "name": "source_monster",
+          "type": "INTEGER"
+        },
+        {
+          "name": "dest_island",
+          "type": "INTEGER"
+        },
+        {
+          "name": "dest_monster",
+          "type": "INTEGER"
+        }
+      ]
+    },
+    "monster_levels": {
+      "rows": 1065,
+      "columns": [
+        {
+          "name": "monster_level_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "monster",
+          "type": "INTEGER"
+        },
+        {
+          "name": "level",
+          "type": "INTEGER"
+        },
+        {
+          "name": "food",
+          "type": "INTEGER"
+        },
+        {
+          "name": "coins",
+          "type": "INTEGER"
+        },
+        {
+          "name": "max_coins",
+          "type": "INTEGER"
+        },
+        {
+          "name": "ethereal_currency",
+          "type": "INTEGER"
+        },
+        {
+          "name": "max_ethereal",
+          "type": "INTEGER"
+        },
+        {
+          "name": "last_changed",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "monsters": {
+      "rows": 71,
+      "columns": [
+        {
+          "name": "monster_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "entity",
+          "type": "INTEGER"
+        },
+        {
+          "name": "genes",
+          "type": "TEXT"
+        },
+        {
+          "name": "beds",
+          "type": "INTEGER"
+        },
+        {
+          "name": "happiness",
+          "type": "TEXT"
+        },
+        {
+          "name": "names",
+          "type": "TEXT"
+        },
+        {
+          "name": "last_changed",
+          "type": "TEXT"
+        },
+        {
+          "name": "level_up_xp",
+          "type": "INTEGER"
+        },
+        {
+          "name": "box_monster_requirements",
+          "type": "TEXT"
+        },
+        {
+          "name": "levelup_island",
+          "type": "TEXT"
+        },
+        {
+          "name": "link_title",
+          "type": "TEXT"
+        },
+        {
+          "name": "link_address",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "quests": {
+      "rows": 224,
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "name",
+          "type": "TEXT"
+        },
+        {
+          "name": "description",
+          "type": "TEXT"
+        },
+        {
+          "name": "type",
+          "type": "TEXT"
+        },
+        {
+          "name": "goals",
+          "type": "TEXT"
+        },
+        {
+          "name": "next",
+          "type": "TEXT"
+        },
+        {
+          "name": "rewards",
+          "type": "TEXT"
+        },
+        {
+          "name": "sheet",
+          "type": "TEXT"
+        },
+        {
+          "name": "image",
+          "type": "TEXT"
+        },
+        {
+          "name": "initial",
+          "type": "INTEGER"
+        },
+        {
+          "name": "visible",
+          "type": "INTEGER"
+        },
+        {
+          "name": "comment",
+          "type": "TEXT"
+        },
+        {
+          "name": "min_server_version",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "scratch_offs": {
+      "rows": 61,
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "type",
+          "type": "TEXT"
+        },
+        {
+          "name": "prize",
+          "type": "TEXT"
+        },
+        {
+          "name": "amount",
+          "type": "INTEGER"
+        },
+        {
+          "name": "probability",
+          "type": "INTEGER"
+        },
+        {
+          "name": "is_top_prize",
+          "type": "INTEGER"
+        },
+        {
+          "name": "min_server_version",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "seasonal_monster_info": {
+      "rows": 5,
+      "columns": [
+        {
+          "name": "monster_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "start_month",
+          "type": "INTEGER"
+        },
+        {
+          "name": "start_day",
+          "type": "INTEGER"
+        },
+        {
+          "name": "end_month",
+          "type": "INTEGER"
+        },
+        {
+          "name": "end_day",
+          "type": "INTEGER"
+        }
+      ]
+    },
+    "store_currency": {
+      "rows": 4,
+      "columns": [
+        {
+          "name": "storecur_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "currency_name",
+          "type": "TEXT"
+        },
+        {
+          "name": "starting_amount",
+          "type": "INTEGER"
+        },
+        {
+          "name": "last_changed",
+          "type": "TEXT"
+        },
+        {
+          "name": "min_server_version",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "store_groups": {
+      "rows": 3,
+      "columns": [
+        {
+          "name": "storegroup_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "group_name",
+          "type": "TEXT"
+        },
+        {
+          "name": "currency",
+          "type": "INTEGER"
+        },
+        {
+          "name": "group_title",
+          "type": "TEXT"
+        },
+        {
+          "name": "last_changed",
+          "type": "TEXT"
+        },
+        {
+          "name": "min_server_version",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "store_items": {
+      "rows": 18,
+      "columns": [
+        {
+          "name": "storeitem_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "item_name",
+          "type": "TEXT"
+        },
+        {
+          "name": "entitlement",
+          "type": "TEXT"
+        },
+        {
+          "name": "item_title",
+          "type": "TEXT"
+        },
+        {
+          "name": "item_desc",
+          "type": "TEXT"
+        },
+        {
+          "name": "price",
+          "type": "INTEGER"
+        },
+        {
+          "name": "consumable",
+          "type": "INTEGER"
+        },
+        {
+          "name": "amount",
+          "type": "INTEGER"
+        },
+        {
+          "name": "sale_amount",
+          "type": "INTEGER"
+        },
+        {
+          "name": "max",
+          "type": "INTEGER"
+        },
+        {
+          "name": "group_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "currency_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "sheet_id",
+          "type": "TEXT"
+        },
+        {
+          "name": "image_id",
+          "type": "TEXT"
+        },
+        {
+          "name": "ios_platform_id",
+          "type": "TEXT"
+        },
+        {
+          "name": "android_platform_id",
+          "type": "TEXT"
+        },
+        {
+          "name": "last_changed",
+          "type": "TEXT"
+        },
+        {
+          "name": "enabled",
+          "type": "INTEGER"
+        },
+        {
+          "name": "min_server_version",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "structure_levels": {
+      "rows": 0,
+      "columns": [
+        {
+          "name": "structure_level_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "structure",
+          "type": "INTEGER"
+        },
+        {
+          "name": "level",
+          "type": "INTEGER"
+        },
+        {
+          "name": "diamonds",
+          "type": "INTEGER"
+        },
+        {
+          "name": "max_diamonds",
+          "type": "INTEGER"
+        }
+      ]
+    },
+    "structures": {
+      "rows": 201,
+      "columns": [
+        {
+          "name": "structure_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "structure_type",
+          "type": "TEXT"
+        },
+        {
+          "name": "entity",
+          "type": "INTEGER"
+        },
+        {
+          "name": "upgrades_to",
+          "type": "INTEGER"
+        },
+        {
+          "name": "extra",
+          "type": "TEXT"
+        },
+        {
+          "name": "last_changed",
+          "type": "TEXT"
+        },
+        {
+          "name": "sound",
+          "type": "TEXT"
+        },
+        {
+          "name": "limit_to_island",
+          "type": "INTEGER"
+        }
+      ]
+    }
+  },
+  "monster_combinations": {
+    "columns": [
+      "monster_id",
+      "entity",
+      "genes",
+      "beds",
+      "names",
+      "box_monster_requirements",
+      "levelup_island"
+    ],
+    "rows": [
+      {
+        "monster_id": "1",
+        "entity": "64",
+        "genes": "A",
+        "beds": "1",
+        "names": "[\"Byrd\",\"Flitz\",\"Pritty\",\"Tweets\",\"Tryll\",\"Palila\",\"Purps\",\"Canopee\",\"Fyre\",\"Torio\",\"Flap\"",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "2",
+        "entity": "65",
+        "genes": "B",
+        "beds": "1",
+        "names": "[\"Slyth\",\"Thorny\",\"Trappy\",\"Carnivorti\",\"Caviniti\",\"Gafna\",\"Gefen\",\"Audrey\",\"Vino\",\"Rooty\"",
+        "box_monster_requirements": "",
+        "levelup_island": "gold_and_shugga"
+      },
+      {
+        "monster_id": "3",
+        "entity": "66",
+        "genes": "C",
+        "beds": "1",
+        "names": "[\"Shlapp\",\"Thwak\",\"Chuck\",\"Narms\",\"Tongot\",\"Eben\",\"Handy\",\"Rubble\",\"Granok\",\"Wilma\",\"Roark",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "4",
+        "entity": "67",
+        "genes": "D",
+        "beds": "1",
+        "names": "[\"Skwoosh\",\"Nixie\",\"Zarya\",\"Tahoe\",\"Bubbles\",\"Jiggles\",\"Splooosh\",\"Bluuurp\",\"Glob\",\"Toesy\"",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "5",
+        "entity": "68",
+        "genes": "E",
+        "beds": "1",
+        "names": "[\"Squatch\",\"Cuddles\",\"Fuzzles\",\"Feets\",\"Hank\",\"Perdita\",\"Fluffy\",\"Neva\",\"Mondo\",\"Stampy\",\"",
+        "box_monster_requirements": "",
+        "levelup_island": "gold_and_shugga"
+      },
+      {
+        "monster_id": "6",
+        "entity": "69",
+        "genes": "AB",
+        "beds": "2",
+        "names": "[\"Hoity\",\"Muffet\",\"Toity\",\"Gnag\",\"Plutter\",\"Gita\",\"Gwen\",\"Lenna\",\"Zeebee\",\"Blanky\",\"Doodee",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "7",
+        "entity": "70",
+        "genes": "AC",
+        "beds": "2",
+        "names": "[\"Choppa\",\"Clampy\",\"Beezee\",\"Monono\",\"Bot\",\"Monoeye\",\"Bukkit\",\"Thrott\",\"Blaise\",\"Kenji\",\"S",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "8",
+        "entity": "71",
+        "genes": "AD",
+        "beds": "2",
+        "names": "[\"Lepht & Rhyth\",\"Thys & Thatt\",\"Pokey\",\"Hizz & Hurzz\",\"Pollox\",\"Tarleton\",\"Accalia\",\"Gann",
+        "box_monster_requirements": "",
+        "levelup_island": "gold_and_shugga"
+      },
+      {
+        "monster_id": "9",
+        "entity": "72",
+        "genes": "AE",
+        "beds": "2",
+        "names": "[\"Klatter\",\"Shwam\",\"Booloo\",\"Shmoodles\",\"Thwoodles\",\"Chatters\",\"Aric\",\"Gaston\",\"Charff\",\"T",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "10",
+        "entity": "73",
+        "genes": "BC",
+        "beds": "2",
+        "names": "[\"Rahz\",\"Bëetz\",\"Pepper\",\"Iggy\",\"Tanga\",\"Chorine\",\"Raff\",\"Gaillard\",\"Bushy\",\"Vito\",\"Gazell",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "11",
+        "entity": "74",
+        "genes": "BD",
+        "beds": "2",
+        "names": "[\"Sapps\",\"Barkley\",\"Whitler\",\"Pomona\",\"Grumples\",\"Shoob\",\"Knotty\",\"Harold\",\"Rooty\",\"Redlin",
+        "box_monster_requirements": "",
+        "levelup_island": "gold_and_shugga"
+      },
+      {
+        "monster_id": "12",
+        "entity": "75",
+        "genes": "BE",
+        "beds": "2",
+        "names": "[\"Leef\",\"Twiglit\",\"Tyke\",\"Sprigg\",\"Moss\",\"Budd\",\"Boodul\",\"Shookin\",\"Faedd\",\"Cooty\",\"Bokshi",
+        "box_monster_requirements": "",
+        "levelup_island": "gold_and_shugga"
+      },
+      {
+        "monster_id": "13",
+        "entity": "76",
+        "genes": "CD",
+        "beds": "2",
+        "names": "[\"Fwub\",\"Trog\",\"Warty\",\"Phibian\",\"Flumper\",\"Gool\",\"Mooper\",\"Gribbit\",\"Wowng\",\"Newlin\",\"Wal",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "14",
+        "entity": "77",
+        "genes": "CE",
+        "beds": "2",
+        "names": "[\"Sticks\",\"Thwomp\",\"Vrenna\",\"Marchy\",\"Blattle\",\"Hitty\",\"Larz\",\"Orri\",\"Dorma\",\"Armina\",\"Ogr",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "15",
+        "entity": "78",
+        "genes": "DE",
+        "beds": "2",
+        "names": "[\"Lump\",\"Mouthy\",\"Gord\",\"Deetz\",\"Furball\",\"Pinky\",\"Doug\",\"Mallang\",\"Dottie\",\"Deedee\",\"Mung",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "16",
+        "entity": "79",
+        "genes": "ABC",
+        "beds": "3",
+        "names": "[\"Rddahtoot\",\"Fwoot\",\"Weedle\",\"Rhootoot\",\"Yardling\",\"Plootuft\",\"Deftoosnark\",\"Von\",\"Lókunn",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "17",
+        "entity": "80",
+        "genes": "ABD",
+        "beds": "3",
+        "names": "[\"Tubbs\",\"Whistlee\",\"Wobble\",\"Bubba\",\"Wubbs\",\"Doovey\",\"Grubb\",\"Soakle\",\"Squirt\",\"Kake\",\"Ko",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "18",
+        "entity": "81",
+        "genes": "ABE",
+        "beds": "3",
+        "names": "[\"Fur & Noob\",\"Lepht & Rhyth\",\"Bakk & Forph\",\"Bump & Thump\",\"Thys & Thatt\",\"Bee & Pee\",\"Ba",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "19",
+        "entity": "82",
+        "genes": "ACE",
+        "beds": "3",
+        "names": "[\"Toorie\",\"Cheery\",\"Pinky\",\"Shelby\",\"Smooch\",\"Nicci\",\"Lovey\",\"Kimmy\",\"Abra\",\"Beulah\",\"Gise",
+        "box_monster_requirements": "",
+        "levelup_island": "gold_and_shugga"
+      },
+      {
+        "monster_id": "20",
+        "entity": "83",
+        "genes": "ADE",
+        "beds": "3",
+        "names": "[\"Dory\",\"Tido\",\"Bubb\",\"Jorak\",\"Egbert\",\"Vilbur\",\"Reuvin\",\"Alger\",\"Garlan\",\"Bartel\",\"Enola\"",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "21",
+        "entity": "84",
+        "genes": "BCD",
+        "beds": "3",
+        "names": "[\"Thudd\",\"Shbam\",\"Thunk\",\"Boomer\",\"Jr.\",\"Bruce\",\"Jawz\",\"Laurence\",\"Sunki\",\"Leandro\",\"Rahul",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "22",
+        "entity": "85",
+        "genes": "BCE",
+        "beds": "3",
+        "names": "[\"Clang\",\"Klink\",\"Smashy\",\"Hatter\",\"Tink\",\"Miles\",\"Clamp\",\"Lurch\",\"Bluto\",\"Kane\",\"Nevish\",",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "23",
+        "entity": "86",
+        "genes": "BDE",
+        "beds": "3",
+        "names": "[\"Fiddles\",\"Quadd\",\"Jónsi\",\"Zoë\",\"Ooops\",\"Boolu\",\"Chellby\",\"Stringle\",\"Rossiter\",\"Yacoub\",",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "24",
+        "entity": "87",
+        "genes": "CDE",
+        "beds": "3",
+        "names": "[\"Thudd\",\"Stomp\",\"Basher\",\"Chomp\",\"Bites\",\"Steppz\",\"Kinser\",\"Doon\",\"Merle\",\"Cosmos\",\"Basil",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "25",
+        "entity": "88",
+        "genes": "ABCD",
+        "beds": "4",
+        "names": "[\"Soakum\",\"Blarble\",\"Whynaught\",\"Squibb\",\"Thulhu\",\"Floydberg\",\"Sethalo\",\"Leek\",\"Scuttle\",\"",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "26",
+        "entity": "89",
+        "genes": "ABCE",
+        "beds": "4",
+        "names": "[\"Botchelli\",\"Pavarocki\",\"Bowlderz\",\"Rawkstaah\",\"Vergil\",\"Pebblonius\",\"Archie\",\"Steely\",\"G",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "27",
+        "entity": "90",
+        "genes": "ABDE",
+        "beds": "4",
+        "names": "[\"Roth\",\"Aphex\",\"Wubadub\",\"Scratch\",\"Skipp\",\"Qweetz\",\"Shlock\",\"Jerrick\",\"Maegth\",\"Otilie\",",
+        "box_monster_requirements": "",
+        "levelup_island": "gold_and_shugga"
+      },
+      {
+        "monster_id": "28",
+        "entity": "91",
+        "genes": "ACDE",
+        "beds": "4",
+        "names": "[\"Frett\",\"Pooch\",\"Scorch\",\"Grind\",\"Schnozz\",\"Geet\",\"Thrash\",\"Hagly\",\"Tate\",\"Cadby\",\"Cormic",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "29",
+        "entity": "92",
+        "genes": "BCDE",
+        "beds": "4",
+        "names": "[\"Mulch\",\"Hagger\",\"Forie\",\"Sabba\",\"Horns\",\"Laahh\",\"Garble\",\"Horace\",\"Vardit\",\"Stefford\",\"K",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "30",
+        "entity": "93",
+        "genes": "",
+        "beds": "5",
+        "names": "[\"NEW ABCDE 1\",\"NEW ABCDE 2\"]",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "31",
+        "entity": "94",
+        "genes": "ACD",
+        "beds": "3",
+        "names": "[\"Skooch\",\"Shimmy\",\"Suckie\",\"Stickles\",\"Skwee\",\"Gorman\",\"Mankato\",\"Rigel\",\"Woad\",\"Azure\",\"",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "32",
+        "entity": "188",
+        "genes": "",
+        "beds": "1",
+        "names": "[\"Jackle\",\"Creepsworth\",\"Bonesy\",\"Vinnie\",\"Sneakles\",\"Specto\",\"Tricksy\",\"Figaro\",\"Treaters",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "33",
+        "entity": "201",
+        "genes": "",
+        "beds": "1",
+        "names": "[\"Mathis\", \"Rudy\", \"Santler\", \"Frawst\", \"Reignur\", \"Kringle\", \"Jollee\", \"Burrrg\", \"Bombur\"",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "34",
+        "entity": "247",
+        "genes": "",
+        "beds": "2",
+        "names": "[\"Snuglekis\",\"Freyawinger\",\"Clementine\",\"Houlihan\",\"Romiette\",\"Sweetums\",\"Naylei\",\"Cinta\",",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "35",
+        "entity": "248",
+        "genes": "F",
+        "beds": "6",
+        "names": "[\"Drawp\",\"Wibbler\",\"Subsaanik\",\"Xillerks\",\"Reeferb\",\"Gullit\",\"Flo\",\"Jolthead\",\"Serkett\",\"B",
+        "box_monster_requirements": "[2,3,4,5,10,11,12,13,14,15,21,22,23,24,29]",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "36",
+        "entity": "250",
+        "genes": "F",
+        "beds": "6",
+        "names": "[\"Drawp\",\"Wibbler\",\"Subsaanik\",\"Xillerks\",\"Reeferb\",\"Gullit\",\"Flo\",\"Jolthead\",\"Serkett\",\"B",
+        "box_monster_requirements": "[1,2,4,5,6,8,9,11,12,15,17,18,20,23,27]",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "37",
+        "entity": "251",
+        "genes": "F",
+        "beds": "6",
+        "names": "[\"Drawp\",\"Wibbler\",\"Subsaanik\",\"Xillerks\",\"Reeferb\",\"Gullit\",\"Flo\",\"Jolthead\",\"Serkett\",\"B",
+        "box_monster_requirements": "[1,3,4,5,7,8,9,13,14,15,19,20,24,28,31]",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "38",
+        "entity": "252",
+        "genes": "F",
+        "beds": "6",
+        "names": "[\"Drawp\",\"Wibbler\",\"Subsaanik\",\"Xillerks\",\"Reeferb\",\"Gullit\",\"Flo\",\"Jolthead\",\"Serkett\",\"B",
+        "box_monster_requirements": "[1,2,3,4,6,7,8,10,11,13,16,17,21,25,31]",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "39",
+        "entity": "253",
+        "genes": "F",
+        "beds": "6",
+        "names": "[\"Drawp\",\"Wibbler\",\"Subsaanik\",\"Xillerks\",\"Reeferb\",\"Gullit\",\"Flo\",\"Jolthead\",\"Serkett\",\"B",
+        "box_monster_requirements": "[1,2,3,5,6,7,9,10,12,14,16,18,19,22,26]",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "49",
+        "entity": "267",
+        "genes": "",
+        "beds": "1",
+        "names": "[\"Phuzz\", \"Jeenah\", \"Skudd\", \"Boingg\", \"Basil\", \"Pookey\", \"Lappers\", \"Weston\", \"Thumpah\", ",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "50",
+        "entity": "272",
+        "genes": "G",
+        "beds": "5",
+        "names": "[\"Puttinz\",\"Skwurm\",\"Astral\",\"Orbz\",\"Salaman\",\"Xander\",\"Seethroo\",\"Plooo\",\"Glowb\",\"Aethuri",
+        "box_monster_requirements": "",
+        "levelup_island": "ethereal"
+      },
+      {
+        "monster_id": "51",
+        "entity": "273",
+        "genes": "K",
+        "beds": "5",
+        "names": "[\"Konck\",\"Sapht\",\"Flonk\",\"Steef\",\"Greay\",\"Sereeb\",\"Smartee\",\"Hed-Ayk\",\"Brai-nyac\",\"Myndi\",",
+        "box_monster_requirements": "",
+        "levelup_island": "ethereal"
+      },
+      {
+        "monster_id": "52",
+        "entity": "274",
+        "genes": "",
+        "beds": "1",
+        "names": "[\"Loola\", \"Floww\", \"Rachael\", \"Loopy\", \"Lou Lou\", \"Dizzie\", \"Benifer\", \"Roxann\", \"Hibbs\", ",
+        "box_monster_requirements": "",
+        "levelup_island": "gold"
+      },
+      {
+        "monster_id": "53",
+        "entity": "281",
+        "genes": "Z",
+        "beds": "2",
+        "names": "[\"Merrill\",\"Settlin\",\"Knox\",\"Sevier\",\"Emory\",\"Pilgrim\",\"Bloom\",\"Decatur\",\"Eddie\",\"Glibson\"",
+        "box_monster_requirements": "",
+        "levelup_island": "gold_and_shugga"
+      },
+      {
+        "monster_id": "54",
+        "entity": "288",
+        "genes": "J",
+        "beds": "5",
+        "names": "[\"Phlapp\",\"Deemy\", \"Gritt\", \"Soot\", \"Soar\", \"Darr\", \"Ahhtch\", \"Skiek\", \"Huvvar\", \"Nibbz\", ",
+        "box_monster_requirements": "",
+        "levelup_island": "ethereal"
+      },
+      {
+        "monster_id": "55",
+        "entity": "289",
+        "genes": "GK",
+        "beds": "10",
+        "names": "[\"Tanka\",\"Phog\",\"Cosmo\",\"Yuri\",\"Oxygon\",\"Wilhelm\",\"Yo-Haan\",\"Krouse\",\"Breethurb\",\"Astrog\",",
+        "box_monster_requirements": "",
+        "levelup_island": "ethereal"
+      },
+      {
+        "monster_id": "56",
+        "entity": "290",
+        "genes": "JK",
+        "beds": "10",
+        "names": "[\"Speetar\",\"Laika\",\"Webster\",\"Spinnjo\",\"Taranto\",\"Weava\",\"Sharlotte\",\"Lobshe\",\"Goggarag\",\"",
+        "box_monster_requirements": "",
+        "levelup_island": "ethereal"
+      },
+      {
+        "monster_id": "57",
+        "entity": "291",
+        "genes": "GJ",
+        "beds": "10",
+        "names": "[\"Kelpie\",\"Rayth\",\"Wight\",\"Morgan\",\"Ofelia\",\"Veelo\",\"Spekta\",\"Whail\",\"Chelsea\",\"Gosland\",\"",
+        "box_monster_requirements": "",
+        "levelup_island": "ethereal"
+      },
+      {
+        "monster_id": "58",
+        "entity": "298",
+        "genes": "L",
+        "beds": "5",
+        "names": "[\"Shinee\", \"Prongla\", \"Gandy\", \"Teresa\", \"Lutha\", \"Vooga\", \"Ekko\", \"Shardly\", \"Renata\", \"N",
+        "box_monster_requirements": "",
+        "levelup_island": "ethereal"
+      },
+      {
+        "monster_id": "59",
+        "entity": "299",
+        "genes": "JL",
+        "beds": "10",
+        "names": "[\"Bondyeah\", \"Lwaa\", \"Vidaloc\", \"Legba\", \"Ayizius\", \"Shakka\", \"Armisen\", \"Dwight\", \"Pavo\",",
+        "box_monster_requirements": "",
+        "levelup_island": "ethereal"
+      },
+      {
+        "monster_id": "60",
+        "entity": "302",
+        "genes": "B",
+        "beds": "1",
+        "names": "[\"Slyth\",\"Thorny\",\"Trappy\",\"Carnivorti\",\"Caviniti\",\"Gafna\",\"Gefen\",\"Audrey\",\"Vino\",\"Rooty\"",
+        "box_monster_requirements": "",
+        "levelup_island": "none"
+      },
+      {
+        "monster_id": "61",
+        "entity": "303",
+        "genes": "E",
+        "beds": "1",
+        "names": "[\"Squatch\",\"Cuddles\",\"Fuzzles\",\"Feets\",\"Hank\",\"Perdita\",\"Fluffy\",\"Neva\",\"Mondo\",\"Stampy\",\"",
+        "box_monster_requirements": "",
+        "levelup_island": "none"
+      },
+      {
+        "monster_id": "62",
+        "entity": "304",
+        "genes": "AD",
+        "beds": "2",
+        "names": "[\"Lepht & Rhyth\",\"Thys & Thatt\",\"Pokey\",\"Hizz & Hurzz\",\"Pollox\",\"Tarleton\",\"Accalia\",\"Gann",
+        "box_monster_requirements": "",
+        "levelup_island": "none"
+      },
+      {
+        "monster_id": "63",
+        "entity": "305",
+        "genes": "BD",
+        "beds": "2",
+        "names": "[\"Sapps\",\"Barkley\",\"Whitler\",\"Pomona\",\"Grumples\",\"Shoob\",\"Knotty\",\"Harold\",\"Rooty\",\"Redlin",
+        "box_monster_requirements": "",
+        "levelup_island": "none"
+      },
+      {
+        "monster_id": "64",
+        "entity": "306",
+        "genes": "BE",
+        "beds": "2",
+        "names": "[\"Leef\",\"Twiglit\",\"Tyke\",\"Sprigg\",\"Moss\",\"Budd\",\"Boodul\",\"Shookin\",\"Faedd\",\"Cooty\",\"Bokshi",
+        "box_monster_requirements": "",
+        "levelup_island": "none"
+      },
+      {
+        "monster_id": "65",
+        "entity": "307",
+        "genes": "ACE",
+        "beds": "3",
+        "names": "[\"Toorie\",\"Cheery\",\"Pinky\",\"Shelby\",\"Smooch\",\"Nicci\",\"Lovey\",\"Kimmy\",\"Abra\",\"Beulah\",\"Gise",
+        "box_monster_requirements": "",
+        "levelup_island": "none"
+      },
+      {
+        "monster_id": "66",
+        "entity": "308",
+        "genes": "ABDE",
+        "beds": "4",
+        "names": "[\"Roth\",\"Aphex\",\"Wubadub\",\"Scratch\",\"Skipp\",\"Qweetz\",\"Shlock\",\"Jerrick\",\"Maegth\",\"Otilie\",",
+        "box_monster_requirements": "",
+        "levelup_island": "none"
+      },
+      {
+        "monster_id": "67",
+        "entity": "309",
+        "genes": "Z",
+        "beds": "2",
+        "names": "[\"Merrill\",\"Settlin\",\"Knox\",\"Sevier\",\"Emory\",\"Pilgrim\",\"Bloom\",\"Decatur\",\"Eddie\",\"Glibson\"",
+        "box_monster_requirements": "",
+        "levelup_island": "gold_and_shugga"
+      },
+      {
+        "monster_id": "68",
+        "entity": "310",
+        "genes": "Z",
+        "beds": "3",
+        "names": "[\"Phender\", \"Eebanez\", \"Glibson\", \"Yamahaw\", \"Dean\", \"Epifone\", \"Hawfner\", \"Gretsch\", \"Pee",
+        "box_monster_requirements": "",
+        "levelup_island": "none"
+      },
+      {
+        "monster_id": "69",
+        "entity": "311",
+        "genes": "Z",
+        "beds": "3",
+        "names": "[\"Nekk\", \"Bridje\", \"Zaddle\", \"Knut\", \"Pynz\", \"Peggie\", \"Phretz\", \"Bohred\", \"Pikk\", \"Schlap",
+        "box_monster_requirements": "",
+        "levelup_island": "none"
+      },
+      {
+        "monster_id": "70",
+        "entity": "312",
+        "genes": "Z",
+        "beds": "3",
+        "names": "[\"Bart\", \"Deering\", \"Capek\", \"Bishline\", \"Hatfield\", \"Marcier\", \"Ome\", \"Louzee\", \"Samick\",",
+        "box_monster_requirements": "",
+        "levelup_island": "none"
+      },
+      {
+        "monster_id": "71",
+        "entity": "313",
+        "genes": "Z",
+        "beds": "3",
+        "names": "[\"Godin\",\"Jaksun\", \"Klein\",\"Hamer\",\"Zeegul\",\"Strumma\", \"Schred\", \"Hendriks\", \"Vonn\", \"Suml",
+        "box_monster_requirements": "",
+        "levelup_island": "none"
+      },
+      {
+        "monster_id": "72",
+        "entity": "314",
+        "genes": "Z",
+        "beds": "3",
+        "names": "[\"Casseo\", \"Boomking\", \"Linkin\", \"Samedi\", \"Arsène\", \"Bleek\", \"Hershel\", \"Jeremiah\", \"Lech",
+        "box_monster_requirements": "",
+        "levelup_island": "none"
+      },
+      {
+        "monster_id": "73",
+        "entity": "315",
+        "genes": "Z",
+        "beds": "3",
+        "names": "[\"Perll\", \"Tamma\", \"Mapex\", \"Retsch\", \"Zonor\", \"Spaun\", \"Yamahaw\", \"Ludwig\", \"Mycoe\", \"Gur",
+        "box_monster_requirements": "",
+        "levelup_island": "none"
+      },
+      {
+        "monster_id": "74",
+        "entity": "316",
+        "genes": "Z",
+        "beds": "3",
+        "names": "[\"Yodell\", \"Frayne\", \"Trebel\", \"Shantee\", \"Crüner\", \"Bello\", \"Ario\", \"Barrit\", \"Busq\", \"Di",
+        "box_monster_requirements": "",
+        "levelup_island": "none"
+      }
+    ]
+  },
+  "island_summary": {
+    "columns": [
+      "island_id",
+      "name",
+      "genes",
+      "enabled"
+    ],
+    "rows": [
+      {
+        "island_id": "1",
+        "name": "ISLAND_1",
+        "genes": "BCDE",
+        "enabled": "1"
+      },
+      {
+        "island_id": "2",
+        "name": "ISLAND_2",
+        "genes": "ABDE",
+        "enabled": "1"
+      },
+      {
+        "island_id": "3",
+        "name": "ISLAND_3",
+        "genes": "ACDE",
+        "enabled": "1"
+      },
+      {
+        "island_id": "4",
+        "name": "ISLAND_4",
+        "genes": "ABCD",
+        "enabled": "1"
+      },
+      {
+        "island_id": "5",
+        "name": "ISLAND_5",
+        "genes": "ABCE",
+        "enabled": "1"
+      },
+      {
+        "island_id": "6",
+        "name": "ISLAND_GOLD",
+        "genes": "ABCDE",
+        "enabled": "1"
+      },
+      {
+        "island_id": "7",
+        "name": "ISLAND_ETHEREAL",
+        "genes": "BCDE",
+        "enabled": "1"
+      },
+      {
+        "island_id": "8",
+        "name": "ISLAND_SHUGA",
+        "genes": "BCDE",
+        "enabled": "1"
+      }
+    ]
+  },
+  "special_gene_mentions": [
+    {
+      "table": "breeding_combinations",
+      "first_300_rows_matching_ABCDE": 0,
+      "examples": []
+    }
+  ],
+  "note": "Only approved static game-data tables. No personal records, source binaries, or account information.",
+  "island_monsters_preview": {
+    "columns": [
+      "island_monster_id",
+      "island",
+      "monster"
+    ],
+    "sample": [
+      {
+        "island_monster_id": "1",
+        "island": "1",
+        "monster": "2"
+      },
+      {
+        "island_monster_id": "2",
+        "island": "1",
+        "monster": "3"
+      },
+      {
+        "island_monster_id": "3",
+        "island": "1",
+        "monster": "4"
+      },
+      {
+        "island_monster_id": "4",
+        "island": "1",
+        "monster": "5"
+      },
+      {
+        "island_monster_id": "5",
+        "island": "1",
+        "monster": "10"
+      },
+      {
+        "island_monster_id": "6",
+        "island": "1",
+        "monster": "11"
+      },
+      {
+        "island_monster_id": "7",
+        "island": "1",
+        "monster": "12"
+      },
+      {
+        "island_monster_id": "8",
+        "island": "1",
+        "monster": "13"
+      },
+      {
+        "island_monster_id": "9",
+        "island": "1",
+        "monster": "14"
+      },
+      {
+        "island_monster_id": "10",
+        "island": "1",
+        "monster": "15"
+      },
+      {
+        "island_monster_id": "11",
+        "island": "1",
+        "monster": "21"
+      },
+      {
+        "island_monster_id": "12",
+        "island": "1",
+        "monster": "22"
+      },
+      {
+        "island_monster_id": "13",
+        "island": "1",
+        "monster": "23"
+      },
+      {
+        "island_monster_id": "14",
+        "island": "1",
+        "monster": "24"
+      },
+      {
+        "island_monster_id": "15",
+        "island": "1",
+        "monster": "29"
+      },
+      {
+        "island_monster_id": "16",
+        "island": "2",
+        "monster": "1"
+      },
+      {
+        "island_monster_id": "17",
+        "island": "2",
+        "monster": "2"
+      },
+      {
+        "island_monster_id": "18",
+        "island": "2",
+        "monster": "4"
+      },
+      {
+        "island_monster_id": "19",
+        "island": "2",
+        "monster": "5"
+      },
+      {
+        "island_monster_id": "20",
+        "island": "2",
+        "monster": "6"
+      }
+    ]
+  }
+}
