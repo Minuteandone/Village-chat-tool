@@ -1,0 +1,7245 @@
+{
+  "original_url": "https://archive.org/download/monster-game-server/monster-game-server.zip",
+  "sha1": "df086c9ca4581733f73f2e8aaea1408382232e4d",
+  "zip_size": 15170251,
+  "total_items_reviewed": 187,
+  "excluded": [
+    "wordsFile.txt"
+  ],
+  "inventory": [
+    {
+      "path": "BBBServerExtensionLib.jar",
+      "kind": ".jar",
+      "group": "Root project and database",
+      "bytes": 229817,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "build.xml",
+      "kind": ".xml",
+      "group": "Root project and database",
+      "bytes": 4790,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/aws-java-sdk-1.5.0.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 10238659,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/commons-codec-1.3.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 46725,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/dependancies/commons-lang-2.4.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 261809,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/dependancies/jdom.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 153115,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/dependancies/netty-3.2.2.Final.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 785556,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/dependancies/sfs2x-client-core.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 45654,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/dependancies/slf4j-api-1.6.1.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 25496,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/dependancies/slf4j-simple-1.6.1.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 7669,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/elasticache-java-cluster-client-1.0.61.0.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 334664,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/ESAPI.properties",
+      "kind": ".properties",
+      "group": "Libraries and library configuration",
+      "bytes": 24214,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/esapi-2.1.0.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 367021,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/httpclient-4.2.3.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 433070,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/httpcore-4.2.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 223282,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/jackson-core-asl-1.8.7.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 227451,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/jackson-mapper-asl-1.8.7.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 667765,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/mysql-connector-java-5.1.18-bin.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 789885,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/sfs2x.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 592767,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/SFS2X_API_Java.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 274284,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/sfs2x-core.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 199318,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/spymemcached-2.11.1.jar",
+      "kind": ".jar",
+      "group": "Libraries and library configuration",
+      "bytes": 459447,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/lib/validation.properties",
+      "kind": ".properties",
+      "group": "Libraries and library configuration",
+      "bytes": 1217,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/BBBServerExtension.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 6704,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/client/sfs-config.xml",
+      "kind": ".xml",
+      "group": "Shared BBB infrastructure",
+      "bytes": 185,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/exceptions/AccountNotFoundException.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 175,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/exceptions/FacebookAuthenticationException.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 182,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/exceptions/NoAccountUserBindingFoundException.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 207,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/exceptions/TooManyRecordsReturned.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 173,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/exceptions/UserNotFoundException.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 172,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/ServerEventHandler.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 15046,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/BatchingSNSWorker.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 3412,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/BBBToken.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 4045,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/ByteBuffer.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 1085,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/CacheWrapper.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 2077,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/CooldownCounter.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 682,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/CustomSerializingTranscoder.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 1804,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/DbWrapper.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 10202,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/DoubleBuffer.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 1711,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/Encryption.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 1775,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/HttpPost.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 1437,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/MigBase64.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 23159,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/Misc.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 3237,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/SFSHelpers.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 6074,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/SNSWorker.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 9631,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/SnsWrapper.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 2175,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/SqsWrapper.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 2128,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/VersionInfo.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 2850,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/WebHelper.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 5113,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/metrics/MetricsRequest.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 2121,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/metrics/MetricsSessionTask.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 3314,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/monitoring/CloudWatchReporter.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 3648,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/com/bigbluebubble/monitoring/EC2Metadata.java",
+      "kind": ".java",
+      "group": "Shared BBB infrastructure",
+      "bytes": 1350,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/org/json/CDL.java",
+      "kind": ".java",
+      "group": "Third-party JSON source",
+      "bytes": 10047,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/org/json/Cookie.java",
+      "kind": ".java",
+      "group": "Third-party JSON source",
+      "bytes": 6583,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/org/json/CookieList.java",
+      "kind": ".java",
+      "group": "Third-party JSON source",
+      "bytes": 3396,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/org/json/HTTP.java",
+      "kind": ".java",
+      "group": "Third-party JSON source",
+      "bytes": 5860,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/org/json/HTTPTokener.java",
+      "kind": ".java",
+      "group": "Third-party JSON source",
+      "bytes": 2484,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/org/json/JSONArray.java",
+      "kind": ".java",
+      "group": "Third-party JSON source",
+      "bytes": 29522,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/org/json/JSONException.java",
+      "kind": ".java",
+      "group": "Third-party JSON source",
+      "bytes": 709,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/org/json/JSONML.java",
+      "kind": ".java",
+      "group": "Third-party JSON source",
+      "bytes": 14951,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/org/json/JSONObject.java",
+      "kind": ".java",
+      "group": "Third-party JSON source",
+      "bytes": 52757,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/org/json/JSONString.java",
+      "kind": ".java",
+      "group": "Third-party JSON source",
+      "bytes": 712,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/org/json/JSONStringer.java",
+      "kind": ".java",
+      "group": "Third-party JSON source",
+      "bytes": 3266,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/org/json/JSONTokener.java",
+      "kind": ".java",
+      "group": "Third-party JSON source",
+      "bytes": 12399,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/org/json/JSONWriter.java",
+      "kind": ".java",
+      "group": "Third-party JSON source",
+      "bytes": 10528,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/org/json/Test.java",
+      "kind": ".java",
+      "group": "Third-party JSON source",
+      "bytes": 31828,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/org/json/XML.java",
+      "kind": ".java",
+      "group": "Third-party JSON source",
+      "bytes": 14143,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "external/src/org/json/XMLTokener.java",
+      "kind": ".java",
+      "group": "Third-party JSON source",
+      "bytes": 10712,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "Local BBBServerExtensionLib.jardesc",
+      "kind": ".jardesc",
+      "group": "Root project and database",
+      "bytes": 1133,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "Local MSMExtension.jardesc",
+      "kind": ".jardesc",
+      "group": "Root project and database",
+      "bytes": 1063,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "Local X86 BBBServerExtensionLib.jardesc",
+      "kind": ".jardesc",
+      "group": "Root project and database",
+      "bytes": 1139,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "Local X86 MSMExtension.jardesc",
+      "kind": ".jardesc",
+      "group": "Root project and database",
+      "bytes": 1069,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "MSMExtension.jar",
+      "kind": ".jar",
+      "group": "Root project and database",
+      "bytes": 451597,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "my_singing_monsters_clean_20120810.sql",
+      "kind": ".sql",
+      "group": "Root project and database",
+      "bytes": 186500,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/BreedingCombination.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 1236,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/BreedingLookup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 11003,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Code.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 3554,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/CodeLookup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 1856,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Entity.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 11219,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Gene.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 1057,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/GeneLookup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 605,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/Advertisement2018Group.java",
+      "kind": ".java",
+      "group": "MSM game code: data/groups",
+      "bytes": 947,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/AdvertisementGroup.java",
+      "kind": ".java",
+      "group": "MSM game code: data/groups",
+      "bytes": 3935,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/BaseGroup.java",
+      "kind": ".java",
+      "group": "MSM game code: data/groups",
+      "bytes": 5590,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/BrandedAdvertisementGroup.java",
+      "kind": ".java",
+      "group": "MSM game code: data/groups",
+      "bytes": 385,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/CurrencyGroup.java",
+      "kind": ".java",
+      "group": "MSM game code: data/groups",
+      "bytes": 722,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/NoAdvertisementGroup.java",
+      "kind": ".java",
+      "group": "MSM game code: data/groups",
+      "bytes": 1972,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/ScientificRevenueGroup.java",
+      "kind": ".java",
+      "group": "MSM game code: data/groups",
+      "bytes": 4624,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/TutorialGroup.java",
+      "kind": ".java",
+      "group": "MSM game code: data/groups",
+      "bytes": 3992,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/UserGroup.java",
+      "kind": ".java",
+      "group": "MSM game code: data/groups",
+      "bytes": 5965,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Island.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 7445,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/IslandLookup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 689,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/IslandTorch.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 594,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Level.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 424,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/LevelLookup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 566,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Mail.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 5648,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MailLookup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 2853,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MemoryMinigameFunctions.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 1409,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Monster.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 11203,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterCommonToRareMapping.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 2053,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterIslandData.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 263,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterIslandToIslandMapping.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 4061,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterLookup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 1646,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterRareData.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 331,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MsmSession.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 643,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Promo.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 1890,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/PromoLookup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 452,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/QuestLookup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 3825,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/ScientificRevenue.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 30764,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/ScratchTicketFunctions.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 11034,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/SegmentationGroup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 12387,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Sticker.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 980,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StickerLookup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 476,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StoreCurrencyLookup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 1049,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StoreGroupsLookup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 1025,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StoreItemsLookup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 1009,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StoreReplacementItem.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 885,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StoreReplacements.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 2876,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Structure.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 5456,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StructureLookup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 1197,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/CurrencyAvailabilityList.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "bytes": 810,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/CurrencySalesList.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "bytes": 755,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/EntityAvailList.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "bytes": 778,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/EntitySalesList.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "bytes": 736,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/IslandSalesList.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "bytes": 736,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/ITimedEventTypeList.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "bytes": 777,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/KeyedTimedEventTypeList.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "bytes": 3574,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/MegafySaleList.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "bytes": 603,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/PermalightTorchSaleList.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "bytes": 675,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/ShortenedFuzingList.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "bytes": 642,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/StarAvailList.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "bytes": 761,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/StarSalesList.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "bytes": 719,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/TimedEventTypeList.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "bytes": 2442,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/BreedAvailabilityEvent.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "bytes": 388,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/BreedProbabilityChangeEvent.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "bytes": 503,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/CurrencyAvailabilityEvent.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "bytes": 2163,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/CurrencySalesEvent.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "bytes": 2150,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/EntityAvailabilityEvent.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "bytes": 1731,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/EntitySalesEvent.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "bytes": 5845,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/IslandSalesEvent.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "bytes": 4494,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/MegafySale.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "bytes": 4333,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/PermalightTorchSale.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "bytes": 4372,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/ShortenedFuzing.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "bytes": 4256,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/StarAvailabilityEvent.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "bytes": 1712,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/StarSalesEvent.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "bytes": 4245,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEvent.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events",
+      "bytes": 3778,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEventList.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events",
+      "bytes": 5936,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEventListBuilder.java",
+      "kind": ".java",
+      "group": "MSM game code: data/timed_events",
+      "bytes": 7006,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/TorchLookup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 885,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/TribalQuestLookup.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 1063,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/VersionData.java",
+      "kind": ".java",
+      "group": "MSM game code: data",
+      "bytes": 2480,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/exceptions/InvalidPlayerException.java",
+      "kind": ".java",
+      "group": "MSM game code: exceptions",
+      "bytes": 270,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "kind": ".java",
+      "group": "MSM game code: core",
+      "bytes": 592850,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/Helpers.java",
+      "kind": ".java",
+      "group": "MSM game code: core",
+      "bytes": 2213,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/logging/GooglePlayEvents.java",
+      "kind": ".java",
+      "group": "MSM game code: logging",
+      "bytes": 6665,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/logging/MetricCost.java",
+      "kind": ".java",
+      "group": "MSM game code: logging",
+      "bytes": 1276,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/logging/MSMCommandLogging.java",
+      "kind": ".java",
+      "group": "MSM game code: logging",
+      "bytes": 6020,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/logging/MSMCommands.java",
+      "kind": ".java",
+      "group": "MSM game code: logging",
+      "bytes": 27746,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/MSMExtension.java",
+      "kind": ".java",
+      "group": "MSM game code: core",
+      "bytes": 110110,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/MSMServerEventHandler.java",
+      "kind": ".java",
+      "group": "MSM game code: core",
+      "bytes": 25910,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/InitialPlayerIslandData.java",
+      "kind": ".java",
+      "group": "MSM game code: player",
+      "bytes": 363,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/LitPlayerTorch.java",
+      "kind": ".java",
+      "group": "MSM game code: player",
+      "bytes": 3771,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/MonsterMegaData.java",
+      "kind": ".java",
+      "group": "MSM game code: player",
+      "bytes": 3550,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/Player.java",
+      "kind": ".java",
+      "group": "MSM game code: player",
+      "bytes": 102743,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerAchievement.java",
+      "kind": ".java",
+      "group": "MSM game code: player",
+      "bytes": 3782,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerActiveIslandStats.java",
+      "kind": ".java",
+      "group": "MSM game code: player",
+      "bytes": 5890,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerBaking.java",
+      "kind": ".java",
+      "group": "MSM game code: player",
+      "bytes": 4430,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerBreeding.java",
+      "kind": ".java",
+      "group": "MSM game code: player",
+      "bytes": 4821,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerBuyback.java",
+      "kind": ".java",
+      "group": "MSM game code: player",
+      "bytes": 4384,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerEgg.java",
+      "kind": ".java",
+      "group": "MSM game code: player",
+      "bytes": 5205,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerFuzeBuddy.java",
+      "kind": ".java",
+      "group": "MSM game code: player",
+      "bytes": 4507,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerIsland.java",
+      "kind": ".java",
+      "group": "MSM game code: player",
+      "bytes": 55138,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerIslandFactory.java",
+      "kind": ".java",
+      "group": "MSM game code: player",
+      "bytes": 13841,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerMonster.java",
+      "kind": ".java",
+      "group": "MSM game code: player",
+      "bytes": 38267,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerQuest.java",
+      "kind": ".java",
+      "group": "MSM game code: player",
+      "bytes": 19836,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerStructure.java",
+      "kind": ".java",
+      "group": "MSM game code: player",
+      "bytes": 14900,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/ShutdownHookThread.java",
+      "kind": ".java",
+      "group": "MSM game code: core",
+      "bytes": 449,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/AuthTokenUpdateTask.java",
+      "kind": ".java",
+      "group": "MSM game code: task",
+      "bytes": 1610,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/MailUpdateTask.java",
+      "kind": ".java",
+      "group": "MSM game code: task",
+      "bytes": 4689,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/MSMAdminCatchUnreleasedAccount.java",
+      "kind": ".java",
+      "group": "MSM game code: task",
+      "bytes": 4763,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/MSMMonsterLinksReloadTask.java",
+      "kind": ".java",
+      "group": "MSM game code: task",
+      "bytes": 2101,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/MSMServerStatusTask.java",
+      "kind": ".java",
+      "group": "MSM game code: task",
+      "bytes": 4318,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/MSMStats.java",
+      "kind": ".java",
+      "group": "MSM game code: task",
+      "bytes": 31905,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/UpdateActiveTimedEvents.java",
+      "kind": ".java",
+      "group": "MSM game code: task",
+      "bytes": 717,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "StressTester.jardesc",
+      "kind": ".jardesc",
+      "group": "Root project and database",
+      "bytes": 1052,
+      "date": "2020-07-03"
+    },
+    {
+      "path": "tribal_date_updated.sql",
+      "kind": ".sql",
+      "group": "Root project and database",
+      "bytes": 1026,
+      "date": "2020-07-03"
+    }
+  ],
+  "java": [
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/BBBServerExtension.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 236,
+      "class_names": [
+        "BBBServerExtension"
+      ],
+      "method_count": 12,
+      "methods": [
+        "putDB",
+        "getDB",
+        "getAuthDB",
+        "getSQS",
+        "getSNS",
+        "getCache",
+        "getGameSettings",
+        "init",
+        "initGameSettings",
+        "loadGameSettings",
+        "getGameSetting",
+        "destroy"
+      ],
+      "imports_count": 17,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/exceptions/AccountNotFoundException.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 9,
+      "class_names": [
+        "AccountNotFoundException"
+      ],
+      "method_count": 0,
+      "methods": [],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/exceptions/FacebookAuthenticationException.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 9,
+      "class_names": [
+        "FacebookAuthenticationException"
+      ],
+      "method_count": 0,
+      "methods": [],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/exceptions/NoAccountUserBindingFoundException.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 9,
+      "class_names": [
+        "NoAccountUserBindingFoundException"
+      ],
+      "method_count": 0,
+      "methods": [],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/exceptions/TooManyRecordsReturned.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 9,
+      "class_names": [
+        "TooManyRecordsReturned"
+      ],
+      "method_count": 0,
+      "methods": [],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/exceptions/UserNotFoundException.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 9,
+      "class_names": [
+        "UserNotFoundException"
+      ],
+      "method_count": 0,
+      "methods": [],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/ServerEventHandler.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 502,
+      "class_names": [
+        "ServerEventHandler"
+      ],
+      "method_count": 32,
+      "methods": [
+        "URLEncode",
+        "handleServerEvent",
+        "serverReady",
+        "handleLoginData",
+        "userLogin",
+        "checkAuthCredentials",
+        "getDataFromUrl",
+        "getJsonDataFromUrl",
+        "userLogout",
+        "userReconnectSuccess",
+        "userReconnectTry",
+        "userDisconnect",
+        "userVariablesUpdate",
+        "userJoinZone",
+        "roomAdded",
+        "roomRemoved",
+        "roomVariablesUpdate",
+        "userJoinRoom",
+        "userLeaveRoom",
+        "playerToSpectator",
+        "spectatorToPlayer",
+        "gameInvitationSuccess",
+        "gameInvitationFailure",
+        "publicMessage",
+        "privateMessage",
+        "buddyAdd",
+        "buddyRemove",
+        "buddyBlock",
+        "buddyListInit",
+        "buddyMessage",
+        "buddyOnlineStatusUpdate",
+        "buddyVariablesUpdate"
+      ],
+      "imports_count": 26,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver",
+        "org.json"
+      ],
+      "topics": [
+        "Quests and timed events",
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/BatchingSNSWorker.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 121,
+      "class_names": [
+        "BatchingSNSWorker"
+      ],
+      "method_count": 7,
+      "methods": [
+        "getWorker",
+        "run",
+        "dealWithRemainingMessagesAtShutdown",
+        "sendMessageBatch",
+        "addMessageToBatch",
+        "getByteLength",
+        "getByteArrayLength"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.amazonaws",
+        "com.bigbluebubble",
+        "net.spy"
+      ],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/BBBToken.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 150,
+      "class_names": [
+        "BBBToken"
+      ],
+      "method_count": 12,
+      "methods": [
+        "isTokenValid",
+        "timeLeft",
+        "createdOn",
+        "getUserGameIds",
+        "hasPermission",
+        "username",
+        "loginType",
+        "getRawEncrypted",
+        "setRawEncrypted",
+        "getAuthTokenFromServer",
+        "decryptToken",
+        "trace"
+      ],
+      "imports_count": 7,
+      "dependency_roots": [
+        "org.json"
+      ],
+      "topics": [
+        "Quests and timed events",
+        "Networking and services"
+      ],
+      "keyword_counts": {
+        "TODO": 1
+      }
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/ByteBuffer.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 66,
+      "class_names": [
+        "cause",
+        "ByteBuffer"
+      ],
+      "method_count": 5,
+      "methods": [
+        "add",
+        "clear",
+        "getBytes",
+        "used",
+        "available"
+      ],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/CacheWrapper.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 80,
+      "class_names": [
+        "CacheWrapper"
+      ],
+      "method_count": 6,
+      "methods": [
+        "kill",
+        "set",
+        "get",
+        "delete",
+        "increment",
+        "decrement"
+      ],
+      "imports_count": 7,
+      "dependency_roots": [
+        "net.spy"
+      ],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/CooldownCounter.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 36,
+      "class_names": [
+        "CooldownCounter"
+      ],
+      "method_count": 5,
+      "methods": [
+        "increment",
+        "decrement",
+        "reset",
+        "isOnCooldown",
+        "count"
+      ],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/CustomSerializingTranscoder.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 65,
+      "class_names": [
+        "CustomSerializingTranscoder"
+      ],
+      "method_count": 3,
+      "methods": [
+        "deserialize",
+        "resolveClass",
+        "closeStream"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "net.spy"
+      ],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/DbWrapper.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 425,
+      "class_names": [
+        "DbWrapper"
+      ],
+      "method_count": 11,
+      "methods": [
+        "setDebugMode",
+        "setTimeQueries",
+        "query",
+        "traceQuery",
+        "exists",
+        "update",
+        "insertGetId",
+        "insertGetIdNoBruno",
+        "transactionBegin",
+        "transactionEnd",
+        "transactionRollback"
+      ],
+      "imports_count": 10,
+      "dependency_roots": [
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Quests and timed events",
+        "Administration and tests",
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/DoubleBuffer.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 84,
+      "class_names": [
+        "for",
+        "DoubleBuffer"
+      ],
+      "method_count": 2,
+      "methods": [
+        "add",
+        "swapBuffers"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/Encryption.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 47,
+      "class_names": [
+        "Encryption"
+      ],
+      "method_count": 2,
+      "methods": [
+        "encrypt",
+        "decrypt"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "org.apache"
+      ],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/HttpPost.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 61,
+      "class_names": [
+        "HttpPost"
+      ],
+      "method_count": 1,
+      "methods": [
+        "run"
+      ],
+      "imports_count": 3,
+      "dependency_roots": [],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/MigBase64.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 575,
+      "class_names": [
+        "to",
+        "MigBase64"
+      ],
+      "method_count": 5,
+      "methods": [
+        "encodeToChar",
+        "decode",
+        "decodeFast",
+        "encodeToByte",
+        "encodeToString"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [],
+      "topics": [
+        "Island and structures",
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/Misc.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 132,
+      "class_names": [
+        "Misc"
+      ],
+      "method_count": 8,
+      "methods": [
+        "getStackTraceAsString",
+        "implode",
+        "md5",
+        "URLEncode",
+        "compress",
+        "uncompress",
+        "compressTextData",
+        "decompressTextData"
+      ],
+      "imports_count": 7,
+      "dependency_roots": [],
+      "topics": [
+        "Island and structures",
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/SFSHelpers.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 250,
+      "class_names": [
+        "SFSHelpers"
+      ],
+      "method_count": 7,
+      "methods": [
+        "equals",
+        "clone",
+        "getDouble",
+        "getLong",
+        "getUtfString",
+        "getBool",
+        "getInt"
+      ],
+      "imports_count": 2,
+      "dependency_roots": [],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/SNSWorker.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 319,
+      "class_names": [
+        "SNSWorker"
+      ],
+      "method_count": 18,
+      "methods": [
+        "addMessage",
+        "addMessages",
+        "shutdown",
+        "getWorker",
+        "run",
+        "dealWithRemainingMessagesAtShutdown",
+        "takeMessage",
+        "drainQueue",
+        "monitorThreads",
+        "sendMessage",
+        "addNewWorkerToPool",
+        "resetBackoff",
+        "increaseBackoff",
+        "doBackoff",
+        "handleException",
+        "dumpToS3",
+        "updateLastSendTime",
+        "getLastSendTime"
+      ],
+      "imports_count": 19,
+      "dependency_roots": [
+        "com.amazonaws",
+        "com.bigbluebubble",
+        "net.spy"
+      ],
+      "topics": [
+        "Quests and timed events",
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/SnsWrapper.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 78,
+      "class_names": [
+        "SnsWrapper"
+      ],
+      "method_count": 2,
+      "methods": [
+        "publish",
+        "run"
+      ],
+      "imports_count": 7,
+      "dependency_roots": [
+        "com.amazonaws",
+        "com.bigbluebubble",
+        "com.smartfoxserver",
+        "org.json"
+      ],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/SqsWrapper.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 79,
+      "class_names": [
+        "SqsWrapper"
+      ],
+      "method_count": 2,
+      "methods": [
+        "sendToQueue",
+        "run"
+      ],
+      "imports_count": 7,
+      "dependency_roots": [
+        "com.amazonaws",
+        "com.bigbluebubble",
+        "com.smartfoxserver",
+        "org.json"
+      ],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/VersionInfo.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 144,
+      "class_names": [
+        "consisting",
+        "VersionInfo"
+      ],
+      "method_count": 6,
+      "methods": [
+        "toString",
+        "compareTo",
+        "equals",
+        "getMajor",
+        "getMinor",
+        "getRev"
+      ],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/util/WebHelper.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 157,
+      "class_names": [
+        "WebHelper"
+      ],
+      "method_count": 3,
+      "methods": [
+        "getDataFromUrl",
+        "getJsonDataFromUrl",
+        "trace"
+      ],
+      "imports_count": 10,
+      "dependency_roots": [
+        "org.json"
+      ],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/metrics/MetricsRequest.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 97,
+      "class_names": [
+        "MetricsRequest"
+      ],
+      "method_count": 5,
+      "methods": [
+        "setQueueUrl",
+        "setRequestEndpoint",
+        "addParam",
+        "send",
+        "run"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.amazonaws",
+        "com.smartfoxserver",
+        "org.json"
+      ],
+      "topics": [
+        "Quests and timed events",
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/metrics/MetricsSessionTask.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 117,
+      "class_names": [
+        "MetricsSessionTask"
+      ],
+      "method_count": 2,
+      "methods": [
+        "schedule",
+        "run"
+      ],
+      "imports_count": 11,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/monitoring/CloudWatchReporter.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 128,
+      "class_names": [
+        "CloudWatchReporter"
+      ],
+      "method_count": 4,
+      "methods": [
+        "reportUserCount",
+        "reportMemory",
+        "reportThreads",
+        "run"
+      ],
+      "imports_count": 12,
+      "dependency_roots": [
+        "com.amazonaws",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Music and minigames",
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/com/bigbluebubble/monitoring/EC2Metadata.java",
+      "group": "Shared BBB infrastructure",
+      "lines": 59,
+      "class_names": [
+        "EC2Metadata"
+      ],
+      "method_count": 3,
+      "methods": [
+        "runningOnEC2",
+        "getEC2InstanceMetadata",
+        "getEC2InstanceId"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [],
+      "topics": [],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/org/json/CDL.java",
+      "group": "Third-party JSON source",
+      "lines": 279,
+      "class_names": [
+        "CDL"
+      ],
+      "method_count": 6,
+      "methods": [
+        "getValue",
+        "rowToJSONArray",
+        "rowToJSONObject",
+        "toJSONArray",
+        "rowToString",
+        "toString"
+      ],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/org/json/Cookie.java",
+      "group": "Third-party JSON source",
+      "lines": 169,
+      "class_names": [
+        "Cookie"
+      ],
+      "method_count": 4,
+      "methods": [
+        "escape",
+        "toJSONObject",
+        "toString",
+        "unescape"
+      ],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/org/json/CookieList.java",
+      "group": "Third-party JSON source",
+      "lines": 91,
+      "class_names": [
+        "CookieList"
+      ],
+      "method_count": 2,
+      "methods": [
+        "toJSONObject",
+        "toString"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [],
+      "topics": [],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/org/json/HTTP.java",
+      "group": "Third-party JSON source",
+      "lines": 164,
+      "class_names": [
+        "HTTP"
+      ],
+      "method_count": 2,
+      "methods": [
+        "toJSONObject",
+        "toString"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/org/json/HTTPTokener.java",
+      "group": "Third-party JSON source",
+      "lines": 77,
+      "class_names": [
+        "HTTPTokener"
+      ],
+      "method_count": 1,
+      "methods": [
+        "nextToken"
+      ],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/org/json/JSONArray.java",
+      "group": "Third-party JSON source",
+      "lines": 918,
+      "class_names": [
+        "JSONArray"
+      ],
+      "method_count": 24,
+      "methods": [
+        "get",
+        "getBoolean",
+        "getDouble",
+        "getInt",
+        "getJSONArray",
+        "getJSONObject",
+        "getLong",
+        "getString",
+        "isNull",
+        "join",
+        "length",
+        "opt",
+        "optBoolean",
+        "optDouble",
+        "optInt",
+        "optJSONArray",
+        "optJSONObject",
+        "optLong",
+        "optString",
+        "put",
+        "remove",
+        "toJSONObject",
+        "toString",
+        "write"
+      ],
+      "imports_count": 7,
+      "dependency_roots": [],
+      "topics": [],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/org/json/JSONException.java",
+      "group": "Third-party JSON source",
+      "lines": 31,
+      "class_names": [
+        "JSONException"
+      ],
+      "method_count": 1,
+      "methods": [
+        "getCause"
+      ],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/org/json/JSONML.java",
+      "group": "Third-party JSON source",
+      "lines": 460,
+      "class_names": [
+        "JSONML"
+      ],
+      "method_count": 4,
+      "methods": [
+        "parse",
+        "toJSONArray",
+        "toJSONObject",
+        "toString"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [],
+      "topics": [],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/org/json/JSONObject.java",
+      "group": "Third-party JSON source",
+      "lines": 1573,
+      "class_names": [
+        "JSONObject",
+        "Null",
+        "then"
+      ],
+      "method_count": 40,
+      "methods": [
+        "clone",
+        "equals",
+        "toString",
+        "accumulate",
+        "append",
+        "doubleToString",
+        "get",
+        "getBoolean",
+        "getDouble",
+        "getInt",
+        "getJSONArray",
+        "getJSONObject",
+        "getLong",
+        "getNames",
+        "getString",
+        "has",
+        "increment",
+        "isNull",
+        "keys",
+        "length",
+        "names",
+        "numberToString",
+        "opt",
+        "optBoolean",
+        "optDouble",
+        "optInt",
+        "optJSONArray",
+        "optJSONObject",
+        "optLong",
+        "optString",
+        "populateMap",
+        "put",
+        "putOnce",
+        "putOpt",
+        "quote",
+        "remove",
+        "sortedKeys",
+        "stringToValue",
+        "toJSONArray",
+        "write"
+      ],
+      "imports_count": 10,
+      "dependency_roots": [],
+      "topics": [],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/org/json/JSONString.java",
+      "group": "Third-party JSON source",
+      "lines": 18,
+      "class_names": [
+        "allows",
+        "can",
+        "JSONString",
+        "to"
+      ],
+      "method_count": 1,
+      "methods": [
+        "toJSONString"
+      ],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/org/json/JSONStringer.java",
+      "group": "Third-party JSON source",
+      "lines": 78,
+      "class_names": [
+        "JSONStringer"
+      ],
+      "method_count": 1,
+      "methods": [
+        "toString"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [],
+      "topics": [],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/org/json/JSONTokener.java",
+      "group": "Third-party JSON source",
+      "lines": 435,
+      "class_names": [
+        "JSONTokener"
+      ],
+      "method_count": 12,
+      "methods": [
+        "back",
+        "dehexchar",
+        "end",
+        "more",
+        "next",
+        "nextClean",
+        "nextString",
+        "nextTo",
+        "nextValue",
+        "skipTo",
+        "syntaxError",
+        "toString"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [],
+      "topics": [],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/org/json/JSONWriter.java",
+      "group": "Third-party JSON source",
+      "lines": 323,
+      "class_names": [
+        "JSONWriter"
+      ],
+      "method_count": 10,
+      "methods": [
+        "append",
+        "array",
+        "end",
+        "endArray",
+        "endObject",
+        "key",
+        "object",
+        "pop",
+        "push",
+        "value"
+      ],
+      "imports_count": 2,
+      "dependency_roots": [],
+      "topics": [],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/org/json/Test.java",
+      "group": "Third-party JSON source",
+      "lines": 679,
+      "class_names": [
+        "Test",
+        "that",
+        "Obj",
+        "name",
+        "name",
+        "name",
+        "name"
+      ],
+      "method_count": 8,
+      "methods": [
+        "main",
+        "getNumber",
+        "getString",
+        "isBoolean",
+        "getBENT",
+        "getX",
+        "toJSONString",
+        "toString"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [],
+      "topics": [
+        "Administration and tests"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/org/json/XML.java",
+      "group": "Third-party JSON source",
+      "lines": 438,
+      "class_names": [
+        "XML"
+      ],
+      "method_count": 5,
+      "methods": [
+        "escape",
+        "noSpace",
+        "parse",
+        "toJSONObject",
+        "toString"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [],
+      "topics": [],
+      "keyword_counts": {}
+    },
+    {
+      "path": "external/src/org/json/XMLTokener.java",
+      "group": "Third-party JSON source",
+      "lines": 366,
+      "class_names": [
+        "XMLTokener"
+      ],
+      "method_count": 6,
+      "methods": [
+        "nextCDATA",
+        "nextContent",
+        "nextEntity",
+        "nextMeta",
+        "nextToken",
+        "skipPast"
+      ],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/BreedingCombination.java",
+      "group": "MSM game code: data",
+      "lines": 64,
+      "class_names": [
+        "BreedingCombination"
+      ],
+      "method_count": 6,
+      "methods": [
+        "getMonster1",
+        "getMonster2",
+        "getResult",
+        "getProbability",
+        "getModifier",
+        "getData"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/BreedingLookup.java",
+      "group": "MSM game code: data",
+      "lines": 267,
+      "class_names": [
+        "BreedingLookup"
+      ],
+      "method_count": 7,
+      "methods": [
+        "init",
+        "add",
+        "getBreedingResult",
+        "getMonsterBreedWeightContribution",
+        "getDatabaseBreedingComboResult",
+        "findTotalProbability",
+        "probabilityWithTorches"
+      ],
+      "imports_count": 9,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Code.java",
+      "group": "MSM game code: data",
+      "lines": 145,
+      "class_names": [
+        "Code"
+      ],
+      "method_count": 15,
+      "methods": [
+        "getCodeID",
+        "getAdvertiserID",
+        "getGameID",
+        "getAdvertismentID",
+        "getCampaignID",
+        "getPromoCode",
+        "getCodeLimit",
+        "getRewards",
+        "getRewardText",
+        "getClaimCount",
+        "getStartDate",
+        "getEndDate",
+        "getChecksum",
+        "getExtra",
+        "getCode"
+      ],
+      "imports_count": 2,
+      "dependency_roots": [
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/CodeLookup.java",
+      "group": "MSM game code: data",
+      "lines": 69,
+      "class_names": [
+        "CodeLookup",
+        "CodeException"
+      ],
+      "method_count": 4,
+      "methods": [
+        "init",
+        "add",
+        "decrypt",
+        "getCodes"
+      ],
+      "imports_count": 10,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver",
+        "org.apache"
+      ],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Entity.java",
+      "group": "MSM game code: data",
+      "lines": 419,
+      "class_names": [
+        "Entity"
+      ],
+      "method_count": 37,
+      "methods": [
+        "getEntityId",
+        "getRequirements",
+        "getLevelData",
+        "getBuildTimeMs",
+        "ethSellingPrice",
+        "coinSellingPrice",
+        "timedSaleNow",
+        "getTimedSaleCostCoins",
+        "getTimedSaleCostDiamonds",
+        "getTimedSaleCostEth",
+        "getTimedSaleCostKeys",
+        "getTimedSaleCostRelics",
+        "getTimedSaleCostStarpower",
+        "getTimedSaleCost",
+        "getCurrencyCost",
+        "getSecondaryCurrencyCost",
+        "getCostCoins",
+        "getCostEth",
+        "getCostDiamonds",
+        "getCostKeys",
+        "getCostStarpower",
+        "getCostRelics",
+        "getCostSaleOld",
+        "getXp",
+        "getViewInMarket",
+        "getViewInStarmarket",
+        "isPremium",
+        "minVersion",
+        "getData",
+        "getExtraData",
+        "getName",
+        "toString",
+        "supportedByClient",
+        "canPurchaseFromStore",
+        "userAllowedToPurchase",
+        "getLevelUnlocked",
+        "getLastChanged"
+      ],
+      "imports_count": 15,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Gene.java",
+      "group": "MSM game code: data",
+      "lines": 48,
+      "class_names": [
+        "Gene"
+      ],
+      "method_count": 5,
+      "methods": [
+        "getGeneLetter",
+        "getGeneGraphic",
+        "getData",
+        "minVersion",
+        "supportedByClient"
+      ],
+      "imports_count": 2,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/GeneLookup.java",
+      "group": "MSM game code: data",
+      "lines": 27,
+      "class_names": [
+        "GeneLookup"
+      ],
+      "method_count": 4,
+      "methods": [
+        "init",
+        "add",
+        "get",
+        "iterator"
+      ],
+      "imports_count": 2,
+      "dependency_roots": [],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/Advertisement2018Group.java",
+      "group": "MSM game code: data/groups",
+      "lines": 35,
+      "class_names": [
+        "Advertisement2018Group"
+      ],
+      "method_count": 3,
+      "methods": [
+        "toString",
+        "initStaticData",
+        "getGroupToAssign"
+      ],
+      "imports_count": 3,
+      "dependency_roots": [
+        "com.bigbluebubble"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/AdvertisementGroup.java",
+      "group": "MSM game code: data/groups",
+      "lines": 124,
+      "class_names": [
+        "AdvertisementGroup"
+      ],
+      "method_count": 6,
+      "methods": [
+        "initStaticData",
+        "AdvertisementGroupsExist",
+        "getGroupToAssign",
+        "toString",
+        "level",
+        "chance"
+      ],
+      "imports_count": 5,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/BaseGroup.java",
+      "group": "MSM game code: data/groups",
+      "lines": 184,
+      "class_names": [
+        "BaseGroup"
+      ],
+      "method_count": 6,
+      "methods": [
+        "supportsLevel",
+        "supportsVersion",
+        "supportsPlatform",
+        "getChance",
+        "determineGroup",
+        "toString"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/BrandedAdvertisementGroup.java",
+      "group": "MSM game code: data/groups",
+      "lines": 16,
+      "class_names": [
+        "BrandedAdvertisementGroup"
+      ],
+      "method_count": 0,
+      "methods": [],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/CurrencyGroup.java",
+      "group": "MSM game code: data/groups",
+      "lines": 31,
+      "class_names": [
+        "CurrencyGroup"
+      ],
+      "method_count": 2,
+      "methods": [
+        "toString",
+        "currencyName"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/NoAdvertisementGroup.java",
+      "group": "MSM game code: data/groups",
+      "lines": 73,
+      "class_names": [
+        "NoAdvertisementGroup"
+      ],
+      "method_count": 4,
+      "methods": [
+        "initStaticData",
+        "getGroupToAssign",
+        "toString",
+        "chance"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/ScientificRevenueGroup.java",
+      "group": "MSM game code: data/groups",
+      "lines": 147,
+      "class_names": [
+        "ScientificRevenueGroup"
+      ],
+      "method_count": 9,
+      "methods": [
+        "initStaticData",
+        "getGroupToAssign",
+        "getActiveGroup",
+        "getBBBControlGroup",
+        "getSRControlGroup",
+        "supportsVersion",
+        "supportsPlatform",
+        "supportsClient",
+        "toString"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/TutorialGroup.java",
+      "group": "MSM game code: data/groups",
+      "lines": 124,
+      "class_names": [
+        "TutorialGroup"
+      ],
+      "method_count": 8,
+      "methods": [
+        "initStaticData",
+        "TutorialGroupsExist",
+        "getGroupToAssign",
+        "getInitialQuests",
+        "CallIslandInitializationFunction",
+        "clientTutorial",
+        "chance",
+        "toString"
+      ],
+      "imports_count": 9,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/groups/UserGroup.java",
+      "group": "MSM game code: data/groups",
+      "lines": 198,
+      "class_names": [
+        "UserGroup",
+        "GroupType"
+      ],
+      "method_count": 8,
+      "methods": [
+        "create",
+        "id",
+        "type",
+        "toString",
+        "getGroupById",
+        "getGroup",
+        "add",
+        "print"
+      ],
+      "imports_count": 3,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Island.java",
+      "group": "MSM game code: data",
+      "lines": 260,
+      "class_names": [
+        "Island"
+      ],
+      "method_count": 19,
+      "methods": [
+        "getID",
+        "getType",
+        "getData",
+        "minVersion",
+        "maxVersion",
+        "getMonsters",
+        "getMaxVersionedMonsters",
+        "hasMonster",
+        "getCastleStructureId",
+        "lastChanged",
+        "getCoinCost",
+        "getStarpowerCost",
+        "getDiamondCost",
+        "timedSaleNow",
+        "getTimedSaleCostCoins",
+        "getTimedSaleCostDiamonds",
+        "getTimedSaleCost",
+        "supportedByClient",
+        "getValidIslandDataForUser"
+      ],
+      "imports_count": 15,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/IslandLookup.java",
+      "group": "MSM game code: data",
+      "lines": 27,
+      "class_names": [
+        "IslandLookup"
+      ],
+      "method_count": 3,
+      "methods": [
+        "init",
+        "add",
+        "get"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/IslandTorch.java",
+      "group": "MSM game code: data",
+      "lines": 30,
+      "class_names": [
+        "IslandTorch"
+      ],
+      "method_count": 3,
+      "methods": [
+        "getIsland",
+        "getTorchGraphic",
+        "getData"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Level.java",
+      "group": "MSM game code: data",
+      "lines": 29,
+      "class_names": [
+        "Level"
+      ],
+      "method_count": 3,
+      "methods": [
+        "getLevel",
+        "getXp",
+        "getData"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/LevelLookup.java",
+      "group": "MSM game code: data",
+      "lines": 23,
+      "class_names": [
+        "LevelLookup"
+      ],
+      "method_count": 3,
+      "methods": [
+        "init",
+        "add",
+        "get"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Mail.java",
+      "group": "MSM game code: data",
+      "lines": 227,
+      "class_names": [
+        "Mail",
+        "MailRepeatMode"
+      ],
+      "method_count": 19,
+      "methods": [
+        "toSFSObject",
+        "getID",
+        "getTitle",
+        "getShortTitle",
+        "getMessage",
+        "getSender",
+        "getIcon",
+        "getAttachment",
+        "getStartDate",
+        "getEndDate",
+        "getRepeatMode",
+        "getRepeatCount",
+        "getCurRepeat",
+        "setCurRepeat",
+        "getExpiry",
+        "getUrgentFlag",
+        "getEnabledFlag",
+        "getSegmentation",
+        "getBBBID"
+      ],
+      "imports_count": 5,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MailLookup.java",
+      "group": "MSM game code: data",
+      "lines": 89,
+      "class_names": [
+        "MailLookup"
+      ],
+      "method_count": 5,
+      "methods": [
+        "init",
+        "get",
+        "getValidValues",
+        "inSegment",
+        "updateMail"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MemoryMinigameFunctions.java",
+      "group": "MSM game code: data",
+      "lines": 43,
+      "class_names": [
+        "MemoryMinigameFunctions"
+      ],
+      "method_count": 2,
+      "methods": [
+        "canPlayMemoryMinigame",
+        "getMemoryMinigameUserData"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Music and minigames"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Monster.java",
+      "group": "MSM game code: data",
+      "lines": 380,
+      "class_names": [
+        "Monster"
+      ],
+      "method_count": 32,
+      "methods": [
+        "specialCollectionRate",
+        "getNames",
+        "generateRandomMonsterName",
+        "getGenes",
+        "setTimeToFillSec",
+        "getTimeToFillSec",
+        "isSeasonalMonster",
+        "isDipster",
+        "getCompleteData",
+        "isBoxMonsterType",
+        "getBoxRequirements",
+        "initGoldBoxMonsterRequirements",
+        "isLegendaryMonster",
+        "isGoldUpgradeMonster",
+        "isEtherealMonster",
+        "getGoldBoxMonsterRequirements",
+        "getGoldRareBoxMonsterRequirements",
+        "getLikes",
+        "getDislikes",
+        "getLevel",
+        "getMonsterID",
+        "coinRate",
+        "etherealRate",
+        "beds",
+        "upgradesTo",
+        "getLinkTitle",
+        "getLinkAddress",
+        "setLinkTitle",
+        "setLinkAddress",
+        "setLastUpdated",
+        "isValidMonsterForVersionFromId",
+        "isTrackedUncommon"
+      ],
+      "imports_count": 11,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Quests and timed events",
+        "Music and minigames"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterCommonToRareMapping.java",
+      "group": "MSM game code: data",
+      "lines": 72,
+      "class_names": [
+        "MonsterCommonToRareMapping"
+      ],
+      "method_count": 7,
+      "methods": [
+        "sfsData",
+        "init",
+        "add",
+        "isRare",
+        "commonToRareMapGet",
+        "rareToCommonMapContainsKey",
+        "rareToCommonMapGet"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterIslandData.java",
+      "group": "MSM game code: data",
+      "lines": 14,
+      "class_names": [
+        "MonsterIslandData"
+      ],
+      "method_count": 0,
+      "methods": [],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterIslandToIslandMapping.java",
+      "group": "MSM game code: data",
+      "lines": 124,
+      "class_names": [
+        "MonsterIslandToIslandMapping"
+      ],
+      "method_count": 8,
+      "methods": [
+        "sfsData",
+        "setSFSData",
+        "init",
+        "add",
+        "get",
+        "monsterTeleportsToIslandAs",
+        "monsterTeleportsFromIslandAs",
+        "monsterSourceGivenDestIsland"
+      ],
+      "imports_count": 5,
+      "dependency_roots": [
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterLookup.java",
+      "group": "MSM game code: data",
+      "lines": 58,
+      "class_names": [
+        "MonsterLookup"
+      ],
+      "method_count": 5,
+      "methods": [
+        "init",
+        "add",
+        "get",
+        "getFromEntityId",
+        "iterator"
+      ],
+      "imports_count": 3,
+      "dependency_roots": [
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MonsterRareData.java",
+      "group": "MSM game code: data",
+      "lines": 17,
+      "class_names": [
+        "MonsterRareData"
+      ],
+      "method_count": 0,
+      "methods": [],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/MsmSession.java",
+      "group": "MSM game code: data",
+      "lines": 29,
+      "class_names": [
+        "MsmSession"
+      ],
+      "method_count": 0,
+      "methods": [],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [
+        "Monster and breeding",
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Promo.java",
+      "group": "MSM game code: data",
+      "lines": 83,
+      "class_names": [
+        "Promo"
+      ],
+      "method_count": 8,
+      "methods": [
+        "getID",
+        "getType",
+        "getIcon",
+        "getSheet",
+        "getURL",
+        "getStartDate",
+        "getEndDate",
+        "getData"
+      ],
+      "imports_count": 3,
+      "dependency_roots": [
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/PromoLookup.java",
+      "group": "MSM game code: data",
+      "lines": 23,
+      "class_names": [
+        "PromoLookup"
+      ],
+      "method_count": 3,
+      "methods": [
+        "init",
+        "add",
+        "get"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/QuestLookup.java",
+      "group": "MSM game code: data",
+      "lines": 116,
+      "class_names": [
+        "QuestLookup"
+      ],
+      "method_count": 5,
+      "methods": [
+        "init",
+        "getDefaultTutorialQuests",
+        "getById",
+        "getByName",
+        "getValues"
+      ],
+      "imports_count": 10,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/ScientificRevenue.java",
+      "group": "MSM game code: data",
+      "lines": 926,
+      "class_names": [
+        "ScientificRevenue",
+        "Offer",
+        "Offer"
+      ],
+      "method_count": 37,
+      "methods": [
+        "initStaticData",
+        "debugLog",
+        "validOfferWallPlatform",
+        "getCachedOffer",
+        "getUpdatedOffer",
+        "doWebRequest",
+        "queryOfferWall",
+        "getDBOfferWall",
+        "updateDBOfferWall",
+        "toSFSObject",
+        "getKeys",
+        "getKeys2",
+        "getStartTimeMillis",
+        "getStartTimeSec",
+        "isControlGroup",
+        "getGroupId",
+        "getGroupCurrency",
+        "putOptionalString",
+        "fixSciencyString",
+        "getDuration",
+        "getLocale",
+        "getPaywallAdKeys",
+        "getPaywallAdKeys2",
+        "getPaymentWallPackageObject",
+        "removePaymentWall",
+        "preprocessPaymentWalls",
+        "getStoreCurrencyArray",
+        "getStoreGroupObject",
+        "getStoreGroupArray",
+        "getPaymentWallAd",
+        "getVirtualCurrencyItems",
+        "addSlotDuration",
+        "addSlotImage",
+        "addSlotCurrencies",
+        "getPaymentWallItems",
+        "getStoreItemsArray",
+        "convertOfferJSON"
+      ],
+      "imports_count": 17,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver",
+        "org.json"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Quests and timed events",
+        "Administration and tests"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/ScratchTicketFunctions.java",
+      "group": "MSM game code: data",
+      "lines": 294,
+      "class_names": [
+        "ScratchTicketFunctions"
+      ],
+      "method_count": 6,
+      "methods": [
+        "initializeScratchOff",
+        "getScaledPrizeAmounts",
+        "scaleScratchReward",
+        "roundToHundreds",
+        "getAlternativeMonsterScratch",
+        "getPossibleRare"
+      ],
+      "imports_count": 11,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store"
+      ],
+      "keyword_counts": {
+        "TODO": 2
+      }
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/SegmentationGroup.java",
+      "group": "MSM game code: data",
+      "lines": 505,
+      "class_names": [
+        "SegmentationGroup",
+        "SegmentCompare"
+      ],
+      "method_count": 5,
+      "methods": [
+        "compare",
+        "getID",
+        "getName",
+        "getDescription",
+        "getDefinition"
+      ],
+      "imports_count": 7,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Sticker.java",
+      "group": "MSM game code: data",
+      "lines": 42,
+      "class_names": [
+        "Sticker"
+      ],
+      "method_count": 4,
+      "methods": [
+        "getID",
+        "getData",
+        "minVersion",
+        "supportedByClient"
+      ],
+      "imports_count": 2,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StickerLookup.java",
+      "group": "MSM game code: data",
+      "lines": 23,
+      "class_names": [
+        "StickerLookup"
+      ],
+      "method_count": 3,
+      "methods": [
+        "init",
+        "add",
+        "get"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StoreCurrencyLookup.java",
+      "group": "MSM game code: data",
+      "lines": 31,
+      "class_names": [
+        "StoreCurrencyLookup"
+      ],
+      "method_count": 4,
+      "methods": [
+        "init",
+        "add",
+        "get",
+        "storeCurrencySupportedByServerVersion"
+      ],
+      "imports_count": 3,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StoreGroupsLookup.java",
+      "group": "MSM game code: data",
+      "lines": 33,
+      "class_names": [
+        "StoreGroupsLookup"
+      ],
+      "method_count": 4,
+      "methods": [
+        "init",
+        "add",
+        "get",
+        "storeGroupSupportedByServerVersion"
+      ],
+      "imports_count": 3,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StoreItemsLookup.java",
+      "group": "MSM game code: data",
+      "lines": 33,
+      "class_names": [
+        "StoreItemsLookup"
+      ],
+      "method_count": 4,
+      "methods": [
+        "init",
+        "add",
+        "get",
+        "storeItemSupportedByServerVersion"
+      ],
+      "imports_count": 3,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StoreReplacementItem.java",
+      "group": "MSM game code: data",
+      "lines": 33,
+      "class_names": [
+        "StoreReplacementItem"
+      ],
+      "method_count": 1,
+      "methods": [
+        "ownsEnoughToMakeReplacement"
+      ],
+      "imports_count": 2,
+      "dependency_roots": [
+        "com.bigbluebubble"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StoreReplacements.java",
+      "group": "MSM game code: data",
+      "lines": 86,
+      "class_names": [
+        "StoreReplacements"
+      ],
+      "method_count": 5,
+      "methods": [
+        "Initialize",
+        "addReplacementItem",
+        "currentlyReplacesAnotherStoreItem",
+        "getValueEntityId",
+        "getData"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/Structure.java",
+      "group": "MSM game code: data",
+      "lines": 182,
+      "class_names": [
+        "Structure"
+      ],
+      "method_count": 20,
+      "methods": [
+        "getExtra",
+        "getType",
+        "getXp",
+        "isNursery",
+        "isHappyTree",
+        "isBreeding",
+        "isBakery",
+        "isCastle",
+        "isMine",
+        "isDecoration",
+        "isObstacle",
+        "isHotel",
+        "isWarehouse",
+        "isTimeMachine",
+        "isRecordingStudio",
+        "isTorch",
+        "isBuddy",
+        "isFuzer",
+        "getID",
+        "getUpgradesTo"
+      ],
+      "imports_count": 5,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/StructureLookup.java",
+      "group": "MSM game code: data",
+      "lines": 39,
+      "class_names": [
+        "StructureLookup"
+      ],
+      "method_count": 5,
+      "methods": [
+        "init",
+        "add",
+        "get",
+        "getFromEntityId",
+        "getNextUpgrade"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/CurrencyAvailabilityList.java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "lines": 26,
+      "class_names": [
+        "CurrencyAvailabilityList"
+      ],
+      "method_count": 2,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/CurrencySalesList.java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "lines": 26,
+      "class_names": [
+        "CurrencySalesList"
+      ],
+      "method_count": 2,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/EntityAvailList.java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "lines": 26,
+      "class_names": [
+        "EntityAvailList"
+      ],
+      "method_count": 2,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/EntitySalesList.java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "lines": 25,
+      "class_names": [
+        "EntitySalesList"
+      ],
+      "method_count": 2,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/IslandSalesList.java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "lines": 25,
+      "class_names": [
+        "IslandSalesList"
+      ],
+      "method_count": 2,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/ITimedEventTypeList.java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "lines": 23,
+      "class_names": [
+        "ITimedEventTypeList"
+      ],
+      "method_count": 6,
+      "methods": [
+        "makeEvent",
+        "addEvent",
+        "remove",
+        "GetKey",
+        "timedEventNow",
+        "currentActiveOnKey"
+      ],
+      "imports_count": 3,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/KeyedTimedEventTypeList.java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "lines": 126,
+      "class_names": [
+        "KeyedTimedEventTypeList"
+      ],
+      "method_count": 4,
+      "methods": [
+        "addEvent",
+        "remove",
+        "timedEventNow",
+        "currentActiveOnKey"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/MegafySaleList.java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "lines": 24,
+      "class_names": [
+        "MegafySaleList"
+      ],
+      "method_count": 2,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "imports_count": 3,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/PermalightTorchSaleList.java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "lines": 24,
+      "class_names": [
+        "PermalightTorchSaleList"
+      ],
+      "method_count": 2,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "imports_count": 3,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/ShortenedFuzingList.java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "lines": 24,
+      "class_names": [
+        "ShortenedFuzingList"
+      ],
+      "method_count": 2,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "imports_count": 3,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/StarAvailList.java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "lines": 25,
+      "class_names": [
+        "StarAvailList"
+      ],
+      "method_count": 2,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/StarSalesList.java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "lines": 25,
+      "class_names": [
+        "StarSalesList"
+      ],
+      "method_count": 2,
+      "methods": [
+        "GetKey",
+        "makeEvent"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/TimedEventTypeList.java",
+      "group": "MSM game code: data/timed_events/active_lists",
+      "lines": 93,
+      "class_names": [
+        "TimedEventTypeList"
+      ],
+      "method_count": 4,
+      "methods": [
+        "addEvent",
+        "remove",
+        "timedEventNow",
+        "currentActiveOnKey"
+      ],
+      "imports_count": 5,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/BreedAvailabilityEvent.java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "lines": 14,
+      "class_names": [
+        "BreedAvailabilityEvent"
+      ],
+      "method_count": 0,
+      "methods": [],
+      "imports_count": 2,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/BreedProbabilityChangeEvent.java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "lines": 14,
+      "class_names": [
+        "BreedProbabilityChangeEvent"
+      ],
+      "method_count": 0,
+      "methods": [],
+      "imports_count": 2,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/CurrencyAvailabilityEvent.java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "lines": 61,
+      "class_names": [
+        "CurrencyAvailabilityEvent"
+      ],
+      "method_count": 3,
+      "methods": [
+        "getSaleItemId",
+        "equals",
+        "myStringRep"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/CurrencySalesEvent.java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "lines": 68,
+      "class_names": [
+        "CurrencySalesEvent"
+      ],
+      "method_count": 3,
+      "methods": [
+        "getSaleItemId",
+        "equals",
+        "myStringRep"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/EntityAvailabilityEvent.java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "lines": 59,
+      "class_names": [
+        "EntityAvailabilityEvent"
+      ],
+      "method_count": 3,
+      "methods": [
+        "getEntityId",
+        "equals",
+        "myStringRep"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/EntitySalesEvent.java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "lines": 229,
+      "class_names": [
+        "EntitySalesEvent",
+        "DiscountType"
+      ],
+      "method_count": 9,
+      "methods": [
+        "Key",
+        "Value",
+        "isDefined",
+        "getEntityId",
+        "getDiscountType",
+        "getDiscountValue",
+        "setDiscountType",
+        "equals",
+        "myStringRep"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/IslandSalesEvent.java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "lines": 176,
+      "class_names": [
+        "IslandSalesEvent",
+        "DiscountType"
+      ],
+      "method_count": 9,
+      "methods": [
+        "Key",
+        "Value",
+        "isDefined",
+        "getIslandId",
+        "getDiscountType",
+        "getDiscountValue",
+        "setDiscountType",
+        "equals",
+        "myStringRep"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/MegafySale.java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "lines": 172,
+      "class_names": [
+        "MegafySale",
+        "DiscountType"
+      ],
+      "method_count": 9,
+      "methods": [
+        "Key",
+        "Value",
+        "isDefined",
+        "getDiscountType",
+        "getDiscountValue",
+        "setDiscountType",
+        "equals",
+        "getSaleCost",
+        "myStringRep"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/PermalightTorchSale.java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "lines": 172,
+      "class_names": [
+        "PermalightTorchSale",
+        "DiscountType"
+      ],
+      "method_count": 9,
+      "methods": [
+        "Key",
+        "Value",
+        "isDefined",
+        "getDiscountType",
+        "getDiscountValue",
+        "setDiscountType",
+        "equals",
+        "getSaleCost",
+        "myStringRep"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/ShortenedFuzing.java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "lines": 167,
+      "class_names": [
+        "ShortenedFuzing",
+        "DecreaseType"
+      ],
+      "method_count": 9,
+      "methods": [
+        "Key",
+        "Value",
+        "isDefined",
+        "getDecreaseType",
+        "getValue",
+        "equals",
+        "setDecreaseType",
+        "GetNewFuzeTime",
+        "myStringRep"
+      ],
+      "imports_count": 5,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/StarAvailabilityEvent.java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "lines": 56,
+      "class_names": [
+        "StarAvailabilityEvent"
+      ],
+      "method_count": 3,
+      "methods": [
+        "getEntityId",
+        "equals",
+        "myStringRep"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/StarSalesEvent.java",
+      "group": "MSM game code: data/timed_events/event_types",
+      "lines": 166,
+      "class_names": [
+        "StarSalesEvent",
+        "DiscountType"
+      ],
+      "method_count": 9,
+      "methods": [
+        "Key",
+        "Value",
+        "isDefined",
+        "getEntityId",
+        "getDiscountType",
+        "getDiscountValue",
+        "setDiscountType",
+        "equals",
+        "myStringRep"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEvent.java",
+      "group": "MSM game code: data/timed_events",
+      "lines": 136,
+      "class_names": [
+        "TimedEvent",
+        "TimedEventType"
+      ],
+      "method_count": 10,
+      "methods": [
+        "Dispose",
+        "currentlyActive",
+        "getSfsObject",
+        "getId",
+        "getStartDate",
+        "getEndDate",
+        "getEventType",
+        "getTimedEventType",
+        "toString",
+        "myStringRep"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEventList.java",
+      "group": "MSM game code: data/timed_events",
+      "lines": 186,
+      "class_names": [
+        "TimedEventList"
+      ],
+      "method_count": 10,
+      "methods": [
+        "Instance",
+        "init",
+        "activeEventsInNext24Hours",
+        "addNewEventFromDb",
+        "UpdateActiveTimedEvents",
+        "timedEventNow",
+        "currentActiveOnKey",
+        "addEvent",
+        "remove",
+        "GetListFromType"
+      ],
+      "imports_count": 17,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEventListBuilder.java",
+      "group": "MSM game code: data/timed_events",
+      "lines": 210,
+      "class_names": [
+        "TimedEventListBuilder",
+        "with",
+        "for"
+      ],
+      "method_count": 8,
+      "methods": [
+        "activeEventsInNext24Hours",
+        "addNewEventFromDb",
+        "doErrorCheckingOnTimedEvent",
+        "UpdateActiveTimedEvents",
+        "removeFinishedEvents",
+        "addNewlyActiveEvents",
+        "addToActiveEvents",
+        "UpdateCachedSFSArrayOfEvents"
+      ],
+      "imports_count": 8,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/TorchLookup.java",
+      "group": "MSM game code: data",
+      "lines": 31,
+      "class_names": [
+        "TorchLookup"
+      ],
+      "method_count": 4,
+      "methods": [
+        "init",
+        "add",
+        "get",
+        "iterator"
+      ],
+      "imports_count": 3,
+      "dependency_roots": [
+        "com.bigbluebubble"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/TribalQuestLookup.java",
+      "group": "MSM game code: data",
+      "lines": 37,
+      "class_names": [
+        "TribalQuestLookup"
+      ],
+      "method_count": 2,
+      "methods": [
+        "init",
+        "getValues"
+      ],
+      "imports_count": 5,
+      "dependency_roots": [
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/data/VersionData.java",
+      "group": "MSM game code: data",
+      "lines": 91,
+      "class_names": [
+        "VersionData"
+      ],
+      "method_count": 5,
+      "methods": [
+        "compare",
+        "init",
+        "add",
+        "getMaxServerVersionFromClientVersion",
+        "getMinClientVersionFromServerVersion"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/exceptions/InvalidPlayerException.java",
+      "group": "MSM game code: exceptions",
+      "lines": 13,
+      "class_names": [
+        "InvalidPlayerException"
+      ],
+      "method_count": 0,
+      "methods": [],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "group": "MSM game code: core",
+      "lines": 17305,
+      "class_names": [
+        "GameStateHandler"
+      ],
+      "method_count": 241,
+      "methods": [
+        "handleClientRequest",
+        "getPromotions",
+        "deleteComposerTemplate",
+        "saveComposerTemplate",
+        "saveComposerTrack",
+        "deleteMail",
+        "dailyLoginBuyback",
+        "diamondsRequiredToComplete",
+        "updateDisplayName",
+        "redeemCode",
+        "transferCode",
+        "adminGetCodes",
+        "serverQuestEvent",
+        "buyEgg",
+        "transferEgg",
+        "sellEgg",
+        "adminHatchNonEgg",
+        "hatchEgg",
+        "hatchingSpeedUp",
+        "feedMonster",
+        "muteMonster",
+        "flipMonster",
+        "moveMonster",
+        "sellMonster",
+        "collectSpecialFromMonster",
+        "collectFromMonster",
+        "nameMonster",
+        "tribalFeedMonster",
+        "adminNameMonster",
+        "adminBoxActivateMonster",
+        "adminFinishedEdit",
+        "boxActivateMonster",
+        "boxPurchaseFillCost",
+        "adminBoxPurchaseFill",
+        "boxPurchaseFill",
+        "boxAddEgg",
+        "boxAddUnderlingEgg",
+        "adminBoxMonsterToggle",
+        "boxAddMonster",
+        "adminBoxToggleMonster",
+        "sendMonsterHome",
+        "deleteParentData",
+        "deleteAssociatedGoldMonster",
+        "testBreeding",
+        "adminQASelectBreedEgg",
+        "breedMonsters",
+        "finishBreeding",
+        "breedingSpeedUp",
+        "processAdminNeighborChangeMsg",
+        "processAdminMultiNeighborChangeMsg",
+        "processMultiNeighborChangeMsg",
+        "generateMonsterHappinessUpdate",
+        "updateMonsterHappiness",
+        "calculateHappiness",
+        "triggerNeighborQuest",
+        "adminChangeUserHappiness",
+        "buyIsland",
+        "changeIsland",
+        "adminPlaceOnGoldIsland",
+        "placeOnGoldIsland",
+        "saveIslandWarpSpeed",
+        "placeOnTribal",
+        "adminSwapTribalMonster",
+        "islandHasTribalMonster",
+        "playerInOtherTribe",
+        "cancelTribeInvite",
+        "declineAllTribeInvites",
+        "cancelTribeRequest",
+        "sendTribeRequest",
+        "sendTribeInvite",
+        "joinTribe",
+        "leaveTribeRequest",
+        "kickTribeRequest",
+        "updateTribeName",
+        "updateIslandName",
+        "refreshTribeRequests",
+        "getRequests",
+        "buyStructure",
+        "addHappyTreeEffects",
+        "moveStructure",
+        "sellStructure",
+        "adminPutDecorationInStorage",
+        "putDecorationInStorage",
+        "adminPutBuddyInFuzer",
+        "putBuddyInFuzer",
+        "adminRemoveDecorationFromStorage",
+        "removeDecorationFromStorage",
+        "adminRemoveBuddyFromFuzer",
+        "removeBuddyFromFuzer",
+        "adminPutMonsterInStorage",
+        "putMonsterInStorage",
+        "adminRemoveMonsterFromStorage",
+        "removeMonsterFromStorage",
+        "megaMonsterMessage",
+        "getTorchGifts",
+        "adminUnlightTorch",
+        "getFriendTorchInfo",
+        "lightTorch",
+        "lightOwnTorch",
+        "adminLightUserTorch",
+        "lightFriendTorch",
+        "startUpgradeStructure",
+        "finishUpgradeStructure",
+        "finishStructure",
+        "flipStructure",
+        "structureSpeedUp",
+        "muteStructure",
+        "startObstacle",
+        "clearObstacle",
+        "clearObstacleSpeedUp",
+        "startBaking",
+        "finishBaking",
+        "bakingSpeedUp",
+        "startFuzing",
+        "finishFuzing",
+        "adminFinishFuzing",
+        "fuzingSpeedUp",
+        "collectFromMine",
+        "questEvent",
+        "solveQuestForUser",
+        "handleQuestEvent",
+        "processNewQuestStatus",
+        "processCompletionEventsAsQuestEvents",
+        "giveNextQuests",
+        "crazyQuestArrayContainsNewQuestId",
+        "questRead",
+        "questCollect",
+        "updateAchievementStatus",
+        "saveAchievement",
+        "createAchievementFromQuest",
+        "processUnclaimedPurchases",
+        "processUncollectedOfferRewards",
+        "processUncollectedGlobalAchRewards",
+        "bindAccountToGlobalAchievements",
+        "convertCurrency",
+        "convertDiamondsToCoins",
+        "convertCoinsToEthCurrency",
+        "convertDiamondsToEthCurrency",
+        "convertEthToDiamondsCurrency",
+        "giveMeShit",
+        "viewThirdPartyAd",
+        "viewThirdPartyVideoAd",
+        "sendFacebookHelp",
+        "handleFacebookHelpInstances",
+        "requestFacebookHelpPermissions",
+        "adminPurchaseBuyback",
+        "purchaseBuyback",
+        "collectFacebookReward",
+        "getFriends",
+        "getRandomTribes",
+        "collectInviteReward",
+        "getFriendVisitData",
+        "getRandomVisitData",
+        "visitSpecificFriendIsland",
+        "setFriendAsFav",
+        "makeMyFriendAFav",
+        "incrTorchesILitCount",
+        "getTribalIslandData",
+        "getRankedIslandData",
+        "loadTopStages",
+        "getIslandRank",
+        "hasRatedIsland",
+        "rateIsland",
+        "loadTopTribes",
+        "getFriendData",
+        "loadFriendsWithFavs",
+        "getMessages",
+        "deleteMessage",
+        "addBbbIdReferral",
+        "completeOffer",
+        "updatePaywall",
+        "goDeeper",
+        "playerHasScratchOff",
+        "playScratchOff",
+        "collectScratchOffPrize",
+        "retrieveMemoryGameGameSettings",
+        "requestFlipMinigameCost",
+        "requestMemoryMinigameCurrentCost",
+        "purchaseFlipGame",
+        "generateFlipPrize",
+        "purchaseMemoryGame",
+        "collectMemoryGamePrize",
+        "collectFlipGamePrize",
+        "addFriend",
+        "removeFriend",
+        "syncFriends",
+        "adminRefreshAll",
+        "getCcu",
+        "logDiamondUsage",
+        "logStarpowerUsage",
+        "getAdminVisitData",
+        "adminMoveUsersMonster",
+        "adminMoveUsersStructure",
+        "adminDestroyUsersMonster",
+        "adminDestroyUsersStructure",
+        "adminSellEgg",
+        "adminBuyEgg",
+        "adminHatchEgg",
+        "adminBuyStructure",
+        "adminBuyIsland",
+        "adminChangeIsland",
+        "adminDestroyIsland",
+        "adminFeedMonster",
+        "adminFinishUpgradeStructure",
+        "adminStartBaking",
+        "adminBakingSpeedUp",
+        "adminStartFuzing",
+        "adminFuzingSpeedUp",
+        "adminBreedingSpeedUp",
+        "adminRemoveBreeding",
+        "adminFinishBreeding",
+        "adminClearObstacleSpeedUp",
+        "adminHatchingSpeedUp",
+        "adminStructureSpeedUp",
+        "adminGetUserQuestInfo",
+        "adminCompleteUserQuest",
+        "adminGiveMeShit",
+        "adminFlipMonster",
+        "adminFlipStructure",
+        "adminKickUser",
+        "getGeneDB",
+        "getTorchGfxDB",
+        "getVersionData",
+        "getMonsterDB",
+        "getStructureDB",
+        "getIslandDB",
+        "getLevelDB",
+        "getScratchOffsDB",
+        "getStoreDB",
+        "getStoreDBv2",
+        "getStickerDB",
+        "retroActiveQuests",
+        "getQuestInfo",
+        "getReplacementStoreStructures",
+        "getTimedEventInfo",
+        "getRareMonsterData",
+        "getMonsterIsland2IslandMapData",
+        "getPlayerInfo",
+        "requestNextRelicReset",
+        "collectDailyReward",
+        "confirmGoalsComplete"
+      ],
+      "imports_count": 83,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver",
+        "org.json",
+        "org.owasp"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Currencies, rewards, store",
+        "Quests and timed events",
+        "Music and minigames",
+        "Administration and tests",
+        "Networking and services"
+      ],
+      "keyword_counts": {
+        "TODO": 22,
+        "HACK": 2,
+        "UNDERLING": 12
+      }
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/Helpers.java",
+      "group": "MSM game code: core",
+      "lines": 72,
+      "class_names": [
+        "Helpers"
+      ],
+      "method_count": 3,
+      "methods": [
+        "implode",
+        "decompressJsonDataField",
+        "compressJsonDataField"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [
+        "com.bigbluebubble"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/logging/GooglePlayEvents.java",
+      "group": "MSM game code: logging",
+      "lines": 154,
+      "class_names": [
+        "GooglePlayEvents"
+      ],
+      "method_count": 6,
+      "methods": [
+        "sendEvent",
+        "reportLevel",
+        "reportIsland",
+        "reportMonsterBreed",
+        "reportMonsterBuy",
+        "reportFriend"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/logging/MetricCost.java",
+      "group": "MSM game code: logging",
+      "lines": 55,
+      "class_names": [
+        "MetricCost"
+      ],
+      "method_count": 3,
+      "methods": [
+        "init",
+        "getResource",
+        "getAmount"
+      ],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [
+        "Monster and breeding",
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/logging/MSMCommandLogging.java",
+      "group": "MSM game code: logging",
+      "lines": 210,
+      "class_names": [
+        "contains",
+        "MSMCommandLogging"
+      ],
+      "method_count": 11,
+      "methods": [
+        "logRequests",
+        "maxRequests",
+        "requestQueue",
+        "init",
+        "createClientRequestLog",
+        "addClientRequestLog",
+        "flushClientRequestLog",
+        "initClientRequestLog",
+        "sendClientRequestLog",
+        "debugLog",
+        "errorLog"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events",
+        "Administration and tests"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/logging/MSMCommands.java",
+      "group": "MSM game code: logging",
+      "lines": 452,
+      "class_names": [
+        "MSMCommands"
+      ],
+      "method_count": 0,
+      "methods": [],
+      "imports_count": 5,
+      "dependency_roots": [],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/MSMExtension.java",
+      "group": "MSM game code: core",
+      "lines": 2867,
+      "class_names": [
+        "MSMExtension"
+      ],
+      "method_count": 56,
+      "methods": [
+        "initGameSettings",
+        "CurrentDBTime",
+        "getInstance",
+        "getScratchOffs",
+        "isDevServer",
+        "scratchOffPrizeSupportedByServerVer",
+        "init",
+        "sendVersionError",
+        "clearAllLockedAccounts",
+        "clearAdminsLockedAccounts",
+        "markAccountLockedForAdminEditing",
+        "kickUserFromAuth",
+        "resetAccountAccessTime",
+        "markAccountAdminEditingComplete",
+        "adminCreatePlayerByBBBID",
+        "updateLastLogin",
+        "checkQuestDataForErrors",
+        "isAValidQuest",
+        "createPlayerByBBBID",
+        "createPlayerByID",
+        "createPlayerWithUserRecord",
+        "initializePlayerQuestData",
+        "initializePlayerAchievementData",
+        "initializePlayerGroupsFromUserGroupsTable",
+        "initializeAdvertisementGroup",
+        "initializePlayerScratchTicketData",
+        "initializePlayerIslands",
+        "initializePlayerAds",
+        "initializePlayerMusic",
+        "setupPlayerScratchData",
+        "setupPlayerPromotions",
+        "initializePlayerScientificRevenue",
+        "loadPlayerIslandData",
+        "loadPlayerTribalIslandData",
+        "createPlayerIsland",
+        "createTribalIsland",
+        "joinTribalIsland",
+        "sendPlayerState",
+        "sendQuests",
+        "sendErrorResponse",
+        "sendAdminMessage",
+        "savePlayer",
+        "savePlayerQuests",
+        "savePlayerIsland",
+        "destroy",
+        "loadAndCacheStaticData",
+        "processUnclaimedPurchases",
+        "addScientificRevenueUserTag",
+        "updateScientificRevenueUserTags",
+        "updateTapjoyUserTags",
+        "processUncollectedOfferRewards",
+        "sendGameSettings",
+        "logMessage",
+        "loadGameSettings",
+        "send",
+        "updateSocialUsers"
+      ],
+      "imports_count": 94,
+      "dependency_roots": [
+        "com.amazonaws",
+        "com.bigbluebubble",
+        "com.smartfoxserver",
+        "org.json",
+        "org.owasp"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Currencies, rewards, store",
+        "Quests and timed events",
+        "Music and minigames",
+        "Administration and tests",
+        "Networking and services"
+      ],
+      "keyword_counts": {
+        "TODO": 1,
+        "HACK": 1
+      }
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/MSMServerEventHandler.java",
+      "group": "MSM game code: core",
+      "lines": 683,
+      "class_names": [
+        "MSMServerEventHandler"
+      ],
+      "method_count": 22,
+      "methods": [
+        "handleLoginData",
+        "userJoinZone",
+        "CreateNewPlayer",
+        "CreateNewBbbIdDbEntry",
+        "CreateNewPlayerDbEntry",
+        "initializeNewPlayerGroups",
+        "initializeFirstIsland",
+        "initializeEmptyQuests",
+        "addUserToInitialGroupsTable",
+        "selectTutorialGroupForNewUser",
+        "selectNoAdvertisementGroupForNewUser",
+        "selectScientificRevenueGroupForNewUser",
+        "selectAdvertisement2018GroupForNewUser",
+        "addUserToGroupTable",
+        "userHasNewerDataThanClientVersion",
+        "getClientLastUpdateVersion",
+        "userLogin",
+        "userLogout",
+        "userDisconnect",
+        "userReconnectSuccess",
+        "userReconnectTry",
+        "send"
+      ],
+      "imports_count": 31,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Currencies, rewards, store",
+        "Quests and timed events",
+        "Networking and services"
+      ],
+      "keyword_counts": {
+        "TODO": 1,
+        "HACK": 1
+      }
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/InitialPlayerIslandData.java",
+      "group": "MSM game code: player",
+      "lines": 15,
+      "class_names": [
+        "InitialPlayerIslandData"
+      ],
+      "method_count": 0,
+      "methods": [],
+      "imports_count": 1,
+      "dependency_roots": [
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/LitPlayerTorch.java",
+      "group": "MSM game code: player",
+      "lines": 152,
+      "class_names": [
+        "LitPlayerTorch"
+      ],
+      "method_count": 11,
+      "methods": [
+        "resetTorchLight",
+        "resetTorchTime",
+        "initFromSFSObject",
+        "toSFSObject",
+        "getData",
+        "toString",
+        "getID",
+        "getStructureId",
+        "isPermalit",
+        "getCompletionTime",
+        "torchExpired"
+      ],
+      "imports_count": 8,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/MonsterMegaData.java",
+      "group": "MSM game code: player",
+      "lines": 148,
+      "class_names": [
+        "MonsterMegaData"
+      ],
+      "method_count": 9,
+      "methods": [
+        "initFromSFSObject",
+        "toSFSObject",
+        "isPermaMega",
+        "resetMega",
+        "resetTempMegaTime",
+        "megaExpired",
+        "enableMega",
+        "getData",
+        "toString"
+      ],
+      "imports_count": 8,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/Player.java",
+      "group": "MSM game code: player",
+      "lines": 3489,
+      "class_names": [
+        "Player",
+        "CurrencyType",
+        "PROPERTY",
+        "SPEED_UP_STATUS",
+        "SPEED_UP_TYPES",
+        "MonsterFixup",
+        "handling",
+        "PlayerSpeedUpInfo"
+      ],
+      "method_count": 194,
+      "methods": [
+        "getEntityCostKey",
+        "SpecificCurrencyDiscountType",
+        "getCurrencyKey",
+        "getCurrencyTypeFromString",
+        "getSpecialCollectionTimer",
+        "setSpecialCollectionTimer",
+        "setDailyBonusToBeCollected",
+        "doFinalizeThings",
+        "collectPendingDailyReward",
+        "checkDailyLogin",
+        "buyDailyLoginStreak",
+        "clearDailyLoginStreak",
+        "getCurIslandTorchGifts",
+        "clearOutInvalidTorchGifts",
+        "canLightFriendTorchTimes",
+        "canLightFriendTorchNow",
+        "getNumLitTorches",
+        "torchLitFromTorchJsonObject",
+        "friendHasUnlitTorches",
+        "toSFSObject",
+        "addPlayerPropertyData",
+        "supportsNewDailyLogin",
+        "supportsDailyLoginBuyBack",
+        "getLastCommandTime",
+        "getLastCommand",
+        "setLastCommand",
+        "duplicateCommand",
+        "getMemoryGameTime",
+        "setMemoryGameTime",
+        "getPlayerId",
+        "getBbbId",
+        "getUserGameId",
+        "getData",
+        "setDisplayName",
+        "getDisplayName",
+        "toString",
+        "isAdmin",
+        "isDirty",
+        "setDirty",
+        "setSaveAllowed",
+        "saveAllowed",
+        "hasPromotionsAvailable",
+        "setPromotions",
+        "getPromotions",
+        "setOffer",
+        "getOffer",
+        "setFriendGift",
+        "getFriendGift",
+        "getCurrentRelicDiamondCost",
+        "getLastClaimedFreeScratchAd",
+        "getNextFreeScratchAd",
+        "getPendingDailyRewardType",
+        "getPendingDailyRewardAmount",
+        "getPendingRewardDay",
+        "claimFreeScratchWithAd",
+        "updateNextAdScratch",
+        "updateAdScratch",
+        "updateMail",
+        "expireMail",
+        "getValidMail",
+        "segmentationCheck",
+        "addNewMail",
+        "getNextReset",
+        "purchaseRelic",
+        "chargePlayer",
+        "paySecondaryCurrencySellingPrice",
+        "payEntitySellingPrice",
+        "canBuy",
+        "canFeed",
+        "hasSpeedUpCredit",
+        "getActualCoins",
+        "getActualDiamonds",
+        "getActualEthCurrency",
+        "getActualFood",
+        "getActualStarpower",
+        "getActualKeys",
+        "getActualRelics",
+        "getDailyRelicsCount",
+        "getLastRelicPurchase",
+        "getActualSpeedUpCredit",
+        "getTotalStarpower",
+        "getDisplayedCoins",
+        "getDisplayedDiamonds",
+        "getDisplayedKeys",
+        "getDisplayedEthCurrency",
+        "getDisplayedFood",
+        "getDisplayedRelics",
+        "getXp",
+        "getLevel",
+        "rewardXp",
+        "adjustCoins",
+        "adjustEthCurrency",
+        "adjustDiamonds",
+        "adjustKeys",
+        "adjustStarpower",
+        "adjustRelics",
+        "adjustFood",
+        "adjustSpeedUpCredit",
+        "calculateMonsterIndex",
+        "getNextMonsterIndex",
+        "hasNewerContent",
+        "hasBoxMonster",
+        "getMonsterIslandId",
+        "initIslands",
+        "getIslands",
+        "getIslandByID",
+        "addIsland",
+        "getActiveIslandId",
+        "getActiveIsland",
+        "setActiveIsland",
+        "getIslandByIslandIndex",
+        "calculateQuestIndex",
+        "getNextQuestIndex",
+        "hasCollectedQuest",
+        "hasActiveQuest",
+        "hasQuest",
+        "addCollectedQuest",
+        "getCollectedQuests",
+        "initQuests",
+        "giveInitialQuests",
+        "giveTutorialGroupSpecificQuests",
+        "addTutorialQuests",
+        "giveRetroactiveTriggeredQuests",
+        "addQuestEvents",
+        "removeQuestEvents",
+        "addQuest",
+        "questComplete",
+        "hasQuestGoal",
+        "hasQuestGoals",
+        "getQuests",
+        "getQuest",
+        "initAchievements",
+        "addAchievement",
+        "getAchievements",
+        "getAchievement",
+        "getNextScratchOffTime",
+        "setNextScratchOffTime",
+        "hasUnclaimedScratchOff",
+        "setUnclaimedScratchOff",
+        "getScratchPrize",
+        "setScratchPrize",
+        "getFacebookInviteReward",
+        "setFacebookInviteReward",
+        "getTwitterInviteReward",
+        "setTwitterInviteReward",
+        "getEmailInviteReward",
+        "setEmailInviteReward",
+        "getLastFacebookPostReward",
+        "setLastFacebookPostReward",
+        "cachedEarnedStarpower",
+        "calculateEarnedStarpower",
+        "compare",
+        "getInGamePurchaseCount",
+        "setInGamePurchaseCount",
+        "getInGamePurchaseAmountTotal",
+        "setInGamePurchaseAmountTotal",
+        "getThirdpartyAds",
+        "setThirdpartyAds",
+        "setThirdpartyVideoAds",
+        "hasMadePurchase",
+        "updateLastClientVersion",
+        "fixDailyLoginRewards",
+        "lastClientVersion",
+        "LastLoginTime",
+        "getDateCreatedTime",
+        "setHasDoneOffer",
+        "setLastCodeTime",
+        "getLastCodeTime",
+        "getExtraAdParamString",
+        "setDailySpeedUpCredit",
+        "getSpeedUpTypeFromString",
+        "refreshLastClaimedOn",
+        "updateSpeedUp",
+        "memberOfGroup",
+        "addToGroup",
+        "hasUnsavedGroups",
+        "getUnsavedGroups",
+        "markUnsavedGroups",
+        "getGroups",
+        "initGroups",
+        "cacheTutorialGroup",
+        "getTutorialGroup",
+        "clientTutorialSetup",
+        "memberOfGroupType",
+        "isSciency",
+        "isBranded",
+        "getPlatform",
+        "setPlatform",
+        "initMusic",
+        "deleteTrack",
+        "getTracks",
+        "getSongs",
+        "getMailbox",
+        "getActiveIslandStats"
+      ],
+      "imports_count": 34,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver",
+        "org.json"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Currencies, rewards, store",
+        "Quests and timed events",
+        "Music and minigames",
+        "Administration and tests"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerAchievement.java",
+      "group": "MSM game code: player",
+      "lines": 130,
+      "class_names": [
+        "PlayerAchievement"
+      ],
+      "method_count": 15,
+      "methods": [
+        "initFromSFSObject",
+        "toSFSObject",
+        "toString",
+        "invalid",
+        "getID",
+        "achievementName",
+        "getUser",
+        "getUserQuest",
+        "getWrappedUserQuest",
+        "setFacebookPosted",
+        "facebookPosted",
+        "setGameCenterPosted",
+        "gameCenterPosted",
+        "setGooglePlayPosted",
+        "googlePlayPosted"
+      ],
+      "imports_count": 1,
+      "dependency_roots": [
+        "com.bigbluebubble"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {
+        "HACK": 1
+      }
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerActiveIslandStats.java",
+      "group": "MSM game code: player",
+      "lines": 239,
+      "class_names": [
+        "PlayerActiveIslandStats"
+      ],
+      "method_count": 11,
+      "methods": [
+        "islandChanged",
+        "islandClosed",
+        "diamondChange",
+        "keysChange",
+        "relicsChange",
+        "coinChange",
+        "ethCurrencyChange",
+        "starpowerCurrencyChange",
+        "foodChange",
+        "speedUpCreditChange",
+        "flushEvent"
+      ],
+      "imports_count": 4,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "org.json"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerBaking.java",
+      "group": "MSM game code: player",
+      "lines": 162,
+      "class_names": [
+        "PlayerBaking"
+      ],
+      "method_count": 16,
+      "methods": [
+        "initFromSFSObject",
+        "toSFSObject",
+        "getData",
+        "toString",
+        "getID",
+        "setID",
+        "getStructureId",
+        "getParentID",
+        "setParentID",
+        "setStructureID",
+        "getTimeRemaining",
+        "getInitialTimeRemaining",
+        "finishBakingNow",
+        "getCompletionTime",
+        "getStartTime",
+        "reduceBakingTimeByVideo"
+      ],
+      "imports_count": 8,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerBreeding.java",
+      "group": "MSM game code: player",
+      "lines": 172,
+      "class_names": [
+        "PlayerBreeding"
+      ],
+      "method_count": 16,
+      "methods": [
+        "initFromSFSObject",
+        "getData",
+        "toSFSObject",
+        "toString",
+        "getID",
+        "getChildType",
+        "getParentID",
+        "getStructureID",
+        "setID",
+        "getTimeRemaining",
+        "getInitialTimeRemaining",
+        "finishBreedingNow",
+        "getCompletionTime",
+        "getStartTime",
+        "reduceBreedingByFacebookHelpTime",
+        "reduceBreedingTimeByVideo"
+      ],
+      "imports_count": 9,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerBuyback.java",
+      "group": "MSM game code: player",
+      "lines": 148,
+      "class_names": [
+        "PlayerBuyback"
+      ],
+      "method_count": 9,
+      "methods": [
+        "initFromSFSObject",
+        "toSFSObject",
+        "getID",
+        "getName",
+        "getLevel",
+        "getTimesFed",
+        "getExtraData",
+        "getMegaMonsterData",
+        "getCoinCost"
+      ],
+      "imports_count": 11,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerEgg.java",
+      "group": "MSM game code: player",
+      "lines": 199,
+      "class_names": [
+        "PlayerEgg"
+      ],
+      "method_count": 18,
+      "methods": [
+        "initFromSFSObject",
+        "getData",
+        "toSFSObject",
+        "toString",
+        "getID",
+        "getType",
+        "getParentID",
+        "setParentID",
+        "getStructureID",
+        "getPreviousName",
+        "getPrevPermaMega",
+        "getTimeRemaining",
+        "getInitialTimeRemaining",
+        "finishHatchingNow",
+        "reduceHatchByFacebookHelpTime",
+        "getCompletionTime",
+        "getStartTime",
+        "reduceHatchingTimeByVideo"
+      ],
+      "imports_count": 9,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerFuzeBuddy.java",
+      "group": "MSM game code: player",
+      "lines": 176,
+      "class_names": [
+        "PlayerFuzeBuddy"
+      ],
+      "method_count": 16,
+      "methods": [
+        "initStaticData",
+        "initFromSFSObject",
+        "getData",
+        "toSFSObject",
+        "toString",
+        "getStructureID",
+        "getTimeRemaining",
+        "getInitialTimeRemaining",
+        "finishNow",
+        "getCompletionTime",
+        "getStartTime",
+        "getCreate",
+        "getR",
+        "getY",
+        "getB",
+        "reduceFuzingTimeByVideo"
+      ],
+      "imports_count": 10,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerIsland.java",
+      "group": "MSM game code: player",
+      "lines": 2007,
+      "class_names": [
+        "PlayerIsland"
+      ],
+      "method_count": 140,
+      "methods": [
+        "toString",
+        "initFromSFSObject",
+        "toSFSObject",
+        "soldMonsterTypes",
+        "initStructures",
+        "initMonsters",
+        "initTribalRequests",
+        "initTribalIslandData",
+        "initTribalQuests",
+        "addChiefData",
+        "getTribalIslandData",
+        "getTribalRequests",
+        "initMonstersFromJson",
+        "initSoldMonstersFromJson",
+        "initStructuresFromJson",
+        "initEggs",
+        "initBreeding",
+        "initBaking",
+        "initFuzeBuddies",
+        "initTorches",
+        "fixMonsterLevels",
+        "checkForInvalidData",
+        "initBuyback",
+        "initLastBred",
+        "setLastPlayerLevel",
+        "setGiMappings",
+        "getIslandMonsterData",
+        "getIslandStructureData",
+        "getIslandVolatileData",
+        "getName",
+        "getID",
+        "getUser",
+        "getType",
+        "getIndex",
+        "getTribalID",
+        "getDateCreated",
+        "getLikes",
+        "getDislikes",
+        "getWarpSpeed",
+        "setWarpSpeed",
+        "isGoldIsland",
+        "isRegularIsland",
+        "isShugaIsland",
+        "isEtherealIsland",
+        "isTribalIsland",
+        "isUnderlingIsland",
+        "isComposerIsland",
+        "isCelestialIsland",
+        "isFireIsland",
+        "getMonsters",
+        "getMonsterByID",
+        "changeMonsterID",
+        "addMonster",
+        "removeMonster",
+        "addToSoldMonsters",
+        "getStructures",
+        "getStructureByID",
+        "addStructure",
+        "removeStructure",
+        "hasMax",
+        "hasHappinessTree",
+        "hasStructure",
+        "numStructuresOfEntTypeOnIsland",
+        "getNextStructureId",
+        "getMonsterBaseBuildTimeForIsland",
+        "getBreeding",
+        "getBreedings",
+        "getBreedCompletionTimeForIsland",
+        "testBreed",
+        "getAvailableEmptyBreedingStructure",
+        "getBusyBreedingStructure",
+        "startNewBreed",
+        "makeNewBreeding",
+        "getBreedResult",
+        "setBreeding",
+        "removeBreeding",
+        "breedingFull",
+        "finishBreeding",
+        "getAnyValidBreedForFacebookSpeedup",
+        "getEgg",
+        "getEggs",
+        "getHatchCompletionTimeForIsland",
+        "addNewEggToIsland",
+        "getAvailableEmptyNursery",
+        "makeNewScratchWinEgg",
+        "makeNewISFSEgg",
+        "setEgg",
+        "removeEgg",
+        "numNurseries",
+        "numBreedingStructures",
+        "eggsFull",
+        "nurseryHasEgg",
+        "getAnyValidEggForFacebookSpeedup",
+        "getBaking",
+        "getLitTorches",
+        "getBakingByStructureId",
+        "getFuzerBuddies",
+        "getFuzerBuddyByStructureId",
+        "getEggByStructureId",
+        "getBreedingByStructureId",
+        "getBakingByID",
+        "addBaking",
+        "removeBaking",
+        "getNextBakingId",
+        "getFuzeBuddyByID",
+        "addFuzeBuddy",
+        "removeFuzeBuddy",
+        "getNextEggId",
+        "getNextBreedingId",
+        "getNextLitTorchId",
+        "getBuyback",
+        "setBuyback",
+        "hasBuyback",
+        "removeBuyback",
+        "getLastBredUserMonster1",
+        "getLastBredUserMonster2",
+        "setLastBred",
+        "lastBredToSFSObject",
+        "canPlace",
+        "hasMonster",
+        "getWarehouse",
+        "getHotel",
+        "getNumDecorationsInStorage",
+        "getFuzer",
+        "getNumBuddiesInFuzer",
+        "getNumMonstersInStorage",
+        "getNumMonsterBedsInStorage",
+        "bedsAvailable",
+        "getMine",
+        "nurseryStructureSpeedMod",
+        "breedingStructureSpeedMod",
+        "getLitTorchData",
+        "removeLitTorch",
+        "lightTorch",
+        "clearOutOldTorchData",
+        "torchExpired",
+        "getNumLitTorchesOnIsland",
+        "getNumTorchesOnIsland",
+        "isALastBredMonster",
+        "testBreeding"
+      ],
+      "imports_count": 13,
+      "dependency_roots": [
+        "com.bigbluebubble"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Currencies, rewards, store",
+        "Quests and timed events",
+        "Music and minigames",
+        "Administration and tests"
+      ],
+      "keyword_counts": {
+        "TODO": 1
+      }
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerIslandFactory.java",
+      "group": "MSM game code: player",
+      "lines": 337,
+      "class_names": [
+        "PlayerIslandFactory"
+      ],
+      "method_count": 17,
+      "methods": [
+        "CreateIslandInitialStructures",
+        "CreateTutorialIsland",
+        "CreateBasicTutorialIsland",
+        "CreateBreedingTutorialIsland",
+        "CreateTypicalIsland",
+        "CreateComposerIsland",
+        "createCastle",
+        "createNursery",
+        "createBreedingStructure",
+        "createNoggin",
+        "createTutorialMammott",
+        "createComposerMammott",
+        "createMonster",
+        "createIslandObstacles",
+        "createStructure",
+        "createObstacle",
+        "createNoCompletionStructure"
+      ],
+      "imports_count": 11,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Music and minigames",
+        "Administration and tests"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerMonster.java",
+      "group": "MSM game code: player",
+      "lines": 1317,
+      "class_names": [
+        "PlayerMonster",
+        "UnderlingCollectionType"
+      ],
+      "method_count": 87,
+      "methods": [
+        "GetRandom",
+        "CachedCollectionTypes",
+        "getCurrencyStrFromType",
+        "createMonsterSFS",
+        "startEggTimer",
+        "eggTimerStart",
+        "collectionOfDyingFetuses",
+        "resetEggTimer",
+        "clearRottenEggs",
+        "initDefaultValues",
+        "initFromSFSObject",
+        "toSFSObject",
+        "DebuggingIslandSet",
+        "toSFSObjectWithoutBoxData",
+        "getMegaSFS",
+        "toString",
+        "getName",
+        "getID",
+        "getType",
+        "getLastCollectedTime",
+        "getLevel",
+        "getParentID",
+        "getTimesFed",
+        "getCollectedCoins",
+        "getCollectedEth",
+        "getCollectedDiamonds",
+        "getCollectedFood",
+        "getCollectedStarpower",
+        "getXPosition",
+        "getYPosition",
+        "getVolume",
+        "getHappiness",
+        "getMuted",
+        "getFlip",
+        "levelUp",
+        "setLevel",
+        "getGoldIslandData",
+        "removeGoldIslandData",
+        "getParentIslandData",
+        "markForDeletion",
+        "inHotel",
+        "setID",
+        "setParentID",
+        "setPosition",
+        "setVolume",
+        "setHappiness",
+        "resetTimesFed",
+        "setName",
+        "toggleMute",
+        "toggleFlip",
+        "setFlip",
+        "feed",
+        "tribalFeed",
+        "setGoldIslandData",
+        "setParentIslandData",
+        "isInactiveBoxMonster",
+        "setBoxMonsterData",
+        "isPermaMega",
+        "megaEnable",
+        "isMega",
+        "isDailyMega",
+        "dailyMegaExpired",
+        "makeMega",
+        "getBoxMonsterPossessedEggs",
+        "getRemainingMonsterTypes",
+        "adminRemoveEgg",
+        "addEgg",
+        "hasNumOfEgg",
+        "numBoxReqsOfTypeReqd",
+        "getBoxRequirements",
+        "boxMonsterBuyPossessedEggsPrice",
+        "boxMonsterSellingPrice",
+        "hasAllRequiredEggs",
+        "needsEgg",
+        "activateBoxMonster",
+        "CurrentCollectionType",
+        "getRandomUnderlingCollectionMin",
+        "resetUnderlingCurrencyType",
+        "validCollectionType",
+        "validRandomTime",
+        "stashCurrency",
+        "GetRandomCollectionType",
+        "collectCurrency",
+        "getEntityId",
+        "setInHotel",
+        "resetLastCollection",
+        "getGoldMonster"
+      ],
+      "imports_count": 11,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Currencies, rewards, store",
+        "Quests and timed events",
+        "Administration and tests"
+      ],
+      "keyword_counts": {
+        "HACK": 1,
+        "UNDERLING": 3
+      }
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerQuest.java",
+      "group": "MSM game code: player",
+      "lines": 695,
+      "class_names": [
+        "PlayerQuest",
+        "for"
+      ],
+      "method_count": 34,
+      "methods": [
+        "JSONParse",
+        "JSONCreate",
+        "lt",
+        "lte",
+        "ne",
+        "gte",
+        "gt",
+        "equal",
+        "getInitialSFSObject",
+        "invalid",
+        "toSFS",
+        "getType",
+        "getLog",
+        "getCompactJSON",
+        "markRead",
+        "isNew",
+        "collected",
+        "collect",
+        "isComplete",
+        "getId",
+        "getWrappedId",
+        "getDataId",
+        "getStatus",
+        "getUser",
+        "adminMarkStatusComplete",
+        "getName",
+        "getNext",
+        "getRewards",
+        "getGoals",
+        "onQuestEvent",
+        "Evaluate",
+        "consolodateStatusAfterUpdate",
+        "isValid",
+        "getGoalEvents"
+      ],
+      "imports_count": 12,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver",
+        "org.json"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Currencies, rewards, store",
+        "Quests and timed events",
+        "Administration and tests"
+      ],
+      "keyword_counts": {
+        "HACK": 1
+      }
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/player/PlayerStructure.java",
+      "group": "MSM game code: player",
+      "lines": 517,
+      "class_names": [
+        "PlayerStructure"
+      ],
+      "method_count": 58,
+      "methods": [
+        "getObstacleStructIdStartFromIslandIndex",
+        "initFromSFSObject",
+        "toSFSObject",
+        "toString",
+        "getLevel",
+        "getID",
+        "setID",
+        "getEntityId",
+        "getType",
+        "getStructureType",
+        "getParentID",
+        "getXPosition",
+        "getYPosition",
+        "getScale",
+        "getTimeRemaining",
+        "getInitialTimeRemaining",
+        "getR",
+        "getY",
+        "getB",
+        "getLastCollectionTime",
+        "getBuildingCompletedTime",
+        "finishBuildingNow",
+        "getDateCreated",
+        "isComplete",
+        "isUpgrading",
+        "toggleFlip",
+        "setFlip",
+        "getFlip",
+        "getMuted",
+        "isWarehouse",
+        "isNursery",
+        "isBreeding",
+        "isHotel",
+        "isTorch",
+        "isBuddy",
+        "isFuzer",
+        "inWarehouse",
+        "inFuzer",
+        "setParentID",
+        "setPosition",
+        "setBuildingCompletedTime",
+        "resetLastCollectionTime",
+        "setDateCreated",
+        "setSettings",
+        "setColor",
+        "setComplete",
+        "setUpgrading",
+        "setType",
+        "toggleMute",
+        "setInWarehouse",
+        "setInFuzer",
+        "startUpgradeStructure",
+        "finishUpgradeStructure",
+        "finishBuildingStructure",
+        "reduceStructureTimeByVideo",
+        "collectFromMine",
+        "storeDiamondsSoFar",
+        "clearStoredDiamonds"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.bigbluebubble"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Currencies, rewards, store",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {
+        "FIXME": 1
+      }
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/ShutdownHookThread.java",
+      "group": "MSM game code: core",
+      "lines": 12,
+      "class_names": [
+        "ShutdownHookThread"
+      ],
+      "method_count": 1,
+      "methods": [
+        "run"
+      ],
+      "imports_count": 0,
+      "dependency_roots": [],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/AuthTokenUpdateTask.java",
+      "group": "MSM game code: task",
+      "lines": 59,
+      "class_names": [
+        "AuthTokenUpdateTask"
+      ],
+      "method_count": 1,
+      "methods": [
+        "run"
+      ],
+      "imports_count": 3,
+      "dependency_roots": [
+        "com.bigbluebubble"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/MailUpdateTask.java",
+      "group": "MSM game code: task",
+      "lines": 127,
+      "class_names": [
+        "MailUpdateTask"
+      ],
+      "method_count": 1,
+      "methods": [
+        "run"
+      ],
+      "imports_count": 9,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/MSMAdminCatchUnreleasedAccount.java",
+      "group": "MSM game code: task",
+      "lines": 135,
+      "class_names": [
+        "MSMAdminCatchUnreleasedAccount"
+      ],
+      "method_count": 6,
+      "methods": [
+        "addAccountToCSRPermaLockPreventionList",
+        "resetAccountAccessTime",
+        "cancelSchedule",
+        "run",
+        "removeFromLockedAccountsList",
+        "clearUnreleasedAcccount"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events",
+        "Administration and tests"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/MSMMonsterLinksReloadTask.java",
+      "group": "MSM game code: task",
+      "lines": 56,
+      "class_names": [
+        "MSMMonsterLinksReloadTask"
+      ],
+      "method_count": 1,
+      "methods": [
+        "run"
+      ],
+      "imports_count": 8,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/MSMServerStatusTask.java",
+      "group": "MSM game code: task",
+      "lines": 134,
+      "class_names": [
+        "MSMServerStatusTask"
+      ],
+      "method_count": 1,
+      "methods": [
+        "run"
+      ],
+      "imports_count": 6,
+      "dependency_roots": [
+        "com.amazonaws",
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/MSMStats.java",
+      "group": "MSM game code: task",
+      "lines": 1023,
+      "class_names": [
+        "MSMStats",
+        "ServerStatsTask"
+      ],
+      "method_count": 52,
+      "methods": [
+        "run",
+        "trackNewUser",
+        "trackSession",
+        "trackPurchase",
+        "trackOffer",
+        "trackMonsterBuy",
+        "trackMonsterSell",
+        "trackMonsterBreeding",
+        "trackStructureBuy",
+        "trackStructureSell",
+        "trackIslandTransaction",
+        "trackSpend",
+        "trackReward",
+        "trackLevelUp",
+        "trackFacebookHelpRequest",
+        "trackFacebookHelpCollect",
+        "trackFacebookHelpSend",
+        "trackTorchGift",
+        "trackThirdPartyAdEvent",
+        "trackUserSFSError",
+        "trackSFSError",
+        "trackActiveIslandEvent",
+        "trackNewTribalIsland",
+        "trackTribalIslandRequest",
+        "trackTribalIslandQuit",
+        "trackTribalIslandJoin",
+        "trackTribalReqCancel",
+        "trackTribalMonsterPlaced",
+        "trackTribalIslandKick",
+        "trackComposerTemplateSaved",
+        "trackComposerDeletedTrack",
+        "trackComposerTrackSaved",
+        "trackIslandVisit",
+        "trackPlayerSaveError",
+        "trackFlipMinigameReward",
+        "trackScratchTicketReward",
+        "trackScratchTicketPlay",
+        "trackDailyLoginReward",
+        "trackSpeedupWithVideo",
+        "trackFriend",
+        "trackAddedToGroup",
+        "getTimestamp",
+        "trackBaking",
+        "trackMonsterLevelUp",
+        "trackMonsterCollectSpecial",
+        "TrackBoxAddMonster",
+        "TrackFillBoxMonster",
+        "sendUserEvent",
+        "sendPlayerEvent",
+        "sendEvent",
+        "extraSpeedupInfo",
+        "sendPlayerGroups"
+      ],
+      "imports_count": 22,
+      "dependency_roots": [
+        "com.amazonaws",
+        "com.bigbluebubble",
+        "com.smartfoxserver",
+        "org.json"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Island and structures",
+        "Currencies, rewards, store",
+        "Quests and timed events",
+        "Music and minigames",
+        "Networking and services"
+      ],
+      "keyword_counts": {}
+    },
+    {
+      "path": "src/com/bigbluebubble/mysingingmonsters/task/UpdateActiveTimedEvents.java",
+      "group": "MSM game code: task",
+      "lines": 22,
+      "class_names": [
+        "UpdateActiveTimedEvents"
+      ],
+      "method_count": 2,
+      "methods": [
+        "schedule",
+        "run"
+      ],
+      "imports_count": 3,
+      "dependency_roots": [
+        "com.bigbluebubble",
+        "com.smartfoxserver"
+      ],
+      "topics": [
+        "Monster and breeding",
+        "Quests and timed events"
+      ],
+      "keyword_counts": {}
+    }
+  ],
+  "jars": [
+    {
+      "path": "BBBServerExtensionLib.jar",
+      "bytes": 229817,
+      "class_count": 55,
+      "entry_count": 57,
+      "class_package_groups": {
+        "com/bigbluebubble/BBBServer": 32,
+        "com/bigbluebubble/metrics": 3,
+        "com/bigbluebubble/monitoring": 2,
+        "org/json/XML.class": 1,
+        "org/json/Cookie.class": 1,
+        "org/json/JSONString.class": 1,
+        "org/json/JSONException.class": 1,
+        "org/json/JSONTokener.class": 1,
+        "org/json/JSONML.class": 1,
+        "org/json/Test$1Obj.class": 1,
+        "org/json/Test.class": 1,
+        "org/json/HTTPTokener.class": 1,
+        "org/json/CookieList.class": 1,
+        "org/json/XMLTokener.class": 1,
+        "org/json/JSONWriter.class": 1,
+        "org/json/JSONArray.class": 1,
+        "org/json/CDL.class": 1,
+        "org/json/JSONStringer.class": 1
+      },
+      "class_file_major_versions_sample": {
+        "50": 55
+      }
+    },
+    {
+      "path": "external/lib/aws-java-sdk-1.5.0.jar",
+      "bytes": 10238659,
+      "class_count": 7541,
+      "entry_count": 7700,
+      "class_package_groups": {
+        "com/amazonaws/services": 7340,
+        "com/amazonaws/auth": 66,
+        "com/amazonaws/transform": 52,
+        "com/amazonaws/util": 35,
+        "com/amazonaws/http": 20,
+        "com/amazonaws/internal": 6,
+        "com/amazonaws/regions": 5,
+        "com/amazonaws/handlers": 4,
+        "com/amazonaws/AmazonClientException.class": 1,
+        "com/amazonaws/AmazonServiceException$ErrorType.class": 1,
+        "com/amazonaws/AmazonServiceException.class": 1,
+        "com/amazonaws/AmazonWebServiceClient.class": 1,
+        "com/amazonaws/AmazonWebServiceRequest.class": 1,
+        "com/amazonaws/AmazonWebServiceResponse.class": 1,
+        "com/amazonaws/ClientConfiguration.class": 1,
+        "com/amazonaws/DefaultRequest.class": 1,
+        "com/amazonaws/HttpMethod.class": 1,
+        "com/amazonaws/Protocol.class": 1
+      },
+      "class_file_major_versions_sample": {
+        "49": 120
+      }
+    },
+    {
+      "path": "external/lib/commons-codec-1.3.jar",
+      "bytes": 46725,
+      "class_count": 25,
+      "entry_count": 42,
+      "class_package_groups": {
+        "org/apache/commons": 25
+      },
+      "class_file_major_versions_sample": {
+        "46": 25
+      }
+    },
+    {
+      "path": "external/lib/dependancies/commons-lang-2.4.jar",
+      "bytes": 261809,
+      "class_count": 127,
+      "entry_count": 148,
+      "class_package_groups": {
+        "org/apache/commons": 127
+      },
+      "class_file_major_versions_sample": {
+        "46": 120
+      }
+    },
+    {
+      "path": "external/lib/dependancies/jdom.jar",
+      "bytes": 153115,
+      "class_count": 76,
+      "entry_count": 89,
+      "class_package_groups": {
+        "org/jdom/output": 10,
+        "org/jdom/adapters": 8,
+        "org/jdom/transform": 8,
+        "org/jdom/filter": 7,
+        "org/jdom/input": 7,
+        "org/jdom/xpath": 4,
+        "JDOMAbout$Author.class": 1,
+        "JDOMAbout$Info.class": 1,
+        "JDOMAbout.class": 1,
+        "org/jdom/Attribute.class": 1,
+        "org/jdom/AttributeList.class": 1,
+        "org/jdom/CDATA.class": 1,
+        "org/jdom/Comment.class": 1,
+        "org/jdom/Content.class": 1,
+        "org/jdom/ContentList$FilterList.class": 1,
+        "org/jdom/ContentList$FilterListIterator.class": 1,
+        "org/jdom/ContentList.class": 1,
+        "org/jdom/DataConversionException.class": 1
+      },
+      "class_file_major_versions_sample": {
+        "46": 76
+      }
+    },
+    {
+      "path": "external/lib/dependancies/netty-3.2.2.Final.jar",
+      "bytes": 785556,
+      "class_count": 515,
+      "entry_count": 577,
+      "class_package_groups": {
+        "org/jboss/netty": 515
+      },
+      "class_file_major_versions_sample": {
+        "49": 120
+      }
+    },
+    {
+      "path": "external/lib/dependancies/sfs2x-client-core.jar",
+      "bytes": 45654,
+      "class_count": 22,
+      "entry_count": 34,
+      "class_package_groups": {
+        "com/smartfoxserver/v2": 21,
+        "com/smartfoxserver/bitswarm": 1
+      },
+      "class_file_major_versions_sample": {
+        "50": 22
+      }
+    },
+    {
+      "path": "external/lib/dependancies/slf4j-api-1.6.1.jar",
+      "bytes": 25496,
+      "class_count": 23,
+      "entry_count": 34,
+      "class_package_groups": {
+        "org/slf4j/helpers": 12,
+        "org/slf4j/spi": 4,
+        "org/slf4j/ILoggerFactory.class": 1,
+        "org/slf4j/IMarkerFactory.class": 1,
+        "org/slf4j/Logger.class": 1,
+        "org/slf4j/LoggerFactory.class": 1,
+        "org/slf4j/Marker.class": 1,
+        "org/slf4j/MarkerFactory.class": 1,
+        "org/slf4j/MDC.class": 1
+      },
+      "class_file_major_versions_sample": {
+        "47": 23
+      }
+    },
+    {
+      "path": "external/lib/dependancies/slf4j-simple-1.6.1.jar",
+      "bytes": 7669,
+      "class_count": 5,
+      "entry_count": 15,
+      "class_package_groups": {
+        "org/slf4j/impl": 5
+      },
+      "class_file_major_versions_sample": {
+        "47": 5
+      }
+    },
+    {
+      "path": "external/lib/elasticache-java-cluster-client-1.0.61.0.jar",
+      "bytes": 334664,
+      "class_count": 254,
+      "entry_count": 277,
+      "class_package_groups": {
+        "net/spy/memcached": 254
+      },
+      "class_file_major_versions_sample": {
+        "49": 120
+      }
+    },
+    {
+      "path": "external/lib/esapi-2.1.0.jar",
+      "bytes": 367021,
+      "class_count": 197,
+      "entry_count": 223,
+      "class_package_groups": {
+        "org/owasp/esapi": 197
+      },
+      "class_file_major_versions_sample": {
+        "49": 120
+      }
+    },
+    {
+      "path": "external/lib/httpclient-4.2.3.jar",
+      "bytes": 433070,
+      "class_count": 323,
+      "entry_count": 358,
+      "class_package_groups": {
+        "org/apache/http": 323
+      },
+      "class_file_major_versions_sample": {
+        "49": 120
+      }
+    },
+    {
+      "path": "external/lib/httpcore-4.2.jar",
+      "bytes": 223282,
+      "class_count": 190,
+      "entry_count": 216,
+      "class_package_groups": {
+        "org/apache/http": 190
+      },
+      "class_file_major_versions_sample": {
+        "49": 120
+      }
+    },
+    {
+      "path": "external/lib/jackson-core-asl-1.8.7.jar",
+      "bytes": 227451,
+      "class_count": 129,
+      "entry_count": 145,
+      "class_package_groups": {
+        "org/codehaus/jackson": 129
+      },
+      "class_file_major_versions_sample": {
+        "49": 120
+      }
+    },
+    {
+      "path": "external/lib/jackson-mapper-asl-1.8.7.jar",
+      "bytes": 667765,
+      "class_count": 432,
+      "entry_count": 457,
+      "class_package_groups": {
+        "org/codehaus/jackson": 432
+      },
+      "class_file_major_versions_sample": {
+        "49": 120
+      }
+    },
+    {
+      "path": "external/lib/mysql-connector-java-5.1.18-bin.jar",
+      "bytes": 789885,
+      "class_count": 245,
+      "entry_count": 279,
+      "class_package_groups": {
+        "com/mysql/jdbc": 244,
+        "org/gjt/mm": 1
+      },
+      "class_file_major_versions_sample": {
+        "49": 103,
+        "50": 17
+      }
+    },
+    {
+      "path": "external/lib/sfs2x.jar",
+      "bytes": 592767,
+      "class_count": 350,
+      "entry_count": 393,
+      "class_package_groups": {
+        "com/smartfoxserver/v2": 350
+      },
+      "class_file_major_versions_sample": {
+        "50": 120
+      }
+    },
+    {
+      "path": "external/lib/SFS2X_API_Java.jar",
+      "bytes": 274284,
+      "class_count": 197,
+      "entry_count": 198,
+      "class_package_groups": {
+        "sfs2x/client/requests": 49,
+        "sfs2x/client/controllers": 36,
+        "sfs2x/client/entities": 35,
+        "sfs2x/client/bitswarm": 33,
+        "sfs2x/client/core": 16,
+        "sfs2x/client/util": 13,
+        "sfs2x/client/net": 3,
+        "sfs2x/fsm/FSMState.class": 1,
+        "sfs2x/client/SmartFox$1.class": 1,
+        "sfs2x/client/SmartFox$2.class": 1,
+        "sfs2x/client/SmartFox$3.class": 1,
+        "sfs2x/client/SmartFox$4.class": 1,
+        "sfs2x/client/SmartFox$5.class": 1,
+        "sfs2x/client/SmartFox$6.class": 1,
+        "sfs2x/client/SmartFox$7.class": 1,
+        "sfs2x/client/SmartFox$8.class": 1,
+        "sfs2x/client/SmartFox.class": 1,
+        "sfs2x/fsm/FiniteStateMachine.class": 1
+      },
+      "class_file_major_versions_sample": {
+        "50": 120
+      }
+    },
+    {
+      "path": "external/lib/sfs2x-core.jar",
+      "bytes": 199318,
+      "class_count": 144,
+      "entry_count": 148,
+      "class_package_groups": {
+        "com/smartfoxserver/bitswarm": 144
+      },
+      "class_file_major_versions_sample": {
+        "50": 120
+      }
+    },
+    {
+      "path": "external/lib/spymemcached-2.11.1.jar",
+      "bytes": 459447,
+      "class_count": 264,
+      "entry_count": 283,
+      "class_package_groups": {
+        "net/spy/memcached": 264
+      },
+      "class_file_major_versions_sample": {
+        "50": 120
+      }
+    },
+    {
+      "path": "MSMExtension.jar",
+      "bytes": 451597,
+      "class_count": 132,
+      "entry_count": 133,
+      "class_package_groups": {
+        "com/bigbluebubble/mysingingmonsters": 132
+      },
+      "class_file_major_versions_sample": {
+        "50": 120
+      }
+    }
+  ],
+  "misc": [
+    {
+      "path": "build.xml",
+      "kind": "XML",
+      "root_tag": "project",
+      "tag_counts": {
+        "project": 1,
+        "property": 4,
+        "path": 1,
+        "pathelement": 14,
+        "target": 10,
+        "mkdir": 5,
+        "copy": 3,
+        "fileset": 5,
+        "exclude": 3,
+        "delete": 1,
+        "echo": 3,
+        "javac": 3,
+        "src": 3,
+        "classpath": 10,
+        "junit": 1,
+        "formatter": 1,
+        "condition": 1,
+        "isset": 1,
+        "jar": 2
+      },
+      "ant_targets": [
+        "init",
+        "clean",
+        "cleanall",
+        "build",
+        "build-base",
+        "build-msm",
+        "build-msm-test",
+        "unittest",
+        "jar",
+        "build-refprojects"
+      ]
+    },
+    {
+      "path": "external/lib/ESAPI.properties",
+      "kind": "Properties",
+      "key_count": 93,
+      "non_sensitive_key_names": [
+        "ESAPI.printProperties",
+        "ESAPI.AccessControl",
+        "ESAPI.Encoder",
+        "ESAPI.Encryptor",
+        "ESAPI.Executor",
+        "ESAPI.HTTPUtilities",
+        "ESAPI.IntrusionDetector",
+        "ESAPI.Logger",
+        "ESAPI.Randomizer",
+        "ESAPI.Validator",
+        "Encoder.AllowMultipleEncoding",
+        "Encoder.AllowMixedEncoding",
+        "Encoder.DefaultCodecList",
+        "Encryptor.PreferredJCEProvider",
+        "Encryptor.EncryptionAlgorithm",
+        "Encryptor.CipherTransformation",
+        "Encryptor.cipher_modes.combined_modes",
+        "Encryptor.cipher_modes.additional_allowed",
+        "Encryptor.EncryptionKeyLength",
+        "Encryptor.ChooseIVMethod",
+        "Encryptor.fixedIV",
+        "Encryptor.CipherText.useMAC",
+        "Encryptor.PlainText.overwrite",
+        "Encryptor.HashAlgorithm",
+        "Encryptor.HashIterations",
+        "Encryptor.DigitalSignatureAlgorithm",
+        "Encryptor.DigitalSignatureKeyLength",
+        "Encryptor.RandomAlgorithm",
+        "Encryptor.CharacterEncoding",
+        "Encryptor.KDF.PRF",
+        "HttpUtilities.UploadDir",
+        "HttpUtilities.UploadTempDir",
+        "HttpUtilities.ForceHttpOnlyCookies",
+        "HttpUtilities.ForceSecureCookies",
+        "HttpUtilities.MaxHeaderSize",
+        "HttpUtilities.ApprovedUploadExtensions",
+        "HttpUtilities.MaxUploadFileBytes",
+        "HttpUtilities.ResponseContentType",
+        "Executor.WorkingDirectory",
+        "Executor.ApprovedExecutables",
+        "Logger.ApplicationName",
+        "Logger.LogEncodingRequired",
+        "Logger.LogApplicationName",
+        "Logger.LogServerIP",
+        "Logger.LogFileName",
+        "Logger.MaxLogFileSize",
+        "IntrusionDetector.Disable",
+        "IntrusionDetector.event.test.count",
+        "IntrusionDetector.event.test.interval",
+        "IntrusionDetector.event.test.actions",
+        "IntrusionDetector.org.owasp.esapi.errors.IntrusionException.count",
+        "IntrusionDetector.org.owasp.esapi.errors.IntrusionException.interval",
+        "IntrusionDetector.org.owasp.esapi.errors.IntrusionException.actions",
+        "IntrusionDetector.org.owasp.esapi.errors.IntegrityException.count",
+        "IntrusionDetector.org.owasp.esapi.errors.IntegrityException.interval",
+        "IntrusionDetector.org.owasp.esapi.errors.IntegrityException.actions",
+        "Validator.ConfigurationFile",
+        "Validator.SystemCommand",
+        "Validator.RoleName",
+        "Validator.Redirect",
+        "Validator.HTTPScheme",
+        "Validator.HTTPServerName",
+        "Validator.HTTPParameterName",
+        "Validator.HTTPParameterValue",
+        "Validator.HTTPCookieName",
+        "Validator.HTTPCookieValue",
+        "Validator.HTTPHeaderName",
+        "Validator.HTTPHeaderValue",
+        "Validator.HTTPContextPath",
+        "Validator.HTTPServletPath",
+        "Validator.HTTPPath",
+        "Validator.HTTPQueryString",
+        "Validator.HTTPURI",
+        "Validator.HTTPURL",
+        "Validator.FileName",
+        "Validator.DirectoryName",
+        "Validator.AcceptLenientDates"
+      ]
+    },
+    {
+      "path": "external/lib/validation.properties",
+      "kind": "Properties",
+      "key_count": 6,
+      "non_sensitive_key_names": [
+        "Validator.SafeString",
+        "Validator.IPAddress",
+        "Validator.URL",
+        "Validator.CreditCard",
+        "Validator.SSN"
+      ]
+    },
+    {
+      "path": "external/src/com/bigbluebubble/BBBServer/client/sfs-config.xml",
+      "kind": "XML",
+      "root_tag": "SmartFoxConfig",
+      "tag_counts": {
+        "SmartFoxConfig": 1,
+        "ip": 1,
+        "port": 1,
+        "udpIp": 1,
+        "udpPort": 1,
+        "zone": 1,
+        "debug": 1
+      }
+    },
+    {
+      "path": "Local BBBServerExtensionLib.jardesc",
+      "kind": "XML",
+      "root_tag": "jardesc",
+      "tag_counts": {
+        "jardesc": 1,
+        "jar": 1,
+        "options": 1,
+        "storedRefactorings": 1,
+        "selectedProjects": 1,
+        "manifest": 1,
+        "sealing": 1,
+        "packagesToSeal": 1,
+        "packagesToUnSeal": 1,
+        "selectedElements": 1,
+        "javaElement": 1
+      }
+    },
+    {
+      "path": "Local MSMExtension.jardesc",
+      "kind": "XML",
+      "root_tag": "jardesc",
+      "tag_counts": {
+        "jardesc": 1,
+        "jar": 1,
+        "options": 1,
+        "storedRefactorings": 1,
+        "selectedProjects": 1,
+        "manifest": 1,
+        "sealing": 1,
+        "packagesToSeal": 1,
+        "packagesToUnSeal": 1,
+        "selectedElements": 1,
+        "javaElement": 1
+      }
+    },
+    {
+      "path": "Local X86 BBBServerExtensionLib.jardesc",
+      "kind": "XML",
+      "root_tag": "jardesc",
+      "tag_counts": {
+        "jardesc": 1,
+        "jar": 1,
+        "options": 1,
+        "storedRefactorings": 1,
+        "selectedProjects": 1,
+        "manifest": 1,
+        "sealing": 1,
+        "packagesToSeal": 1,
+        "packagesToUnSeal": 1,
+        "selectedElements": 1,
+        "javaElement": 1
+      }
+    },
+    {
+      "path": "Local X86 MSMExtension.jardesc",
+      "kind": "XML",
+      "root_tag": "jardesc",
+      "tag_counts": {
+        "jardesc": 1,
+        "jar": 1,
+        "options": 1,
+        "storedRefactorings": 1,
+        "selectedProjects": 1,
+        "manifest": 1,
+        "sealing": 1,
+        "packagesToSeal": 1,
+        "packagesToUnSeal": 1,
+        "selectedElements": 1,
+        "javaElement": 1
+      }
+    },
+    {
+      "path": "my_singing_monsters_clean_20120810.sql",
+      "kind": "SQL",
+      "table_count": 30,
+      "nonpersonal_table_names": [
+        "ads_in_house",
+        "breeding_combinations",
+        "entities",
+        "game_settings",
+        "island_monsters",
+        "island_structures",
+        "islands",
+        "level_xp",
+        "monster_levels",
+        "monsters",
+        "quest_types",
+        "quests",
+        "store_currency",
+        "store_groups",
+        "store_items",
+        "structure_levels",
+        "structures"
+      ],
+      "nonpersonal_sql_references": {
+        "ads_in_house": 1,
+        "breeding_combinations": 1,
+        "entities": 1,
+        "game_settings": 1,
+        "island_monsters": 1,
+        "island_structures": 1,
+        "islands": 1,
+        "level_xp": 1,
+        "monster_levels": 1,
+        "monsters": 1,
+        "quest_types": 1,
+        "quests": 1,
+        "store_currency": 1,
+        "store_groups": 1,
+        "store_items": 1,
+        "structures": 1
+      }
+    },
+    {
+      "path": "StressTester.jardesc",
+      "kind": "XML",
+      "root_tag": "jardesc",
+      "tag_counts": {
+        "jardesc": 1,
+        "jar": 1,
+        "options": 1,
+        "storedRefactorings": 1,
+        "selectedProjects": 1,
+        "manifest": 1,
+        "sealing": 1,
+        "packagesToSeal": 1,
+        "packagesToUnSeal": 1,
+        "selectedElements": 1,
+        "javaElement": 1
+      }
+    },
+    {
+      "path": "tribal_date_updated.sql",
+      "kind": "SQL",
+      "table_count": 0,
+      "nonpersonal_table_names": [],
+      "nonpersonal_sql_references": {}
+    }
+  ],
+  "dev_markers": [
+    {
+      "file": "external/src/com/bigbluebubble/BBBServer/util/BBBToken.java",
+      "line": 55,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "external/src/com/bigbluebubble/BBBServer/util/MigBase64.java",
+      "line": 17,
+      "tags": [
+        "TEMPORARY"
+      ]
+    },
+    {
+      "file": "external/src/com/bigbluebubble/BBBServer/util/MigBase64.java",
+      "line": 19,
+      "tags": [
+        "TEMPORARY"
+      ]
+    },
+    {
+      "file": "external/src/com/bigbluebubble/BBBServer/util/MigBase64.java",
+      "line": 20,
+      "tags": [
+        "TEMPORARY"
+      ]
+    },
+    {
+      "file": "external/src/com/bigbluebubble/BBBServer/util/MigBase64.java",
+      "line": 30,
+      "tags": [
+        "TEMPORARY"
+      ]
+    },
+    {
+      "file": "external/src/com/bigbluebubble/BBBServer/util/MigBase64.java",
+      "line": 457,
+      "tags": [
+        "TEMPORARY"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/data/groups/TutorialGroup.java",
+      "line": 44,
+      "tags": [
+        "DISABLED"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/data/ScratchTicketFunctions.java",
+      "line": 181,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/data/ScratchTicketFunctions.java",
+      "line": 184,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 2625,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 3006,
+      "tags": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 5018,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 6303,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 7535,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 7688,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 9183,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 9440,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 9699,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 10172,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 10810,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 10868,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 10886,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 10898,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 16393,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 16454,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 16559,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 16648,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 16730,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 16784,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 16839,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 16992,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 17068,
+      "tags": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "line": 17093,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/MSMExtension.java",
+      "line": 2789,
+      "tags": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/MSMExtension.java",
+      "line": 2795,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/MSMServerEventHandler.java",
+      "line": 667,
+      "tags": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/MSMServerEventHandler.java",
+      "line": 678,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/player/Player.java",
+      "line": 1155,
+      "tags": [
+        "UNUSED"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/player/PlayerAchievement.java",
+      "line": 95,
+      "tags": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/player/PlayerIsland.java",
+      "line": 1680,
+      "tags": [
+        "TODO"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/player/PlayerMonster.java",
+      "line": 1169,
+      "tags": [
+        "HACK",
+        "TESTING"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/player/PlayerQuest.java",
+      "line": 268,
+      "tags": [
+        "HACK"
+      ]
+    },
+    {
+      "file": "src/com/bigbluebubble/mysingingmonsters/player/PlayerStructure.java",
+      "line": 89,
+      "tags": [
+        "FIXME"
+      ]
+    }
+  ],
+  "source_code_republished": false,
+  "analysis_utc": "2026-11-04T01:21:37.103077+00:00"
+}
