@@ -1,0 +1,59 @@
+name: One-shot MSM Official Guide catalog difference inspection
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: msm-catalog-diff
+  cancel-in-progress: false
+jobs:
+  inspect:
+    if: >-
+      github.event.issue.number == 3 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.user.login == github.repository_owner &&
+      github.event.comment.user.login == github.repository_owner &&
+      github.event.comment.body == '/msm-catalog-diff'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install Unity asset parser
+        run: python3 -m pip install --disable-pip-version-check -q UnityPy
+      - name: Extract Guide catalog versions and compare records
+        shell: bash
+        run: |
+          set +e
+          python3 workspace/msm-investigation/guide_catalog_diff.py > "$RUNNER_TEMP/guide-catalog-output.txt" 2>&1
+          echo "Exit: $?"
+          tail -n 100 "$RUNNER_TEMP/guide-catalog-output.txt"
+      - name: Persist extracted metadata reports
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- workspace/msm-investigation/guide_catalog_diff.json workspace/msm-investigation/guide_catalog_diff.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Persist extracted historical MSM Guide catalog metadata"
+            auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+            git -c "http.extraheader=AUTHORIZATION: basic $auth" push origin HEAD:main
+          fi
+      - name: Report to issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib,re
+          p=pathlib.Path(os.environ["RUNNER_TEMP"]); path=p/"guide-catalog-output.txt"
+          body=path.read_text(errors="replace") if path.exists() else "(No report generated.)"
+          body=re.sub(r'@(?![\u200b\u200c\u200d])','@\u200b',body[-13000:])
+          (p/"comment.json").write_text(json.dumps({"body":"### Extracted historical MSM Guide catalog difference\n\n```text\n"+body+"\n```"}))
+          PY
+          gh api -X POST "repos/$GITHUB_REPOSITORY/issues/3/comments" --input "$RUNNER_TEMP/comment.json"
