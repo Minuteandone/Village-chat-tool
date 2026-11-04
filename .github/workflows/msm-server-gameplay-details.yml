@@ -1,0 +1,53 @@
+name: One-shot historical MSM server gameplay detail scan
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+  issues: write
+jobs:
+  scan:
+    if: >-
+      github.event.issue.number == 3 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.user.login == github.repository_owner &&
+      github.event.comment.user.login == github.repository_owner &&
+      github.event.comment.body == '/msm-server-gameplay-details'
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Analyze historical SQL schema and code comments as data
+        shell: bash
+        run: |
+          python3 workspace/msm-investigation/server_gameplay_details.py > "$RUNNER_TEMP/out.txt" 2>&1
+          tail -n 110 "$RUNNER_TEMP/out.txt"
+      - name: Save derived gameplay metadata only
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add workspace/msm-investigation/server-gameplay-details.json workspace/msm-investigation/server-gameplay-details.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Add historic MSM server schema and method-context details"
+            auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+            git -c "http.extraheader=AUTHORIZATION: basic $auth" push origin HEAD:main
+          fi
+      - name: Post summary to research issue
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])
+          text=(p/'out.txt').read_text(errors='replace') if (p/'out.txt').exists() else 'No output'
+          (p/'issue.json').write_text(json.dumps({'body':'### Historical MSM gameplay SQL and developer comments\n\nNon-executing source-file static analysis; no player records or code bodies.\n\n~~~text\n'+text[-12500:]+'\n~~~'}))
+          PY
+          gh api -X POST "repos/$GITHUB_REPOSITORY/issues/3/comments" --input "$RUNNER_TEMP/issue.json"
