@@ -1721,7 +1721,10 @@
         "probability": "0"
       }
     ],
-    "nonzero_probability_count": 886
+    "nonzero_probability_count": 886,
+    "quint_as_result": 15,
+    "quint_as_parent": 0,
+    "quint_possible_breedings": 15
   },
   "quests": {
     "count": 118,
@@ -2865,6 +2868,6 @@
       }
     ]
   },
-  "analysed_at_utc": "2026-11-04T01:08:29.050156+00:00",
+  "analysed_at_utc": "2026-11-04T01:09:54.901699+00:00",
   "note": "Only game data fields from an archived SQL seed; player data not read or published."
 }
