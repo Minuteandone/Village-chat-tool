@@ -1,0 +1,290 @@
+# monster-game-server archive structure and provenance inspection
+
+Source: https://archive.org/download/monster-game-server/monster-game-server.zip
+SHA-1 verified: `df086c9ca4581733f73f2e8aaea1408382232e4d`
+ZIP bytes: 15,170,251
+Entries: 215
+
+## File types
+
+- `.java`: 155
+- `.jar`: 21
+- `.jardesc`: 5
+- `.xml`: 2
+- `.properties`: 2
+- `.sql`: 2
+- `.txt`: 1
+
+## Files (paths only)
+
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/BBBServerExtensionLib.jar` (229,817 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/build.xml` (4,790 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/aws-java-sdk-1.5.0.jar` (10,238,659 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/commons-codec-1.3.jar` (46,725 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/dependancies/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/dependancies/commons-lang-2.4.jar` (261,809 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/dependancies/jdom.jar` (153,115 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/dependancies/netty-3.2.2.Final.jar` (785,556 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/dependancies/sfs2x-client-core.jar` (45,654 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/dependancies/slf4j-api-1.6.1.jar` (25,496 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/dependancies/slf4j-simple-1.6.1.jar` (7,669 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/elasticache-java-cluster-client-1.0.61.0.jar` (334,664 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/ESAPI.properties` (24,214 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/esapi-2.1.0.jar` (367,021 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/httpclient-4.2.3.jar` (433,070 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/httpcore-4.2.jar` (223,282 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/jackson-core-asl-1.8.7.jar` (227,451 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/jackson-mapper-asl-1.8.7.jar` (667,765 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/mysql-connector-java-5.1.18-bin.jar` (789,885 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/sfs2x.jar` (592,767 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/SFS2X_API_Java.jar` (274,284 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/sfs2x-core.jar` (199,318 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/spymemcached-2.11.1.jar` (459,447 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/validation.properties` (1,217 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/BBBServerExtension.java` (6,704 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/client/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/client/sfs-config.xml` (185 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/AccountNotFoundException.java` (175 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/FacebookAuthenticationException.java` (182 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/NoAccountUserBindingFoundException.java` (207 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/TooManyRecordsReturned.java` (173 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/UserNotFoundException.java` (172 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/ServerEventHandler.java` (15,046 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/BatchingSNSWorker.java` (3,412 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/BBBToken.java` (4,045 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/ByteBuffer.java` (1,085 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/CacheWrapper.java` (2,077 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/CooldownCounter.java` (682 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/CustomSerializingTranscoder.java` (1,804 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/DbWrapper.java` (10,202 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/DoubleBuffer.java` (1,711 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/Encryption.java` (1,775 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/HttpPost.java` (1,437 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/MigBase64.java` (23,159 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/Misc.java` (3,237 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SFSHelpers.java` (6,074 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SNSWorker.java` (9,631 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SnsWrapper.java` (2,175 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SqsWrapper.java` (2,128 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/VersionInfo.java` (2,850 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/WebHelper.java` (5,113 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/metrics/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/metrics/MetricsRequest.java` (2,121 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/metrics/MetricsSessionTask.java` (3,314 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/monitoring/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/monitoring/CloudWatchReporter.java` (3,648 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/monitoring/EC2Metadata.java` (1,350 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/CDL.java` (10,047 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/Cookie.java` (6,583 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/CookieList.java` (3,396 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/HTTP.java` (5,860 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/HTTPTokener.java` (2,484 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONArray.java` (29,522 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONException.java` (709 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONML.java` (14,951 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONObject.java` (52,757 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONString.java` (712 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONStringer.java` (3,266 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONTokener.java` (12,399 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONWriter.java` (10,528 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/Test.java` (31,828 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/XML.java` (14,143 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/XMLTokener.java` (10,712 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/Local BBBServerExtensionLib.jardesc` (1,133 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/Local MSMExtension.jardesc` (1,063 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/Local X86 BBBServerExtensionLib.jardesc` (1,139 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/Local X86 MSMExtension.jardesc` (1,069 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/MSMExtension.jar` (451,597 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/my_singing_monsters_clean_20120810.sql` (186,500 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/BreedingCombination.java` (1,236 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/BreedingLookup.java` (11,003 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Code.java` (3,554 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/CodeLookup.java` (1,856 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Entity.java` (11,219 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Gene.java` (1,057 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/GeneLookup.java` (605 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/Advertisement2018Group.java` (947 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/AdvertisementGroup.java` (3,935 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/BaseGroup.java` (5,590 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/BrandedAdvertisementGroup.java` (385 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/CurrencyGroup.java` (722 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/NoAdvertisementGroup.java` (1,972 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/ScientificRevenueGroup.java` (4,624 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/TutorialGroup.java` (3,992 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/UserGroup.java` (5,965 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Island.java` (7,445 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/IslandLookup.java` (689 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/IslandTorch.java` (594 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Level.java` (424 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/LevelLookup.java` (566 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Mail.java` (5,648 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MailLookup.java` (2,853 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MemoryMinigameFunctions.java` (1,409 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Monster.java` (11,203 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MonsterCommonToRareMapping.java` (2,053 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MonsterIslandData.java` (263 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MonsterIslandToIslandMapping.java` (4,061 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MonsterLookup.java` (1,646 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MonsterRareData.java` (331 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MsmSession.java` (643 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Promo.java` (1,890 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/PromoLookup.java` (452 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/QuestLookup.java` (3,825 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/ScientificRevenue.java` (30,764 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/ScratchTicketFunctions.java` (11,034 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/SegmentationGroup.java` (12,387 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Sticker.java` (980 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StickerLookup.java` (476 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StoreCurrencyLookup.java` (1,049 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StoreGroupsLookup.java` (1,025 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StoreItemsLookup.java` (1,009 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StoreReplacementItem.java` (885 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StoreReplacements.java` (2,876 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Structure.java` (5,456 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StructureLookup.java` (1,197 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/CurrencyAvailabilityList.java` (810 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/CurrencySalesList.java` (755 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/EntityAvailList.java` (778 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/EntitySalesList.java` (736 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/IslandSalesList.java` (736 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/ITimedEventTypeList.java` (777 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/KeyedTimedEventTypeList.java` (3,574 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/MegafySaleList.java` (603 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/PermalightTorchSaleList.java` (675 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/ShortenedFuzingList.java` (642 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/StarAvailList.java` (761 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/StarSalesList.java` (719 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/TimedEventTypeList.java` (2,442 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/BreedAvailabilityEvent.java` (388 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/BreedProbabilityChangeEvent.java` (503 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/CurrencyAvailabilityEvent.java` (2,163 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/CurrencySalesEvent.java` (2,150 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/EntityAvailabilityEvent.java` (1,731 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/EntitySalesEvent.java` (5,845 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/IslandSalesEvent.java` (4,494 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/MegafySale.java` (4,333 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/PermalightTorchSale.java` (4,372 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/ShortenedFuzing.java` (4,256 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/StarAvailabilityEvent.java` (1,712 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/StarSalesEvent.java` (4,245 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEvent.java` (3,778 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEventList.java` (5,936 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEventListBuilder.java` (7,006 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/TorchLookup.java` (885 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/TribalQuestLookup.java` (1,063 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/VersionData.java` (2,480 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/exceptions/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/exceptions/InvalidPlayerException.java` (270 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java` (592,850 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/Helpers.java` (2,213 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/logging/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/logging/GooglePlayEvents.java` (6,665 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/logging/MetricCost.java` (1,276 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/logging/MSMCommandLogging.java` (6,020 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/logging/MSMCommands.java` (27,746 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/MSMExtension.java` (110,110 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/MSMServerEventHandler.java` (25,910 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/InitialPlayerIslandData.java` (363 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/LitPlayerTorch.java` (3,771 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/MonsterMegaData.java` (3,550 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/Player.java` (102,743 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerAchievement.java` (3,782 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerActiveIslandStats.java` (5,890 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerBaking.java` (4,430 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerBreeding.java` (4,821 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerBuyback.java` (4,384 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerEgg.java` (5,205 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerFuzeBuddy.java` (4,507 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerIsland.java` (55,138 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerIslandFactory.java` (13,841 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerMonster.java` (38,267 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerQuest.java` (19,836 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerStructure.java` (14,900 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/ShutdownHookThread.java` (449 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/task/` (0 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/task/AuthTokenUpdateTask.java` (1,610 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/task/MailUpdateTask.java` (4,689 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/task/MSMAdminCatchUnreleasedAccount.java` (4,763 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/task/MSMMonsterLinksReloadTask.java` (2,101 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/task/MSMServerStatusTask.java` (4,318 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/task/MSMStats.java` (31,905 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/task/UpdateActiveTimedEvents.java` (717 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/StressTester.jardesc` (1,052 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/tribal_date_updated.sql` (1,026 bytes)
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/wordsFile.txt` (92,220 bytes)
+
+## Selected documentation and configuration previews (sensitive strings redacted)
+
+
+## Indicators (NOT a definitive authenticity conclusion)
+
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/BBBServerExtension.java`: community_attribution=0; framework=0; known_project=5
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/AccountNotFoundException.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/FacebookAuthenticationException.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/NoAccountUserBindingFoundException.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/TooManyRecordsReturned.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/UserNotFoundException.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/ServerEventHandler.java`: community_attribution=0; framework=0; known_project=5
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/BatchingSNSWorker.java`: community_attribution=0; framework=0; known_project=4
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/BBBToken.java`: community_attribution=0; framework=0; known_project=5
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/ByteBuffer.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/CacheWrapper.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/CooldownCounter.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/CustomSerializingTranscoder.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/DbWrapper.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/DoubleBuffer.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/Encryption.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/HttpPost.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/MigBase64.java`: community_attribution=0; framework=1; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/Misc.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SFSHelpers.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SNSWorker.java`: community_attribution=0; framework=0; known_project=5
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SnsWrapper.java`: community_attribution=0; framework=0; known_project=5
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SqsWrapper.java`: community_attribution=0; framework=0; known_project=5
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/VersionInfo.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/WebHelper.java`: community_attribution=0; framework=0; known_project=2
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/metrics/MetricsRequest.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/metrics/MetricsSessionTask.java`: community_attribution=0; framework=0; known_project=5
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/CDL.java`: community_attribution=0; framework=1; known_project=0
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/Cookie.java`: community_attribution=0; framework=1; known_project=0
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/CookieList.java`: community_attribution=0; framework=1; known_project=0
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/HTTP.java`: community_attribution=0; framework=1; known_project=0
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/HTTPTokener.java`: community_attribution=0; framework=1; known_project=0
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONArray.java`: community_attribution=0; framework=1; known_project=0
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONML.java`: community_attribution=0; framework=1; known_project=0
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONObject.java`: community_attribution=0; framework=1; known_project=0
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONStringer.java`: community_attribution=0; framework=1; known_project=0
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONTokener.java`: community_attribution=0; framework=1; known_project=0
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONWriter.java`: community_attribution=0; framework=1; known_project=0
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/XML.java`: community_attribution=0; framework=1; known_project=0
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/XMLTokener.java`: community_attribution=0; framework=1; known_project=0
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/BreedingLookup.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Entity.java`: community_attribution=5; framework=0; known_project=2
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Gene.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/Advertisement2018Group.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/BaseGroup.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/ScientificRevenueGroup.java`: community_attribution=0; framework=0; known_project=5
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Island.java`: community_attribution=5; framework=0; known_project=3
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Mail.java`: community_attribution=0; framework=0; known_project=5
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Monster.java`: community_attribution=0; framework=0; known_project=1
+- `monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MsmSession.java`: community_attribution=0; framework=0; known_project=1

@@ -1,0 +1,2104 @@
+{
+  "source": "https://archive.org/download/monster-game-server/monster-game-server.zip",
+  "checked_utc": "2026-11-04T00:51:13.217716+00:00",
+  "size": 15170251,
+  "sha1": "df086c9ca4581733f73f2e8aaea1408382232e4d",
+  "total_entries": 215,
+  "file_types": {
+    ".java": 155,
+    ".jar": 21,
+    ".jardesc": 5,
+    ".xml": 2,
+    ".properties": 2,
+    ".sql": 2,
+    ".txt": 1
+  },
+  "tree": [
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/BBBServerExtensionLib.jar",
+      "size": 229817,
+      "compressed": 91265,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/build.xml",
+      "size": 4790,
+      "compressed": 1081,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/aws-java-sdk-1.5.0.jar",
+      "size": 10238659,
+      "compressed": 8764237,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/commons-codec-1.3.jar",
+      "size": 46725,
+      "compressed": 41663,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/dependancies/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/dependancies/commons-lang-2.4.jar",
+      "size": 261809,
+      "compressed": 244030,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/dependancies/jdom.jar",
+      "size": 153115,
+      "compressed": 144475,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/dependancies/netty-3.2.2.Final.jar",
+      "size": 785556,
+      "compressed": 695413,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/dependancies/sfs2x-client-core.jar",
+      "size": 45654,
+      "compressed": 41510,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/dependancies/slf4j-api-1.6.1.jar",
+      "size": 25496,
+      "compressed": 22189,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/dependancies/slf4j-simple-1.6.1.jar",
+      "size": 7669,
+      "compressed": 6302,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/elasticache-java-cluster-client-1.0.61.0.jar",
+      "size": 334664,
+      "compressed": 300596,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/ESAPI.properties",
+      "size": 24214,
+      "compressed": 8945,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/esapi-2.1.0.jar",
+      "size": 367021,
+      "compressed": 341374,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/httpclient-4.2.3.jar",
+      "size": 433070,
+      "compressed": 389017,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/httpcore-4.2.jar",
+      "size": 223282,
+      "compressed": 199114,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/jackson-core-asl-1.8.7.jar",
+      "size": 227451,
+      "compressed": 208742,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/jackson-mapper-asl-1.8.7.jar",
+      "size": 667765,
+      "compressed": 597648,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/mysql-connector-java-5.1.18-bin.jar",
+      "size": 789885,
+      "compressed": 756151,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/sfs2x.jar",
+      "size": 592767,
+      "compressed": 540950,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/SFS2X_API_Java.jar",
+      "size": 274284,
+      "compressed": 249316,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/sfs2x-core.jar",
+      "size": 199318,
+      "compressed": 176973,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/spymemcached-2.11.1.jar",
+      "size": 459447,
+      "compressed": 424191,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/lib/validation.properties",
+      "size": 1217,
+      "compressed": 640,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/BBBServerExtension.java",
+      "size": 6704,
+      "compressed": 1630,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/client/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/client/sfs-config.xml",
+      "size": 185,
+      "compressed": 108,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/AccountNotFoundException.java",
+      "size": 175,
+      "compressed": 144,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/FacebookAuthenticationException.java",
+      "size": 182,
+      "compressed": 145,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/NoAccountUserBindingFoundException.java",
+      "size": 207,
+      "compressed": 161,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/TooManyRecordsReturned.java",
+      "size": 173,
+      "compressed": 146,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/UserNotFoundException.java",
+      "size": 172,
+      "compressed": 142,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/ServerEventHandler.java",
+      "size": 15046,
+      "compressed": 3832,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/BatchingSNSWorker.java",
+      "size": 3412,
+      "compressed": 1193,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/BBBToken.java",
+      "size": 4045,
+      "compressed": 1309,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/ByteBuffer.java",
+      "size": 1085,
+      "compressed": 463,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/CacheWrapper.java",
+      "size": 2077,
+      "compressed": 735,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/CooldownCounter.java",
+      "size": 682,
+      "compressed": 260,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/CustomSerializingTranscoder.java",
+      "size": 1804,
+      "compressed": 559,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/DbWrapper.java",
+      "size": 10202,
+      "compressed": 1935,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/DoubleBuffer.java",
+      "size": 1711,
+      "compressed": 717,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/Encryption.java",
+      "size": 1775,
+      "compressed": 600,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/HttpPost.java",
+      "size": 1437,
+      "compressed": 596,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/MigBase64.java",
+      "size": 23159,
+      "compressed": 4953,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/Misc.java",
+      "size": 3237,
+      "compressed": 1079,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SFSHelpers.java",
+      "size": 6074,
+      "compressed": 1307,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SNSWorker.java",
+      "size": 9631,
+      "compressed": 2944,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SnsWrapper.java",
+      "size": 2175,
+      "compressed": 928,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SqsWrapper.java",
+      "size": 2128,
+      "compressed": 769,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/VersionInfo.java",
+      "size": 2850,
+      "compressed": 845,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/WebHelper.java",
+      "size": 5113,
+      "compressed": 1247,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/metrics/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/metrics/MetricsRequest.java",
+      "size": 2121,
+      "compressed": 863,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/metrics/MetricsSessionTask.java",
+      "size": 3314,
+      "compressed": 1208,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/monitoring/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/monitoring/CloudWatchReporter.java",
+      "size": 3648,
+      "compressed": 914,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/monitoring/EC2Metadata.java",
+      "size": 1350,
+      "compressed": 615,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/CDL.java",
+      "size": 10047,
+      "compressed": 2658,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/Cookie.java",
+      "size": 6583,
+      "compressed": 2320,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/CookieList.java",
+      "size": 3396,
+      "compressed": 1395,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/HTTP.java",
+      "size": 5860,
+      "compressed": 1996,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/HTTPTokener.java",
+      "size": 2484,
+      "compressed": 1146,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONArray.java",
+      "size": 29522,
+      "compressed": 5778,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONException.java",
+      "size": 709,
+      "compressed": 349,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONML.java",
+      "size": 14951,
+      "compressed": 3562,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONObject.java",
+      "size": 52757,
+      "compressed": 10651,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONString.java",
+      "size": 712,
+      "compressed": 339,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONStringer.java",
+      "size": 3266,
+      "compressed": 1534,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONTokener.java",
+      "size": 12399,
+      "compressed": 3597,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONWriter.java",
+      "size": 10528,
+      "compressed": 2975,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/Test.java",
+      "size": 31828,
+      "compressed": 6943,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/XML.java",
+      "size": 14143,
+      "compressed": 3686,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/XMLTokener.java",
+      "size": 10712,
+      "compressed": 3104,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/Local BBBServerExtensionLib.jardesc",
+      "size": 1133,
+      "compressed": 510,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/Local MSMExtension.jardesc",
+      "size": 1063,
+      "compressed": 475,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/Local X86 BBBServerExtensionLib.jardesc",
+      "size": 1139,
+      "compressed": 520,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/Local X86 MSMExtension.jardesc",
+      "size": 1069,
+      "compressed": 483,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/MSMExtension.jar",
+      "size": 451597,
+      "compressed": 427285,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/my_singing_monsters_clean_20120810.sql",
+      "size": 186500,
+      "compressed": 31106,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/BreedingCombination.java",
+      "size": 1236,
+      "compressed": 406,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/BreedingLookup.java",
+      "size": 11003,
+      "compressed": 2827,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Code.java",
+      "size": 3554,
+      "compressed": 856,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/CodeLookup.java",
+      "size": 1856,
+      "compressed": 693,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Entity.java",
+      "size": 11219,
+      "compressed": 2671,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Gene.java",
+      "size": 1057,
+      "compressed": 428,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/GeneLookup.java",
+      "size": 605,
+      "compressed": 267,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/Advertisement2018Group.java",
+      "size": 947,
+      "compressed": 422,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/AdvertisementGroup.java",
+      "size": 3935,
+      "compressed": 1262,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/BaseGroup.java",
+      "size": 5590,
+      "compressed": 1653,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/BrandedAdvertisementGroup.java",
+      "size": 385,
+      "compressed": 240,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/CurrencyGroup.java",
+      "size": 722,
+      "compressed": 376,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/NoAdvertisementGroup.java",
+      "size": 1972,
+      "compressed": 780,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/ScientificRevenueGroup.java",
+      "size": 4624,
+      "compressed": 1402,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/TutorialGroup.java",
+      "size": 3992,
+      "compressed": 1220,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/UserGroup.java",
+      "size": 5965,
+      "compressed": 1779,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Island.java",
+      "size": 7445,
+      "compressed": 2111,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/IslandLookup.java",
+      "size": 689,
+      "compressed": 308,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/IslandTorch.java",
+      "size": 594,
+      "compressed": 295,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Level.java",
+      "size": 424,
+      "compressed": 207,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/LevelLookup.java",
+      "size": 566,
+      "compressed": 243,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Mail.java",
+      "size": 5648,
+      "compressed": 1431,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MailLookup.java",
+      "size": 2853,
+      "compressed": 895,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MemoryMinigameFunctions.java",
+      "size": 1409,
+      "compressed": 658,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Monster.java",
+      "size": 11203,
+      "compressed": 2906,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MonsterCommonToRareMapping.java",
+      "size": 2053,
+      "compressed": 552,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MonsterIslandData.java",
+      "size": 263,
+      "compressed": 142,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MonsterIslandToIslandMapping.java",
+      "size": 4061,
+      "compressed": 1064,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MonsterLookup.java",
+      "size": 1646,
+      "compressed": 553,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MonsterRareData.java",
+      "size": 331,
+      "compressed": 170,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MsmSession.java",
+      "size": 643,
+      "compressed": 256,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Promo.java",
+      "size": 1890,
+      "compressed": 548,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/PromoLookup.java",
+      "size": 452,
+      "compressed": 226,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/QuestLookup.java",
+      "size": 3825,
+      "compressed": 1137,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/ScientificRevenue.java",
+      "size": 30764,
+      "compressed": 7164,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/ScratchTicketFunctions.java",
+      "size": 11034,
+      "compressed": 2984,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/SegmentationGroup.java",
+      "size": 12387,
+      "compressed": 1815,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Sticker.java",
+      "size": 980,
+      "compressed": 408,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StickerLookup.java",
+      "size": 476,
+      "compressed": 232,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StoreCurrencyLookup.java",
+      "size": 1049,
+      "compressed": 424,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StoreGroupsLookup.java",
+      "size": 1025,
+      "compressed": 419,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StoreItemsLookup.java",
+      "size": 1009,
+      "compressed": 418,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StoreReplacementItem.java",
+      "size": 885,
+      "compressed": 366,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StoreReplacements.java",
+      "size": 2876,
+      "compressed": 975,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Structure.java",
+      "size": 5456,
+      "compressed": 1420,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StructureLookup.java",
+      "size": 1197,
+      "compressed": 365,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/CurrencyAvailabilityList.java",
+      "size": 810,
+      "compressed": 350,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/CurrencySalesList.java",
+      "size": 755,
+      "compressed": 340,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/EntityAvailList.java",
+      "size": 778,
+      "compressed": 344,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/EntitySalesList.java",
+      "size": 736,
+      "compressed": 337,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/IslandSalesList.java",
+      "size": 736,
+      "compressed": 337,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/ITimedEventTypeList.java",
+      "size": 777,
+      "compressed": 308,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/KeyedTimedEventTypeList.java",
+      "size": 3574,
+      "compressed": 1038,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/MegafySaleList.java",
+      "size": 603,
+      "compressed": 297,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/PermalightTorchSaleList.java",
+      "size": 675,
+      "compressed": 308,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/ShortenedFuzingList.java",
+      "size": 642,
+      "compressed": 302,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/StarAvailList.java",
+      "size": 761,
+      "compressed": 347,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/StarSalesList.java",
+      "size": 719,
+      "compressed": 336,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/active_lists/TimedEventTypeList.java",
+      "size": 2442,
+      "compressed": 785,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/BreedAvailabilityEvent.java",
+      "size": 388,
+      "compressed": 209,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/BreedProbabilityChangeEvent.java",
+      "size": 503,
+      "compressed": 253,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/CurrencyAvailabilityEvent.java",
+      "size": 2163,
+      "compressed": 809,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/CurrencySalesEvent.java",
+      "size": 2150,
+      "compressed": 779,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/EntityAvailabilityEvent.java",
+      "size": 1731,
+      "compressed": 685,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/EntitySalesEvent.java",
+      "size": 5845,
+      "compressed": 1504,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/IslandSalesEvent.java",
+      "size": 4494,
+      "compressed": 1332,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/MegafySale.java",
+      "size": 4333,
+      "compressed": 1430,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/PermalightTorchSale.java",
+      "size": 4372,
+      "compressed": 1437,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/ShortenedFuzing.java",
+      "size": 4256,
+      "compressed": 1424,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/StarAvailabilityEvent.java",
+      "size": 1712,
+      "compressed": 678,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/StarSalesEvent.java",
+      "size": 4245,
+      "compressed": 1332,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEvent.java",
+      "size": 3778,
+      "compressed": 1245,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEventList.java",
+      "size": 5936,
+      "compressed": 1224,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEventListBuilder.java",
+      "size": 7006,
+      "compressed": 2020,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/TorchLookup.java",
+      "size": 885,
+      "compressed": 366,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/TribalQuestLookup.java",
+      "size": 1063,
+      "compressed": 429,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/VersionData.java",
+      "size": 2480,
+      "compressed": 837,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/exceptions/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/exceptions/InvalidPlayerException.java",
+      "size": 270,
+      "compressed": 198,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/GameStateHandler.java",
+      "size": 592850,
+      "compressed": 100760,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/Helpers.java",
+      "size": 2213,
+      "compressed": 862,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/logging/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/logging/GooglePlayEvents.java",
+      "size": 6665,
+      "compressed": 1230,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/logging/MetricCost.java",
+      "size": 1276,
+      "compressed": 360,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/logging/MSMCommandLogging.java",
+      "size": 6020,
+      "compressed": 1902,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/logging/MSMCommands.java",
+      "size": 27746,
+      "compressed": 4318,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/MSMExtension.java",
+      "size": 110110,
+      "compressed": 23682,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/MSMServerEventHandler.java",
+      "size": 25910,
+      "compressed": 6852,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/InitialPlayerIslandData.java",
+      "size": 363,
+      "compressed": 196,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/LitPlayerTorch.java",
+      "size": 3771,
+      "compressed": 1195,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/MonsterMegaData.java",
+      "size": 3550,
+      "compressed": 1128,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/Player.java",
+      "size": 102743,
+      "compressed": 22336,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerAchievement.java",
+      "size": 3782,
+      "compressed": 1217,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerActiveIslandStats.java",
+      "size": 5890,
+      "compressed": 1341,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerBaking.java",
+      "size": 4430,
+      "compressed": 1323,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerBreeding.java",
+      "size": 4821,
+      "compressed": 1378,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerBuyback.java",
+      "size": 4384,
+      "compressed": 1432,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerEgg.java",
+      "size": 5205,
+      "compressed": 1519,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerFuzeBuddy.java",
+      "size": 4507,
+      "compressed": 1282,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerIsland.java",
+      "size": 55138,
+      "compressed": 10569,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerIslandFactory.java",
+      "size": 13841,
+      "compressed": 2815,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerMonster.java",
+      "size": 38267,
+      "compressed": 8129,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerQuest.java",
+      "size": 19836,
+      "compressed": 4926,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/player/PlayerStructure.java",
+      "size": 14900,
+      "compressed": 3509,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/ShutdownHookThread.java",
+      "size": 449,
+      "compressed": 200,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/task/",
+      "size": 0,
+      "compressed": 0,
+      "modified": "2021-5-9"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/task/AuthTokenUpdateTask.java",
+      "size": 1610,
+      "compressed": 538,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/task/MailUpdateTask.java",
+      "size": 4689,
+      "compressed": 1294,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/task/MSMAdminCatchUnreleasedAccount.java",
+      "size": 4763,
+      "compressed": 1488,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/task/MSMMonsterLinksReloadTask.java",
+      "size": 2101,
+      "compressed": 727,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/task/MSMServerStatusTask.java",
+      "size": 4318,
+      "compressed": 1309,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/task/MSMStats.java",
+      "size": 31905,
+      "compressed": 6094,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/task/UpdateActiveTimedEvents.java",
+      "size": 717,
+      "compressed": 359,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/StressTester.jardesc",
+      "size": 1052,
+      "compressed": 474,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/tribal_date_updated.sql",
+      "size": 1026,
+      "compressed": 228,
+      "modified": "2020-7-3"
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/wordsFile.txt",
+      "size": 92220,
+      "compressed": 23458,
+      "modified": "2020-7-3"
+    }
+  ],
+  "docs_and_manifest_previews": [],
+  "textual_cues": [
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/BBBServerExtension.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer;  import com.bigbluebubble.BBBServer.util.CacheWrapper; import com.bigbluebubble.BBBServer.util.DbWrapper; import com.bigbluebubble.BBBServer.util.Misc; import com.bigbluebu",
+          "package com.bigbluebubble.BBBServer;  import com.bigbluebubble.BBBServer.util.CacheWrapper; import com.bigbluebubble.BBBServer.util.DbWrapper; import com.bigbluebubble.BBBServer.util.Misc; import com.bigbluebubble.BBBServer.util.SnsWrapper; impor",
+          "rt com.bigbluebubble.BBBServer.util.CacheWrapper; import com.bigbluebubble.BBBServer.util.DbWrapper; import com.bigbluebubble.BBBServer.util.Misc; import com.bigbluebubble.BBBServer.util.SnsWrapper; import com.bigbluebubble.BBBServer.util.SqsWrapper; import ",
+          "mport com.bigbluebubble.BBBServer.util.DbWrapper; import com.bigbluebubble.BBBServer.util.Misc; import com.bigbluebubble.BBBServer.util.SnsWrapper; import com.bigbluebubble.BBBServer.util.SqsWrapper; import com.smartfoxserver.bitswarm.sessions.ISession; impo",
+          "er; import com.bigbluebubble.BBBServer.util.Misc; import com.bigbluebubble.BBBServer.util.SnsWrapper; import com.bigbluebubble.BBBServer.util.SqsWrapper; import com.smartfoxserver.bitswarm.sessions.ISession; import com.smartfoxserver.v2.core.SFSEventType; im"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/AccountNotFoundException.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.exceptions;  public class AccountNotFoundException extends Exception {  \t/** \t *  \t */ \tprivate static final long serialVersionUID = 1L; } "
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/FacebookAuthenticationException.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.exceptions;  public class FacebookAuthenticationException extends Exception {  \t/** \t *  \t */ \tprivate static final long serialVersionUID = 1L; } "
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/NoAccountUserBindingFoundException.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.exceptions;  public class NoAccountUserBindingFoundException extends Exception { \t/** \t *  \t */ \tprivate static final long serialVersionUID = 1L; \tpublic int accountId; } "
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/TooManyRecordsReturned.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.exceptions;  public class TooManyRecordsReturned extends Exception {  \t/** \t *  \t */ \tprivate static final long serialVersionUID = 1L; } "
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/UserNotFoundException.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.exceptions;  public class UserNotFoundException extends Exception {  \t/** \t *  \t */ \tprivate static final long serialVersionUID = 1L; } "
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/ServerEventHandler.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer;  import java.io.BufferedReader; import java.io.IOException; import java.io.InputStream; import java.io.InputStreamReader; import java.net.HttpURLConnection; import java.net",
+          "HttpsURLConnection;  import org.json.JSONObject;  import com.bigbluebubble.BBBServer.exceptions.FacebookAuthenticationException; import com.bigbluebubble.BBBServer.util.Misc; import com.smartfoxserver.bitswarm.sessions.ISession; import com.smartfoxserver.v2.",
+          "erver.exceptions.FacebookAuthenticationException; import com.bigbluebubble.BBBServer.util.Misc; import com.smartfoxserver.bitswarm.sessions.ISession; import com.smartfoxserver.v2.core.ISFSEvent; import com.smartfoxserver.v2.core.SFSEventParam; import com.sma",
+          "n session = (ISession) event.getParameter(SFSEventParam.SESSION); \t\tString bbbIdFromUser = (String) event.getParameter(SFSEventParam.LOGIN_NAME); \t\tString encryptedPass = (String) event.getParameter(SFSEventParam.LOGIN_PASSWORD); \t\tSFSObject additionalData =",
+          "a.getUtfString(\"client_platform\"); \t\t\t} \t\t\tacctData = checkAuthCredentials(bbbIdFromUser, clientPlatform);  \t\t\t \t\t\tif(acctData == null){ \t\t\t\tSFSErrorData errData = new SFSErrorData(SFSErrorCode.LOGIN_BAD_USERNAME); \t\t\t\tthrow new SFSLoginException(\"Login Fail"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/BatchingSNSWorker.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;\r \r import java.util.ArrayList;\r import java.util.Collection;\r \r import com.amazonaws.auth.BasicAWSCredentials;\r import com.amazonaws.regions.Region;\r import com.bigblu",
+          "edentials;\r import com.amazonaws.regions.Region;\r import com.bigbluebubble.BBBServer.BBBServerExtension;\r \r import net.spy.memcached.util.StringUtils;\r \r public class BatchingSNSWorker extends SNSWorker {\r \tprivate static final int COMMA_BYTE_LENGTH = getByt",
+          "\r import com.amazonaws.regions.Region;\r import com.bigbluebubble.BBBServer.BBBServerExtension;\r \r import net.spy.memcached.util.StringUtils;\r \r public class BatchingSNSWorker extends SNSWorker {\r \tprivate static final int COMMA_BYTE_LENGTH = getByteLength();",
+          "static final int MAX_FLUSH_INTERVAL = 60000;\r \t\r \tpublic BatchingSNSWorker(BBBServerExtension ext, Region region, String topic, String bucket, String prefix, int maxThreads, BasicAWSCredentials credentials) {\r \t\tsuper(ext, region, topic, bucket, prefix, maxT"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/BBBToken.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;\r \r import java.io.PrintStream;\r import java.net.URL;\r import java.util.ArrayList;\r import java.util.Iterator;\r \r import org.json.JSONArray;\r import org.json.JSONExcept",
+          "mport org.json.JSONException;\r import org.json.JSONObject;\r \r public class BBBToken {\r \t\r \tString rawEncrypted;\r \tJSONObject rawJson;\r \t\r \tlong generatedOn;\r \tlong expiresAt;\r \tArrayList<String> userGameIds;\r \tArrayList<String> permissions;\r \tString username",
+          "missions;\r \tString username = null;\r \tString loginType = null;\r \t\r \tpublic BBBToken(JSONObject json)\r \t{\r \t\tthis.rawJson = json;\r \t\ttry {\r \t\t\tgeneratedOn = json.getInt(\"generated_on\");\r \t\t\r \t\t\texpiresAt = json.getInt(\"expires_at\");\r \t\t\tJSONArray gameIdsJson ",
+          "n){\r \t\tthis.rawEncrypted = encryptedAccessToken;\r \t}\r \t\r \t\r \tpublic static BBBToken getAuthTokenFromServer(String gameId, String authServerUrl, String useHttps, String username, String password, String loginType, String vector, String secret) throws Exceptio",
+          "an, username, password, loginType, vector, secret);\r \t}\r \t\r \tpublic static BBBToken getAuthTokenFromServer(String gameId, String authServerUrl, boolean useHttps, String username, String password, String loginType, String vector, String secret) throws Excepti"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/ByteBuffer.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;\r \r /**\r  * Byte array class cause java really sucks with primitives\r  */\r public class ByteBuffer\r {\r \tprivate transient byte[] _bytes;\r \tprivate transient int _writeI"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/CacheWrapper.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;\r \r import java.io.IOException;\r import java.net.InetSocketAddress;\r import java.util.concurrent.ExecutionException;\r import java.util.concurrent.Future;\r import java.u"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/CooldownCounter.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;\r \r public class CooldownCounter {\r \tprivate int currentCount = 0;\r \tprivate long lastIncrementTime = 0;\r \tprivate long cooldownTime;\r \t\r \tpublic CooldownCounter(long c"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/CustomSerializingTranscoder.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;\r \r import java.io.ByteArrayInputStream;\r import java.io.Closeable;\r import java.io.IOException;\r import java.io.ObjectInputStream;\r import java.io.ObjectStreamClass;\r "
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/DbWrapper.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;  //import com.smartfoxserver.v2.db.DBConfig; import com.smartfoxserver.v2.db.DBConfig; import com.smartfoxserver.v2.db.IDBManager; import com.smartfoxserver.v2.db.SFSD"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/DoubleBuffer.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;\r \r import java.lang.reflect.Array;\r \r /**\r  * DoubleBuffer class for thread-safe producer/consumer action.\r  * \r  * @author jeremypa\r  *\r  * @param <E>\r  */\r public cl"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/Encryption.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;\r \r import javax.crypto.Cipher;\r import javax.crypto.spec.IvParameterSpec;\r import javax.crypto.spec.SecretKeySpec;\r \r import org.apache.commons.codec.binary.Base64;\r \r"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/HttpPost.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;\r \r import java.io.DataOutputStream;\r import java.net.HttpURLConnection;\r import java.net.URL;\r \r \r public class HttpPost implements Runnable\r {\r \tfinal private String "
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/MigBase64.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [
+          " IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND\r  * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\r  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.\r  * IN NO EVENT SHALL THE "
+        ],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;\r \r import java.util.Arrays;\r \r /** A very fast and memory efficient class to encode and decode to and from BASE64 in full accordance\r  * with RFC 2045.<br><br>\r  * On "
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/Misc.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "ates  * and open the template in the editor.  */ package com.bigbluebubble.BBBServer.util;  import java.io.ByteArrayOutputStream; import java.io.PrintStream; import java.io.PrintWriter; import java.io.StringWriter; import java.security.*; import java.util.zi"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SFSHelpers.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;\r \r import java.util.Iterator;\r import java.util.Map;\r \r import com.smartfoxserver.v2.entities.data.*;\r \r /*\r  * Some helper functions for dealing with smart fox object"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SNSWorker.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;\r \r import java.io.ByteArrayInputStream;\r import java.util.ArrayList;\r import java.util.Collection;\r import java.util.List;\r import java.util.concurrent.BlockingQueue;\r",
+          "com.amazonaws.services.sns.model.PublishRequest;\r import com.bigbluebubble.BBBServer.BBBServerExtension;\r \r public class SNSWorker {\t\r \tprotected  static final int MAX_SNS_MESSAGE_SIZE = 262144; \t// 256KB\r \t\r \tprivate static final int CONNECTION_TIMEOUT = 10",
+          "aws.services.sns.model.PublishRequest;\r import com.bigbluebubble.BBBServer.BBBServerExtension;\r \r public class SNSWorker {\t\r \tprotected  static final int MAX_SNS_MESSAGE_SIZE = 262144; \t// 256KB\r \t\r \tprivate static final int CONNECTION_TIMEOUT = 1000; // 1 s",
+          "ooldownCounter(MIN_TIME_TO_WAIT_BETWEEN_WORKER_SPAWNS);\r \t\r \tprivate final BBBServerExtension ext;\r \t\r \tpublic SNSWorker(BBBServerExtension ext, Region region, String topic, String bucket, String prefix, int maxThreads, BasicAWSCredentials credentials )\r \t{\r",
+          "_SPAWNS);\r \t\r \tprivate final BBBServerExtension ext;\r \t\r \tpublic SNSWorker(BBBServerExtension ext, Region region, String topic, String bucket, String prefix, int maxThreads, BasicAWSCredentials credentials )\r \t{\r \t\tthis.ext = ext;\r \t\tthis.snsTopic = topic;\r "
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SnsWrapper.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;\r \r import java.util.concurrent.TimeUnit;\r \r import org.json.JSONObject;\r \r import com.amazonaws.auth.BasicAWSCredentials;\r import com.amazonaws.services.sns.AmazonSNSC",
+          "com.amazonaws.services.sns.model.PublishRequest;\r import com.bigbluebubble.BBBServer.BBBServerExtension;\r import com.smartfoxserver.v2.SmartFoxServer;\r \r \r public class SnsWrapper\r {\r \tBBBServerExtension ext = null;\r \tAmazonSNSClient sns = null;\r \t\r \tpublic ",
+          "aws.services.sns.model.PublishRequest;\r import com.bigbluebubble.BBBServer.BBBServerExtension;\r import com.smartfoxserver.v2.SmartFoxServer;\r \r \r public class SnsWrapper\r {\r \tBBBServerExtension ext = null;\r \tAmazonSNSClient sns = null;\r \t\r \tpublic SnsWrapper",
+          "rt com.smartfoxserver.v2.SmartFoxServer;\r \r \r public class SnsWrapper\r {\r \tBBBServerExtension ext = null;\r \tAmazonSNSClient sns = null;\r \t\r \tpublic SnsWrapper(BBBServerExtension ext, BasicAWSCredentials awsCredentials)\r \t{\r \t\tthis.ext = ext;\r \t\t//append the ",
+          "Extension ext = null;\r \tAmazonSNSClient sns = null;\r \t\r \tpublic SnsWrapper(BBBServerExtension ext, BasicAWSCredentials awsCredentials)\r \t{\r \t\tthis.ext = ext;\r \t\t//append the classpath properties provider to the default credentials chain to make a custom chai"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SqsWrapper.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;\r \r import java.util.concurrent.TimeUnit;\r \r import org.json.JSONObject;\r \r import com.amazonaws.auth.BasicAWSCredentials;\r import com.amazonaws.services.sqs.AmazonSQSC",
+          "amazonaws.services.sqs.model.SendMessageRequest;\r import com.bigbluebubble.BBBServer.BBBServerExtension;\r import com.smartfoxserver.v2.SmartFoxServer;\r \r \r public class SqsWrapper {\r \tBBBServerExtension ext = null;\r \tAmazonSQSClient sqs = null;\r \t\r \tpublic S",
+          "services.sqs.model.SendMessageRequest;\r import com.bigbluebubble.BBBServer.BBBServerExtension;\r import com.smartfoxserver.v2.SmartFoxServer;\r \r \r public class SqsWrapper {\r \tBBBServerExtension ext = null;\r \tAmazonSQSClient sqs = null;\r \t\r \tpublic SqsWrapper(",
+          "ort com.smartfoxserver.v2.SmartFoxServer;\r \r \r public class SqsWrapper {\r \tBBBServerExtension ext = null;\r \tAmazonSQSClient sqs = null;\r \t\r \tpublic SqsWrapper(BBBServerExtension ext, BasicAWSCredentials awsCredentials){\r \t\tthis.ext = ext;\r \t\t//append the cla",
+          "Extension ext = null;\r \tAmazonSQSClient sqs = null;\r \t\r \tpublic SqsWrapper(BBBServerExtension ext, BasicAWSCredentials awsCredentials){\r \t\tthis.ext = ext;\r \t\t//append the classpath properties provider to the default credentials chain to make a custom chain\r "
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/VersionInfo.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;\r \r /**\r * Basic version class consisting of 3 parts:\r *\tMajor Minor Revision\r */\r public class VersionInfo implements Comparable<VersionInfo>\r {\r \tprivate int major;\r "
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/WebHelper.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.BBBServer.util;\r \r import java.io.BufferedReader;\r import java.io.DataOutputStream;\r import java.io.IOException;\r import java.io.InputStream;\r import java.io.InputStreamReader;\r impor",
+          "tatic String getDataFromUrl(URL url, boolean secure, String urlParameters, BBBToken token){\r \t\tString returnValue = null;\r \t\ttry{\r \t\t\tInputStream response;\r \t\t\tString contentType;\r \t\t\tif(secure){\r \t\t\t\tHttpsURLConnection connection = (HttpsURLConnection) url."
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/metrics/MetricsRequest.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          " endpoint;\r \t}\r \t\r \t/**\r \t * Adds a parameter to the metrics request (i.e. bbbId=12345)\r \t * @param key\r \t * @param value\r \t */\r \tpublic void addParam(String key, String value)\r \t{\r \t\ttry \r \t\t{\r \t\t\tparams.put(key, value);\r \t\t}\r \t\tcatch( JSONException jsonEx "
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/metrics/MetricsSessionTask.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "et.URL;\r import java.util.concurrent.TimeUnit;\r \r import com.bigbluebubble.BBBServer.BBBServerExtension;\r import com.bigbluebubble.BBBServer.util.DoubleBuffer;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.smartfoxserver.v2.SmartFoxServer;\r impo",
+          "mport java.util.concurrent.TimeUnit;\r \r import com.bigbluebubble.BBBServer.BBBServerExtension;\r import com.bigbluebubble.BBBServer.util.DoubleBuffer;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.smartfoxserver.v2.SmartFoxServer;\r import com.sma",
+          " com.bigbluebubble.BBBServer.BBBServerExtension;\r import com.bigbluebubble.BBBServer.util.DoubleBuffer;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.smartfoxserver.v2.SmartFoxServer;\r import com.smartfoxserver.v2.extensions.ExtensionLogLevel;\r ",
+          "t com.bigbluebubble.BBBServer.util.DoubleBuffer;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.smartfoxserver.v2.SmartFoxServer;\r import com.smartfoxserver.v2.extensions.ExtensionLogLevel;\r \r /**\r  * Task to send bulk session data to metrics/aut",
+          "onTask implements Runnable\r {\r \tfinal private String _url;\r \tfinal private BBBServerExtension _ext;\r \tfinal private DoubleBuffer<String> _sessions;\r \t\r \tpublic static java.util.concurrent.ScheduledFuture<?> schedule(BBBServerExtension ext, DoubleBuffer<Strin"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/CDL.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [
+          "t Evil.\r \r THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r AUTHORS OR COPYRIGHT HOL"
+        ],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/Cookie.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [
+          "t Evil.\r \r THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r AUTHORS OR COPYRIGHT HOL"
+        ],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/CookieList.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [
+          "t Evil.\r \r THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r AUTHORS OR COPYRIGHT HOL"
+        ],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/HTTP.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [
+          "t Evil.\r \r THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r AUTHORS OR COPYRIGHT HOL"
+        ],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/HTTPTokener.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [
+          "t Evil.\r \r THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r AUTHORS OR COPYRIGHT HOL"
+        ],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONArray.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [
+          "not Evil.  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDER"
+        ],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONML.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [
+          "not Evil.  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDER"
+        ],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONObject.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [
+          "not Evil.  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDER"
+        ],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONStringer.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [
+          "t Evil.\r \r THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r AUTHORS OR COPYRIGHT HOL"
+        ],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONTokener.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [
+          "not Evil.  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDER"
+        ],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONWriter.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [
+          "t Evil.\r \r THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r AUTHORS OR COPYRIGHT HOL"
+        ],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/XML.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [
+          "not Evil.  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDER"
+        ],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/XMLTokener.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [
+          "t Evil.\r \r THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r AUTHORS OR COPYRIGHT HOL"
+        ],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/BreedingLookup.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "import java.util.concurrent.ConcurrentHashMap;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.player.PlayerIsland;\r import com.smartfoxserver.v2.en"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Entity.java",
+      "cues": {
+        "community_attribution": [
+          "leCost(CurrencyType type, Integer keyIslandId) throws Exception\r \t{\r \t\tint originalCost = 0;\r \t\t\r \t\tif(type.equals(CurrencyType.Keys) && keyIslandId != null)\r \t\t\toriginalCost = getCostKeys(keyIslandId);\r \t\telse\r \t\t\toriginalCost = getCurrencyCost(type);\r \t\t\r \t\tif(",
+          " = 0;\r \t\t\r \t\tif(type.equals(CurrencyType.Keys) && keyIslandId != null)\r \t\t\toriginalCost = getCostKeys(keyIslandId);\r \t\telse\r \t\t\toriginalCost = getCurrencyCost(type);\r \t\t\r \t\tif(originalCost == 0)\r \t\t\treturn 0;\r \t\t\r \t\tfloat currentPercentDiscount = 0;\r \t\tint curren",
+          "IslandId != null)\r \t\t\toriginalCost = getCostKeys(keyIslandId);\r \t\telse\r \t\t\toriginalCost = getCurrencyCost(type);\r \t\t\r \t\tif(originalCost == 0)\r \t\t\treturn 0;\r \t\t\r \t\tfloat currentPercentDiscount = 0;\r \t\tint currentCurrencySalePrice = -1;\r \t\t\r \t\tif(type != CurrencyTy",
+          "(keyIslandId);\r \t\telse\r \t\t\toriginalCost = getCurrencyCost(type);\r \t\t\r \t\tif(originalCost == 0)\r \t\t\treturn 0;\r \t\t\r \t\tfloat currentPercentDiscount = 0;\r \t\tint currentCurrencySalePrice = -1;\r \t\t\r \t\tif(type != CurrencyType.Starpower)\r \t\t{\r \t\t\t\r \t\t\tArrayList<EntitySale",
+          "medEventType.EntitySale, getEntityId());\r \t\t\tif(sales == null)\r \t\t\t\treturn originalCost;\r \t\r \t\t\tfor(int i=0; i < sales.size(); i++)\r \t\t\t{\r \t\t\t\tEntitySalesEvent e = sales.get(i);\r \t\t\t\tDiscountType t = e.getDiscountType();\r \t\t\t\tif(t == DiscountType.Discount)\r \t\t\t\t{"
+        ],
+        "framework": [],
+        "known_project": [
+          "gmonsters.data;\r \r import java.util.ArrayList;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.data.t",
+          " \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.data.timed_events.TimedEvent.TimedEventType;\r import "
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Gene.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "kage com.bigbluebubble.mysingingmonsters.data;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.smartfoxserver.v2.entities.data.ISFSObject;\r \r public class Gene {\r \r \tprotected final static String GENE_ID_KEY = \"gene_letter\";\r \tprotected f"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/Advertisement2018Group.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "rs.data.groups;\r \r import java.util.ArrayList;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r \r public class Advertisement2018Group extends BaseGroup \r {\r \tpublic Advertisement2018Group(Stri"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/BaseGroup.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "rt java.util.Iterator;\r import java.util.List;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.smartfoxserver.v2.entities.data.ISFSObject;\r import com.smartfoxserver.v2.entities.data.SFSObject;\r \r abstract class BaseGroup extends UserGrou"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/ScientificRevenueGroup.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "t java.util.ArrayList;\r import java.util.List;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.smartfoxserver.v2.entities.data.ISFSObject;\r import com.smartfoxserver.v2.entities.da",
+          "ic class ScientificRevenueGroup extends UserGroup\r {\r \tfinal protected int bbb_;\r \tfinal protected int control_;\r \tfinal protected double chance_;\r \tfinal protected VersionInfo version_;\r \tfinal protected List<String> platforms_;\r \t\r \t///////////////////////",
+          "cks!!\r \tprivate static int staticActiveId = -1;\r \tprivate static int staticBBBControlId = -1;\r \tprivate static int staticSRControlId = -1;\r \tprivate static double staticChance = 0;\r \tprivate static VersionInfo staticVersion;\r \tprivate static List<String> sta",
+          "ticVersion = g.version_;\r \t\t\t\tstaticPlatforms = g.platforms_;\r \t\t\t}\r \t\t\t// BBB control group\r \t\t\telse if (g.bbb_ != 0)\r \t\t\t{\r \t\t\t\tstaticBBBControlId = g.id();\r \t\t\t}\r \t\t\t// SR control group\r \t\t\telse\r \t\t\t{\r \t\t\t\tstaticSRControlId = g.id();\r \t\t\t}\r \t\t}\r \t\t\r \t\tMSM",
+          "ticPlatforms = g.platforms_;\r \t\t\t}\r \t\t\t// BBB control group\r \t\t\telse if (g.bbb_ != 0)\r \t\t\t{\r \t\t\t\tstaticBBBControlId = g.id();\r \t\t\t}\r \t\t\t// SR control group\r \t\t\telse\r \t\t\t{\r \t\t\t\tstaticSRControlId = g.id();\r \t\t\t}\r \t\t}\r \t\t\r \t\tMSMExtension.getInstance().trace(Str"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Island.java",
+      "cues": {
+        "community_attribution": [
+          "public int getTimedSaleCost(CurrencyType type) throws Exception\r \t{\r \t\tint originalCost = 0;\r \t\t\r \t\tif(type == CurrencyType.Coins)\r \t\t\toriginalCost = getCoinCost();\r \t\telse if(type == CurrencyType.Diamonds)\r \t\t\toriginalCost = getDiamondCost();\r \t\t\r \t\tif(originalC",
+          "ion\r \t{\r \t\tint originalCost = 0;\r \t\t\r \t\tif(type == CurrencyType.Coins)\r \t\t\toriginalCost = getCoinCost();\r \t\telse if(type == CurrencyType.Diamonds)\r \t\t\toriginalCost = getDiamondCost();\r \t\t\r \t\tif(originalCost == 0)\r \t\t\treturn 0;\r \t\t\r \t\tfloat currentPercentDiscount ",
+          "riginalCost = getCoinCost();\r \t\telse if(type == CurrencyType.Diamonds)\r \t\t\toriginalCost = getDiamondCost();\r \t\t\r \t\tif(originalCost == 0)\r \t\t\treturn 0;\r \t\t\r \t\tfloat currentPercentDiscount = 0;\r \t\tint currentCurrencySalePrice = -1;\r \t\t\r \t\tArrayList<IslandSalesEvent",
+          "e == CurrencyType.Diamonds)\r \t\t\toriginalCost = getDiamondCost();\r \t\t\r \t\tif(originalCost == 0)\r \t\t\treturn 0;\r \t\t\r \t\tfloat currentPercentDiscount = 0;\r \t\tint currentCurrencySalePrice = -1;\r \t\t\r \t\tArrayList<IslandSalesEvent> sales = TimedEventList.Instance().current",
+          "OnKey(TimedEventType.IslandSale, getID());\r \t\tif(sales == null)\r \t\t\treturn originalCost;\r \r \t\tfor(int i=0; i < sales.size(); i++)\r \t\t{\r \t\t\tIslandSalesEvent e = sales.get(i);\r \t\t\tIslandSalesEvent.DiscountType t = e.getDiscountType();\r \t\t\tif(t == IslandSalesEvent.D"
+        ],
+        "framework": [],
+        "known_project": [
+          "va.util.ArrayList;\r import java.util.Iterator;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.SFSHelpers;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtensio",
+          " \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.SFSHelpers;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.",
+          "ort com.bigbluebubble.BBBServer.util.SFSHelpers;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.data.timed_events.TimedEventList;\r import com.bigblue"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Mail.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "ing MAIL_SEGMENTATION = \"segmentation\";\r \tprivate static final String MAIL_BBBID = \"bbb_id\";\r \t\r \tprivate long id = 0;\r \tprivate String title = null;\r \tprivate String shortTitle = null;\r \tprivate String message = null;\r \tprivate String sender = null;\r \tpriva",
+          "SEGMENTATION = \"segmentation\";\r \tprivate static final String MAIL_BBBID = \"bbb_id\";\r \t\r \tprivate long id = 0;\r \tprivate String title = null;\r \tprivate String shortTitle = null;\r \tprivate String message = null;\r \tprivate String sender = null;\r \tprivate String",
+          "n enabled = true;\r \tprivate ISFSObject segmentation = null;\r \tprivate long bbbId = 0;\r \t\r \tpublic Mail(ISFSObject mailData)\r \t{\r \t\tid = mailData.getLong(MAIL_ID);\r \t\ttitle = mailData.getUtfString(MAIL_TITLE);\r \t\t\r \t\tif(mailData.containsKey(MAIL_SHORT_TITLE))",
+          "Data.getUtfString(MAIL_SEGMENTATION));\r \t\t\r \t\tif(mailData.containsKey(MAIL_BBBID))\r \t\t\tbbbId = mailData.getLong(MAIL_BBBID);\r \t}\r \t\r \tpublic ISFSObject toSFSObject()\r \t{\r \t\tISFSObject obj = new SFSObject();\r \t\t\r \t\tobj.putLong(MAIL_ID, id);\r \t\tobj.putUtfStrin",
+          "tring(MAIL_SEGMENTATION));\r \t\t\r \t\tif(mailData.containsKey(MAIL_BBBID))\r \t\t\tbbbId = mailData.getLong(MAIL_BBBID);\r \t}\r \t\r \tpublic ISFSObject toSFSObject()\r \t{\r \t\tISFSObject obj = new SFSObject();\r \t\t\r \t\tobj.putLong(MAIL_ID, id);\r \t\tobj.putUtfString(MAIL_TITLE"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Monster.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "import java.util.concurrent.ConcurrentHashMap;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.player.PlayerMonster;\r import com.smartfoxserver.v2.e"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MsmSession.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "a;\r \r public class MsmSession\r {\r \tpublic String userGameId;\r \tpublic Long bbbId;\r \tpublic Integer level;\r \tpublic Long starpower;\r \tpublic Long diamonds;\r \tpublic Long coins;\r \tpublic Long ethCurrency;\r \tpublic Long food;\r \tpublic Long keys;\r \tpublic Long r"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/QuestLookup.java",
+      "cues": {
+        "community_attribution": [
+          "e\r \t\t\t\tquest.putSFSObject( \"rewards\", new SFSObject() );\r \t\t}\r \t\t\r \t\t//get original tutorial group\r \t\tdefaultTutorialQuests = new SFSArray();\r \t\tTutorialGroup t = (TutorialGroup)TutorialGroup.getGroupById(2);\r \t\tif(t != null)\r \t\t{\r \t\t\tISFSArray initialQuests = t."
+        ],
+        "framework": [],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/ScientificRevenue.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "util.Map.Entry;\r \r import org.json.JSONObject;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.SFSHelpers;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.smartfoxserver.v2.entities.data.ISFSArr",
+          " \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.SFSHelpers;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.smartfoxserver.v2.entities.data.ISFSArray;\r import com.smartfoxserver.v2.entities.data",
+          "ts.containsKey(platform);\r \t}\r \t\r \tpublic static Offer getCachedOffer(long bbbId, String platform)\r \t{\r \t\t// HAX SR PLATFORM get ios offers on pc\r \t\tif (platform.equalsIgnoreCase(\"pc\"))\r \t\t\tplatform = \"ios\";\r \t\t\r \t\t// query DB for cached offer\r \t\tISFSObject ",
+          " \t\t// query DB for cached offer\r \t\tISFSObject offerObject = getDBOfferWall(bbbId, platform);\r \t\tif (offerObject != null)\r \t\t{\r \t\t\tString offerData = offerObject.getUtfString(\"paywall_data\");\r \t\t\t\r \t\t\ttry\r \t\t\t{\r \t\t\t\t// decompress offer data if necessary\r \t\t\t\t",
+          "ng custom cached SR offer for user '%d' on platform '%s' created at '%d'\", bbbId, platform, offerStart));\r \t\t\t\treturn new Offer(offerJSON, offerStart);\r \t\t\t}\r \t\t\tcatch (Exception e)\r \t\t\t{\r \t\t\t\tMSMExtension.getInstance().trace(\"Error converting cached JSON of"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/ScratchTicketFunctions.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "java.util.ArrayList;\r import java.util.Random;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.player",
+          " \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.player.Player;\r import com.smartfoxserver.v2.entities"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Sticker.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "kage com.bigbluebubble.mysingingmonsters.data;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.smartfoxserver.v2.entities.data.ISFSObject;\r \r public class Sticker\r {\r \tprotected static final String ID_KEY = \"sticker_id\";\r \tprotected stati"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StoreCurrencyLookup.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "import java.util.concurrent.ConcurrentHashMap;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.smartfoxserver.v2.entities.data.ISFSObject;\r \r public class StoreCurrencyLookup {\r \r \tpublic static ConcurrentHashMap<Integer, ISFSObject> curr"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StoreGroupsLookup.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "import java.util.concurrent.ConcurrentHashMap;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.smartfoxserver.v2.entities.data.ISFSObject;\r \r public class StoreGroupsLookup {\r \r \tpublic static ConcurrentHashMap<Integer, ISFSObject> groups"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StoreItemsLookup.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "import java.util.concurrent.ConcurrentHashMap;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.smartfoxserver.v2.entities.data.ISFSObject;\r \r public class StoreItemsLookup {\r \r \tpublic static ConcurrentHashMap<Integer, ISFSObject> items;\r"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Structure.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "kage com.bigbluebubble.mysingingmonsters.data;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.smartfoxserver.v2.entities.data.ISFSObject;\r import com.smartfoxserver.v2.entities.data.SFSA"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/CurrencyAvailabilityEvent.java",
+      "cues": {
+        "community_attribution": [
+          "e for future reference\r \t//private static final String ORIG_ITEM_ID_KEY = \"original_store_item_id\"; \r \r \tprivate Integer storeItemId;\r \t//private Integer originalStoreItemId = -1;\r \r \t//[{\"store_item_id\":19}] (shows \"Available\" text, but not original/sale price t",
+          "inal_store_item_id\"; \r \r \tprivate Integer storeItemId;\r \t//private Integer originalStoreItemId = -1;\r \r \t//[{\"store_item_id\":19}] (shows \"Available\" text, but not original/sale price tag)\r \t//[{\"store_item_id\":1, \"original_store_item_id\":2}]  (shows \"Available\" t",
+          "ItemId = -1;\r \r \t//[{\"store_item_id\":19}] (shows \"Available\" text, but not original/sale price tag)\r \t//[{\"store_item_id\":1, \"original_store_item_id\":2}]  (shows \"Available\" text, AND original/sale price tag)\r \tpublic CurrencyAvailabilityEvent(ISFSObject timedEve",
+          "vailable\" text, but not original/sale price tag)\r \t//[{\"store_item_id\":1, \"original_store_item_id\":2}]  (shows \"Available\" text, AND original/sale price tag)\r \tpublic CurrencyAvailabilityEvent(ISFSObject timedEventData) throws Exception\r \t{\r \t\tsuper(timedEventDat",
+          "ore_item_id\":1, \"original_store_item_id\":2}]  (shows \"Available\" text, AND original/sale price tag)\r \tpublic CurrencyAvailabilityEvent(ISFSObject timedEventData) throws Exception\r \t{\r \t\tsuper(timedEventData);\r \t\t\r \t\tif(eventDataSfsArray.size() != 1)\r \t\t\tthrow new"
+        ],
+        "framework": [],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/MegafySale.java",
+      "cues": {
+        "community_attribution": [
+          "ost)\r \t\t{\r \t\t\treturn (int)getDiscountValue();\r \t\t}\r \t\telse\r \t\t{\r \t\r \t\t\tint originalCost = Integer.parseInt(MSMExtension.getInstance().getGameSetting(\"USER_DIAMOND_COST_PER_PERMALIT_MEGAMONSTER\"));\r \t\t\tint newCost = originalCost;\r \t\t\t\r \t\t\tfloat currentPercentDisco",
+          "eSetting(\"USER_DIAMOND_COST_PER_PERMALIT_MEGAMONSTER\"));\r \t\t\tint newCost = originalCost;\r \t\t\t\r \t\t\tfloat currentPercentDiscount = getDiscountValue();\r \t\t\tif(currentPercentDiscount != 0)\r \t\t\t\tnewCost = (int)((originalCost * (1.0f-currentPercentDiscount))+0.5);\r \t\t\t",
+          "DiscountValue();\r \t\t\tif(currentPercentDiscount != 0)\r \t\t\t\tnewCost = (int)((originalCost * (1.0f-currentPercentDiscount))+0.5);\r \t\t\t\r \t\t\tif(newCost < 0)\r \t\t\t\tnewCost = 0;\r \t\t\telse if(newCost > originalCost)\r \t\t\t{\r \t\t\t\tMSMExtension.getInstance().trace(\"SOME SORT OF",
+          "t))+0.5);\r \t\t\t\r \t\t\tif(newCost < 0)\r \t\t\t\tnewCost = 0;\r \t\t\telse if(newCost > originalCost)\r \t\t\t{\r \t\t\t\tMSMExtension.getInstance().trace(\"SOME SORT OF PROBLEM HERE: TimedEvents: newCost ends up more than original cost for megafy sale defaulting to original price\");\r ",
+          ").trace(\"SOME SORT OF PROBLEM HERE: TimedEvents: newCost ends up more than original cost for megafy sale defaulting to original price\");\r \t\t\t\tnewCost = originalCost;\r \t\t\t}\r \t\t\t\r \t\t\treturn newCost;\r \t\t}\r \t}\r \t\r \tprotected String myStringRep()\r \t{\r \t\ttry\r \t\t{\r \t\t\tr"
+        ],
+        "framework": [],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/PermalightTorchSale.java",
+      "cues": {
+        "community_attribution": [
+          "ost)\r \t\t{\r \t\t\treturn (int)getDiscountValue();\r \t\t}\r \t\telse\r \t\t{\r \t\r \t\t\tint originalCost = Integer.parseInt(MSMExtension.getInstance().getGameSetting(\"USER_DIAMOND_COST_PER_PERMALIT_TORCH\"));\r \t\t\tint newCost = originalCost;\r \t\t\t\r \t\t\tfloat currentPercentDiscount = ",
+          "getGameSetting(\"USER_DIAMOND_COST_PER_PERMALIT_TORCH\"));\r \t\t\tint newCost = originalCost;\r \t\t\t\r \t\t\tfloat currentPercentDiscount = getDiscountValue();\r \t\t\tif(currentPercentDiscount != 0)\r \t\t\t\tnewCost = (int)((originalCost * (1.0f-currentPercentDiscount))+0.5);\r \t\t\t",
+          "DiscountValue();\r \t\t\tif(currentPercentDiscount != 0)\r \t\t\t\tnewCost = (int)((originalCost * (1.0f-currentPercentDiscount))+0.5);\r \t\t\t\r \t\t\tif(newCost < 0)\r \t\t\t\tnewCost = 0;\r \t\t\telse if(newCost > originalCost)\r \t\t\t{\r \t\t\t\tMSMExtension.getInstance().trace(\"SOME SORT OF",
+          "t))+0.5);\r \t\t\t\r \t\t\tif(newCost < 0)\r \t\t\t\tnewCost = 0;\r \t\t\telse if(newCost > originalCost)\r \t\t\t{\r \t\t\t\tMSMExtension.getInstance().trace(\"SOME SORT OF PROBLEM HERE: TimedEvents: newCost ends up more than original cost for torch sale defaulting to original price\");\r \t",
+          ").trace(\"SOME SORT OF PROBLEM HERE: TimedEvents: newCost ends up more than original cost for torch sale defaulting to original price\");\r \t\t\t\tnewCost = originalCost;\r \t\t\t}\r \t\t\t\r \t\t\treturn newCost;\r \t\t}\r \t}\r \t\r \tprotected String myStringRep()\r \t{\r \t\ttry\r \t\t{\r \t\t\tre"
+        ],
+        "framework": [],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/ShortenedFuzing.java",
+      "cues": {
+        "community_attribution": [
+          ").trace(\"SOME SORT OF PROBLEM HERE: TimedEvents: newCost ends up more than original cost for torch sale defaulting to original price\");\r \t\t\t\tnewTime = origFuzeTime;\r \t\t\t}\r \t\t\t\r \t\t\treturn newTime;\r \t\t}\r \t\t\r \t}\r \t\r \tprotected String myStringRep()\r \t{\r \t\ttry\r \t\t{\r \t",
+          "ents: newCost ends up more than original cost for torch sale defaulting to original price\");\r \t\t\t\tnewTime = origFuzeTime;\r \t\t\t}\r \t\t\t\r \t\t\treturn newTime;\r \t\t}\r \t\t\r \t}\r \t\r \tprotected String myStringRep()\r \t{\r \t\ttry\r \t\t{\r \t\t\treturn \"Torch Lighting sale on to Decreas"
+        ],
+        "framework": [],
+        "known_project": []
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEvent.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "data.timed_events;\r \r \r import java.util.Date;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.smartfoxserver.v2.entities.data.ISFSArray;\r import com.smartfoxserver.v2.entities.data.ISFSO"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEventList.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "a.timed_events;\r \r import java.util.ArrayList;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.data.timed_events.TimedEvent.TimedEventType;\r import com.big"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEventListBuilder.java",
+      "cues": {
+        "community_attribution": [
+          "ent end_time from the map\r \t\t\t//removing from the headMap removes from the original map, yo:\r \t\t\teventDatesThatHaveEnded.remove();\r \t\t}\r \t}\r \t\r \tprivate void addNewlyActiveEvents() throws Exception\r \t{\r \t\tLong time24HoursFromNow = MSMExtension.CurrentDBTime()+msI",
+          "currentEvent);\r \t\t\t}\r \t\t\t\r \t\t\t//removing from the headMap removes from the original map, yo:\r \t\t\tnewlyStartedInactiveEvents.remove();\r \t\t}\r \t}\r \t\r \tprivate void addToActiveEvents(ISFSObject s) throws Exception\r \t{\r \t\t\r \t\tLong endDate = s.getLong(TimedEvent.END_DA"
+        ],
+        "framework": [],
+        "known_project": [
+          "java.util.Iterator;\r import java.util.TreeMap;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.data.timed_events.TimedEvent.TimedEventType;\r import com.sma"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/VersionData.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "ava.util.Map.Entry;\r import java.util.TreeMap;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.smartfoxserver.v2.entities.data.SFSObject;\r \r public class VersionData {\r \r \t\r \tprivate static String MIN_CLIENT_VERSION_KEY = \"min_client_vers"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/Helpers.java",
+      "cues": {
+        "community_attribution": [
+          "\t\t\t\tthrow new Exception(\"ERROR: Decompressed user json data does not match original\");\r \t\t\t\t\t\r \t\t\t\t\t//ext.trace(String.format(\">>> Successfully %s user json data\", compressData == 2 ? \"compressed\" : \"test compressed\"));\r \t\t\t\t\t\r \t\t\t\t\t// return compressed data if r",
+          "PRESSION_ERROR\", String.format(\"Decompressed user json data does not match original\"));\r \t\t}\r \t\t\r \t\treturn textData;\r \t}\r \t\r }\r "
+        ],
+        "framework": [],
+        "known_project": [
+          "package com.bigbluebubble.mysingingmonsters;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r \r public class Helpers {\r \r \tpublic static String implode( String[] ary, String delim )\r \t{\r \t\tStringBuilder out = new StringBuilder();\r \t\tfor ( int i = 0; i < a"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/logging/MSMCommandLogging.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "om.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.BBBServer.util.ByteBuffer;\r import com.bigbluebubble.BBBServer.util.MigBase64;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.smartfoxserver.v2.entities.User;\r \r /////////",
+          "ort com.bigbluebubble.BBBServer.util.ByteBuffer;\r import com.bigbluebubble.BBBServer.util.MigBase64;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.smartfoxserver.v2.entities.User;\r \r //////////////////////////////////////////////////////////////",
+          "port com.bigbluebubble.BBBServer.util.MigBase64;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.smartfoxserver.v2.entities.User;\r \r ///////////////////////////////////////////////////////////////////////////\r // This class contains the methods to",
+          "ring(e));;\r \t\t\t}\r \t\t}\r \t}\r \t\r \t/**\r \t* clear and setup request log header (bbbid / login time)\r \t*/\r \tprivate static void initClientRequestLog(User user)\r \t{\t\r \t\ttry\r \t\t{\r \t\t\tByteBuffer buffer = (ByteBuffer) user.getProperty(\"commands\");\r \t\t\tbuffer.clear();\r",
+          "perty(\"commands\");\r \t\t\tbuffer.clear();\r \t\t\t\t\r \t\t\t// first 16 bytes will be bbbId and user login time for this session\r \t\t\tlong bbbId = (Long) user.getSession().getProperty(\"bbb_id\");\r \t\t\tlong start = user.getLoginTime();\r \t\t\t\r \t\t\tdebugLog(String.format(\">>>>"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/MSMExtension.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          ";  import com.amazonaws.auth.BasicAWSCredentials; import com.bigbluebubble.BBBServer.BBBServerExtension; import com.bigbluebubble.BBBServer.exceptions.UserNotFoundException; import com.bigbluebubble.BBBServer.util.BBBToken; import com.bigbluebubble.BBBServer",
+          "com.amazonaws.auth.BasicAWSCredentials; import com.bigbluebubble.BBBServer.BBBServerExtension; import com.bigbluebubble.BBBServer.exceptions.UserNotFoundException; import com.bigbluebubble.BBBServer.util.BBBToken; import com.bigbluebubble.BBBServer.util.Cach",
+          "t com.bigbluebubble.BBBServer.BBBServerExtension; import com.bigbluebubble.BBBServer.exceptions.UserNotFoundException; import com.bigbluebubble.BBBServer.util.BBBToken; import com.bigbluebubble.BBBServer.util.CacheWrapper; import com.bigbluebubble.BBBServer.",
+          "ubble.BBBServer.exceptions.UserNotFoundException; import com.bigbluebubble.BBBServer.util.BBBToken; import com.bigbluebubble.BBBServer.util.CacheWrapper; import com.bigbluebubble.BBBServer.util.DbWrapper; import com.bigbluebubble.BBBServer.util.Misc; import ",
+          ".exceptions.UserNotFoundException; import com.bigbluebubble.BBBServer.util.BBBToken; import com.bigbluebubble.BBBServer.util.CacheWrapper; import com.bigbluebubble.BBBServer.util.DbWrapper; import com.bigbluebubble.BBBServer.util.Misc; import com.bigbluebubb"
+        ]
+      }
+    },
+    {
+      "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/MSMServerEventHandler.java",
+      "cues": {
+        "community_attribution": [],
+        "framework": [],
+        "known_project": [
+          "rt java.util.Iterator;\r import java.util.List;\r \r import com.bigbluebubble.BBBServer.util.BBBToken;\r import com.bigbluebubble.BBBServer.ServerEventHandler;\r import com.bigbluebubble.BBBServer.util.CacheWrapper;\r import com.bigbluebubble.BBBServer.util.Misc;\r",
+          "erator;\r import java.util.List;\r \r import com.bigbluebubble.BBBServer.util.BBBToken;\r import com.bigbluebubble.BBBServer.ServerEventHandler;\r import com.bigbluebubble.BBBServer.util.CacheWrapper;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.big",
+          "mport com.bigbluebubble.BBBServer.util.BBBToken;\r import com.bigbluebubble.BBBServer.ServerEventHandler;\r import com.bigbluebubble.BBBServer.util.CacheWrapper;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.VersionInf",
+          " com.bigbluebubble.BBBServer.ServerEventHandler;\r import com.bigbluebubble.BBBServer.util.CacheWrapper;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.data.MsmS",
+          "t com.bigbluebubble.BBBServer.util.CacheWrapper;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.data.MsmSession;\r import com.bigbluebubble.mysingingmonsters.dat"
+        ]
+      }
+    }
+  ]
+}
