@@ -1,0 +1,54 @@
+name: One-shot SQL dump vs AWS provenance signature check
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+  issues: write
+jobs:
+  inspect:
+    if: >-
+      github.event.issue.number == 3 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.user.login == github.repository_owner &&
+      github.event.comment.user.login == github.repository_owner &&
+      github.event.comment.body == '/msm-dump-aws'
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Identify SQL dump utility and cloud-service usage without executing archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 workspace/msm-investigation/server_dump_aws_evidence.py > "$RUNNER_TEMP/msm-dump-evidence.txt" 2>&1
+          cat "$RUNNER_TEMP/msm-dump-evidence.txt"
+      - name: Save derived metadata only
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- workspace/msm-investigation/server-dump-aws-evidence.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record SQL dump utility signature and AWS service categories"
+            auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+            git -c "http.extraheader=AUTHORIZATION: basic $auth" push origin HEAD:main
+          fi
+      - name: Note summary
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib
+          p=pathlib.Path(os.environ["RUNNER_TEMP"])
+          msg=(p/"msm-dump-evidence.txt").read_text(errors="replace") if (p/"msm-dump-evidence.txt").exists() else "No output"
+          (p/"comment.json").write_text(json.dumps({"body":"### SQL dump and Amazon library checks\n\nNo credential values, SQL records, or live server access.\n\n~~~json\n"+msg[-10000:]+"\n~~~"}))
+          PY
+          gh api -X POST "repos/$GITHUB_REPOSITORY/issues/3/comments" --input "$RUNNER_TEMP/comment.json"
