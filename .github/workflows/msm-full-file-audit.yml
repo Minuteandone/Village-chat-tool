@@ -1,0 +1,57 @@
+name: One-shot all-files MSM backend archive audit
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+  issues: write
+jobs:
+  inspect:
+    if: >-
+      github.event.issue.number == 3 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.user.login == github.repository_owner &&
+      github.event.comment.user.login == github.repository_owner &&
+      github.event.comment.body == '/msm-full-file-audit'
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Scan every file except wordsFile.txt, without executing source
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 workspace/msm-investigation/server_full_file_audit.py > "$RUNNER_TEMP/full-msm-log.txt" 2>&1
+          tail -n 120 "$RUNNER_TEMP/full-msm-log.txt"
+      - name: Commit derived inventories only
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- workspace/msm-investigation/server-full-file-audit.json workspace/msm-investigation/server-full-file-audit.md workspace/msm-investigation/server-full-file-index.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Save comprehensive metadata audit of 187 MSM server archive files"
+            auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+            git -c "http.extraheader=AUTHORIZATION: basic $auth" push origin HEAD:main
+          fi
+      - name: Report high-level result
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib
+          p=pathlib.Path(os.environ["RUNNER_TEMP"])
+          log=(p/"full-msm-log.txt").read_text(errors="replace") if (p/"full-msm-log.txt").exists() else "No audit log."
+          body="### Complete MSM server archive static inventory (excluding bad word list)\n\n"
+          body+="Code/JARs were inspected, never executed. Source code, secret values, SQL records and binaries were not committed.\n\n"
+          body+="~~~text\n"+log[-12000:]+"\n~~~"
+          (p/"comment.json").write_text(json.dumps({"body":body}))
+          PY
+          gh api -X POST "repos/$GITHUB_REPOSITORY/issues/3/comments" --input "$RUNNER_TEMP/comment.json"
