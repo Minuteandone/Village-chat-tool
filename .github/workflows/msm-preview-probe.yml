@@ -1,0 +1,72 @@
+name: MSM preview depot availability probe (anonymous only)
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: read
+  issues: write
+concurrency:
+  group: msm-preview-anon-probe
+  cancel-in-progress: false
+jobs:
+  probe:
+    if: >-
+      github.event.issue.number == 3 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.user.login == github.repository_owner &&
+      github.event.comment.user.login == github.repository_owner &&
+      github.event.comment.body == '/msm-probe preview'
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Install official SteamCMD and runtime libraries
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq lib32gcc-s1 lib32stdc++6 >/dev/null
+          mkdir -p "$RUNNER_TEMP/steamcmd"
+          cd "$RUNNER_TEMP/steamcmd"
+          curl --fail --silent --show-error --location --max-time 25 \
+            -o steamcmd_linux.tar.gz \
+            "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz"
+          tar -xzf steamcmd_linux.tar.gz
+      - name: Single anonymous depot request
+        shell: bash
+        run: |
+          set +e
+          cd "$RUNNER_TEMP/steamcmd"
+          timeout --signal=TERM --kill-after=5s 80s \
+            ./steamcmd.sh +@ShutdownOnFailedCommand 1 \
+            +force_install_dir "$RUNNER_TEMP/msm-preview" \
+            +login anonymous \
+            +download_depot 1722760 1722769 3349315166870153103 \
+            +quit > "$RUNNER_TEMP/steam-probe.log" 2>&1
+          status=$?
+          echo "$status" > "$RUNNER_TEMP/steam-probe-exit.txt"
+          echo "SteamCMD exit code: $status"
+          tail -n 24 "$RUNNER_TEMP/steam-probe.log" || true
+      - name: Summarize result in owner issue (no files or credentials)
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib, re
+          temp = pathlib.Path(os.environ["RUNNER_TEMP"])
+          log = (temp/"steam-probe.log").read_text(errors="replace") if (temp/"steam-probe.log").exists() else "(SteamCMD did not start; check workflow job logs.)"
+          code = (temp/"steam-probe-exit.txt").read_text().strip() if (temp/"steam-probe-exit.txt").exists() else "not started"
+          excerpts = [line.strip() for line in log.splitlines() if re.search(r"login|anonymous|depot|manifest|license|access|denied|error|failed|timed out|download|password|steam", line, re.I)]
+          excerpts = excerpts[-22:]
+          excerpts = [re.sub(r"@(?![\u200b\u200c\u200d])", "@\u200b", line)[:350] for line in excerpts]
+          body = ("### MSM Preview anonymous Steam depot probe\n\n"
+                  "This was one unauthenticated request for publicly accessible content. "
+                  "No Steam account credentials, beta passwords, or private access were used. "
+                  "No game files were uploaded or committed.\n\n"
+                  "App 1722760; depot 1722769; manifest 3349315166870153103.\n"
+                  f"SteamCMD exit: `{code}`. The action has an 80-second command timeout.\n\n"
+                  "Relevant output:\n```text\n" + "\n".join(excerpts)[-5000:] + "\n```")
+          (temp/"summary.json").write_text(json.dumps({"body": body}))
+          PY
+          gh api -X POST "repos/$GITHUB_REPOSITORY/issues/3/comments" --input "$RUNNER_TEMP/summary.json"
