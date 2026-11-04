@@ -527,6 +527,582 @@
         "entity_type": "monster",
         "name": "MONSTER_ACE",
         "description": "MONSTER_ACE_DESC"
+      },
+      {
+        "entity_id": "83",
+        "entity_type": "monster",
+        "name": "MONSTER_ADE",
+        "description": "MONSTER_ADE_DESC"
+      },
+      {
+        "entity_id": "84",
+        "entity_type": "monster",
+        "name": "MONSTER_BCD",
+        "description": "MONSTER_BCD_DESC"
+      },
+      {
+        "entity_id": "85",
+        "entity_type": "monster",
+        "name": "MONSTER_BCE",
+        "description": "MONSTER_BCE_DESC"
+      },
+      {
+        "entity_id": "86",
+        "entity_type": "monster",
+        "name": "MONSTER_BDE",
+        "description": "MONSTER_BDE_DESC"
+      },
+      {
+        "entity_id": "87",
+        "entity_type": "monster",
+        "name": "MONSTER_CDE",
+        "description": "MONSTER_CDE_DESC"
+      },
+      {
+        "entity_id": "88",
+        "entity_type": "monster",
+        "name": "MONSTER_ABCD",
+        "description": "MONSTER_ABCD_DESC"
+      },
+      {
+        "entity_id": "89",
+        "entity_type": "monster",
+        "name": "MONSTER_ABCE",
+        "description": "MONSTER_ABCE_DESC"
+      },
+      {
+        "entity_id": "90",
+        "entity_type": "monster",
+        "name": "MONSTER_ABDE",
+        "description": "MONSTER_ABDE_DESC"
+      },
+      {
+        "entity_id": "91",
+        "entity_type": "monster",
+        "name": "MONSTER_ACDE",
+        "description": "MONSTER_ACDE_DESC"
+      },
+      {
+        "entity_id": "92",
+        "entity_type": "monster",
+        "name": "MONSTER_BCDE",
+        "description": "MONSTER_BCDE_DESC"
+      },
+      {
+        "entity_id": "93",
+        "entity_type": "monster",
+        "name": "MONSTER_ABCDE",
+        "description": "MONSTER_ABCDE_DESC"
+      },
+      {
+        "entity_id": "94",
+        "entity_type": "monster",
+        "name": "MONSTER_ACD",
+        "description": "MONSTER_ACD_DESC"
+      },
+      {
+        "entity_id": "95",
+        "entity_type": "structure",
+        "name": "DECORATION_BIRDBATH_01",
+        "description": "DECORATION_BIRDBATH_01_DESC"
+      },
+      {
+        "entity_id": "96",
+        "entity_type": "structure",
+        "name": "DECORATION_BRIDGE_01",
+        "description": "DECORATION_BRIDGE_01_DESC"
+      },
+      {
+        "entity_id": "97",
+        "entity_type": "structure",
+        "name": "DECORATION_DIGGER",
+        "description": "DECORATION_DIGGER_DESC"
+      },
+      {
+        "entity_id": "98",
+        "entity_type": "structure",
+        "name": "DECORATION_FALLEN_TREE",
+        "description": "DECORATION_FALLEN_TREE_DESC"
+      },
+      {
+        "entity_id": "100",
+        "entity_type": "structure",
+        "name": "DECORATION_FENCE_01",
+        "description": "DECORATION_FENCE_01_DESC"
+      },
+      {
+        "entity_id": "101",
+        "entity_type": "structure",
+        "name": "DECORATION_FLAG_01",
+        "description": "DECORATION_FLAG_01_DESC"
+      },
+      {
+        "entity_id": "102",
+        "entity_type": "structure",
+        "name": "DECORATION_FOSSIL_01",
+        "description": "DECORATION_FOSSIL_01_DESC"
+      },
+      {
+        "entity_id": "103",
+        "entity_type": "structure",
+        "name": "DECORATION_FOSSIL_02",
+        "description": "DECORATION_FOSSIL_02_DESC"
+      },
+      {
+        "entity_id": "104",
+        "entity_type": "structure",
+        "name": "DECORATION_FOUNTAIN",
+        "description": "DECORATION_FOUNTAIN_DESC"
+      },
+      {
+        "entity_id": "105",
+        "entity_type": "structure",
+        "name": "DECORATION_HOUSE_01",
+        "description": "DECORATION_HOUSE_01_DESC"
+      },
+      {
+        "entity_id": "106",
+        "entity_type": "structure",
+        "name": "DECORATION_HOUSE_02",
+        "description": "DECORATION_HOUSE_02_DESC"
+      },
+      {
+        "entity_id": "107",
+        "entity_type": "structure",
+        "name": "DECORATION_LAMPPOST_01",
+        "description": "DECORATION_LAMPPOST_01_DESC"
+      },
+      {
+        "entity_id": "108",
+        "entity_type": "structure",
+        "name": "DECORATION_LAMPPOST_02",
+        "description": "DECORATION_LAMPPOST_02_DESC"
+      },
+      {
+        "entity_id": "109",
+        "entity_type": "structure",
+        "name": "DECORATION_METALSTUFF_01",
+        "description": "DECORATION_METALSTUFF_01_DESC"
+      },
+      {
+        "entity_id": "110",
+        "entity_type": "structure",
+        "name": "DECORATION_METALSTUFF_06",
+        "description": "DECORATION_METALSTUFF_06_DESC"
+      },
+      {
+        "entity_id": "111",
+        "entity_type": "structure",
+        "name": "DECORATION_MUSICAL_PIPES",
+        "description": "DECORATION_MUSICAL_PIPES_DESC"
+      },
+      {
+        "entity_id": "112",
+        "entity_type": "structure",
+        "name": "DECORATION_MUSIC_TREE_01",
+        "description": "DECORATION_MUSIC_TREE_01_DESC"
+      },
+      {
+        "entity_id": "113",
+        "entity_type": "structure",
+        "name": "DECORATION_MUSIC_TREE_02",
+        "description": "DECORATION_MUSIC_TREE_02_DESC"
+      },
+      {
+        "entity_id": "114",
+        "entity_type": "structure",
+        "name": "DECORATION_MUSIC_VINE_01",
+        "description": "DECORATION_MUSIC_VINE_02_DESC"
+      },
+      {
+        "entity_id": "115",
+        "entity_type": "structure",
+        "name": "DECORATION_PUMPKINS",
+        "description": "DECORATION_PUMPKINS_DESC"
+      },
+      {
+        "entity_id": "116",
+        "entity_type": "structure",
+        "name": "DECORATION_RUINS_01",
+        "description": "DECORATION_RUINS_01_DESC"
+      },
+      {
+        "entity_id": "117",
+        "entity_type": "structure",
+        "name": "DECORATION_SIGN_01",
+        "description": "DECORATION_SIGN_01_DESC"
+      },
+      {
+        "entity_id": "118",
+        "entity_type": "structure",
+        "name": "DECORATION_SIGN_02",
+        "description": "DECORATION_SIGN_02_DESC"
+      },
+      {
+        "entity_id": "119",
+        "entity_type": "structure",
+        "name": "DECORATION_SPIKEY_PLANT",
+        "description": "DECORATION_SPIKEY_PLANT_DESC"
+      },
+      {
+        "entity_id": "120",
+        "entity_type": "structure",
+        "name": "DECORATION_STATUE_01",
+        "description": "DECORATION_STATUE_01_DESC"
+      },
+      {
+        "entity_id": "121",
+        "entity_type": "structure",
+        "name": "DECORATION_STATUE_02",
+        "description": "DECORATION_STATUE_02_DESC"
+      },
+      {
+        "entity_id": "122",
+        "entity_type": "structure",
+        "name": "DECORATION_STATUE_03",
+        "description": "DECORATION_STATUE_03_DESC"
+      },
+      {
+        "entity_id": "123",
+        "entity_type": "structure",
+        "name": "DECORATION_STRETCHED_SKIN",
+        "description": "DECORATION_STRETCHED_SKIN_DESC"
+      },
+      {
+        "entity_id": "125",
+        "entity_type": "structure",
+        "name": "DECORATION_TREE_02",
+        "description": "DECORATION_TREE_02_DESC"
+      },
+      {
+        "entity_id": "126",
+        "entity_type": "structure",
+        "name": "DECORATION_TREE_03",
+        "description": "DECORATION_TREE_03_DESC"
+      },
+      {
+        "entity_id": "127",
+        "entity_type": "structure",
+        "name": "DECORATION_TREE_04",
+        "description": "DECORATION_TREE_04_DESC"
+      },
+      {
+        "entity_id": "128",
+        "entity_type": "structure",
+        "name": "DECORATION_TREE_05",
+        "description": "DECORATION_TREE_05_DESC"
+      },
+      {
+        "entity_id": "129",
+        "entity_type": "structure",
+        "name": "DECORATION_TREE_06",
+        "description": "DECORATION_TREE_06_DESC"
+      },
+      {
+        "entity_id": "130",
+        "entity_type": "structure",
+        "name": "DECORATION_TREE_07",
+        "description": "DECORATION_TREE_07_DESC"
+      },
+      {
+        "entity_id": "131",
+        "entity_type": "structure",
+        "name": "DECORATION_TREE_09",
+        "description": "DECORATION_TREE_09_DESC"
+      },
+      {
+        "entity_id": "132",
+        "entity_type": "structure",
+        "name": "DECORATION_TREE_10",
+        "description": "DECORATION_TREE_10_DESC"
+      },
+      {
+        "entity_id": "133",
+        "entity_type": "structure",
+        "name": "DECORATION_TREE_11",
+        "description": "DECORATION_TREE_11_DESC"
+      },
+      {
+        "entity_id": "134",
+        "entity_type": "structure",
+        "name": "DECORATION_TREE_12",
+        "description": "DECORATION_TREE_12_DESC"
+      },
+      {
+        "entity_id": "135",
+        "entity_type": "structure",
+        "name": "DECORATION_WATCHTOWER_01",
+        "description": "DECORATION_WATCHTOWER_01_DESC"
+      },
+      {
+        "entity_id": "136",
+        "entity_type": "structure",
+        "name": "DECORATION_WATCHTOWER_02",
+        "description": "DECORATION_WATCHTOWER_02_DESC"
+      },
+      {
+        "entity_id": "137",
+        "entity_type": "structure",
+        "name": "DECORATION_WATCHTOWER_03",
+        "description": "DECORATION_WATCHTOWER_03_DESC"
+      },
+      {
+        "entity_id": "138",
+        "entity_type": "structure",
+        "name": "OBSTACLE_ROCK_01",
+        "description": "OBSTACLE_ROCK_01_DESC"
+      },
+      {
+        "entity_id": "139",
+        "entity_type": "structure",
+        "name": "OBSTACLE_ROCK_02",
+        "description": "OBSTACLE_ROCK_02_DESC"
+      },
+      {
+        "entity_id": "140",
+        "entity_type": "structure",
+        "name": "OBSTACLE_ROCK_03",
+        "description": "OBSTACLE_ROCK_03_DESC"
+      },
+      {
+        "entity_id": "141",
+        "entity_type": "structure",
+        "name": "OBSTACLE_TREE_01",
+        "description": "OBSTACLE_TREE_01_DESC"
+      },
+      {
+        "entity_id": "142",
+        "entity_type": "structure",
+        "name": "OBSTACLE_TREE_02",
+        "description": "OBSTACLE_TREE_02_DESC"
+      },
+      {
+        "entity_id": "143",
+        "entity_type": "structure",
+        "name": "OBSTACLE_TREE_03",
+        "description": "OBSTACLE_TREE_03_DESC"
+      },
+      {
+        "entity_id": "145",
+        "entity_type": "structure",
+        "name": "MINE_02_01",
+        "description": "MINE_02_01_DESC"
+      },
+      {
+        "entity_id": "146",
+        "entity_type": "structure",
+        "name": "MINE_03_01",
+        "description": "MINE_03_01_DESC"
+      },
+      {
+        "entity_id": "147",
+        "entity_type": "structure",
+        "name": "MINE_04_01",
+        "description": "MINE_04_01_DESC"
+      },
+      {
+        "entity_id": "148",
+        "entity_type": "structure",
+        "name": "MINE_05_01",
+        "description": "MINE_05_01_DESC"
+      },
+      {
+        "entity_id": "149",
+        "entity_type": "structure",
+        "name": "BREEDING_STRUCTURE_02_01",
+        "description": "BREEDING_STRUCTURE_02_01_DESC"
+      },
+      {
+        "entity_id": "150",
+        "entity_type": "structure",
+        "name": "BREEDING_STRUCTURE_03_01",
+        "description": "BREEDING_STRUCTURE_03_01_DESC"
+      },
+      {
+        "entity_id": "151",
+        "entity_type": "structure",
+        "name": "BREEDING_STRUCTURE_04_01",
+        "description": "BREEDING_STRUCTURE_04_01_DESC"
+      },
+      {
+        "entity_id": "152",
+        "entity_type": "structure",
+        "name": "BREEDING_STRUCTURE_05_01",
+        "description": "BREEDING_STRUCTURE_05_01_DESC"
+      },
+      {
+        "entity_id": "153",
+        "entity_type": "structure",
+        "name": "NURSERY_02_01",
+        "description": "NURSERY_DESC"
+      },
+      {
+        "entity_id": "154",
+        "entity_type": "structure",
+        "name": "NURSERY_03_01",
+        "description": "NURSERY_DESC"
+      },
+      {
+        "entity_id": "155",
+        "entity_type": "structure",
+        "name": "NURSERY_04_01",
+        "description": "NURSERY_DESC"
+      },
+      {
+        "entity_id": "156",
+        "entity_type": "structure",
+        "name": "NURSERY_05_01",
+        "description": "NURSERY_DESC"
+      },
+      {
+        "entity_id": "157",
+        "entity_type": "structure",
+        "name": "BAKERY_02_01",
+        "description": "BAKERY_02_01_DESC"
+      },
+      {
+        "entity_id": "158",
+        "entity_type": "structure",
+        "name": "BAKERY_03_01",
+        "description": "BAKERY_03_01_DESC"
+      },
+      {
+        "entity_id": "159",
+        "entity_type": "structure",
+        "name": "BAKERY_04_01",
+        "description": "BAKERY_04_01_DESC"
+      },
+      {
+        "entity_id": "160",
+        "entity_type": "structure",
+        "name": "BAKERY_05_01",
+        "description": "BAKERY_05_01_DESC"
+      },
+      {
+        "entity_id": "161",
+        "entity_type": "structure",
+        "name": "BAKERY_02_02",
+        "description": "BAKERY_02_02_DESC"
+      },
+      {
+        "entity_id": "162",
+        "entity_type": "structure",
+        "name": "BAKERY_03_02",
+        "description": "BAKERY_03_02_DESC"
+      },
+      {
+        "entity_id": "163",
+        "entity_type": "structure",
+        "name": "BAKERY_04_02",
+        "description": "BAKERY_04_02_DESC"
+      },
+      {
+        "entity_id": "164",
+        "entity_type": "structure",
+        "name": "BAKERY_05_02",
+        "description": "BAKERY_05_02_DESC"
+      },
+      {
+        "entity_id": "165",
+        "entity_type": "structure",
+        "name": "BAKERY_02_03",
+        "description": "BAKERY_02_03_DESC"
+      },
+      {
+        "entity_id": "166",
+        "entity_type": "structure",
+        "name": "BAKERY_03_03",
+        "description": "BAKERY_03_03_DESC"
+      },
+      {
+        "entity_id": "167",
+        "entity_type": "structure",
+        "name": "BAKERY_04_03",
+        "description": "BAKERY_04_03_DESC"
+      },
+      {
+        "entity_id": "168",
+        "entity_type": "structure",
+        "name": "BAKERY_05_03",
+        "description": "BAKERY_05_03_DESC"
+      },
+      {
+        "entity_id": "169",
+        "entity_type": "structure",
+        "name": "OBSTACLE_ROCK_01_SNOW",
+        "description": "OBSTACLE_ROCK_01_DESC_SNOW"
+      },
+      {
+        "entity_id": "170",
+        "entity_type": "structure",
+        "name": "OBSTACLE_ROCK_02_SNOW",
+        "description": "OBSTACLE_ROCK_02_DESC_SNOW"
+      },
+      {
+        "entity_id": "171",
+        "entity_type": "structure",
+        "name": "OBSTACLE_ROCK_03_SNOW",
+        "description": "OBSTACLE_ROCK_03_DESC_SNOW"
+      },
+      {
+        "entity_id": "172",
+        "entity_type": "structure",
+        "name": "OBSTACLE_TREE_01_SNOW",
+        "description": "OBSTACLE_TREE_01_DESC_SNOW"
+      },
+      {
+        "entity_id": "173",
+        "entity_type": "structure",
+        "name": "OBSTACLE_TREE_02_SNOW",
+        "description": "OBSTACLE_TREE_02_DESC_SNOW"
+      },
+      {
+        "entity_id": "174",
+        "entity_type": "structure",
+        "name": "OBSTACLE_TREE_03_SNOW",
+        "description": "OBSTACLE_TREE_03_DESC_SNOW"
+      },
+      {
+        "entity_id": "175",
+        "entity_type": "structure",
+        "name": "OBSTACLE_ROCK_01_AIR",
+        "description": "OBSTACLE_ROCK_01_DESC_AIR"
+      },
+      {
+        "entity_id": "176",
+        "entity_type": "structure",
+        "name": "OBSTACLE_ROCK_02_AIR",
+        "description": "OBSTACLE_ROCK_02_DESC_AIR"
+      },
+      {
+        "entity_id": "177",
+        "entity_type": "structure",
+        "name": "OBSTACLE_ROCK_03_AIR",
+        "description": "OBSTACLE_ROCK_03_DESC_AIR"
+      },
+      {
+        "entity_id": "178",
+        "entity_type": "structure",
+        "name": "OBSTACLE_TREE_01_AIR",
+        "description": "OBSTACLE_TREE_01_DESC_AIR"
+      },
+      {
+        "entity_id": "179",
+        "entity_type": "structure",
+        "name": "OBSTACLE_TREE_02_AIR",
+        "description": "OBSTACLE_TREE_02_DESC_AIR"
+      },
+      {
+        "entity_id": "180",
+        "entity_type": "structure",
+        "name": "OBSTACLE_TREE_03_AIR",
+        "description": "OBSTACLE_TREE_03_DESC_AIR"
+      },
+      {
+        "entity_id": "181",
+        "entity_type": "structure",
+        "name": "TIME_MACHINE",
+        "description": "TIME_MACHINE_DESC"
       }
     ],
     "types": [
@@ -1324,6 +1900,657 @@
         "type": "AND",
         "initial": "0",
         "visible": "1"
+      },
+      {
+        "id": "28",
+        "name": "BREED_MONSTER_BD",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "29",
+        "name": "BREED_MONSTER_BCE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "30",
+        "name": "BREED_MONSTER_BDE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "31",
+        "name": "BREED_MONSTER_BCD",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "32",
+        "name": "BREED_MONSTER_BCDE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "33",
+        "name": "PLACE_DECORATION_2",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "34",
+        "name": "UPGRADE_3_BAKERIES",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "35",
+        "name": "FEED_MONSTER_10",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "36",
+        "name": "FEED_MONSTER_15",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "37",
+        "name": "_100_HAPPINESS",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "38",
+        "name": "_100_HAPPINESS_3",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "39",
+        "name": "PLACE_STATUE_01",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "40",
+        "name": "PLACE_MUSIC_TREE_01",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "41",
+        "name": "SAVE_500K_COINS",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "42",
+        "name": "PLACE_STATUE_03",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "43",
+        "name": "UPGRADE_5_BAKERIES",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "44",
+        "name": "PLACE_HOUSE_02",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "45",
+        "name": "PLACE_METAL_STUFF_01",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "46",
+        "name": "BUILD_MINE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "47",
+        "name": "FULLY_UPGRADE_CASTLE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "48",
+        "name": "PLACE_MONSTER_A",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "49",
+        "name": "BREED_MONSTER_AB",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "50",
+        "name": "BREED_MONSTER_AE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "51",
+        "name": "BREED_MONSTER_AD",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "52",
+        "name": "BREED_MONSTER_ABE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "53",
+        "name": "BREED_MONSTER_ABD",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "54",
+        "name": "BREED_MONSTER_ADE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "55",
+        "name": "BREED_MONSTER_ABDE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "56",
+        "name": "GET_ISLAND_2",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "57",
+        "name": "GET_ISLAND_3",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "58",
+        "name": "BREED_MONSTER_AC",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "59",
+        "name": "BREED_MONSTER_ABC",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "60",
+        "name": "BREED_MONSTER_ACD",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "61",
+        "name": "BREED_MONSTER_ABCD",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "62",
+        "name": "BREED_MONSTER_ACDE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "64",
+        "name": "BREED_MONSTER_ABCE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "65",
+        "name": "GET_ISLAND_4",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "67",
+        "name": "REACH_LEVEL_2",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "68",
+        "name": "REACH_LEVEL_3",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "69",
+        "name": "REACH_LEVEL_4",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "70",
+        "name": "REACH_LEVEL_5",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "71",
+        "name": "REACH_LEVEL_6",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "72",
+        "name": "REACH_LEVEL_7",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "73",
+        "name": "REACH_LEVEL_8",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "74",
+        "name": "REACH_LEVEL_9",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "75",
+        "name": "REACH_LEVEL_10",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "76",
+        "name": "REACH_LEVEL_11",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "77",
+        "name": "REACH_LEVEL_12",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "78",
+        "name": "REACH_LEVEL_13",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "79",
+        "name": "REACH_LEVEL_14",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "80",
+        "name": "REACH_LEVEL_15",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "81",
+        "name": "REACH_LEVEL_16",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "82",
+        "name": "REACH_LEVEL_17",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "83",
+        "name": "REACH_LEVEL_18",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "84",
+        "name": "REACH_LEVEL_19",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "85",
+        "name": "REACH_LEVEL_20",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "86",
+        "name": "BUILD_BAKERY_2",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "87",
+        "name": "BREED_3_MONSTER_BDE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "88",
+        "name": "BREED_2_MONSTER_DE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "89",
+        "name": "BREED_2_MONSTER_BE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "90",
+        "name": "BREED_3_MONSTER_ADE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "91",
+        "name": "COLLECT_PLACE_MONSTER_C",
+        "type": "AND",
+        "initial": "0",
+        "visible": "0"
+      },
+      {
+        "id": "92",
+        "name": "COLLECT_PLACE_MONSTER_E",
+        "type": "AND",
+        "initial": "0",
+        "visible": "0"
+      },
+      {
+        "id": "93",
+        "name": "COLLECT_RENAME_MONSTER_C",
+        "type": "AND",
+        "initial": "0",
+        "visible": "0"
+      },
+      {
+        "id": "94",
+        "name": "GET_ISLAND_5",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "95",
+        "name": "ACH_ISLAND_2",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "96",
+        "name": "ACH_ISLAND_3",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "97",
+        "name": "ACH_100_HAPPINESS",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "98",
+        "name": "ACH_FIRST_MONSTER",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "99",
+        "name": "ACH_ISLAND_4",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "100",
+        "name": "ACH_ISLAND_5",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "101",
+        "name": "ACH_BREED_MONSTERS",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "102",
+        "name": "ACH_4_GENE_MONSTER",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "103",
+        "name": "ACH_REACH_LEVEL_10",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "104",
+        "name": "ACH_MONSTER_LEVEL_15",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "105",
+        "name": "ACH_3_GENE_MONSTER",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "106",
+        "name": "ACH_ALL_MONSTERS_ISLAND_1",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "107",
+        "name": "ACH_ALL_MONSTERS_ISLAND_2",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "108",
+        "name": "ACH_ALL_MONSTERS_ISLAND_3",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "109",
+        "name": "ACH_ALL_MONSTERS_ISLAND_4",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "110",
+        "name": "ACH_ALL_MONSTERS_ISLAND_5",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "111",
+        "name": "ACH_NO_OBSTACLES",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "112",
+        "name": "REMOVE_2_OBSTACLES",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "113",
+        "name": "PLACE_SIGN_02",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "114",
+        "name": "PLACE_FENCE_01",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "115",
+        "name": "FIRST_HAPPINESS",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "116",
+        "name": "MAGIC_NEIGHBORS",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "117",
+        "name": "NEIGHBORS_01",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "118",
+        "name": "FLIP_MONSTER",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "119",
+        "name": "MUTE_MONSTER",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "120",
+        "name": "NEIGHBORS_02",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "121",
+        "name": "NEIGHBORS_03",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "122",
+        "name": "NEIGHBORS_04",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
       }
     ],
     "suspicious_names": []
@@ -1332,22 +2559,34 @@
     "count": 6,
     "records": [
       {
-        "name": "TUTORIAL"
+        "type_id": "1",
+        "name": "TUTORIAL",
+        "depricated": "0"
       },
       {
-        "name": "COLLECTION"
+        "type_id": "2",
+        "name": "COLLECTION",
+        "depricated": "0"
       },
       {
-        "name": "BUILD"
+        "type_id": "3",
+        "name": "BUILD",
+        "depricated": "0"
       },
       {
-        "name": "TRAVEL"
+        "type_id": "4",
+        "name": "TRAVEL",
+        "depricated": "0"
       },
       {
-        "name": "BATTLE"
+        "type_id": "5",
+        "name": "BATTLE",
+        "depricated": "0"
       },
       {
-        "name": "DARE"
+        "type_id": "6",
+        "name": "DARE",
+        "depricated": "0"
       }
     ]
   },
@@ -1626,6 +2865,6 @@
       }
     ]
   },
-  "analysed_at_utc": "2026-11-04T01:06:47.462025+00:00",
+  "analysed_at_utc": "2026-11-04T01:08:29.050156+00:00",
   "note": "Only game data fields from an archived SQL seed; player data not read or published."
 }

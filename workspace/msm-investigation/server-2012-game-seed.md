@@ -96,6 +96,11 @@ Only non-personal game-data IDs and public-facing names; no player records or fu
 - entity_id: 80, entity_type: monster, name: MONSTER_ABD, description: MONSTER_ABD_DESC
 - entity_id: 81, entity_type: monster, name: MONSTER_ABE, description: MONSTER_ABE_DESC
 - entity_id: 82, entity_type: monster, name: MONSTER_ACE, description: MONSTER_ACE_DESC
+- entity_id: 83, entity_type: monster, name: MONSTER_ADE, description: MONSTER_ADE_DESC
+- entity_id: 84, entity_type: monster, name: MONSTER_BCD, description: MONSTER_BCD_DESC
+- entity_id: 85, entity_type: monster, name: MONSTER_BCE, description: MONSTER_BCE_DESC
+- entity_id: 86, entity_type: monster, name: MONSTER_BDE, description: MONSTER_BDE_DESC
+- entity_id: 87, entity_type: monster, name: MONSTER_CDE, description: MONSTER_CDE_DESC
 
 ## structures — 91 records
 
@@ -193,15 +198,45 @@ Only non-personal game-data IDs and public-facing names; no player records or fu
 - id: 25, name: PLACE_MONSTER_B, type: AND, initial: 0, visible: 1
 - id: 26, name: BREED_MONSTER_BE, type: AND, initial: 0, visible: 1
 - id: 27, name: BREED_MONSTER_BC, type: AND, initial: 0, visible: 1
+- id: 28, name: BREED_MONSTER_BD, type: AND, initial: 0, visible: 1
+- id: 29, name: BREED_MONSTER_BCE, type: AND, initial: 0, visible: 1
+- id: 30, name: BREED_MONSTER_BDE, type: AND, initial: 0, visible: 1
+- id: 31, name: BREED_MONSTER_BCD, type: AND, initial: 0, visible: 1
+- id: 32, name: BREED_MONSTER_BCDE, type: AND, initial: 0, visible: 1
+- id: 33, name: PLACE_DECORATION_2, type: AND, initial: 0, visible: 1
+- id: 34, name: UPGRADE_3_BAKERIES, type: AND, initial: 0, visible: 1
+- id: 35, name: FEED_MONSTER_10, type: AND, initial: 0, visible: 1
+- id: 36, name: FEED_MONSTER_15, type: AND, initial: 0, visible: 1
+- id: 37, name: _100_HAPPINESS, type: AND, initial: 0, visible: 1
+- id: 38, name: _100_HAPPINESS_3, type: AND, initial: 0, visible: 1
+- id: 39, name: PLACE_STATUE_01, type: AND, initial: 0, visible: 1
+- id: 40, name: PLACE_MUSIC_TREE_01, type: AND, initial: 0, visible: 1
+- id: 41, name: SAVE_500K_COINS, type: AND, initial: 0, visible: 1
+- id: 42, name: PLACE_STATUE_03, type: AND, initial: 0, visible: 1
+- id: 43, name: UPGRADE_5_BAKERIES, type: AND, initial: 0, visible: 1
+- id: 44, name: PLACE_HOUSE_02, type: AND, initial: 0, visible: 1
+- id: 45, name: PLACE_METAL_STUFF_01, type: AND, initial: 0, visible: 1
+- id: 46, name: BUILD_MINE, type: AND, initial: 0, visible: 1
+- id: 47, name: FULLY_UPGRADE_CASTLE, type: AND, initial: 0, visible: 1
+- id: 48, name: PLACE_MONSTER_A, type: AND, initial: 0, visible: 1
+- id: 49, name: BREED_MONSTER_AB, type: AND, initial: 0, visible: 1
+- id: 50, name: BREED_MONSTER_AE, type: AND, initial: 0, visible: 1
+- id: 51, name: BREED_MONSTER_AD, type: AND, initial: 0, visible: 1
+- id: 52, name: BREED_MONSTER_ABE, type: AND, initial: 0, visible: 1
+- id: 53, name: BREED_MONSTER_ABD, type: AND, initial: 0, visible: 1
+- id: 54, name: BREED_MONSTER_ADE, type: AND, initial: 0, visible: 1
+- id: 55, name: BREED_MONSTER_ABDE, type: AND, initial: 0, visible: 1
+- id: 56, name: GET_ISLAND_2, type: AND, initial: 1, visible: 0
+- id: 57, name: GET_ISLAND_3, type: AND, initial: 1, visible: 0
 
 ## quest_types — 6 records
 
-- name: TUTORIAL
-- name: COLLECTION
-- name: BUILD
-- name: TRAVEL
-- name: BATTLE
-- name: DARE
+- type_id: 1, name: TUTORIAL, depricated: 0
+- type_id: 2, name: COLLECTION, depricated: 0
+- type_id: 3, name: BUILD, depricated: 0
+- type_id: 4, name: TRAVEL, depricated: 0
+- type_id: 5, name: BATTLE, depricated: 0
+- type_id: 6, name: DARE, depricated: 0
 
 ## island_monsters — 45 records
 
