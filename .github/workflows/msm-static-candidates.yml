@@ -1,0 +1,51 @@
+name: One-shot public Monster Choir and Vita archive inspection
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+  issues: write
+jobs:
+  inspect:
+    if: >-
+      github.event.issue.number == 3 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.user.login == github.repository_owner &&
+      github.event.comment.user.login == github.repository_owner &&
+      github.event.comment.body == '/msm-static-candidates'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Download public archives to temporary storage and verify signatures
+        run: |
+          set -euo pipefail
+          python3 workspace/msm-investigation/msm_candidate_archive_static_inspect.py > "$RUNNER_TEMP/msm-static-candidates.txt" 2>&1
+          tail -n 24 "$RUNNER_TEMP/msm-static-candidates.txt"
+      - name: Save only derived inventories
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add workspace/msm-investigation/msm-candidate-static-verified-contents.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Verify Korean and Chinese Monster Choir APKs and original PS Vita package metadata"
+            auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+            git -c "http.extraheader=AUTHORIZATION: basic $auth" push origin HEAD:main
+          fi
+      - name: Post summary to owner
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])
+          t=(p/'msm-static-candidates.txt').read_text(errors='replace') if (p/'msm-static-candidates.txt').exists() else "No output"
+          (p/'reply.json').write_text(json.dumps({'body':'### SHA-1 verified Monster Choir/Vita ZIP inspection\n\nOnly derived filenames and counters are committed; no original packages.\n\n'+t[-10500:]}))
+          PY
+          gh api -X POST "repos/$GITHUB_REPOSITORY/issues/3/comments" --input "$RUNNER_TEMP/reply.json"
