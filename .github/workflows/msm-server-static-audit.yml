@@ -1,0 +1,54 @@
+name: One-shot MSM archived server Java and SQL static audit
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+  issues: write
+jobs:
+  inspect:
+    if: >-
+      github.event.issue.number == 3 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.user.login == github.repository_owner &&
+      github.event.comment.user.login == github.repository_owner &&
+      github.event.comment.body == '/msm-server-static-audit'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Read historical ZIP as data only
+        shell: bash
+        run: |
+          python3 workspace/msm-investigation/server_static_audit.py > "$RUNNER_TEMP/audit-summary.txt" 2>&1
+          tail -n 130 "$RUNNER_TEMP/audit-summary.txt"
+      - name: Persist source-free analysis files
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add workspace/msm-investigation/server-static-audit.json workspace/msm-investigation/server-static-audit.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Record static code and SQL metadata for historical MSM server archive"
+            auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+            git -c "http.extraheader=AUTHORIZATION: basic $auth" push origin HEAD:main
+          fi
+      - name: Post audit summary
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib
+          p=pathlib.Path(os.environ["RUNNER_TEMP"])
+          report=(p/"audit-summary.txt").read_text(errors="replace") if (p/"audit-summary.txt").exists() else "No log"
+          body="### Historic MSM server Java/SQL static analysis\n\nOnly code identifiers and schema names, no server source, credentials or database rows.\n\n~~~text\n"+report[-11500:]+"\n~~~"
+          (p/"comment.json").write_text(json.dumps({"body":body}))
+          PY
+          gh api -X POST "repos/$GITHUB_REPOSITORY/issues/3/comments" --input "$RUNNER_TEMP/comment.json"
