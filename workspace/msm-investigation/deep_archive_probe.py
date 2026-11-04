@@ -54,8 +54,13 @@ def try_symbols(results):
         matches=[(txt,href) for txt,href in parse.links if "My Singing Monsters" in txt and ".7z" in txt and "2021-" in txt]
         section["index_matches"]=[{"text":txt,"href":href} for txt,href in matches]
         if not matches:
-            section["status"]="No 2021 link anchors found; only page listing available"
-            return
+            # The index sometimes renders filenames without link annotations; test only the two documented names.
+            documented=[
+                "[WIN] My Singing Monsters [Manifest 2046132612292651817] [2021-05-18] .7z",
+                "[WIN] My Singing Monsters [Manifest 4651787433336000098] [2021-04-21].7z",
+            ]
+            matches=[(name,"/Windows/"+urllib.parse.quote(name)) for name in documented]
+            section["status"]="Index has no exposed link anchors; tried two exact listed filenames"
         for txt,href in matches[:2]:
             u=urllib.parse.urljoin(final,href)
             host=urllib.parse.urlsplit(u).hostname
