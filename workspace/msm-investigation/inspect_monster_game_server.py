@@ -15,7 +15,7 @@ class ArchiveRedirect(urllib.request.HTTPRedirectHandler):
             raise ValueError("Redirect outside expected Internet Archive hosts")
         return super().redirect_request(req,fp,code,msg,headers,newurl)
 def red(text):
-    text=re.sub(r'(?i)(token|password|passwd|api[_-]?key|secret|authorization)\s*[=:]\s*(["\']?)[^\n"',]+',r'\1=[redacted]',text)
+    text=re.sub(r"(?im)\b(token|password|passwd|api[_-]?key|secret|authorization)\s*[:=]\s*[^\n]+",r"\1=[redacted]",text)
     text=re.sub(r"[\w.+-]+@[\w.-]+\.[a-z]{2,}","[email redacted]",text, flags=re.I)
     return text
 def inspect():
