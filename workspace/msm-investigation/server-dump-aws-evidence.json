@@ -1,0 +1,111 @@
+{
+  "archive_url": "https://archive.org/download/monster-game-server/monster-game-server.zip",
+  "verified_sha1": "df086c9ca4581733f73f2e8aaea1408382232e4d",
+  "sql": {
+    "my_singing_monsters_clean_20120810.sql": {
+      "mysql_dump_header": true,
+      "mysqldump_style_table_sections": true,
+      "mysqldump_style_structure_sections": true,
+      "phpmyadmin_export_header": false,
+      "adminer_export_header": false,
+      "mysql_dump_completed": true,
+      "amazon_word_occurrences": 0,
+      "aws_word_occurrences": 0,
+      "amazon_web_services_phrase_occurrences": 0,
+      "structure_section_count": 30,
+      "data_section_count": 30,
+      "has_source_generator_version_line": true,
+      "has_server_version_line": true,
+      "has_generation_timestamp_line": true,
+      "server_version_numeric": "5.5.20",
+      "completed_on_header_date": "2012-08-10 22:58:59"
+    },
+    "tribal_date_updated.sql": {
+      "mysql_dump_header": false,
+      "mysqldump_style_table_sections": false,
+      "mysqldump_style_structure_sections": false,
+      "phpmyadmin_export_header": false,
+      "adminer_export_header": false,
+      "mysql_dump_completed": false,
+      "amazon_word_occurrences": 0,
+      "aws_word_occurrences": 0,
+      "amazon_web_services_phrase_occurrences": 0,
+      "structure_section_count": 0,
+      "data_section_count": 0,
+      "has_source_generator_version_line": false,
+      "has_server_version_line": false,
+      "has_generation_timestamp_line": false
+    }
+  },
+  "cloud_java": {
+    "classes_by_service": {
+      "SQS messaging": 4,
+      "SNS notifications": 4,
+      "Elasticache/memcache": 1,
+      "S3 storage": 1,
+      "CloudWatch metrics": 1,
+      "EC2 instance metadata": 2
+    },
+    "files": [
+      {
+        "file": "BBBServerExtension.java",
+        "services": [
+          "SQS messaging",
+          "SNS notifications"
+        ]
+      },
+      {
+        "file": "CacheWrapper.java",
+        "services": [
+          "Elasticache/memcache"
+        ]
+      },
+      {
+        "file": "SNSWorker.java",
+        "services": [
+          "SNS notifications",
+          "S3 storage"
+        ]
+      },
+      {
+        "file": "SnsWrapper.java",
+        "services": [
+          "SNS notifications"
+        ]
+      },
+      {
+        "file": "SqsWrapper.java",
+        "services": [
+          "SQS messaging"
+        ]
+      },
+      {
+        "file": "MetricsRequest.java",
+        "services": [
+          "SQS messaging"
+        ]
+      },
+      {
+        "file": "CloudWatchReporter.java",
+        "services": [
+          "CloudWatch metrics",
+          "EC2 instance metadata"
+        ]
+      },
+      {
+        "file": "EC2Metadata.java",
+        "services": [
+          "EC2 instance metadata"
+        ]
+      },
+      {
+        "file": "MSMExtension.java",
+        "services": [
+          "SQS messaging",
+          "SNS notifications"
+        ]
+      }
+    ]
+  },
+  "notes": "Only program/version and category flags retained; no hosts, secrets, game database rows or original code."
+}
