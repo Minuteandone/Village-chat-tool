@@ -1,0 +1,1631 @@
+{
+  "islands": {
+    "count": 5,
+    "records": [
+      {
+        "island_id": "1",
+        "name": "ISLAND_1",
+        "genes": "BCDE",
+        "enabled": "1"
+      },
+      {
+        "island_id": "2",
+        "name": "ISLAND_2",
+        "genes": "ABDE",
+        "enabled": "1"
+      },
+      {
+        "island_id": "3",
+        "name": "ISLAND_3",
+        "genes": "ACDE",
+        "enabled": "0"
+      },
+      {
+        "island_id": "4",
+        "name": "ISLAND_4",
+        "genes": "ABCD",
+        "enabled": "0"
+      },
+      {
+        "island_id": "5",
+        "name": "ISLAND_5",
+        "genes": "ABCE",
+        "enabled": "0"
+      }
+    ]
+  },
+  "monsters": {
+    "count": 31,
+    "records": [
+      {
+        "monster_id": "1",
+        "entity": "64",
+        "genes": "A",
+        "beds": "1"
+      },
+      {
+        "monster_id": "2",
+        "entity": "65",
+        "genes": "B",
+        "beds": "1"
+      },
+      {
+        "monster_id": "3",
+        "entity": "66",
+        "genes": "C",
+        "beds": "1"
+      },
+      {
+        "monster_id": "4",
+        "entity": "67",
+        "genes": "D",
+        "beds": "1"
+      },
+      {
+        "monster_id": "5",
+        "entity": "68",
+        "genes": "E",
+        "beds": "1"
+      },
+      {
+        "monster_id": "6",
+        "entity": "69",
+        "genes": "AB",
+        "beds": "2"
+      },
+      {
+        "monster_id": "7",
+        "entity": "70",
+        "genes": "AC",
+        "beds": "2"
+      },
+      {
+        "monster_id": "8",
+        "entity": "71",
+        "genes": "AD",
+        "beds": "2"
+      },
+      {
+        "monster_id": "9",
+        "entity": "72",
+        "genes": "AE",
+        "beds": "2"
+      },
+      {
+        "monster_id": "10",
+        "entity": "73",
+        "genes": "BC",
+        "beds": "2"
+      },
+      {
+        "monster_id": "11",
+        "entity": "74",
+        "genes": "BD",
+        "beds": "2"
+      },
+      {
+        "monster_id": "12",
+        "entity": "75",
+        "genes": "BE",
+        "beds": "2"
+      },
+      {
+        "monster_id": "13",
+        "entity": "76",
+        "genes": "CD",
+        "beds": "2"
+      },
+      {
+        "monster_id": "14",
+        "entity": "77",
+        "genes": "CE",
+        "beds": "2"
+      },
+      {
+        "monster_id": "15",
+        "entity": "78",
+        "genes": "DE",
+        "beds": "2"
+      },
+      {
+        "monster_id": "16",
+        "entity": "79",
+        "genes": "ABC",
+        "beds": "3"
+      },
+      {
+        "monster_id": "17",
+        "entity": "80",
+        "genes": "ABD",
+        "beds": "3"
+      },
+      {
+        "monster_id": "18",
+        "entity": "81",
+        "genes": "ABE",
+        "beds": "3"
+      },
+      {
+        "monster_id": "19",
+        "entity": "82",
+        "genes": "ACE",
+        "beds": "3"
+      },
+      {
+        "monster_id": "20",
+        "entity": "83",
+        "genes": "ADE",
+        "beds": "3"
+      },
+      {
+        "monster_id": "21",
+        "entity": "84",
+        "genes": "BCD",
+        "beds": "3"
+      },
+      {
+        "monster_id": "22",
+        "entity": "85",
+        "genes": "BCE",
+        "beds": "3"
+      },
+      {
+        "monster_id": "23",
+        "entity": "86",
+        "genes": "BDE",
+        "beds": "3"
+      },
+      {
+        "monster_id": "24",
+        "entity": "87",
+        "genes": "CDE",
+        "beds": "3"
+      },
+      {
+        "monster_id": "25",
+        "entity": "88",
+        "genes": "ABCD",
+        "beds": "4"
+      },
+      {
+        "monster_id": "26",
+        "entity": "89",
+        "genes": "ABCE",
+        "beds": "4"
+      },
+      {
+        "monster_id": "27",
+        "entity": "90",
+        "genes": "ABDE",
+        "beds": "4"
+      },
+      {
+        "monster_id": "28",
+        "entity": "91",
+        "genes": "ACDE",
+        "beds": "4"
+      },
+      {
+        "monster_id": "29",
+        "entity": "92",
+        "genes": "BCDE",
+        "beds": "4"
+      },
+      {
+        "monster_id": "30",
+        "entity": "93",
+        "genes": "ABCDE",
+        "beds": "5"
+      },
+      {
+        "monster_id": "31",
+        "entity": "94",
+        "genes": "ACD",
+        "beds": "3"
+      }
+    ]
+  },
+  "entities": {
+    "count": 146,
+    "first": [
+      {
+        "entity_id": "1",
+        "entity_type": "structure",
+        "name": "NURSERY_01_01",
+        "description": "NURSERY_DESC"
+      },
+      {
+        "entity_id": "2",
+        "entity_type": "structure",
+        "name": "BREEDING_STRUCTURE_01_01",
+        "description": "BREEDING_STRUCTURE_01_01_DESC"
+      },
+      {
+        "entity_id": "6",
+        "entity_type": "structure",
+        "name": "MINE_01_01",
+        "description": "MINE_DESC"
+      },
+      {
+        "entity_id": "7",
+        "entity_type": "structure",
+        "name": "CASTLE_01_01",
+        "description": "CASTLE_01_01_DESC"
+      },
+      {
+        "entity_id": "8",
+        "entity_type": "structure",
+        "name": "CASTLE_01_02",
+        "description": "CASTLE_01_02_DESC"
+      },
+      {
+        "entity_id": "9",
+        "entity_type": "structure",
+        "name": "CASTLE_01_03",
+        "description": "CASTLE_01_03_DESC"
+      },
+      {
+        "entity_id": "10",
+        "entity_type": "structure",
+        "name": "CASTLE_01_04",
+        "description": "CASTLE_01_04_DESC"
+      },
+      {
+        "entity_id": "11",
+        "entity_type": "structure",
+        "name": "CASTLE_01_05",
+        "description": "CASTLE_01_05_DESC"
+      },
+      {
+        "entity_id": "12",
+        "entity_type": "structure",
+        "name": "CASTLE_02_01",
+        "description": "CASTLE_02_01_DESC"
+      },
+      {
+        "entity_id": "13",
+        "entity_type": "structure",
+        "name": "CASTLE_02_02",
+        "description": "CASTLE_02_02_DESC"
+      },
+      {
+        "entity_id": "14",
+        "entity_type": "structure",
+        "name": "CASTLE_02_03",
+        "description": "CASTLE_02_03_DESC"
+      },
+      {
+        "entity_id": "15",
+        "entity_type": "structure",
+        "name": "CASTLE_02_04",
+        "description": "CASTLE_02_04_DESC"
+      },
+      {
+        "entity_id": "16",
+        "entity_type": "structure",
+        "name": "CASTLE_02_05",
+        "description": "CASTLE_02_05_DESC"
+      },
+      {
+        "entity_id": "17",
+        "entity_type": "structure",
+        "name": "CASTLE_03_01",
+        "description": "CASTLE_03_01_DESC"
+      },
+      {
+        "entity_id": "18",
+        "entity_type": "structure",
+        "name": "CASTLE_03_02",
+        "description": "CASTLE_03_02_DESC"
+      },
+      {
+        "entity_id": "19",
+        "entity_type": "structure",
+        "name": "CASTLE_03_03",
+        "description": "CASTLE_03_03_DESC"
+      },
+      {
+        "entity_id": "20",
+        "entity_type": "structure",
+        "name": "CASTLE_03_04",
+        "description": "CASTLE_03_04_DESC"
+      },
+      {
+        "entity_id": "21",
+        "entity_type": "structure",
+        "name": "CASTLE_03_05",
+        "description": "CASTLE_03_05_DESC"
+      },
+      {
+        "entity_id": "22",
+        "entity_type": "structure",
+        "name": "CASTLE_04_01",
+        "description": "CASTLE_04_01_DESC"
+      },
+      {
+        "entity_id": "23",
+        "entity_type": "structure",
+        "name": "CASTLE_04_02",
+        "description": "CASTLE_04_02_DESC"
+      },
+      {
+        "entity_id": "24",
+        "entity_type": "structure",
+        "name": "CASTLE_04_03",
+        "description": "CASTLE_04_03_DESC"
+      },
+      {
+        "entity_id": "25",
+        "entity_type": "structure",
+        "name": "CASTLE_04_04",
+        "description": "CASTLE_04_04_DESC"
+      },
+      {
+        "entity_id": "26",
+        "entity_type": "structure",
+        "name": "CASTLE_04_05",
+        "description": "CASTLE_04_05_DESC"
+      },
+      {
+        "entity_id": "27",
+        "entity_type": "structure",
+        "name": "CASTLE_05_01",
+        "description": "CASTLE_05_01_DESC"
+      },
+      {
+        "entity_id": "28",
+        "entity_type": "structure",
+        "name": "CASTLE_05_02",
+        "description": "CASTLE_05_02_DESC"
+      },
+      {
+        "entity_id": "29",
+        "entity_type": "structure",
+        "name": "CASTLE_05_03",
+        "description": "CASTLE_05_03_DESC"
+      },
+      {
+        "entity_id": "30",
+        "entity_type": "structure",
+        "name": "CASTLE_05_04",
+        "description": "CASTLE_05_04_DESC"
+      },
+      {
+        "entity_id": "31",
+        "entity_type": "structure",
+        "name": "CASTLE_05_05",
+        "description": "CASTLE_05_05_DESC"
+      },
+      {
+        "entity_id": "32",
+        "entity_type": "structure",
+        "name": "BAKERY_01_01",
+        "description": "BAKERY_01_01_DESC"
+      },
+      {
+        "entity_id": "33",
+        "entity_type": "structure",
+        "name": "BAKERY_01_02",
+        "description": "BAKERY_01_02_DESC"
+      },
+      {
+        "entity_id": "34",
+        "entity_type": "structure",
+        "name": "BAKERY_01_03",
+        "description": "BAKERY_01_03_DESC"
+      },
+      {
+        "entity_id": "64",
+        "entity_type": "monster",
+        "name": "MONSTER_A",
+        "description": "MONSTER_A_DESC"
+      },
+      {
+        "entity_id": "65",
+        "entity_type": "monster",
+        "name": "MONSTER_B",
+        "description": "MONSTER_B_DESC"
+      },
+      {
+        "entity_id": "66",
+        "entity_type": "monster",
+        "name": "MONSTER_C",
+        "description": "MONSTER_C_DESC"
+      },
+      {
+        "entity_id": "67",
+        "entity_type": "monster",
+        "name": "MONSTER_D",
+        "description": "MONSTER_D_DESC"
+      },
+      {
+        "entity_id": "68",
+        "entity_type": "monster",
+        "name": "MONSTER_E",
+        "description": "MONSTER_E_DESC"
+      },
+      {
+        "entity_id": "69",
+        "entity_type": "monster",
+        "name": "MONSTER_AB",
+        "description": "MONSTER_AB_DESC"
+      },
+      {
+        "entity_id": "70",
+        "entity_type": "monster",
+        "name": "MONSTER_AC",
+        "description": "MONSTER_AC_DESC"
+      },
+      {
+        "entity_id": "71",
+        "entity_type": "monster",
+        "name": "MONSTER_AD",
+        "description": "MONSTER_AD_DESC"
+      },
+      {
+        "entity_id": "72",
+        "entity_type": "monster",
+        "name": "MONSTER_AE",
+        "description": "MONSTER_AE_DESC"
+      },
+      {
+        "entity_id": "73",
+        "entity_type": "monster",
+        "name": "MONSTER_BC",
+        "description": "MONSTER_BC_DESC"
+      },
+      {
+        "entity_id": "74",
+        "entity_type": "monster",
+        "name": "MONSTER_BD",
+        "description": "MONSTER_BD_DESC"
+      },
+      {
+        "entity_id": "75",
+        "entity_type": "monster",
+        "name": "MONSTER_BE",
+        "description": "MONSTER_BE_DESC"
+      },
+      {
+        "entity_id": "76",
+        "entity_type": "monster",
+        "name": "MONSTER_CD",
+        "description": "MONSTER_CD_DESC"
+      },
+      {
+        "entity_id": "77",
+        "entity_type": "monster",
+        "name": "MONSTER_CE",
+        "description": "MONSTER_CE_DESC"
+      },
+      {
+        "entity_id": "78",
+        "entity_type": "monster",
+        "name": "MONSTER_DE",
+        "description": "MONSTER_DE_DESC"
+      },
+      {
+        "entity_id": "79",
+        "entity_type": "monster",
+        "name": "MONSTER_ABC",
+        "description": "MONSTER_ABC_DESC"
+      },
+      {
+        "entity_id": "80",
+        "entity_type": "monster",
+        "name": "MONSTER_ABD",
+        "description": "MONSTER_ABD_DESC"
+      },
+      {
+        "entity_id": "81",
+        "entity_type": "monster",
+        "name": "MONSTER_ABE",
+        "description": "MONSTER_ABE_DESC"
+      },
+      {
+        "entity_id": "82",
+        "entity_type": "monster",
+        "name": "MONSTER_ACE",
+        "description": "MONSTER_ACE_DESC"
+      }
+    ],
+    "types": [
+      "monster",
+      "structure"
+    ]
+  },
+  "structures": {
+    "count": 91,
+    "records": [
+      {
+        "structure_id": "1",
+        "structure_type": "nursery",
+        "entity": "1",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "2",
+        "structure_type": "breeding",
+        "entity": "2",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "6",
+        "structure_type": "mine",
+        "entity": "6",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "7",
+        "structure_type": "castle",
+        "entity": "7",
+        "upgrades_to": "8"
+      },
+      {
+        "structure_id": "8",
+        "structure_type": "castle",
+        "entity": "8",
+        "upgrades_to": "9"
+      },
+      {
+        "structure_id": "9",
+        "structure_type": "castle",
+        "entity": "9",
+        "upgrades_to": "10"
+      },
+      {
+        "structure_id": "10",
+        "structure_type": "castle",
+        "entity": "10",
+        "upgrades_to": "11"
+      },
+      {
+        "structure_id": "11",
+        "structure_type": "castle",
+        "entity": "11",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "12",
+        "structure_type": "castle",
+        "entity": "12",
+        "upgrades_to": "13"
+      },
+      {
+        "structure_id": "13",
+        "structure_type": "castle",
+        "entity": "13",
+        "upgrades_to": "14"
+      },
+      {
+        "structure_id": "14",
+        "structure_type": "castle",
+        "entity": "14",
+        "upgrades_to": "15"
+      },
+      {
+        "structure_id": "15",
+        "structure_type": "castle",
+        "entity": "15",
+        "upgrades_to": "16"
+      },
+      {
+        "structure_id": "16",
+        "structure_type": "castle",
+        "entity": "16",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "17",
+        "structure_type": "castle",
+        "entity": "17",
+        "upgrades_to": "18"
+      },
+      {
+        "structure_id": "18",
+        "structure_type": "castle",
+        "entity": "18",
+        "upgrades_to": "19"
+      },
+      {
+        "structure_id": "19",
+        "structure_type": "castle",
+        "entity": "19",
+        "upgrades_to": "20"
+      },
+      {
+        "structure_id": "20",
+        "structure_type": "castle",
+        "entity": "20",
+        "upgrades_to": "21"
+      },
+      {
+        "structure_id": "21",
+        "structure_type": "castle",
+        "entity": "21",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "22",
+        "structure_type": "castle",
+        "entity": "22",
+        "upgrades_to": "23"
+      },
+      {
+        "structure_id": "23",
+        "structure_type": "castle",
+        "entity": "23",
+        "upgrades_to": "24"
+      },
+      {
+        "structure_id": "24",
+        "structure_type": "castle",
+        "entity": "24",
+        "upgrades_to": "25"
+      },
+      {
+        "structure_id": "25",
+        "structure_type": "castle",
+        "entity": "25",
+        "upgrades_to": "26"
+      },
+      {
+        "structure_id": "26",
+        "structure_type": "castle",
+        "entity": "26",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "27",
+        "structure_type": "castle",
+        "entity": "27",
+        "upgrades_to": "28"
+      },
+      {
+        "structure_id": "28",
+        "structure_type": "castle",
+        "entity": "28",
+        "upgrades_to": "29"
+      },
+      {
+        "structure_id": "29",
+        "structure_type": "castle",
+        "entity": "29",
+        "upgrades_to": "30"
+      },
+      {
+        "structure_id": "30",
+        "structure_type": "castle",
+        "entity": "30",
+        "upgrades_to": "31"
+      },
+      {
+        "structure_id": "31",
+        "structure_type": "castle",
+        "entity": "31",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "32",
+        "structure_type": "bakery",
+        "entity": "32",
+        "upgrades_to": "33"
+      },
+      {
+        "structure_id": "33",
+        "structure_type": "bakery",
+        "entity": "33",
+        "upgrades_to": "34"
+      },
+      {
+        "structure_id": "34",
+        "structure_type": "bakery",
+        "entity": "34",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "64",
+        "structure_type": "decoration",
+        "entity": "95",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "65",
+        "structure_type": "decoration",
+        "entity": "96",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "66",
+        "structure_type": "decoration",
+        "entity": "97",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "67",
+        "structure_type": "decoration",
+        "entity": "98",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "68",
+        "structure_type": "decoration",
+        "entity": "100",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "69",
+        "structure_type": "decoration",
+        "entity": "101",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "70",
+        "structure_type": "decoration",
+        "entity": "102",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "71",
+        "structure_type": "decoration",
+        "entity": "103",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "72",
+        "structure_type": "decoration",
+        "entity": "104",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "73",
+        "structure_type": "decoration",
+        "entity": "105",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "74",
+        "structure_type": "decoration",
+        "entity": "106",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "75",
+        "structure_type": "decoration",
+        "entity": "107",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "76",
+        "structure_type": "decoration",
+        "entity": "108",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "77",
+        "structure_type": "decoration",
+        "entity": "109",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "78",
+        "structure_type": "decoration",
+        "entity": "110",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "79",
+        "structure_type": "decoration",
+        "entity": "111",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "80",
+        "structure_type": "decoration",
+        "entity": "112",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "81",
+        "structure_type": "decoration",
+        "entity": "113",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "82",
+        "structure_type": "decoration",
+        "entity": "114",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "83",
+        "structure_type": "decoration",
+        "entity": "115",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "84",
+        "structure_type": "decoration",
+        "entity": "116",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "85",
+        "structure_type": "decoration",
+        "entity": "117",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "86",
+        "structure_type": "decoration",
+        "entity": "118",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "87",
+        "structure_type": "decoration",
+        "entity": "119",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "88",
+        "structure_type": "decoration",
+        "entity": "120",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "89",
+        "structure_type": "decoration",
+        "entity": "121",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "90",
+        "structure_type": "decoration",
+        "entity": "122",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "91",
+        "structure_type": "decoration",
+        "entity": "123",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "93",
+        "structure_type": "decoration",
+        "entity": "125",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "94",
+        "structure_type": "decoration",
+        "entity": "126",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "95",
+        "structure_type": "decoration",
+        "entity": "127",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "96",
+        "structure_type": "decoration",
+        "entity": "128",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "97",
+        "structure_type": "decoration",
+        "entity": "129",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "98",
+        "structure_type": "decoration",
+        "entity": "130",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "99",
+        "structure_type": "decoration",
+        "entity": "131",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "100",
+        "structure_type": "decoration",
+        "entity": "132",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "101",
+        "structure_type": "decoration",
+        "entity": "133",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "102",
+        "structure_type": "decoration",
+        "entity": "134",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "103",
+        "structure_type": "decoration",
+        "entity": "135",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "104",
+        "structure_type": "decoration",
+        "entity": "136",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "105",
+        "structure_type": "decoration",
+        "entity": "137",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "106",
+        "structure_type": "obstacle",
+        "entity": "138",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "107",
+        "structure_type": "obstacle",
+        "entity": "139",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "108",
+        "structure_type": "obstacle",
+        "entity": "140",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "109",
+        "structure_type": "obstacle",
+        "entity": "141",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "110",
+        "structure_type": "obstacle",
+        "entity": "142",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "111",
+        "structure_type": "obstacle",
+        "entity": "143",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "112",
+        "structure_type": "obstacle",
+        "entity": "169",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "113",
+        "structure_type": "obstacle",
+        "entity": "170",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "114",
+        "structure_type": "obstacle",
+        "entity": "171",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "115",
+        "structure_type": "obstacle",
+        "entity": "172",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "116",
+        "structure_type": "obstacle",
+        "entity": "173",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "117",
+        "structure_type": "obstacle",
+        "entity": "174",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "118",
+        "structure_type": "obstacle",
+        "entity": "175",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "119",
+        "structure_type": "obstacle",
+        "entity": "176",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "120",
+        "structure_type": "obstacle",
+        "entity": "177",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "121",
+        "structure_type": "obstacle",
+        "entity": "178",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "122",
+        "structure_type": "obstacle",
+        "entity": "179",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "123",
+        "structure_type": "obstacle",
+        "entity": "180",
+        "upgrades_to": "0"
+      },
+      {
+        "structure_id": "124",
+        "structure_type": "time_machine",
+        "entity": "181",
+        "upgrades_to": "0"
+      }
+    ]
+  },
+  "breeding_combinations": {
+    "count": 1041,
+    "examples": [
+      {
+        "breeding_combination_id": "1",
+        "monster_1": "1",
+        "monster_2": "2",
+        "result": "1",
+        "probability": "0"
+      },
+      {
+        "breeding_combination_id": "2",
+        "monster_1": "1",
+        "monster_2": "2",
+        "result": "2",
+        "probability": "0"
+      },
+      {
+        "breeding_combination_id": "3",
+        "monster_1": "1",
+        "monster_2": "2",
+        "result": "6",
+        "probability": "100"
+      },
+      {
+        "breeding_combination_id": "4",
+        "monster_1": "1",
+        "monster_2": "3",
+        "result": "1",
+        "probability": "0"
+      },
+      {
+        "breeding_combination_id": "5",
+        "monster_1": "1",
+        "monster_2": "3",
+        "result": "3",
+        "probability": "0"
+      },
+      {
+        "breeding_combination_id": "6",
+        "monster_1": "1",
+        "monster_2": "3",
+        "result": "7",
+        "probability": "100"
+      },
+      {
+        "breeding_combination_id": "7",
+        "monster_1": "1",
+        "monster_2": "4",
+        "result": "1",
+        "probability": "0"
+      },
+      {
+        "breeding_combination_id": "8",
+        "monster_1": "1",
+        "monster_2": "4",
+        "result": "4",
+        "probability": "0"
+      }
+    ],
+    "nonzero_probability_count": 886
+  },
+  "quests": {
+    "count": 118,
+    "first": [
+      {
+        "id": "1",
+        "name": "BUY_MONSTER_C",
+        "type": "AND",
+        "initial": "1",
+        "visible": "0"
+      },
+      {
+        "id": "3",
+        "name": "PLACE_MONSTER_C",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "4",
+        "name": "RENAME_MONSTER_C",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "5",
+        "name": "BUY_MONSTER_E",
+        "type": "AND",
+        "initial": "0",
+        "visible": "0"
+      },
+      {
+        "id": "6",
+        "name": "PLACE_MONSTER_E",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "7",
+        "name": "BUILD_BAKERY",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "8",
+        "name": "BAKE_FOOD",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "9",
+        "name": "FEED_MONSTER",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "10",
+        "name": "REMOVE_OBSTACLE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "11",
+        "name": "PLACE_MONSTER_D",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "12",
+        "name": "TRIGGER_LIKE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "13",
+        "name": "UPGRADE_CASTLE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "15",
+        "name": "PLACE_3_DECORATIONS",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "16",
+        "name": "FEED_MONSTER_TO_4",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "17",
+        "name": "BUILD_BREEDING_CAVE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "18",
+        "name": "BREED_MONSTER_CE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "19",
+        "name": "BREED_MONSTER_DE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "20",
+        "name": "BREED_MONSTER_CD",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "21",
+        "name": "BREED_MONSTER_CDE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "22",
+        "name": "VISIT_ANOTHER_PLAYER",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "23",
+        "name": "UPGRADE_BAKERY",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "24",
+        "name": "SAVE_1K_FOOD",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "25",
+        "name": "PLACE_MONSTER_B",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "26",
+        "name": "BREED_MONSTER_BE",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      },
+      {
+        "id": "27",
+        "name": "BREED_MONSTER_BC",
+        "type": "AND",
+        "initial": "0",
+        "visible": "1"
+      }
+    ],
+    "suspicious_names": []
+  },
+  "quest_types": {
+    "count": 6,
+    "records": [
+      {
+        "name": "TUTORIAL"
+      },
+      {
+        "name": "COLLECTION"
+      },
+      {
+        "name": "BUILD"
+      },
+      {
+        "name": "TRAVEL"
+      },
+      {
+        "name": "BATTLE"
+      },
+      {
+        "name": "DARE"
+      }
+    ]
+  },
+  "island_monsters": {
+    "count": 45,
+    "records": [
+      {
+        "island_monster_id": "1",
+        "island": "1",
+        "monster": "2",
+        "instrument": "001_B.bin"
+      },
+      {
+        "island_monster_id": "2",
+        "island": "1",
+        "monster": "3",
+        "instrument": "001_C.bin"
+      },
+      {
+        "island_monster_id": "3",
+        "island": "1",
+        "monster": "4",
+        "instrument": "001_D.bin"
+      },
+      {
+        "island_monster_id": "4",
+        "island": "1",
+        "monster": "5",
+        "instrument": "001_E.bin"
+      },
+      {
+        "island_monster_id": "5",
+        "island": "1",
+        "monster": "10",
+        "instrument": "001_BC.bin"
+      },
+      {
+        "island_monster_id": "6",
+        "island": "1",
+        "monster": "11",
+        "instrument": "001_BD.bin"
+      },
+      {
+        "island_monster_id": "7",
+        "island": "1",
+        "monster": "12",
+        "instrument": "001_BE.bin"
+      },
+      {
+        "island_monster_id": "8",
+        "island": "1",
+        "monster": "13",
+        "instrument": "001_CD.bin"
+      },
+      {
+        "island_monster_id": "9",
+        "island": "1",
+        "monster": "14",
+        "instrument": "001_CE.bin"
+      },
+      {
+        "island_monster_id": "10",
+        "island": "1",
+        "monster": "15",
+        "instrument": "001_DE.bin"
+      },
+      {
+        "island_monster_id": "11",
+        "island": "1",
+        "monster": "21",
+        "instrument": "001_BCD.bin"
+      },
+      {
+        "island_monster_id": "12",
+        "island": "1",
+        "monster": "22",
+        "instrument": "001_BCE.bin"
+      },
+      {
+        "island_monster_id": "13",
+        "island": "1",
+        "monster": "23",
+        "instrument": "001_BDE.bin"
+      },
+      {
+        "island_monster_id": "14",
+        "island": "1",
+        "monster": "24",
+        "instrument": "001_CDE.bin"
+      },
+      {
+        "island_monster_id": "15",
+        "island": "1",
+        "monster": "29",
+        "instrument": "001_BCDE.bin"
+      },
+      {
+        "island_monster_id": "16",
+        "island": "2",
+        "monster": "1",
+        "instrument": "002_A.bin"
+      },
+      {
+        "island_monster_id": "17",
+        "island": "2",
+        "monster": "2",
+        "instrument": "002_B.bin"
+      },
+      {
+        "island_monster_id": "18",
+        "island": "2",
+        "monster": "4",
+        "instrument": "002_D.bin"
+      },
+      {
+        "island_monster_id": "19",
+        "island": "2",
+        "monster": "5",
+        "instrument": "002_E.bin"
+      },
+      {
+        "island_monster_id": "20",
+        "island": "2",
+        "monster": "6",
+        "instrument": "002_AB.bin"
+      },
+      {
+        "island_monster_id": "21",
+        "island": "2",
+        "monster": "8",
+        "instrument": "002_AD.bin"
+      },
+      {
+        "island_monster_id": "22",
+        "island": "2",
+        "monster": "9",
+        "instrument": "002_AE.bin"
+      },
+      {
+        "island_monster_id": "23",
+        "island": "2",
+        "monster": "11",
+        "instrument": "002_BD.bin"
+      },
+      {
+        "island_monster_id": "24",
+        "island": "2",
+        "monster": "12",
+        "instrument": "002_BE.bin"
+      },
+      {
+        "island_monster_id": "25",
+        "island": "2",
+        "monster": "15",
+        "instrument": "002_DE.bin"
+      },
+      {
+        "island_monster_id": "26",
+        "island": "2",
+        "monster": "17",
+        "instrument": "002_ABD.bin"
+      },
+      {
+        "island_monster_id": "27",
+        "island": "2",
+        "monster": "18",
+        "instrument": "002_ABE.bin"
+      },
+      {
+        "island_monster_id": "28",
+        "island": "2",
+        "monster": "20",
+        "instrument": "002_ADE.bin"
+      },
+      {
+        "island_monster_id": "29",
+        "island": "2",
+        "monster": "23",
+        "instrument": "002_BDE.bin"
+      },
+      {
+        "island_monster_id": "30",
+        "island": "2",
+        "monster": "27",
+        "instrument": "002_ABDE.bin"
+      },
+      {
+        "island_monster_id": "33",
+        "island": "3",
+        "monster": "1",
+        "instrument": "003_A.bin"
+      },
+      {
+        "island_monster_id": "34",
+        "island": "3",
+        "monster": "3",
+        "instrument": "003_C.bin"
+      },
+      {
+        "island_monster_id": "35",
+        "island": "3",
+        "monster": "4",
+        "instrument": "003_D.bin"
+      },
+      {
+        "island_monster_id": "36",
+        "island": "3",
+        "monster": "5",
+        "instrument": "003_E.bin"
+      },
+      {
+        "island_monster_id": "37",
+        "island": "3",
+        "monster": "7",
+        "instrument": "003_AC.bin"
+      },
+      {
+        "island_monster_id": "38",
+        "island": "3",
+        "monster": "8",
+        "instrument": "003_AD.bin"
+      },
+      {
+        "island_monster_id": "39",
+        "island": "3",
+        "monster": "9",
+        "instrument": "003_AE.bin"
+      },
+      {
+        "island_monster_id": "40",
+        "island": "3",
+        "monster": "13",
+        "instrument": "003_CD.bin"
+      },
+      {
+        "island_monster_id": "41",
+        "island": "3",
+        "monster": "14",
+        "instrument": "003_CE.bin"
+      },
+      {
+        "island_monster_id": "42",
+        "island": "3",
+        "monster": "15",
+        "instrument": "003_DE.bin"
+      },
+      {
+        "island_monster_id": "43",
+        "island": "3",
+        "monster": "31",
+        "instrument": "003_ACD.bin"
+      },
+      {
+        "island_monster_id": "44",
+        "island": "3",
+        "monster": "19",
+        "instrument": "003_ACE.bin"
+      },
+      {
+        "island_monster_id": "45",
+        "island": "3",
+        "monster": "20",
+        "instrument": "003_ADE.bin"
+      },
+      {
+        "island_monster_id": "46",
+        "island": "3",
+        "monster": "24",
+        "instrument": "003_CDE.bin"
+      },
+      {
+        "island_monster_id": "47",
+        "island": "3",
+        "monster": "28",
+        "instrument": "003_ACDE.bin"
+      }
+    ]
+  },
+  "analysed_at_utc": "2026-11-04T01:06:47.462025+00:00",
+  "note": "Only game data fields from an archived SQL seed; player data not read or published."
+}
