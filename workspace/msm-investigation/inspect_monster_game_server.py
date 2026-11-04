@@ -12,7 +12,7 @@ class ArchiveRedirect(urllib.request.HTTPRedirectHandler):
         self.count+=1
         host=urllib.parse.urlsplit(newurl).hostname or ""
         if self.count>5 or not (host=="archive.org" or host.endswith(".us.archive.org")) or not newurl.startswith("https://"):
-            raise ValueError("Redirect outside expected Internet Archive hosts")
+            raise ValueError("Redirect outside expected Internet Archive hosts: "+host)
         return super().redirect_request(req,fp,code,msg,headers,newurl)
 def red(text):
     text=re.sub(r"(?im)\b(token|password|passwd|api[_-]?key|secret|authorization)\s*[:=]\s*[^\n]+",r"\1=[redacted]",text)
@@ -73,18 +73,18 @@ def inspect():
         }
     (OUT/"monster-game-server-inspection.json").write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n")
     report=["# monster-game-server archive structure and provenance inspection","",
-        f"Source: {TARGET}",f"SHA-1 verified: \`{digest}\`",
+        f"Source: {TARGET}",f"SHA-1 verified: `{digest}`",
         f"ZIP bytes: {len(content):,}",f"Entries: {len(inf)}","",
         "## File types",""]
-    report.extend(f"- \`{k or '(none)'}\`: {v}" for k,v in suffix_count.most_common())
+    report.extend(f"- `{k or '(none)'}`: {v}" for k,v in suffix_count.most_common())
     report+=["","## Files (paths only)",""]
-    report.extend(f"- \`{x['path']}\` ({x['size']:,} bytes)" for x in paths)
+    report.extend(f"- `{x['path']}` ({x['size']:,} bytes)" for x in paths)
     report+=["","## Selected documentation and configuration previews (sensitive strings redacted)",""]
     for d in details:
         report.extend([f"### {d['path']}","", "~~~text",d["preview"],"~~~",""])
     report+=["","## Indicators (NOT a definitive authenticity conclusion)",""]
     for s in source_entries[:50]:
-        report.extend([f"- \`{s['path']}\`: "+"; ".join(f"{k}={len(v)}" for k,v in s["cues"].items())])
+        report.extend([f"- `{s['path']}`: "+"; ".join(f"{k}={len(v)}" for k,v in s["cues"].items())])
     (OUT/"monster-game-server-inspection.md").write_text("\n".join(report)+"\n")
     print("Verified archive bytes:",len(content),"entries:",len(inf))
     print("Types:",dict(suffix_count.most_common()))
