@@ -1,0 +1,51 @@
+name: One-shot Monster Choir APK localized asset comparison
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+  issues: write
+jobs:
+  compare:
+    if: >-
+      github.event.issue.number == 3 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.user.login == github.repository_owner &&
+      github.event.comment.user.login == github.repository_owner &&
+      github.event.comment.body == '/msm-choir-compare'
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Fetch public APKs and compare SHA1-verified filenames without running
+        run: |
+          set -euo pipefail
+          python3 workspace/msm-investigation/msm_choir_package_comparison.py > "$RUNNER_TEMP/choir.txt" 2>&1
+          head -c 11000 "$RUNNER_TEMP/choir.txt"
+      - name: Save only original-file list metadata
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add workspace/msm-investigation/msm-choir-apk-content-comparison.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Save Chinese/Korean Monster Choir verified file-set differences"
+            auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+            git -c "http.extraheader=AUTHORIZATION: basic $auth" push origin HEAD:main
+          fi
+      - name: Post summary
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib
+          p=pathlib.Path(os.environ["RUNNER_TEMP"])
+          s=(p/"choir.txt").read_text(errors="replace") if (p/"choir.txt").exists() else "No result"
+          (p/"comment.json").write_text(json.dumps({"body":"### Korean/Chinese Monster Choir APK asset verification\n\n"+s[:10000]}))
+          PY
+          gh api -X POST "repos/$GITHUB_REPOSITORY/issues/3/comments" --input "$RUNNER_TEMP/comment.json"
