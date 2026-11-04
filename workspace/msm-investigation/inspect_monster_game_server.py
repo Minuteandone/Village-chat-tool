@@ -11,7 +11,7 @@ class ArchiveRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self,req,fp,code,msg,headers,newurl):
         self.count+=1
         host=urllib.parse.urlsplit(newurl).hostname or ""
-        if self.count>5 or not (host=="archive.org" or host.endswith(".us.archive.org")) or not newurl.startswith("https://"):
+        if self.count>5 or not (host=="archive.org" or host.endswith(".archive.org")) or not newurl.startswith("https://"):
             raise ValueError("Redirect outside expected Internet Archive hosts: "+host)
         return super().redirect_request(req,fp,code,msg,headers,newurl)
 def red(text):
