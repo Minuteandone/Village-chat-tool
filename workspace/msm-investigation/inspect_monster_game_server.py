@@ -63,6 +63,9 @@ def inspect():
             }
             if any(cues.values()):
                 source_entries.append({"path":x.filename,"cues":cues})
+        # Store only indicators, never code excerpts or configuration previews.
+        details=[{"path":x["path"],"note":"Source text omitted"} for x in details]
+        source_entries=[{"path":x["path"],"indicators":{k:len(v) for k,v in x["cues"].items()}} for x in source_entries]
         result={
             "source":TARGET,"checked_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),
             "size":len(content),"sha1":digest,
@@ -81,17 +84,17 @@ def inspect():
     report.extend(f"- `{x['path']}` ({x['size']:,} bytes)" for x in paths)
     report+=["","## Selected documentation and configuration previews (sensitive strings redacted)",""]
     for d in details:
-        report.extend([f"### {d['path']}","", "~~~text",d["preview"],"~~~",""])
+        report.extend([f"### {d['path']}","", "Content omitted; only file presence recorded.",""])
     report+=["","## Indicators (NOT a definitive authenticity conclusion)",""]
     for s in source_entries[:50]:
-        report.extend([f"- `{s['path']}`: "+"; ".join(f"{k}={len(v)}" for k,v in s["cues"].items())])
+        report.extend([f"- `{s['path']}`: "+"; ".join(f"{k}={v}" for k,v in s["indicators"].items())])
     (OUT/"monster-game-server-inspection.md").write_text("\n".join(report)+"\n")
     print("Verified archive bytes:",len(content),"entries:",len(inf))
     print("Types:",dict(suffix_count.most_common()))
     print("Full tree:")
     for x in paths:print(" ",x["path"],x["size"])
     print("Selected docs:")
-    for d in details[:20]:print("---",d["path"],"---\n",d["preview"][:1600])
+    for d in details[:20]:print("DOC",d["path"])
     print("Code cues:")
-    for s in source_entries[:25]:print(s["path"],{k:v[:2] for k,v in s["cues"].items() if v})
+    for s in source_entries[:25]:print(s["path"],s["indicators"])
 if __name__=="__main__":inspect()
