@@ -1,0 +1,56 @@
+{
+  "source_url": "https://archive.org/download/monster-game-server/monster-game-server.zip",
+  "verified_archive_sha1": "df086c9ca4581733f73f2e8aaea1408382232e4d",
+  "downloaded_bytes": 15170251,
+  "zip_file_comment_length": 0,
+  "zip_file_comment_ascii": "",
+  "zip_file_comment_hex": "",
+  "eocd_comment_length": 0,
+  "archive_comment_equals_folder_hash": false,
+  "root_folder_names": [
+    "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84"
+  ],
+  "entry_count": 215,
+  "file_count": 188,
+  "dir_count": 27,
+  "all_member_timestamps": {
+    "2020-07-03T15:48:00": 60,
+    "2020-07-03T15:48:02": 56,
+    "2020-07-03T15:47:58": 52,
+    "2020-07-03T15:47:56": 20,
+    "2021-05-09T20:25:24": 13,
+    "2021-05-09T20:25:26": 12,
+    "2021-05-09T20:25:28": 2
+  },
+  "create_system_counts": {
+    "0": 215
+  },
+  "compression_method_counts": {
+    "8": 188,
+    "0": 27
+  },
+  "general_purpose_flags_counts": {
+    "0": 215
+  },
+  "central_directory_extra_field_ids_counts": {},
+  "individual_file_comment_count": 0,
+  "first_entry_metadata": {
+    "name": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/BBBServerExtensionLib.jar",
+    "timestamp": [
+      2020,
+      7,
+      3,
+      15,
+      47,
+      56
+    ],
+    "creator_system": 0,
+    "creator_version": 20,
+    "extract_version": 20,
+    "external_mode_oct": "0o0",
+    "compression": 8,
+    "extra_len": 0,
+    "individual_comment_len": 0
+  },
+  "note": "No archived code or binaries executed or republished. Git-style metadata does not prove GitHub/GitLab hosting."
+}
