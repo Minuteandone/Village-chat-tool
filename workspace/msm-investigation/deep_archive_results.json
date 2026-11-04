@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-04T00:35:35.550056+00:00",
+  "generated_utc": "2026-11-04T00:36:55.384830+00:00",
   "scope": "Public game preservation metadata only; original binary archives remain in runner temporary storage",
   "metadata_source": "https://archive.org/metadata/msm_official_guide_dlcs",
   "pc_2021": {
@@ -8,13 +8,102 @@
     "entries": [
       {
         "title": "[WIN] My Singing Monsters [Manifest 2046132612292651817] [2021-05-18] .7z",
-        "requested_url": "https://debugging.games/_files/Windows/[WIN] My Singing Monsters [Manifest 2046132612292651817] [2021-05-18] .7z",
-        "error": "InvalidURL: URL can't contain control characters. '/_files/Windows/[WIN] My Singing Monsters [Manifest 2046132612292651817] [2021-05-18] .7z' (found at least ' ')"
+        "requested_url": "https://debugging.games/_files/Windows/%5BWIN%5D%20My%20Singing%20Monsters%20%5BManifest%202046132612292651817%5D%20%5B2021-05-18%5D%20.7z",
+        "bytes": 11127240,
+        "sha256": "f698d0a8f02b1b1751505a8210c85a14e50ff4b2308cba3c4bf19e06e0ad6ef2",
+        "final_url": "https://debugging.games/_files/Windows/%5BWIN%5D%20My%20Singing%20Monsters%20%5BManifest%202046132612292651817%5D%20%5B2021-05-18%5D%20.7z",
+        "7z_exit_code": 0,
+        "contents": [
+          {
+            "Path": "MySingingMonsters.exp",
+            "Size": "2833",
+            "Packed Size": "9589066",
+            "Modified": "2022-12-13 21:34:48.9361180",
+            "Attributes": "A"
+          },
+          {
+            "Path": "MySingingMonsters.iobj",
+            "Size": "72729955",
+            "Packed Size": "",
+            "Modified": "2022-12-13 21:34:51.3596465",
+            "Attributes": "A"
+          },
+          {
+            "Path": "MySingingMonsters.ipdb",
+            "Size": "13303504",
+            "Packed Size": "",
+            "Modified": "2022-12-13 21:34:49.8303215",
+            "Attributes": "A"
+          },
+          {
+            "Path": "MySingingMonsters.lib",
+            "Size": "5658",
+            "Packed Size": "",
+            "Modified": "2022-12-13 21:34:49.5684782",
+            "Attributes": "A"
+          },
+          {
+            "Path": "MySingingMonsters.exe",
+            "Size": "5782016",
+            "Packed Size": "1537911",
+            "Modified": "2022-12-13 21:34:49.5023778",
+            "Attributes": "A"
+          }
+        ],
+        "item_count": 5
       },
       {
         "title": "[WIN] My Singing Monsters [Manifest 4651787433336000098] [2021-04-21].7z",
-        "requested_url": "https://debugging.games/_files/Windows/[WIN] My Singing Monsters [Manifest 4651787433336000098] [2021-04-21].7z",
-        "error": "InvalidURL: URL can't contain control characters. '/_files/Windows/[WIN] My Singing Monsters [Manifest 4651787433336000098] [2021-04-21].7z' (found at least ' ')"
+        "requested_url": "https://debugging.games/_files/Windows/%5BWIN%5D%20My%20Singing%20Monsters%20%5BManifest%204651787433336000098%5D%20%5B2021-04-21%5D.7z",
+        "bytes": 11135464,
+        "sha256": "ec0f5c7c5bdf79eacacb9dd37f72b771ce83c17f4c69bd3395eb3fc5ca1af162",
+        "final_url": "https://debugging.games/_files/Windows/%5BWIN%5D%20My%20Singing%20Monsters%20%5BManifest%204651787433336000098%5D%20%5B2021-04-21%5D.7z",
+        "7z_exit_code": 0,
+        "contents": [
+          {
+            "Path": "MySingingMonsters.exe.metagen",
+            "Size": "8527",
+            "Packed Size": "9597754",
+            "Modified": "2022-12-13 21:23:02.3819244",
+            "Attributes": "A"
+          },
+          {
+            "Path": "MySingingMonsters.exp",
+            "Size": "2833",
+            "Packed Size": "",
+            "Modified": "2022-12-13 21:23:09.5731019",
+            "Attributes": "A"
+          },
+          {
+            "Path": "MySingingMonsters.iobj",
+            "Size": "72721676",
+            "Packed Size": "",
+            "Modified": "2022-12-13 21:23:10.0241219",
+            "Attributes": "A"
+          },
+          {
+            "Path": "MySingingMonsters.ipdb",
+            "Size": "13301936",
+            "Packed Size": "",
+            "Modified": "2022-12-13 21:23:09.2954588",
+            "Attributes": "A"
+          },
+          {
+            "Path": "MySingingMonsters.lib",
+            "Size": "5658",
+            "Packed Size": "",
+            "Modified": "2022-12-13 21:23:00.8910541",
+            "Attributes": "A"
+          },
+          {
+            "Path": "MySingingMonsters.exe",
+            "Size": "5780480",
+            "Packed Size": "1537422",
+            "Modified": "2022-12-13 21:23:09.8810899",
+            "Attributes": "A"
+          }
+        ],
+        "item_count": 6
       }
     ],
     "index_matches": [
@@ -35,34 +124,17 @@
       "archive_sha1": "56d86aff5b49cffe85756e93a34788b78cad5676",
       "bytes": 1220,
       "sha1_verified": true,
-      "config_lines": [
-        "UnityFS\u0000\u0000\u0000\u0000\u00065.x.x\u00002017.4.3f1\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004�\u0000\u0000\u0000A\u0000\u0000\u0000[\u0000\u0000\u0000C",
-        "\u0000\u0001\u0000�\u0001\u0000\u0000\u0012H\u0000\u0000\u0004R\u0000A\u000e\u0000\b",
-        "\u0000\u0000\u001a\u0000�\u0018\u0000\u0004CAB-b256187ebdb96f35466cb698edc0a6fd\u0000]\u0000\u0000\b\u0000\u0000\u0000`/\u0012Y�-ț�9_+[���\"0�;�,�kI�&��&W��h�=j��&N\u0011\u0001T\u000e_�ޟR",
-        "X�a]���o���F)�\"�B��\u0011���|+6�\u0001?���\u0015Q���6/jP�xI�Z�%Q �\u000e�������\t_B��m�",
-        "�T\u0000\u0018q���!�$%�\bH�^�6�����\u0018̵J�×�",
-        "QuM��[!Ì�",
-        "\u000e2�x\u0002�'xQ�q���`a�K�Rb�ٹ��,qX�!v���E8�A\u001aSCxn=����2\u0001\u0011\u001fQ�'",
-        "�Z\u0016�S",
-        "�",
-        "���`�ţ�\u0001�Q�d�OQBm�H2��Y\u001b�XJ���JL�Tk�",
-        "�\\�a8ZۇO\u0006��f�35�����2\u0018$�m�\u0005����|TtL$G�b@\u001a�\u0002���@\b���=4",
-        "S��s+l",
-        "惘[^�ĭ���=b<\u0002\u0000A=�yjfL�\t��u|\u0006��~)�<�ӭZ\u0003q�",
-        "��C/\u0012���e�\u000f�lc\u0004��͈T[&���O��i�2\u000e�b�M\u000f\u0007W�\u0003��?��quPVF�\u0007��9#��pWQ�ǈ������CX�$��JĀ\u0011G��̿�*�⺸$�$ 8",
-        "��\u001a��3\u0003�\u0005�H\b*\u0011�\u0010��@�\u0000!Ph\u0007��\u00037\u0002wb��ߴ����q���x�M�����u\u001bB",
-        "��B�8D��rٖ�f\u0002��^\u0006�:�\u0017#�!�)�!�Y!f\u0010t���\u000e��\u001b\u0001�pް�*���\u001f?������\u001aȱ�\u0012p��",
-        "zh",
-        "�\u001f�,�\u0016���m�M�Eh>�Ԙ��F�Lty��M`�����X^4)ڼ<L���E",
-        "���",
-        "�ͣח����8�\u001f��\tH�\u0001\u0007�1c�\u000e�3",
-        "",
-        "[XK�'\"��b�;�$kh�\u001bR\".W�r[\u0016?�\u001b`\u0019.���2�\u0019�8a��ȴJ�po�{a���ש!�+ ]MH��/�\u0017댱�u4��<ܚ�j�\u0003�:Y�T��Ɩ�\u0002փ\u00116\u0014)&�`\u0006\u001f�l�tI�ޖ��>�q�5C\u0017\u0019\u0018�[�\u0012",
-        "\u000e�v��fI�AP����R��k3{",
-        "�pb�\"O۝",
-        "��UZ_�_�\b�nl\u0004"
-      ],
-      "url_hosts": []
+      "unity_object_count": 2,
+      "unity_types": {
+        "AssetBundle": 1,
+        "AssetBundleManifest": 1
+      },
+      "objects_named_or_text": [
+        {
+          "type": "AssetBundleManifest",
+          "name": "AssetBundleManifest"
+        }
+      ]
     },
     {
       "path": "dlc/1280 (1.3.0)/android/data.unity3d",
@@ -83,7 +155,72 @@
         },
         {
           "type": "MonoBehaviour",
-          "name": "UISettings"
+          "name": "UISettings",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "listColors"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-615566726739985248"
+            },
+            {
+              "field": ".m_Name",
+              "value": "UISettings"
+            },
+            {
+              "field": ".listColors[0].r",
+              "value": "0.1568627506494522"
+            },
+            {
+              "field": ".listColors[0].g",
+              "value": "0.1411764770746231"
+            },
+            {
+              "field": ".listColors[0].b",
+              "value": "0.1921568661928177"
+            },
+            {
+              "field": ".listColors[0].a",
+              "value": "1.0"
+            },
+            {
+              "field": ".listColors[1].r",
+              "value": "0.25882354378700256"
+            },
+            {
+              "field": ".listColors[1].g",
+              "value": "0.20392157137393951"
+            },
+            {
+              "field": ".listColors[1].b",
+              "value": "0.29019609093666077"
+            },
+            {
+              "field": ".listColors[1].a",
+              "value": "1.0"
+            }
+          ]
         },
         {
           "type": "AssetBundle",
@@ -95,7 +232,257 @@
         },
         {
           "type": "MonoBehaviour",
-          "name": "AllData"
+          "name": "AllData",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "msm1",
+            "msm2"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "5236842526972459975"
+            },
+            {
+              "field": ".m_Name",
+              "value": "AllData"
+            },
+            {
+              "field": ".msm1.monsters[0].id",
+              "value": "1"
+            },
+            {
+              "field": ".msm1.monsters[0].entity_id",
+              "value": "64"
+            },
+            {
+              "field": ".msm1.monsters[0].classId",
+              "value": "CLASS_NATURAL"
+            },
+            {
+              "field": ".msm1.monsters[0].monsterName",
+              "value": "MONSTER_A"
+            },
+            {
+              "field": ".msm1.monsters[0].description",
+              "value": "MONSTER_A_DESC"
+            },
+            {
+              "field": ".msm1.monsters[0].portrait.guid",
+              "value": "7c22f125a4a8667408659ffece3666b5|monster_portrait_square_a"
+            },
+            {
+              "field": ".msm1.monsters[0].portrait.typeName",
+              "value": "UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[0].spore.guid",
+              "value": "d2e35c84c36198e49b73d470290cd85c|spore_A"
+            },
+            {
+              "field": ".msm1.monsters[0].spore.typeName",
+              "value": "UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[0].genes[0]",
+              "value": "A"
+            },
+            {
+              "field": ".msm1.monsters[0].animation_adult.typeName",
+              "value": "UnityCommon.Anim2D.AnimData2D, Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[0].animation_baby.typeName",
+              "value": "UnityCommon.Anim2D.AnimData2D, Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[0].msm1AnimObj.guid",
+              "value": "047243bfb9144414aa17160f67ad0daf"
+            },
+            {
+              "field": ".msm1.monsters[0].msm1AnimObj.typeName",
+              "value": "UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[0].beds",
+              "value": "1"
+            },
+            {
+              "field": ".msm1.monsters[0].level",
+              "value": "4"
+            },
+            {
+              "field": ".msm1.monsters[0].isRare",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].isFavourite",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].isCollected",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].ignore",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].linkedId",
+              "value": "118"
+            },
+            {
+              "field": ".msm1.monsters[0].xp",
+              "value": "150"
+            },
+            {
+              "field": ".msm1.monsters[0].cost_coins",
+              "value": "300"
+            },
+            {
+              "field": ".msm1.monsters[0].cost_diamonds",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].cost_eth_currency",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].cost_starpower",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].sell_price",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].breed_time",
+              "value": "14400"
+            },
+            {
+              "field": ".msm1.monsters[0].likes[0]",
+              "value": "70"
+            },
+            {
+              "field": ".msm1.monsters[0].likes[1]",
+              "value": "86"
+            },
+            {
+              "field": ".msm1.monsters[0].likes[2]",
+              "value": "95"
+            },
+            {
+              "field": ".msm1.monsters[0].likes[3]",
+              "value": "134"
+            },
+            {
+              "field": ".msm1.monsters[0].likes[4]",
+              "value": "112"
+            },
+            {
+              "field": ".msm1.monsters[1].id",
+              "value": "2"
+            },
+            {
+              "field": ".msm1.monsters[1].entity_id",
+              "value": "65"
+            },
+            {
+              "field": ".msm1.monsters[1].classId",
+              "value": "CLASS_NATURAL"
+            },
+            {
+              "field": ".msm1.monsters[1].monsterName",
+              "value": "MONSTER_B"
+            },
+            {
+              "field": ".msm1.monsters[1].description",
+              "value": "MONSTER_B_DESC"
+            },
+            {
+              "field": ".msm1.monsters[1].portrait.guid",
+              "value": "96c4c8de63f5bb94b937532b0a334ba5|monster_portrait_square_b"
+            },
+            {
+              "field": ".msm1.monsters[1].portrait.typeName",
+              "value": "UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[1].spore.guid",
+              "value": "fec1d8bab4e98d841bc65532c16b4e86|spore_B"
+            },
+            {
+              "field": ".msm1.monsters[1].spore.typeName",
+              "value": "UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[1].genes[0]",
+              "value": "B"
+            },
+            {
+              "field": ".msm1.monsters[1].animation_adult.typeName",
+              "value": "UnityCommon.Anim2D.AnimData2D, Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[1].animation_baby.typeName",
+              "value": "UnityCommon.Anim2D.AnimData2D, Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[1].msm1AnimObj.guid",
+              "value": "07223ee3ff95f1b41a52b6fc3b77d1eb"
+            },
+            {
+              "field": ".msm1.monsters[1].msm1AnimObj.typeName",
+              "value": "UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[1].beds",
+              "value": "1"
+            },
+            {
+              "field": ".msm1.monsters[1].level",
+              "value": "9"
+            },
+            {
+              "field": ".msm1.monsters[1].isRare",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[1].isFavourite",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[1].isCollected",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[1].ignore",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[1].linkedId",
+              "value": "115"
+            }
+          ]
         }
       ]
     },
@@ -114,15 +501,373 @@
       "objects_named_or_text": [
         {
           "type": "MonoBehaviour",
-          "name": "de"
+          "name": "de",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "hashes",
+            "strings"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-4409710521683154717"
+            },
+            {
+              "field": ".m_Name",
+              "value": "de"
+            },
+            {
+              "field": ".hashes[0]",
+              "value": "1238981132"
+            },
+            {
+              "field": ".hashes[1]",
+              "value": "1479077690"
+            },
+            {
+              "field": ".hashes[2]",
+              "value": "1316241844"
+            },
+            {
+              "field": ".hashes[3]",
+              "value": "511225978"
+            },
+            {
+              "field": ".hashes[4]",
+              "value": "1108848080"
+            },
+            {
+              "field": ".hashes[5]",
+              "value": "-1221104235"
+            },
+            {
+              "field": ".hashes[6]",
+              "value": "-740059146"
+            },
+            {
+              "field": ".hashes[7]",
+              "value": "2038228853"
+            },
+            {
+              "field": ".hashes[8]",
+              "value": "-9280167"
+            },
+            {
+              "field": ".hashes[9]",
+              "value": "318129856"
+            },
+            {
+              "field": ".hashes[10]",
+              "value": "747267240"
+            },
+            {
+              "field": ".hashes[11]",
+              "value": "-1994501329"
+            },
+            {
+              "field": ".hashes[12]",
+              "value": "1376469481"
+            },
+            {
+              "field": ".hashes[13]",
+              "value": "379609712"
+            },
+            {
+              "field": ".hashes[14]",
+              "value": "1701477981"
+            },
+            {
+              "field": ".strings[0]",
+              "value": "Initialisieren von DLC"
+            },
+            {
+              "field": ".strings[1]",
+              "value": "DLC aktualisieren"
+            },
+            {
+              "field": ".strings[2]",
+              "value": "Initialisiere Spiel-Status"
+            },
+            {
+              "field": ".strings[3]",
+              "value": "Bereite Spieldaten vor"
+            },
+            {
+              "field": ".strings[4]",
+              "value": "Neue Dateien werden heruntergeladen..."
+            },
+            {
+              "field": ".strings[5]",
+              "value": "Inhalt wird entpackt"
+            },
+            {
+              "field": ".strings[6]",
+              "value": "Ich muß vielleicht ein bisschen spät bleiben, hoffentlich nicht lange, aber müssen nur sicher, Sachen machen ist gut für Führer"
+            },
+            {
+              "field": ".strings[7]",
+              "value": "Fehler beim Herunterladen DLC! Bitte stellen Sie sicher, dass Sie mit dem Internet verbunden sind, und dass Sie genügend Speicherplatz zur Verfügung haben."
+            },
+            {
+              "field": ".strings[8]",
+              "value": "Versuch es noch einmal"
+            },
+            {
+              "field": ".strings[9]",
+              "value": "Starten Sie im Offline-Modus"
+            },
+            {
+              "field": ".strings[10]",
+              "value": "Immer verwenden Offline-Modus"
+            },
+            {
+              "field": ".strings[11]",
+              "value": "TIPPEN, UM FORTZUSETZEN"
+            },
+            {
+              "field": ".strings[12]",
+              "value": "Datenschutz-Bestimmungen"
+            },
+            {
+              "field": ".strings[13]",
+              "value": "Kontakt Support"
+            },
+            {
+              "field": ".strings[14]",
+              "value": "Bewerten Sie uns"
+            }
+          ]
         },
         {
           "type": "MonoBehaviour",
-          "name": "it"
+          "name": "it",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "hashes",
+            "strings"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-4409710521683154717"
+            },
+            {
+              "field": ".m_Name",
+              "value": "it"
+            },
+            {
+              "field": ".hashes[0]",
+              "value": "1238981132"
+            },
+            {
+              "field": ".hashes[1]",
+              "value": "1479077690"
+            },
+            {
+              "field": ".hashes[2]",
+              "value": "1316241844"
+            },
+            {
+              "field": ".hashes[3]",
+              "value": "511225978"
+            },
+            {
+              "field": ".hashes[4]",
+              "value": "1108848080"
+            },
+            {
+              "field": ".hashes[5]",
+              "value": "-1221104235"
+            },
+            {
+              "field": ".hashes[6]",
+              "value": "-740059146"
+            },
+            {
+              "field": ".hashes[7]",
+              "value": "2038228853"
+            },
+            {
+              "field": ".hashes[8]",
+              "value": "-9280167"
+            },
+            {
+              "field": ".hashes[9]",
+              "value": "318129856"
+            },
+            {
+              "field": ".hashes[10]",
+              "value": "747267240"
+            },
+            {
+              "field": ".hashes[11]",
+              "value": "-1994501329"
+            },
+            {
+              "field": ".hashes[12]",
+              "value": "1376469481"
+            },
+            {
+              "field": ".hashes[13]",
+              "value": "379609712"
+            },
+            {
+              "field": ".hashes[14]",
+              "value": "1701477981"
+            },
+            {
+              "field": ".strings[0]",
+              "value": "L'inizializzazione DLC"
+            },
+            {
+              "field": ".strings[1]",
+              "value": "L'aggiornamento DLC"
+            },
+            {
+              "field": ".strings[2]",
+              "value": "Inizializzazione stato del gioco"
+            },
+            {
+              "field": ".strings[3]",
+              "value": "Preparazione dati di gioco"
+            },
+            {
+              "field": ".strings[4]",
+              "value": "Scaricamento dei nuovi file in corso ..."
+            },
+            {
+              "field": ".strings[5]",
+              "value": "Estrazione contenuti"
+            },
+            {
+              "field": ".strings[6]",
+              "value": "Potrei aver bisogno di stare un po 'in ritardo, si spera non molto tempo, ma devo solo fare roba sicuro è buono per la Guida"
+            },
+            {
+              "field": ".strings[7]",
+              "value": "Errore durante il download DLC! Si prega di assicurarsi di essere connessi a Internet e che si dispone di spazio sufficiente a disposizione."
+            },
+            {
+              "field": ".strings[8]",
+              "value": "Riprova"
+            },
+            {
+              "field": ".strings[9]",
+              "value": "Inizia in modalità offline"
+            },
+            {
+              "field": ".strings[10]",
+              "value": "Modalità Sempre l'utilizzo offline"
+            },
+            {
+              "field": ".strings[11]",
+              "value": "TOCCA PER CONTINUARE"
+            },
+            {
+              "field": ".strings[12]",
+              "value": "politica sulla riservatezza"
+            },
+            {
+              "field": ".strings[13]",
+              "value": "Contatta il supporto"
+            },
+            {
+              "field": ".strings[14]",
+              "value": "tasso degli Stati Uniti"
+            }
+          ]
         },
         {
           "type": "MonoBehaviour",
-          "name": "settings"
+          "name": "settings",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "main",
+            "platforms"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-2824817505517731658"
+            },
+            {
+              "field": ".m_Name",
+              "value": "settings"
+            },
+            {
+              "field": ".main.masterText[0].m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".main.masterText[0].m_PathID",
+              "value": "-5405994658041649662"
+            },
+            {
+              "field": ".platforms[0].masterText[0].m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".platforms[0].masterText[0].m_PathID",
+              "value": "-5405994658041649662"
+            }
+          ]
         },
         {
           "type": "MonoScript",
@@ -130,11 +875,125 @@
         },
         {
           "type": "MonoBehaviour",
-          "name": "_master_text"
+          "name": "_master_text",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "data"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-6818086132537144000"
+            },
+            {
+              "field": ".m_Name",
+              "value": "_master_text"
+            },
+            {
+              "field": ".data[0].m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".data[0].m_PathID",
+              "value": "8738952335623856710"
+            },
+            {
+              "field": ".data[1].m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".data[1].m_PathID",
+              "value": "4208576947312525323"
+            },
+            {
+              "field": ".data[2].m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".data[2].m_PathID",
+              "value": "-8463057681460212656"
+            },
+            {
+              "field": ".data[3].m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".data[3].m_PathID",
+              "value": "-8697769173095479090"
+            },
+            {
+              "field": ".data[4].m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".data[4].m_PathID",
+              "value": "4066196768730528900"
+            }
+          ]
         },
         {
           "type": "MonoBehaviour",
-          "name": "localization"
+          "name": "localization",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "mtfAll"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "3314501045537253785"
+            },
+            {
+              "field": ".m_Name",
+              "value": "localization"
+            },
+            {
+              "field": ".mtfAll[0].m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".mtfAll[0].m_PathID",
+              "value": "-5405994658041649662"
+            }
+          ]
         },
         {
           "type": "MonoScript",
@@ -154,15 +1013,477 @@
         },
         {
           "type": "MonoBehaviour",
-          "name": "es"
+          "name": "es",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "hashes",
+            "strings"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-4409710521683154717"
+            },
+            {
+              "field": ".m_Name",
+              "value": "es"
+            },
+            {
+              "field": ".hashes[0]",
+              "value": "1238981132"
+            },
+            {
+              "field": ".hashes[1]",
+              "value": "1479077690"
+            },
+            {
+              "field": ".hashes[2]",
+              "value": "1316241844"
+            },
+            {
+              "field": ".hashes[3]",
+              "value": "511225978"
+            },
+            {
+              "field": ".hashes[4]",
+              "value": "1108848080"
+            },
+            {
+              "field": ".hashes[5]",
+              "value": "-1221104235"
+            },
+            {
+              "field": ".hashes[6]",
+              "value": "-740059146"
+            },
+            {
+              "field": ".hashes[7]",
+              "value": "2038228853"
+            },
+            {
+              "field": ".hashes[8]",
+              "value": "-9280167"
+            },
+            {
+              "field": ".hashes[9]",
+              "value": "318129856"
+            },
+            {
+              "field": ".hashes[10]",
+              "value": "747267240"
+            },
+            {
+              "field": ".hashes[11]",
+              "value": "-1994501329"
+            },
+            {
+              "field": ".hashes[12]",
+              "value": "1376469481"
+            },
+            {
+              "field": ".hashes[13]",
+              "value": "379609712"
+            },
+            {
+              "field": ".hashes[14]",
+              "value": "1701477981"
+            },
+            {
+              "field": ".strings[0]",
+              "value": "Inicializando DLC"
+            },
+            {
+              "field": ".strings[1]",
+              "value": "Actualización de DLC"
+            },
+            {
+              "field": ".strings[2]",
+              "value": "Inicializando estado de juego actual"
+            },
+            {
+              "field": ".strings[3]",
+              "value": "Preparando datos del juego"
+            },
+            {
+              "field": ".strings[4]",
+              "value": "Descargando nuevos archivos..."
+            },
+            {
+              "field": ".strings[5]",
+              "value": "Extrayendo contenido"
+            },
+            {
+              "field": ".strings[6]",
+              "value": "Puede que tenga que permanecer un poco tarde, espero que no sea mucho, pero sólo tengo que asegurarse de material es bueno para la guía"
+            },
+            {
+              "field": ".strings[7]",
+              "value": "Error al descargar el DLC! Por favor asegúrese de que está conectado a Internet y que tiene suficiente espacio de almacenamiento disponible."
+            },
+            {
+              "field": ".strings[8]",
+              "value": "Inténtalo de nuevo"
+            },
+            {
+              "field": ".strings[9]",
+              "value": "Iniciar en modo sin conexión"
+            },
+            {
+              "field": ".strings[10]",
+              "value": "Modo de uso sin conexión siempre"
+            },
+            {
+              "field": ".strings[11]",
+              "value": "PULSA PARA CONTINUAR"
+            },
+            {
+              "field": ".strings[12]",
+              "value": "Política de privacidad"
+            },
+            {
+              "field": ".strings[13]",
+              "value": "Soporte de contacto"
+            },
+            {
+              "field": ".strings[14]",
+              "value": "nosotros tasa"
+            }
+          ]
         },
         {
           "type": "MonoBehaviour",
-          "name": "fr"
+          "name": "fr",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "hashes",
+            "strings"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-4409710521683154717"
+            },
+            {
+              "field": ".m_Name",
+              "value": "fr"
+            },
+            {
+              "field": ".hashes[0]",
+              "value": "1238981132"
+            },
+            {
+              "field": ".hashes[1]",
+              "value": "1479077690"
+            },
+            {
+              "field": ".hashes[2]",
+              "value": "1316241844"
+            },
+            {
+              "field": ".hashes[3]",
+              "value": "511225978"
+            },
+            {
+              "field": ".hashes[4]",
+              "value": "1108848080"
+            },
+            {
+              "field": ".hashes[5]",
+              "value": "-1221104235"
+            },
+            {
+              "field": ".hashes[6]",
+              "value": "-740059146"
+            },
+            {
+              "field": ".hashes[7]",
+              "value": "2038228853"
+            },
+            {
+              "field": ".hashes[8]",
+              "value": "-9280167"
+            },
+            {
+              "field": ".hashes[9]",
+              "value": "318129856"
+            },
+            {
+              "field": ".hashes[10]",
+              "value": "747267240"
+            },
+            {
+              "field": ".hashes[11]",
+              "value": "-1994501329"
+            },
+            {
+              "field": ".hashes[12]",
+              "value": "1376469481"
+            },
+            {
+              "field": ".hashes[13]",
+              "value": "379609712"
+            },
+            {
+              "field": ".hashes[14]",
+              "value": "1701477981"
+            },
+            {
+              "field": ".strings[0]",
+              "value": "Initialisation de DLC"
+            },
+            {
+              "field": ".strings[1]",
+              "value": "Mise à jour de DLC"
+            },
+            {
+              "field": ".strings[2]",
+              "value": "Initialisation du jeu"
+            },
+            {
+              "field": ".strings[3]",
+              "value": "Préparation des données de jeu"
+            },
+            {
+              "field": ".strings[4]",
+              "value": "Téléchargement de nouveaux fichiers en cours..."
+            },
+            {
+              "field": ".strings[5]",
+              "value": "Décompression du contenu"
+            },
+            {
+              "field": ".strings[6]",
+              "value": "Je peux avoir besoin de rester un peu en retard, je l'espère pas longtemps, mais dois juste faire des choses est bon pour vous Guide"
+            },
+            {
+              "field": ".strings[7]",
+              "value": "Erreur lors du téléchargement DLC! S'il vous plaît assurez-vous que vous êtes connecté à Internet et que vous disposez d'un espace de stockage suffisant."
+            },
+            {
+              "field": ".strings[8]",
+              "value": "Réessayer"
+            },
+            {
+              "field": ".strings[9]",
+              "value": "Démarrez en mode hors connexion"
+            },
+            {
+              "field": ".strings[10]",
+              "value": "Toujours utiliser le mode hors connexion"
+            },
+            {
+              "field": ".strings[11]",
+              "value": "TOUCHER POUR CONTINUER"
+            },
+            {
+              "field": ".strings[12]",
+              "value": "Politique de confidentialité"
+            },
+            {
+              "field": ".strings[13]",
+              "value": "Contactez le support"
+            },
+            {
+              "field": ".strings[14]",
+              "value": "Évaluez nous"
+            }
+          ]
         },
         {
           "type": "MonoBehaviour",
-          "name": "en"
+          "name": "en",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "hashes",
+            "strings"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-4409710521683154717"
+            },
+            {
+              "field": ".m_Name",
+              "value": "en"
+            },
+            {
+              "field": ".hashes[0]",
+              "value": "1238981132"
+            },
+            {
+              "field": ".hashes[1]",
+              "value": "1479077690"
+            },
+            {
+              "field": ".hashes[2]",
+              "value": "1316241844"
+            },
+            {
+              "field": ".hashes[3]",
+              "value": "511225978"
+            },
+            {
+              "field": ".hashes[4]",
+              "value": "1108848080"
+            },
+            {
+              "field": ".hashes[5]",
+              "value": "-1221104235"
+            },
+            {
+              "field": ".hashes[6]",
+              "value": "-740059146"
+            },
+            {
+              "field": ".hashes[7]",
+              "value": "2038228853"
+            },
+            {
+              "field": ".hashes[8]",
+              "value": "-9280167"
+            },
+            {
+              "field": ".hashes[9]",
+              "value": "318129856"
+            },
+            {
+              "field": ".hashes[10]",
+              "value": "747267240"
+            },
+            {
+              "field": ".hashes[11]",
+              "value": "-1994501329"
+            },
+            {
+              "field": ".hashes[12]",
+              "value": "1376469481"
+            },
+            {
+              "field": ".hashes[13]",
+              "value": "379609712"
+            },
+            {
+              "field": ".hashes[14]",
+              "value": "1701477981"
+            },
+            {
+              "field": ".strings[0]",
+              "value": "Initializing DLC"
+            },
+            {
+              "field": ".strings[1]",
+              "value": "Updating DLC"
+            },
+            {
+              "field": ".strings[2]",
+              "value": "Initializing game state"
+            },
+            {
+              "field": ".strings[3]",
+              "value": "Preparing game data"
+            },
+            {
+              "field": ".strings[4]",
+              "value": "Downloading new files..."
+            },
+            {
+              "field": ".strings[5]",
+              "value": "Decompressing content"
+            },
+            {
+              "field": ".strings[6]",
+              "value": "Error getting DLC URL! Please check your internet connection and try again."
+            },
+            {
+              "field": ".strings[7]",
+              "value": "Error downloading DLC! Please make sure you are connected to the internet and that you have sufficient storage space available."
+            },
+            {
+              "field": ".strings[8]",
+              "value": "Try Again"
+            },
+            {
+              "field": ".strings[9]",
+              "value": "Start in Offline Mode"
+            },
+            {
+              "field": ".strings[10]",
+              "value": "Always Use Offline Mode"
+            },
+            {
+              "field": ".strings[11]",
+              "value": "TAP TO CONTINUE"
+            },
+            {
+              "field": ".strings[12]",
+              "value": "Privacy Policy"
+            },
+            {
+              "field": ".strings[13]",
+              "value": "Contact Support"
+            },
+            {
+              "field": ".strings[14]",
+              "value": "Rate Us"
+            }
+          ]
         }
       ]
     },
@@ -181,7 +1502,256 @@
       "objects_named_or_text": [
         {
           "type": "MonoBehaviour",
-          "name": "GlobalBundleData"
+          "name": "GlobalBundleData",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "bundleProperties"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-3310445040115646727"
+            },
+            {
+              "field": ".m_Name",
+              "value": "GlobalBundleData"
+            },
+            {
+              "field": ".bundleProperties.keys[0]",
+              "value": "data.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[1]",
+              "value": "localization.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[2]",
+              "value": "menu.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[3]",
+              "value": "msm1.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[4]",
+              "value": "msm2.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[5]",
+              "value": "prefabs.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[6]",
+              "value": "splash.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[7]",
+              "value": "master.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[8]",
+              "value": "misc.unity3d"
+            },
+            {
+              "field": ".bundleProperties.values[0].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[0].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[0].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[0].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[0].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[1].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[1].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[1].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[1].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[1].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[2].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[2].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[2].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[2].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[2].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[3].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[3].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[3].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[3].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[3].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[4].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[4].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[4].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[4].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[4].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[5].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[5].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[5].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[5].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[5].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[6].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[6].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[6].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[6].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[6].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[7].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[7].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[7].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[7].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[7].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[8].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[8].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[8].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[8].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[8].forcedUnload",
+              "value": "0"
+            }
+          ]
         },
         {
           "type": "MonoScript",
@@ -189,7 +1759,258 @@
         },
         {
           "type": "MonoBehaviour",
-          "name": "GlobalLookupData"
+          "name": "GlobalLookupData",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "version",
+            "bundleInfo",
+            "GUIDS"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "2569803766900591944"
+            },
+            {
+              "field": ".m_Name",
+              "value": "GlobalLookupData"
+            },
+            {
+              "field": ".version",
+              "value": "1280"
+            },
+            {
+              "field": ".bundleInfo[0].bundleName",
+              "value": "data.unity3d"
+            },
+            {
+              "field": ".bundleInfo[0].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[0].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[1].bundleName",
+              "value": "localization.unity3d"
+            },
+            {
+              "field": ".bundleInfo[1].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[1].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[2].bundleName",
+              "value": "master.unity3d"
+            },
+            {
+              "field": ".bundleInfo[2].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[2].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[3].bundleName",
+              "value": "menu.unity3d"
+            },
+            {
+              "field": ".bundleInfo[3].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[3].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[4].bundleName",
+              "value": "misc.unity3d"
+            },
+            {
+              "field": ".bundleInfo[4].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[4].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[5].bundleName",
+              "value": "msm1.unity3d"
+            },
+            {
+              "field": ".bundleInfo[5].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[5].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[6].bundleName",
+              "value": "msm2.unity3d"
+            },
+            {
+              "field": ".bundleInfo[6].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[6].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[7].bundleName",
+              "value": "prefabs.unity3d"
+            },
+            {
+              "field": ".bundleInfo[7].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[7].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[8].bundleName",
+              "value": "splash.unity3d"
+            },
+            {
+              "field": ".bundleInfo[8].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[8].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".GUIDS.keys[0]",
+              "value": "6ba8bad9841a3d947b8d9abfd0e86b12"
+            },
+            {
+              "field": ".GUIDS.keys[1]",
+              "value": "30181b8037281044883ad8511efb607b"
+            },
+            {
+              "field": ".GUIDS.keys[2]",
+              "value": "4213aa52c0f490a4b9bc5a04923d6ffb"
+            },
+            {
+              "field": ".GUIDS.keys[3]",
+              "value": "8ac85831d50608e499206b395ec05dbb"
+            },
+            {
+              "field": ".GUIDS.keys[4]",
+              "value": "6407cbc6b6de97c43bbd477007bc9664"
+            },
+            {
+              "field": ".GUIDS.keys[5]",
+              "value": "d90ff2bb5c717784f9a10641719f05cc"
+            },
+            {
+              "field": ".GUIDS.keys[6]",
+              "value": "d90ff2bb5c717784f9a10641719f05cc|back"
+            },
+            {
+              "field": ".GUIDS.keys[7]",
+              "value": "7c910e2156412f84d97108dc8ce4e49f"
+            },
+            {
+              "field": ".GUIDS.keys[8]",
+              "value": "7c910e2156412f84d97108dc8ce4e49f|Black9SFrame50"
+            },
+            {
+              "field": ".GUIDS.keys[9]",
+              "value": "89028e2487df1644b802291820589436"
+            },
+            {
+              "field": ".GUIDS.keys[10]",
+              "value": "89028e2487df1644b802291820589436|black_circle"
+            },
+            {
+              "field": ".GUIDS.keys[11]",
+              "value": "75fc055f026aa4b4e80d0ecd26dfd715"
+            },
+            {
+              "field": ".GUIDS.keys[12]",
+              "value": "75fc055f026aa4b4e80d0ecd26dfd715|black_star"
+            },
+            {
+              "field": ".GUIDS.keys[13]",
+              "value": "cfa934927c851e640b9dcdbe971e638c"
+            },
+            {
+              "field": ".GUIDS.keys[14]",
+              "value": "cfa934927c851e640b9dcdbe971e638c|blue_circle"
+            },
+            {
+              "field": ".GUIDS.values[0].key",
+              "value": "6ba8bad9841a3d947b8d9abfd0e86b12"
+            },
+            {
+              "field": ".GUIDS.values[0].path",
+              "value": "Assets/StaticData/AllData.asset"
+            },
+            {
+              "field": ".GUIDS.values[0].bundleIndex",
+              "value": "0"
+            },
+            {
+              "field": ".GUIDS.values[0].assetId.__id",
+              "value": "0"
+            },
+            {
+              "field": ".GUIDS.values[1].key",
+              "value": "30181b8037281044883ad8511efb607b"
+            },
+            {
+              "field": ".GUIDS.values[1].path",
+              "value": "Assets/StaticData/UISettings.asset"
+            },
+            {
+              "field": ".GUIDS.values[1].bundleIndex",
+              "value": "0"
+            },
+            {
+              "field": ".GUIDS.values[1].assetId.__id",
+              "value": "0"
+            },
+            {
+              "field": ".GUIDS.values[2].key",
+              "value": "4213aa52c0f490a4b9bc5a04923d6ffb"
+            },
+            {
+              "field": ".GUIDS.values[2].path",
+              "value": "Assets/Localization/settings.asset"
+            },
+            {
+              "field": ".GUIDS.values[2].bundleIndex",
+              "value": "1"
+            }
+          ]
         },
         {
           "type": "AssetBundle",
@@ -207,34 +2028,17 @@
       "archive_sha1": "9657cc7996c359d128c1a3c864b342c03c0ecb47",
       "bytes": 1252,
       "sha1_verified": true,
-      "config_lines": [
-        "UnityFS\u0000\u0000\u0000\u0000\u00065.x.x\u00002017.4.22f1\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004�\u0000\u0000\u0000A\u0000\u0000\u0000[\u0000\u0000\u0000C",
-        "\u0000\u0001\u0000�\u0001\u0000\u0000\u0012|\u0000\u0000\u0004q\u0000A\u000e\u0000\b",
-        "\u0000\u0000\u001a\u0000�\u0018\u0000\u0004CAB-b256187ebdb96f35466cb698edc0a6fd\u0000]\u0000\u0000\b\u0000\u0000\u0000`/\u001aW�/�o\u0000Zq?��c*�}�c�������",
-        "U�\u0012�K߄P\u001a�B�\u0014J\u0016Ip�m#z��̢���v_Z>�\u0013�=Y��6i�0��=�&�j]���!cn\u0012K�������Q0E���X\u0012s�z�ٝ*�������2��l�)\u0012&ck��t�hNɟ$(UY&�b�����-��\b�",
-        "�U��{\u0002\u0014\u0013Y2{x�ʦ��",
-        "�����\u000e�W�˳�v�\u001a��1�",
-        "\u0012HԴ��7�[!\"� �u",
-        ")R�\u0002˰����\u0006H\u0002�K�?�E5��{d��L���m�%�^�&�vd#�",
-        "�+��5\u0019U{�&��\u0016\"�\u000fK�`~�6\u0017�8�0ޮ��6��\u0000;I�\u0012��ޭ���P�z\u0001.^P��-�?�'\u000f$z4�$�\u0001��窦�\u0004QU�;�T�K�>eS�>9���",
-        "n��\tk��R",
-        ";��b\u0017t59���",
-        "� �656d=��\u0007l��d��4�'�\u001b\u001f\\",
-        "J�����믰(K���A�o\u0002إ",
-        "�H8�48e]��YҤzM�S\u0004b�О�c\t\u0001Q�\u0018�~W@[���v�WKK����;���ޕz�q�J��F�QT\u0006���Β���Q�Z",
-        "�����٥K\u0017T",
-        "�>",
-        "��w\u0019�Y�~�0,8H�یY!ݪ6�Cy",
-        "^k.��\u0013�w\u0000V��p�$����{&��.�5\u0012���nmQ:e",
-        "G��gx[w�V��m�j\u0011cQ��\u0010�7����<o�\u0019��O�J\u000e��G�o���\u0016W�n��Z�a����.-K�*F�;\u0000)�l�����\u0001��RM�n�ۤp\"C�\u0012ߪ_\"",
-        "\u0006kR�\u00029\t_\u0012��WԿ�\b� ��Mx�P",
-        "�k�8�\u0013y��ޞ{B:c?�դ��.���k�u~Y 7����<������g\t��!^4~Y��O�\u000e1�\u0000�ak+\tY�ªكUc\u001b\u001b��5$\u0011j�Փ��P�Q]�\u0005",
-        "q�Prf�;��",
-        "�\u0002ۃ�>bt�搁�՝=�ޡ5�9N'����\u0016�\u001b�D�����l�c}�����V��M���8��l��-\u0005Cf�`ًиʐ����i8�!d�:�a�@�ɞ\u0013��r����<M+�T�W{����7��C�\u0000���':c0��[��O�S$4",
-        "ҋ \u0016x���e0�1e�7\u0005��~\u0011m&w\"�i�㬿��F�@��Z���p*���\u0002��5n�l��N1�Wu��Q�L\u001b>� ,j��ھ�\u000fT'\u000f\u0014��m$K\"&B�,�)\u000e�",
-        "�\u0010�2/;�À;O��"
-      ],
-      "url_hosts": []
+      "unity_object_count": 2,
+      "unity_types": {
+        "AssetBundle": 1,
+        "AssetBundleManifest": 1
+      },
+      "objects_named_or_text": [
+        {
+          "type": "AssetBundleManifest",
+          "name": "AssetBundleManifest"
+        }
+      ]
     },
     {
       "path": "dlc/1383 (sept 26 2019)/android/data.unity3d",
@@ -255,7 +2059,72 @@
         },
         {
           "type": "MonoBehaviour",
-          "name": "UISettings"
+          "name": "UISettings",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "listColors"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-615566726739985248"
+            },
+            {
+              "field": ".m_Name",
+              "value": "UISettings"
+            },
+            {
+              "field": ".listColors[0].r",
+              "value": "0.1568627506494522"
+            },
+            {
+              "field": ".listColors[0].g",
+              "value": "0.1411764770746231"
+            },
+            {
+              "field": ".listColors[0].b",
+              "value": "0.1921568661928177"
+            },
+            {
+              "field": ".listColors[0].a",
+              "value": "1.0"
+            },
+            {
+              "field": ".listColors[1].r",
+              "value": "0.25882354378700256"
+            },
+            {
+              "field": ".listColors[1].g",
+              "value": "0.20392157137393951"
+            },
+            {
+              "field": ".listColors[1].b",
+              "value": "0.29019609093666077"
+            },
+            {
+              "field": ".listColors[1].a",
+              "value": "1.0"
+            }
+          ]
         },
         {
           "type": "AssetBundle",
@@ -267,7 +2136,257 @@
         },
         {
           "type": "MonoBehaviour",
-          "name": "AllData"
+          "name": "AllData",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "msm1",
+            "msm2"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "5236842526972459975"
+            },
+            {
+              "field": ".m_Name",
+              "value": "AllData"
+            },
+            {
+              "field": ".msm1.monsters[0].id",
+              "value": "1"
+            },
+            {
+              "field": ".msm1.monsters[0].entity_id",
+              "value": "64"
+            },
+            {
+              "field": ".msm1.monsters[0].classId",
+              "value": "CLASS_NATURAL"
+            },
+            {
+              "field": ".msm1.monsters[0].monsterName",
+              "value": "MONSTER_A"
+            },
+            {
+              "field": ".msm1.monsters[0].description",
+              "value": "MONSTER_A_DESC"
+            },
+            {
+              "field": ".msm1.monsters[0].portrait.guid",
+              "value": "7c22f125a4a8667408659ffece3666b5|monster_portrait_square_a"
+            },
+            {
+              "field": ".msm1.monsters[0].portrait.typeName",
+              "value": "UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[0].spore.guid",
+              "value": "d2e35c84c36198e49b73d470290cd85c|spore_A"
+            },
+            {
+              "field": ".msm1.monsters[0].spore.typeName",
+              "value": "UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[0].genes[0]",
+              "value": "A"
+            },
+            {
+              "field": ".msm1.monsters[0].animation_adult.typeName",
+              "value": "UnityCommon.Anim2D.AnimData2D, Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[0].animation_baby.typeName",
+              "value": "UnityCommon.Anim2D.AnimData2D, Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[0].msm1AnimObj.guid",
+              "value": "047243bfb9144414aa17160f67ad0daf"
+            },
+            {
+              "field": ".msm1.monsters[0].msm1AnimObj.typeName",
+              "value": "UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[0].beds",
+              "value": "1"
+            },
+            {
+              "field": ".msm1.monsters[0].level",
+              "value": "4"
+            },
+            {
+              "field": ".msm1.monsters[0].isRare",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].isEpic",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].isFavourite",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].isCollected",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].ignore",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].linkedId",
+              "value": "118"
+            },
+            {
+              "field": ".msm1.monsters[0].linkedEpicId",
+              "value": "301"
+            },
+            {
+              "field": ".msm1.monsters[0].xp",
+              "value": "150"
+            },
+            {
+              "field": ".msm1.monsters[0].cost_coins",
+              "value": "300"
+            },
+            {
+              "field": ".msm1.monsters[0].cost_diamonds",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].cost_eth_currency",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].cost_relics",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].cost_starpower",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].sell_price",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].breed_time",
+              "value": "14400"
+            },
+            {
+              "field": ".msm1.monsters[0].likes[0]",
+              "value": "70"
+            },
+            {
+              "field": ".msm1.monsters[0].likes[1]",
+              "value": "86"
+            },
+            {
+              "field": ".msm1.monsters[0].likes[2]",
+              "value": "95"
+            },
+            {
+              "field": ".msm1.monsters[0].likes[3]",
+              "value": "134"
+            },
+            {
+              "field": ".msm1.monsters[0].likes[4]",
+              "value": "112"
+            },
+            {
+              "field": ".msm1.monsters[1].id",
+              "value": "2"
+            },
+            {
+              "field": ".msm1.monsters[1].entity_id",
+              "value": "65"
+            },
+            {
+              "field": ".msm1.monsters[1].classId",
+              "value": "CLASS_NATURAL"
+            },
+            {
+              "field": ".msm1.monsters[1].monsterName",
+              "value": "MONSTER_B"
+            },
+            {
+              "field": ".msm1.monsters[1].description",
+              "value": "MONSTER_B_DESC"
+            },
+            {
+              "field": ".msm1.monsters[1].portrait.guid",
+              "value": "96c4c8de63f5bb94b937532b0a334ba5|monster_portrait_square_b"
+            },
+            {
+              "field": ".msm1.monsters[1].portrait.typeName",
+              "value": "UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[1].spore.guid",
+              "value": "fec1d8bab4e98d841bc65532c16b4e86|spore_B"
+            },
+            {
+              "field": ".msm1.monsters[1].spore.typeName",
+              "value": "UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[1].genes[0]",
+              "value": "B"
+            },
+            {
+              "field": ".msm1.monsters[1].animation_adult.typeName",
+              "value": "UnityCommon.Anim2D.AnimData2D, Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[1].animation_baby.typeName",
+              "value": "UnityCommon.Anim2D.AnimData2D, Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[1].msm1AnimObj.guid",
+              "value": "07223ee3ff95f1b41a52b6fc3b77d1eb"
+            },
+            {
+              "field": ".msm1.monsters[1].msm1AnimObj.typeName",
+              "value": "UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[1].beds",
+              "value": "1"
+            },
+            {
+              "field": ".msm1.monsters[1].level",
+              "value": "9"
+            },
+            {
+              "field": ".msm1.monsters[1].isRare",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[1].isEpic",
+              "value": "0"
+            }
+          ]
         }
       ]
     },
@@ -286,7 +2405,256 @@
       "objects_named_or_text": [
         {
           "type": "MonoBehaviour",
-          "name": "GlobalBundleData"
+          "name": "GlobalBundleData",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "bundleProperties"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-3310445040115646727"
+            },
+            {
+              "field": ".m_Name",
+              "value": "GlobalBundleData"
+            },
+            {
+              "field": ".bundleProperties.keys[0]",
+              "value": "data.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[1]",
+              "value": "msm2.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[2]",
+              "value": "master.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[3]",
+              "value": "localization.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[4]",
+              "value": "menu.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[5]",
+              "value": "misc.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[6]",
+              "value": "msm1.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[7]",
+              "value": "prefabs.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[8]",
+              "value": "splash.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[9]",
+              "value": "static_data.unity3d"
+            },
+            {
+              "field": ".bundleProperties.values[0].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[0].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[0].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[0].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[0].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[1].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[1].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[1].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[1].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[1].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[2].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[2].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[2].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[2].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[2].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[3].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[3].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[3].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[3].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[3].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[4].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[4].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[4].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[4].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[4].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[5].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[5].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[5].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[5].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[5].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[6].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[6].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[6].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[6].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[6].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[7].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[7].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[7].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[7].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[7].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[8].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[8].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[8].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[8].dynamicUnload",
+              "value": "0"
+            }
+          ]
         },
         {
           "type": "MonoScript",
@@ -294,7 +2662,258 @@
         },
         {
           "type": "MonoBehaviour",
-          "name": "GlobalLookupData"
+          "name": "GlobalLookupData",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "version",
+            "bundleInfo",
+            "GUIDS"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "2569803766900591944"
+            },
+            {
+              "field": ".m_Name",
+              "value": "GlobalLookupData"
+            },
+            {
+              "field": ".version",
+              "value": "1383"
+            },
+            {
+              "field": ".bundleInfo[0].bundleName",
+              "value": "data.unity3d"
+            },
+            {
+              "field": ".bundleInfo[0].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[0].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[1].bundleName",
+              "value": "localization.unity3d"
+            },
+            {
+              "field": ".bundleInfo[1].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[1].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[2].bundleName",
+              "value": "master.unity3d"
+            },
+            {
+              "field": ".bundleInfo[2].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[2].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[3].bundleName",
+              "value": "menu.unity3d"
+            },
+            {
+              "field": ".bundleInfo[3].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[3].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[4].bundleName",
+              "value": "misc.unity3d"
+            },
+            {
+              "field": ".bundleInfo[4].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[4].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[5].bundleName",
+              "value": "msm1.unity3d"
+            },
+            {
+              "field": ".bundleInfo[5].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[5].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[6].bundleName",
+              "value": "msm2.unity3d"
+            },
+            {
+              "field": ".bundleInfo[6].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[6].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[7].bundleName",
+              "value": "prefabs.unity3d"
+            },
+            {
+              "field": ".bundleInfo[7].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[7].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[8].bundleName",
+              "value": "splash.unity3d"
+            },
+            {
+              "field": ".bundleInfo[8].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[8].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[9].bundleName",
+              "value": "static_data.unity3d"
+            },
+            {
+              "field": ".bundleInfo[9].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[9].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".GUIDS.keys[0]",
+              "value": "6ba8bad9841a3d947b8d9abfd0e86b12"
+            },
+            {
+              "field": ".GUIDS.keys[1]",
+              "value": "30181b8037281044883ad8511efb607b"
+            },
+            {
+              "field": ".GUIDS.keys[2]",
+              "value": "4213aa52c0f490a4b9bc5a04923d6ffb"
+            },
+            {
+              "field": ".GUIDS.keys[3]",
+              "value": "8ac85831d50608e499206b395ec05dbb"
+            },
+            {
+              "field": ".GUIDS.keys[4]",
+              "value": "6407cbc6b6de97c43bbd477007bc9664"
+            },
+            {
+              "field": ".GUIDS.keys[5]",
+              "value": "0dede54f3398f7d4f89010f905f7c10a"
+            },
+            {
+              "field": ".GUIDS.keys[6]",
+              "value": "d90ff2bb5c717784f9a10641719f05cc"
+            },
+            {
+              "field": ".GUIDS.keys[7]",
+              "value": "d90ff2bb5c717784f9a10641719f05cc|back"
+            },
+            {
+              "field": ".GUIDS.keys[8]",
+              "value": "7c910e2156412f84d97108dc8ce4e49f"
+            },
+            {
+              "field": ".GUIDS.keys[9]",
+              "value": "7c910e2156412f84d97108dc8ce4e49f|Black9SFrame50"
+            },
+            {
+              "field": ".GUIDS.keys[10]",
+              "value": "89028e2487df1644b802291820589436"
+            },
+            {
+              "field": ".GUIDS.keys[11]",
+              "value": "89028e2487df1644b802291820589436|black_circle"
+            },
+            {
+              "field": ".GUIDS.keys[12]",
+              "value": "75fc055f026aa4b4e80d0ecd26dfd715"
+            },
+            {
+              "field": ".GUIDS.keys[13]",
+              "value": "75fc055f026aa4b4e80d0ecd26dfd715|black_star"
+            },
+            {
+              "field": ".GUIDS.keys[14]",
+              "value": "cfa934927c851e640b9dcdbe971e638c"
+            },
+            {
+              "field": ".GUIDS.values[0].key",
+              "value": "6ba8bad9841a3d947b8d9abfd0e86b12"
+            },
+            {
+              "field": ".GUIDS.values[0].path",
+              "value": "Assets/StaticData/AllData.asset"
+            },
+            {
+              "field": ".GUIDS.values[0].bundleIndex",
+              "value": "0"
+            },
+            {
+              "field": ".GUIDS.values[0].assetId.__id",
+              "value": "0"
+            },
+            {
+              "field": ".GUIDS.values[1].key",
+              "value": "30181b8037281044883ad8511efb607b"
+            },
+            {
+              "field": ".GUIDS.values[1].path",
+              "value": "Assets/StaticData/UISettings.asset"
+            },
+            {
+              "field": ".GUIDS.values[1].bundleIndex",
+              "value": "0"
+            },
+            {
+              "field": ".GUIDS.values[1].assetId.__id",
+              "value": "0"
+            }
+          ]
         },
         {
           "type": "AssetBundle",
@@ -320,7 +2939,39 @@
       "objects_named_or_text": [
         {
           "type": "MonoBehaviour",
-          "name": "staticinfo_ACD_scups"
+          "name": "staticinfo_ACD_scups",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Name",
+              "value": "staticinfo_ACD_scups"
+            }
+          ]
         },
         {
           "type": "AssetBundle",
@@ -328,7 +2979,39 @@
         },
         {
           "type": "MonoBehaviour",
-          "name": "staticinfo_ABC_reedling"
+          "name": "staticinfo_ABC_reedling",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Name",
+              "value": "staticinfo_ABC_reedling"
+            }
+          ]
         }
       ]
     },
@@ -338,34 +3021,17 @@
       "archive_sha1": "4db494a789bc4b4d6c06f8338fb996b12693fb3c",
       "bytes": 1253,
       "sha1_verified": true,
-      "config_lines": [
-        "UnityFS\u0000\u0000\u0000\u0000\u00065.x.x\u00002017.4.22f1\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004�\u0000\u0000\u0000A\u0000\u0000\u0000[\u0000\u0000\u0000C",
-        "\u0000\u0001\u0000�\u0001\u0000\u0000\u0012|\u0000\u0000\u0004r\u0000A\u000e\u0000\b",
-        "\u0000\u0000\u001a\u0000�\u0018\u0000\u0004CAB-b256187ebdb96f35466cb698edc0a6fd\u0000]\u0000\u0000\b\u0000\u0000\u0000`/\u001aW�/�o\u0000Zq?��c*�}�c�������",
-        "U�\u0012�K߄P\u001a�B�\u0014J\u0016Ip�m#z��̢���v_Z>�\u0013�=Y��6i�0��=�&�j]���!cn\u0012K�������Q0E���X\u0012s�z�ٝ*�������2��l�)\u0012&ck��t�hNɟ$(UY&�b�����-��\b�",
-        "�U��{\u0002\u0014\u0013Y2{x�ʦ��",
-        "�����\u000e�W�˳�v�\u001a��1�",
-        "\u0012HԴ��7�[!\"� �u",
-        ")R�\u0002˰����\u0006H\u0002�K�?�E5��{d��L���m�%�^�&�vd#�",
-        "�+��5\u0019U{�&��\u0016\"�\u000fK�`~�6\u0017�8�0ޮ��6��\u0000;I�\u0012��ޭ���P�z\u0001.^P��-�?�'\u000f$z4�$�\u0001��窦�\u0004QU�;�T�K�>eS�>9���",
-        "n��\tk��R",
-        ";��b\u0017t59���",
-        "� �656d=��\u0007l��d��4�'�\u001b\u001f\\",
-        "J�����믰(K���A�o\u0002إ",
-        "�H8�48e]��YҤzM�S\u0004b�О�c\t\u0001Q�\u0018�~W@[���v�WKK����;���ޕz�q�J��F�QT\u0006���Β���Q�Z",
-        "�����٥K\u0017T",
-        "�>",
-        "��w\u0019�Y�~�0,8H�یY!ݪ6�Cy",
-        "^k.��\u0013�w\u0000V��p�$����{&��.�5\u0012���nmQ:e",
-        "G��gx[w�V��m�j\u0011cQ��\u0010�7����<o�\u0019��O�J\u000e��G�o���\u0016W�n��Z�a����.-K�*F�;\u0000)�l�����\u0001��RM�n�ۤp\"C�\u0012ߪ_\"",
-        "\u0006kR�\u00029\t_\u0012��WԿ�\b� ��Mx�P",
-        "�k�8�\u0013y��ޞ{B:c?�դ��.���k�u~Y 7����<������g\t��!^4~Y��O�\u000e1�\u0000�ak+\tY�ªكUc\u001b\u001b��5$\u0011j�Փ��P�Q]�\u0005",
-        "q�Prf�;��",
-        "�\u0002ۃ�>bt�搁�՝=�ޡ5�9N'����\u0016�\u001b�D�����l�c}�����V��M���8��l��-\u0005Cf�`ًиʐ����i8�!d�:�a�@�ɞ\u0013��r����<M+�T�W{����7��C�\u0000���':c0�5",
-        "�\u0015�ɂ�2�\u0017�Z���#Yd��E!�N����S�ף��.7\u0012�\u0015�}���U��\"�zh0m",
-        "\u001f涶}��.V�\u0016\u0010�q���5�3@ҼG'�%�d\u001b5UIE�V�\u0015��Ř�.���\u0016������\"�s�D\bUD\u000e<��x/("
-      ],
-      "url_hosts": []
+      "unity_object_count": 2,
+      "unity_types": {
+        "AssetBundle": 1,
+        "AssetBundleManifest": 1
+      },
+      "objects_named_or_text": [
+        {
+          "type": "AssetBundleManifest",
+          "name": "AssetBundleManifest"
+        }
+      ]
     },
     {
       "path": "dlc/1428 (oct 23 2019)/android/data.unity3d",
@@ -386,7 +3052,72 @@
         },
         {
           "type": "MonoBehaviour",
-          "name": "UISettings"
+          "name": "UISettings",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "listColors"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-615566726739985248"
+            },
+            {
+              "field": ".m_Name",
+              "value": "UISettings"
+            },
+            {
+              "field": ".listColors[0].r",
+              "value": "0.1568627506494522"
+            },
+            {
+              "field": ".listColors[0].g",
+              "value": "0.1411764770746231"
+            },
+            {
+              "field": ".listColors[0].b",
+              "value": "0.1921568661928177"
+            },
+            {
+              "field": ".listColors[0].a",
+              "value": "1.0"
+            },
+            {
+              "field": ".listColors[1].r",
+              "value": "0.25882354378700256"
+            },
+            {
+              "field": ".listColors[1].g",
+              "value": "0.20392157137393951"
+            },
+            {
+              "field": ".listColors[1].b",
+              "value": "0.29019609093666077"
+            },
+            {
+              "field": ".listColors[1].a",
+              "value": "1.0"
+            }
+          ]
         },
         {
           "type": "AssetBundle",
@@ -398,7 +3129,257 @@
         },
         {
           "type": "MonoBehaviour",
-          "name": "AllData"
+          "name": "AllData",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "msm1",
+            "msm2"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "5236842526972459975"
+            },
+            {
+              "field": ".m_Name",
+              "value": "AllData"
+            },
+            {
+              "field": ".msm1.monsters[0].id",
+              "value": "1"
+            },
+            {
+              "field": ".msm1.monsters[0].entity_id",
+              "value": "64"
+            },
+            {
+              "field": ".msm1.monsters[0].classId",
+              "value": "CLASS_NATURAL"
+            },
+            {
+              "field": ".msm1.monsters[0].monsterName",
+              "value": "MONSTER_A"
+            },
+            {
+              "field": ".msm1.monsters[0].description",
+              "value": "MONSTER_A_DESC"
+            },
+            {
+              "field": ".msm1.monsters[0].portrait.guid",
+              "value": "7c22f125a4a8667408659ffece3666b5|monster_portrait_square_a"
+            },
+            {
+              "field": ".msm1.monsters[0].portrait.typeName",
+              "value": "UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[0].spore.guid",
+              "value": "d2e35c84c36198e49b73d470290cd85c|spore_A"
+            },
+            {
+              "field": ".msm1.monsters[0].spore.typeName",
+              "value": "UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[0].genes[0]",
+              "value": "A"
+            },
+            {
+              "field": ".msm1.monsters[0].animation_adult.typeName",
+              "value": "UnityCommon.Anim2D.AnimData2D, Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[0].animation_baby.typeName",
+              "value": "UnityCommon.Anim2D.AnimData2D, Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[0].msm1AnimObj.guid",
+              "value": "047243bfb9144414aa17160f67ad0daf"
+            },
+            {
+              "field": ".msm1.monsters[0].msm1AnimObj.typeName",
+              "value": "UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[0].beds",
+              "value": "1"
+            },
+            {
+              "field": ".msm1.monsters[0].level",
+              "value": "4"
+            },
+            {
+              "field": ".msm1.monsters[0].isRare",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].isEpic",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].isFavourite",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].isCollected",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].ignore",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].linkedId",
+              "value": "118"
+            },
+            {
+              "field": ".msm1.monsters[0].linkedEpicId",
+              "value": "301"
+            },
+            {
+              "field": ".msm1.monsters[0].xp",
+              "value": "150"
+            },
+            {
+              "field": ".msm1.monsters[0].cost_coins",
+              "value": "300"
+            },
+            {
+              "field": ".msm1.monsters[0].cost_diamonds",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].cost_eth_currency",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].cost_relics",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].cost_starpower",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].sell_price",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[0].breed_time",
+              "value": "14400"
+            },
+            {
+              "field": ".msm1.monsters[0].likes[0]",
+              "value": "70"
+            },
+            {
+              "field": ".msm1.monsters[0].likes[1]",
+              "value": "86"
+            },
+            {
+              "field": ".msm1.monsters[0].likes[2]",
+              "value": "95"
+            },
+            {
+              "field": ".msm1.monsters[0].likes[3]",
+              "value": "134"
+            },
+            {
+              "field": ".msm1.monsters[0].likes[4]",
+              "value": "112"
+            },
+            {
+              "field": ".msm1.monsters[1].id",
+              "value": "2"
+            },
+            {
+              "field": ".msm1.monsters[1].entity_id",
+              "value": "65"
+            },
+            {
+              "field": ".msm1.monsters[1].classId",
+              "value": "CLASS_NATURAL"
+            },
+            {
+              "field": ".msm1.monsters[1].monsterName",
+              "value": "MONSTER_B"
+            },
+            {
+              "field": ".msm1.monsters[1].description",
+              "value": "MONSTER_B_DESC"
+            },
+            {
+              "field": ".msm1.monsters[1].portrait.guid",
+              "value": "96c4c8de63f5bb94b937532b0a334ba5|monster_portrait_square_b"
+            },
+            {
+              "field": ".msm1.monsters[1].portrait.typeName",
+              "value": "UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[1].spore.guid",
+              "value": "fec1d8bab4e98d841bc65532c16b4e86|spore_B"
+            },
+            {
+              "field": ".msm1.monsters[1].spore.typeName",
+              "value": "UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[1].genes[0]",
+              "value": "B"
+            },
+            {
+              "field": ".msm1.monsters[1].animation_adult.typeName",
+              "value": "UnityCommon.Anim2D.AnimData2D, Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[1].animation_baby.typeName",
+              "value": "UnityCommon.Anim2D.AnimData2D, Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[1].msm1AnimObj.guid",
+              "value": "07223ee3ff95f1b41a52b6fc3b77d1eb"
+            },
+            {
+              "field": ".msm1.monsters[1].msm1AnimObj.typeName",
+              "value": "UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "field": ".msm1.monsters[1].beds",
+              "value": "1"
+            },
+            {
+              "field": ".msm1.monsters[1].level",
+              "value": "9"
+            },
+            {
+              "field": ".msm1.monsters[1].isRare",
+              "value": "0"
+            },
+            {
+              "field": ".msm1.monsters[1].isEpic",
+              "value": "0"
+            }
+          ]
         }
       ]
     },
@@ -417,15 +3398,373 @@
       "objects_named_or_text": [
         {
           "type": "MonoBehaviour",
-          "name": "de"
+          "name": "de",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "hashes",
+            "strings"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-4409710521683154717"
+            },
+            {
+              "field": ".m_Name",
+              "value": "de"
+            },
+            {
+              "field": ".hashes[0]",
+              "value": "1238981132"
+            },
+            {
+              "field": ".hashes[1]",
+              "value": "1479077690"
+            },
+            {
+              "field": ".hashes[2]",
+              "value": "1316241844"
+            },
+            {
+              "field": ".hashes[3]",
+              "value": "511225978"
+            },
+            {
+              "field": ".hashes[4]",
+              "value": "1108848080"
+            },
+            {
+              "field": ".hashes[5]",
+              "value": "-1221104235"
+            },
+            {
+              "field": ".hashes[6]",
+              "value": "-740059146"
+            },
+            {
+              "field": ".hashes[7]",
+              "value": "2038228853"
+            },
+            {
+              "field": ".hashes[8]",
+              "value": "-9280167"
+            },
+            {
+              "field": ".hashes[9]",
+              "value": "318129856"
+            },
+            {
+              "field": ".hashes[10]",
+              "value": "747267240"
+            },
+            {
+              "field": ".hashes[11]",
+              "value": "-1994501329"
+            },
+            {
+              "field": ".hashes[12]",
+              "value": "1376469481"
+            },
+            {
+              "field": ".hashes[13]",
+              "value": "379609712"
+            },
+            {
+              "field": ".hashes[14]",
+              "value": "1701477981"
+            },
+            {
+              "field": ".strings[0]",
+              "value": "DLC wird initialisiert..."
+            },
+            {
+              "field": ".strings[1]",
+              "value": "DLC wird aktualisiert..."
+            },
+            {
+              "field": ".strings[2]",
+              "value": "Spielstatus wird initialisiert..."
+            },
+            {
+              "field": ".strings[3]",
+              "value": "Spieldaten werden vorbereitet..."
+            },
+            {
+              "field": ".strings[4]",
+              "value": "Neue Dateien werden heruntergeladen..."
+            },
+            {
+              "field": ".strings[5]",
+              "value": "Inhalt dekomprimieren..."
+            },
+            {
+              "field": ".strings[6]",
+              "value": "Fehler beim Abrufen der DLC-URL! Bitte überprüfe deine Internetverbindung und versuche es erneut."
+            },
+            {
+              "field": ".strings[7]",
+              "value": "Fehler beim Herunterladen DLC! Bitte stelle sicher,dass eine Verbindung mit dem Internet besteht, und dass ausreichend Speicherplatz zur Verfügung hast."
+            },
+            {
+              "field": ".strings[8]",
+              "value": "Versuchen Sie es noch einmal"
+            },
+            {
+              "field": ".strings[9]",
+              "value": "Starten Sie im Offline-Modus"
+            },
+            {
+              "field": ".strings[10]",
+              "value": "Immer verwenden Offline-Modus"
+            },
+            {
+              "field": ".strings[11]",
+              "value": "TIPPEN, UM FORTZUSETZEN"
+            },
+            {
+              "field": ".strings[12]",
+              "value": "Datenschutzrichtlinien"
+            },
+            {
+              "field": ".strings[13]",
+              "value": "Support kontaktieren"
+            },
+            {
+              "field": ".strings[14]",
+              "value": "App-Wertung"
+            }
+          ]
         },
         {
           "type": "MonoBehaviour",
-          "name": "it"
+          "name": "it",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "hashes",
+            "strings"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-4409710521683154717"
+            },
+            {
+              "field": ".m_Name",
+              "value": "it"
+            },
+            {
+              "field": ".hashes[0]",
+              "value": "1238981132"
+            },
+            {
+              "field": ".hashes[1]",
+              "value": "1479077690"
+            },
+            {
+              "field": ".hashes[2]",
+              "value": "1316241844"
+            },
+            {
+              "field": ".hashes[3]",
+              "value": "511225978"
+            },
+            {
+              "field": ".hashes[4]",
+              "value": "1108848080"
+            },
+            {
+              "field": ".hashes[5]",
+              "value": "-1221104235"
+            },
+            {
+              "field": ".hashes[6]",
+              "value": "-740059146"
+            },
+            {
+              "field": ".hashes[7]",
+              "value": "2038228853"
+            },
+            {
+              "field": ".hashes[8]",
+              "value": "-9280167"
+            },
+            {
+              "field": ".hashes[9]",
+              "value": "318129856"
+            },
+            {
+              "field": ".hashes[10]",
+              "value": "747267240"
+            },
+            {
+              "field": ".hashes[11]",
+              "value": "-1994501329"
+            },
+            {
+              "field": ".hashes[12]",
+              "value": "1376469481"
+            },
+            {
+              "field": ".hashes[13]",
+              "value": "379609712"
+            },
+            {
+              "field": ".hashes[14]",
+              "value": "1701477981"
+            },
+            {
+              "field": ".strings[0]",
+              "value": "Inizializzazione del DLC..."
+            },
+            {
+              "field": ".strings[1]",
+              "value": "Aggiornamento del DLC..."
+            },
+            {
+              "field": ".strings[2]",
+              "value": "Inizializzazione dello stato del gioco..."
+            },
+            {
+              "field": ".strings[3]",
+              "value": "Preparazione dei dati di gioco..."
+            },
+            {
+              "field": ".strings[4]",
+              "value": "Scaricamento dei nuovi file..."
+            },
+            {
+              "field": ".strings[5]",
+              "value": "Decompressione dei contenuti..."
+            },
+            {
+              "field": ".strings[6]",
+              "value": "Errore durante l'ottenimento dell'URL DLC! Per favore controlla la tua connessione Internet e prova di nuovo."
+            },
+            {
+              "field": ".strings[7]",
+              "value": "Errore durante il download DLC! Si prega di assicurarsi di essere connessi a Internet e che si dispone di spazio sufficiente a disposizione."
+            },
+            {
+              "field": ".strings[8]",
+              "value": "Riprova"
+            },
+            {
+              "field": ".strings[9]",
+              "value": "Inizia in modalità offline"
+            },
+            {
+              "field": ".strings[10]",
+              "value": "Modalità Sempre l'utilizzo offline"
+            },
+            {
+              "field": ".strings[11]",
+              "value": "TOCCA PER CONTINUARE"
+            },
+            {
+              "field": ".strings[12]",
+              "value": "Informativa sulla Privacy"
+            },
+            {
+              "field": ".strings[13]",
+              "value": "Contatta il Supporto"
+            },
+            {
+              "field": ".strings[14]",
+              "value": "Vota app"
+            }
+          ]
         },
         {
           "type": "MonoBehaviour",
-          "name": "settings"
+          "name": "settings",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "main",
+            "platforms"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-2824817505517731658"
+            },
+            {
+              "field": ".m_Name",
+              "value": "settings"
+            },
+            {
+              "field": ".main.masterText[0].m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".main.masterText[0].m_PathID",
+              "value": "-5405994658041649662"
+            },
+            {
+              "field": ".platforms[0].masterText[0].m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".platforms[0].masterText[0].m_PathID",
+              "value": "-5405994658041649662"
+            }
+          ]
         },
         {
           "type": "MonoScript",
@@ -433,11 +3772,125 @@
         },
         {
           "type": "MonoBehaviour",
-          "name": "_master_text"
+          "name": "_master_text",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "data"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-6818086132537144000"
+            },
+            {
+              "field": ".m_Name",
+              "value": "_master_text"
+            },
+            {
+              "field": ".data[0].m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".data[0].m_PathID",
+              "value": "8738952335623856710"
+            },
+            {
+              "field": ".data[1].m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".data[1].m_PathID",
+              "value": "4208576947312525323"
+            },
+            {
+              "field": ".data[2].m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".data[2].m_PathID",
+              "value": "-8463057681460212656"
+            },
+            {
+              "field": ".data[3].m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".data[3].m_PathID",
+              "value": "-8697769173095479090"
+            },
+            {
+              "field": ".data[4].m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".data[4].m_PathID",
+              "value": "4066196768730528900"
+            }
+          ]
         },
         {
           "type": "MonoBehaviour",
-          "name": "localization"
+          "name": "localization",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "mtfAll"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "3314501045537253785"
+            },
+            {
+              "field": ".m_Name",
+              "value": "localization"
+            },
+            {
+              "field": ".mtfAll[0].m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".mtfAll[0].m_PathID",
+              "value": "-5405994658041649662"
+            }
+          ]
         },
         {
           "type": "MonoScript",
@@ -457,15 +3910,477 @@
         },
         {
           "type": "MonoBehaviour",
-          "name": "es"
+          "name": "es",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "hashes",
+            "strings"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-4409710521683154717"
+            },
+            {
+              "field": ".m_Name",
+              "value": "es"
+            },
+            {
+              "field": ".hashes[0]",
+              "value": "1238981132"
+            },
+            {
+              "field": ".hashes[1]",
+              "value": "1479077690"
+            },
+            {
+              "field": ".hashes[2]",
+              "value": "1316241844"
+            },
+            {
+              "field": ".hashes[3]",
+              "value": "511225978"
+            },
+            {
+              "field": ".hashes[4]",
+              "value": "1108848080"
+            },
+            {
+              "field": ".hashes[5]",
+              "value": "-1221104235"
+            },
+            {
+              "field": ".hashes[6]",
+              "value": "-740059146"
+            },
+            {
+              "field": ".hashes[7]",
+              "value": "2038228853"
+            },
+            {
+              "field": ".hashes[8]",
+              "value": "-9280167"
+            },
+            {
+              "field": ".hashes[9]",
+              "value": "318129856"
+            },
+            {
+              "field": ".hashes[10]",
+              "value": "747267240"
+            },
+            {
+              "field": ".hashes[11]",
+              "value": "-1994501329"
+            },
+            {
+              "field": ".hashes[12]",
+              "value": "1376469481"
+            },
+            {
+              "field": ".hashes[13]",
+              "value": "379609712"
+            },
+            {
+              "field": ".hashes[14]",
+              "value": "1701477981"
+            },
+            {
+              "field": ".strings[0]",
+              "value": "Inicializando DLC..."
+            },
+            {
+              "field": ".strings[1]",
+              "value": "Actualizando DLC..."
+            },
+            {
+              "field": ".strings[2]",
+              "value": "Inicializando estado de juego..."
+            },
+            {
+              "field": ".strings[3]",
+              "value": "Preparando datos de juego..."
+            },
+            {
+              "field": ".strings[4]",
+              "value": "Descargando nuevos archivos..."
+            },
+            {
+              "field": ".strings[5]",
+              "value": "Extrayendo contenido..."
+            },
+            {
+              "field": ".strings[6]",
+              "value": "¡Error al obtener la URL DLC! Verifica tu conexión a Internet e intenta nuevamente."
+            },
+            {
+              "field": ".strings[7]",
+              "value": "Error al descargar el DLC! Asegúrete de estar conectado a Internet y de tener suficiente espacio de almacenamiento disponible."
+            },
+            {
+              "field": ".strings[8]",
+              "value": "Intentar de nuevo"
+            },
+            {
+              "field": ".strings[9]",
+              "value": "Iniciar en modo sin conexión"
+            },
+            {
+              "field": ".strings[10]",
+              "value": "Modo de uso sin conexión siempre"
+            },
+            {
+              "field": ".strings[11]",
+              "value": "TOCAR PARA CONTINUAR"
+            },
+            {
+              "field": ".strings[12]",
+              "value": "Política de privacidad"
+            },
+            {
+              "field": ".strings[13]",
+              "value": "Contactar con Soporte"
+            },
+            {
+              "field": ".strings[14]",
+              "value": "Calificar aplicación"
+            }
+          ]
         },
         {
           "type": "MonoBehaviour",
-          "name": "fr"
+          "name": "fr",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "hashes",
+            "strings"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-4409710521683154717"
+            },
+            {
+              "field": ".m_Name",
+              "value": "fr"
+            },
+            {
+              "field": ".hashes[0]",
+              "value": "1238981132"
+            },
+            {
+              "field": ".hashes[1]",
+              "value": "1479077690"
+            },
+            {
+              "field": ".hashes[2]",
+              "value": "1316241844"
+            },
+            {
+              "field": ".hashes[3]",
+              "value": "511225978"
+            },
+            {
+              "field": ".hashes[4]",
+              "value": "1108848080"
+            },
+            {
+              "field": ".hashes[5]",
+              "value": "-1221104235"
+            },
+            {
+              "field": ".hashes[6]",
+              "value": "-740059146"
+            },
+            {
+              "field": ".hashes[7]",
+              "value": "2038228853"
+            },
+            {
+              "field": ".hashes[8]",
+              "value": "-9280167"
+            },
+            {
+              "field": ".hashes[9]",
+              "value": "318129856"
+            },
+            {
+              "field": ".hashes[10]",
+              "value": "747267240"
+            },
+            {
+              "field": ".hashes[11]",
+              "value": "-1994501329"
+            },
+            {
+              "field": ".hashes[12]",
+              "value": "1376469481"
+            },
+            {
+              "field": ".hashes[13]",
+              "value": "379609712"
+            },
+            {
+              "field": ".hashes[14]",
+              "value": "1701477981"
+            },
+            {
+              "field": ".strings[0]",
+              "value": "Initialisation de DLC..."
+            },
+            {
+              "field": ".strings[1]",
+              "value": "Mise à jour de DLC..."
+            },
+            {
+              "field": ".strings[2]",
+              "value": "Initialisation du jeu en cours..."
+            },
+            {
+              "field": ".strings[3]",
+              "value": "Préparation des données de jeu..."
+            },
+            {
+              "field": ".strings[4]",
+              "value": "Téléchargement de nouveaux fichiers..."
+            },
+            {
+              "field": ".strings[5]",
+              "value": "Décompression du contenu..."
+            },
+            {
+              "field": ".strings[6]",
+              "value": "Erreur lors de l'obtention de l'URL DLC! S'il te plaît, vérifie ta connexion à internet et réessaye."
+            },
+            {
+              "field": ".strings[7]",
+              "value": "Erreur lors du téléchargement DLC! S'il te plaît assures-toi que tu es connecté à internet et que tu disposes d'un espace de stockage suffisant."
+            },
+            {
+              "field": ".strings[8]",
+              "value": "Réessayer"
+            },
+            {
+              "field": ".strings[9]",
+              "value": "Démarrer en mode hors connexion"
+            },
+            {
+              "field": ".strings[10]",
+              "value": "Toujours utiliser le mode hors connexion"
+            },
+            {
+              "field": ".strings[11]",
+              "value": "TAPER POUR CONTINUER"
+            },
+            {
+              "field": ".strings[12]",
+              "value": "Politique de confidentialité"
+            },
+            {
+              "field": ".strings[13]",
+              "value": "Contacter Support"
+            },
+            {
+              "field": ".strings[14]",
+              "value": "Noter Application"
+            }
+          ]
         },
         {
           "type": "MonoBehaviour",
-          "name": "en"
+          "name": "en",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "hashes",
+            "strings"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-4409710521683154717"
+            },
+            {
+              "field": ".m_Name",
+              "value": "en"
+            },
+            {
+              "field": ".hashes[0]",
+              "value": "1238981132"
+            },
+            {
+              "field": ".hashes[1]",
+              "value": "1479077690"
+            },
+            {
+              "field": ".hashes[2]",
+              "value": "1316241844"
+            },
+            {
+              "field": ".hashes[3]",
+              "value": "511225978"
+            },
+            {
+              "field": ".hashes[4]",
+              "value": "1108848080"
+            },
+            {
+              "field": ".hashes[5]",
+              "value": "-1221104235"
+            },
+            {
+              "field": ".hashes[6]",
+              "value": "-740059146"
+            },
+            {
+              "field": ".hashes[7]",
+              "value": "2038228853"
+            },
+            {
+              "field": ".hashes[8]",
+              "value": "-9280167"
+            },
+            {
+              "field": ".hashes[9]",
+              "value": "318129856"
+            },
+            {
+              "field": ".hashes[10]",
+              "value": "747267240"
+            },
+            {
+              "field": ".hashes[11]",
+              "value": "-1994501329"
+            },
+            {
+              "field": ".hashes[12]",
+              "value": "1376469481"
+            },
+            {
+              "field": ".hashes[13]",
+              "value": "379609712"
+            },
+            {
+              "field": ".hashes[14]",
+              "value": "1701477981"
+            },
+            {
+              "field": ".strings[0]",
+              "value": "Initializing DLC..."
+            },
+            {
+              "field": ".strings[1]",
+              "value": "Updating DLC..."
+            },
+            {
+              "field": ".strings[2]",
+              "value": "Initializing game state..."
+            },
+            {
+              "field": ".strings[3]",
+              "value": "Preparing game data..."
+            },
+            {
+              "field": ".strings[4]",
+              "value": "Downloading new files..."
+            },
+            {
+              "field": ".strings[5]",
+              "value": "Decompressing content..."
+            },
+            {
+              "field": ".strings[6]",
+              "value": "Error getting DLC URL! Please check your internet connection and try again."
+            },
+            {
+              "field": ".strings[7]",
+              "value": "Error downloading DLC! Please make sure you are connected to the internet and that you have sufficient storage space available."
+            },
+            {
+              "field": ".strings[8]",
+              "value": "Try Again"
+            },
+            {
+              "field": ".strings[9]",
+              "value": "Start in Offline Mode"
+            },
+            {
+              "field": ".strings[10]",
+              "value": "Always Use Offline Mode"
+            },
+            {
+              "field": ".strings[11]",
+              "value": "TAP TO CONTINUE"
+            },
+            {
+              "field": ".strings[12]",
+              "value": "Privacy Policy"
+            },
+            {
+              "field": ".strings[13]",
+              "value": "Contact Support"
+            },
+            {
+              "field": ".strings[14]",
+              "value": "Rate App"
+            }
+          ]
         }
       ]
     },
@@ -484,7 +4399,256 @@
       "objects_named_or_text": [
         {
           "type": "MonoBehaviour",
-          "name": "GlobalBundleData"
+          "name": "GlobalBundleData",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "bundleProperties"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "-3310445040115646727"
+            },
+            {
+              "field": ".m_Name",
+              "value": "GlobalBundleData"
+            },
+            {
+              "field": ".bundleProperties.keys[0]",
+              "value": "data.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[1]",
+              "value": "msm2.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[2]",
+              "value": "master.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[3]",
+              "value": "localization.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[4]",
+              "value": "menu.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[5]",
+              "value": "misc.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[6]",
+              "value": "msm1.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[7]",
+              "value": "prefabs.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[8]",
+              "value": "splash.unity3d"
+            },
+            {
+              "field": ".bundleProperties.keys[9]",
+              "value": "static_data.unity3d"
+            },
+            {
+              "field": ".bundleProperties.values[0].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[0].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[0].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[0].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[0].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[1].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[1].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[1].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[1].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[1].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[2].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[2].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[2].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[2].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[2].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[3].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[3].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[3].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[3].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[3].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[4].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[4].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[4].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[4].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[4].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[5].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[5].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[5].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[5].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[5].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[6].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[6].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[6].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[6].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[6].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[7].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[7].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[7].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[7].dynamicUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[7].forcedUnload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[8].serverOnly",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[8].required",
+              "value": "1"
+            },
+            {
+              "field": ".bundleProperties.values[8].preloaded",
+              "value": "0"
+            },
+            {
+              "field": ".bundleProperties.values[8].dynamicUnload",
+              "value": "0"
+            }
+          ]
         },
         {
           "type": "MonoScript",
@@ -500,7 +4664,258 @@
         },
         {
           "type": "MonoBehaviour",
-          "name": "GlobalLookupData"
+          "name": "GlobalLookupData",
+          "typetree_keys": [
+            "m_GameObject",
+            "m_Enabled",
+            "m_Script",
+            "m_Name",
+            "version",
+            "bundleInfo",
+            "GUIDS"
+          ],
+          "typetree_fields": [
+            {
+              "field": ".m_GameObject.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_GameObject.m_PathID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Enabled",
+              "value": "1"
+            },
+            {
+              "field": ".m_Script.m_FileID",
+              "value": "0"
+            },
+            {
+              "field": ".m_Script.m_PathID",
+              "value": "2569803766900591944"
+            },
+            {
+              "field": ".m_Name",
+              "value": "GlobalLookupData"
+            },
+            {
+              "field": ".version",
+              "value": "1427"
+            },
+            {
+              "field": ".bundleInfo[0].bundleName",
+              "value": "data.unity3d"
+            },
+            {
+              "field": ".bundleInfo[0].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[0].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[1].bundleName",
+              "value": "localization.unity3d"
+            },
+            {
+              "field": ".bundleInfo[1].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[1].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[2].bundleName",
+              "value": "master.unity3d"
+            },
+            {
+              "field": ".bundleInfo[2].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[2].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[3].bundleName",
+              "value": "menu.unity3d"
+            },
+            {
+              "field": ".bundleInfo[3].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[3].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[4].bundleName",
+              "value": "misc.unity3d"
+            },
+            {
+              "field": ".bundleInfo[4].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[4].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[5].bundleName",
+              "value": "msm1.unity3d"
+            },
+            {
+              "field": ".bundleInfo[5].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[5].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[6].bundleName",
+              "value": "msm2.unity3d"
+            },
+            {
+              "field": ".bundleInfo[6].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[6].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[7].bundleName",
+              "value": "prefabs.unity3d"
+            },
+            {
+              "field": ".bundleInfo[7].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[7].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[8].bundleName",
+              "value": "splash.unity3d"
+            },
+            {
+              "field": ".bundleInfo[8].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[8].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".bundleInfo[9].bundleName",
+              "value": "static_data.unity3d"
+            },
+            {
+              "field": ".bundleInfo[9].preload",
+              "value": "0"
+            },
+            {
+              "field": ".bundleInfo[9].loadOrder",
+              "value": "2147483647"
+            },
+            {
+              "field": ".GUIDS.keys[0]",
+              "value": "6ba8bad9841a3d947b8d9abfd0e86b12"
+            },
+            {
+              "field": ".GUIDS.keys[1]",
+              "value": "30181b8037281044883ad8511efb607b"
+            },
+            {
+              "field": ".GUIDS.keys[2]",
+              "value": "4213aa52c0f490a4b9bc5a04923d6ffb"
+            },
+            {
+              "field": ".GUIDS.keys[3]",
+              "value": "8ac85831d50608e499206b395ec05dbb"
+            },
+            {
+              "field": ".GUIDS.keys[4]",
+              "value": "6407cbc6b6de97c43bbd477007bc9664"
+            },
+            {
+              "field": ".GUIDS.keys[5]",
+              "value": "d90ff2bb5c717784f9a10641719f05cc"
+            },
+            {
+              "field": ".GUIDS.keys[6]",
+              "value": "d90ff2bb5c717784f9a10641719f05cc|back"
+            },
+            {
+              "field": ".GUIDS.keys[7]",
+              "value": "7c910e2156412f84d97108dc8ce4e49f"
+            },
+            {
+              "field": ".GUIDS.keys[8]",
+              "value": "7c910e2156412f84d97108dc8ce4e49f|Black9SFrame50"
+            },
+            {
+              "field": ".GUIDS.keys[9]",
+              "value": "89028e2487df1644b802291820589436"
+            },
+            {
+              "field": ".GUIDS.keys[10]",
+              "value": "89028e2487df1644b802291820589436|black_circle"
+            },
+            {
+              "field": ".GUIDS.keys[11]",
+              "value": "75fc055f026aa4b4e80d0ecd26dfd715"
+            },
+            {
+              "field": ".GUIDS.keys[12]",
+              "value": "75fc055f026aa4b4e80d0ecd26dfd715|black_star"
+            },
+            {
+              "field": ".GUIDS.keys[13]",
+              "value": "cfa934927c851e640b9dcdbe971e638c"
+            },
+            {
+              "field": ".GUIDS.keys[14]",
+              "value": "cfa934927c851e640b9dcdbe971e638c|blue_circle"
+            },
+            {
+              "field": ".GUIDS.values[0].key",
+              "value": "6ba8bad9841a3d947b8d9abfd0e86b12"
+            },
+            {
+              "field": ".GUIDS.values[0].path",
+              "value": "Assets/StaticData/AllData.asset"
+            },
+            {
+              "field": ".GUIDS.values[0].bundleIndex",
+              "value": "0"
+            },
+            {
+              "field": ".GUIDS.values[0].assetId.__id",
+              "value": "0"
+            },
+            {
+              "field": ".GUIDS.values[1].key",
+              "value": "30181b8037281044883ad8511efb607b"
+            },
+            {
+              "field": ".GUIDS.values[1].path",
+              "value": "Assets/StaticData/UISettings.asset"
+            },
+            {
+              "field": ".GUIDS.values[1].bundleIndex",
+              "value": "0"
+            },
+            {
+              "field": ".GUIDS.values[1].assetId.__id",
+              "value": "0"
+            }
+          ]
         }
       ]
     }
