@@ -2,7 +2,7 @@
 """Read-only compare two historical official-looking Monster Choir APKs.
 No installation/execution or redistribution. Checks original public SHA1.
 """
-import collections,hashlib,json,pathlib,re,shutil,subprocess,tempfile,urllib.parse,urllib.request,zipfile
+import collections,hashlib,json,os,pathlib,re,shutil,subprocess,tempfile,urllib.parse,urllib.request,zipfile
 ROOT=pathlib.Path(__file__).resolve().parent
 ITEM="Msmapks"
 CASES=[("korean","MONSTERCHOIRSOUTHKORIEA.apk","2e41a71fdc59be8d4904316adee168c686367e6e",51720835),
@@ -33,6 +33,9 @@ with tempfile.TemporaryDirectory() as temp:
           output.write(data);dig.update(data)
       if total!=size or dig.hexdigest()!=expect:raise ValueError("Size/SHA1 mismatch")
       tool=shutil.which("aapt")
+      if not tool and os.environ.get("ANDROID_HOME"):
+        paths=sorted((pathlib.Path(os.environ["ANDROID_HOME"])/"build-tools").glob("*/aapt"),reverse=True)
+        if paths:tool=str(paths[0])
       badging=[]
       if tool:
         p=subprocess.run([tool,"dump","badging",str(file)],text=True,capture_output=True,timeout=22)
