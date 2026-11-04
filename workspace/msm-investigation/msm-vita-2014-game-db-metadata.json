@@ -1569,5 +1569,26 @@
         "monster": "6"
       }
     ]
+  },
+  "monster_30_cross_references": {
+    "island_monsters": {
+      "island_monster_id": 1,
+      "monster": 0
+    },
+    "breeding_combinations": {
+      "monster_1": 0,
+      "monster_2": 0,
+      "result": 15
+    },
+    "monster_island_2_island_map": {
+      "source_monster": 0,
+      "dest_monster": 0
+    },
+    "store_items": {
+      "storeitem_id": 0,
+      "item_name": 0,
+      "item_title": 0,
+      "item_desc": 0
+    }
   }
 }
