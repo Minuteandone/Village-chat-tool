@@ -1,0 +1,71 @@
+name: One-shot public MSM historical archive inspection
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: msm-archive-deep-inspect
+  cancel-in-progress: false
+jobs:
+  inspect:
+    if: >-
+      github.event.issue.number == 3 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.user.login == github.repository_owner &&
+      github.event.comment.user.login == github.repository_owner &&
+      github.event.comment.body == '/msm-deep-inspect'
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install 7-Zip and Unity asset inspector
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq p7zip-full >/dev/null
+          python3 -m pip install --disable-pip-version-check -q UnityPy
+      - name: Inspect just two listed 2021 packages and small public DLC bundles
+        shell: bash
+        run: |
+          set +e
+          python3 workspace/msm-investigation/deep_archive_probe.py > "$RUNNER_TEMP/deep-summary.txt" 2>&1
+          ec=$?
+          echo "Inspector exit: $ec"
+          tail -n 110 "$RUNNER_TEMP/deep-summary.txt"
+          echo "$ec" > "$RUNNER_TEMP/deep-exit.txt"
+      - name: Persist summary files only (never binaries)
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- workspace/msm-investigation/deep_archive_results.json workspace/msm-investigation/deep_archive_results.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Save public historical MSM archive inspection results"
+            auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+            git -c "http.extraheader=AUTHORIZATION: basic $auth" push origin HEAD:main
+          fi
+      - name: Summarize in owner issue
+        shell: bash
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib,re
+          p=pathlib.Path(os.environ["RUNNER_TEMP"])
+          path=p/"deep-summary.txt"
+          text=path.read_text(errors="replace") if path.exists() else "No log available."
+          text=re.sub(r'@(?![\u200b\u200c\u200d])', '@\u200b', text)
+          data={'body':"### Historical MSM archives and small Unity bundles\n\n"
+                       "One limited public archive inspection. No executable ran, no private access, "
+                       "and no original game binaries committed.\n\n"
+                       "```text\n"+text[-11000:]+"\n```"}
+          (p/"deep-comment.json").write_text(json.dumps(data))
+          PY
+          gh api -X POST "repos/$GITHUB_REPOSITORY/issues/3/comments" --input "$RUNNER_TEMP/deep-comment.json"
