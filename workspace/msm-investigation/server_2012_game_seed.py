@@ -71,7 +71,10 @@ for table in ALLOW:
     records=[{key:safe(row[i]) for key,i in zip(labels,indices) if i<len(row)} for row in rows]
     if table=='breeding_combinations':
         preview=records[:8];game[table]={'count':len(rows),'examples':preview,
-              'nonzero_probability_count':sum(1 for x in records if (x.get('probability') not in (None,'0','0.0','0.00','0.000','NULL')))}
+              'nonzero_probability_count':sum(1 for x in records if (x.get('probability') not in (None,'0','0.0','0.00','0.000','NULL'))),
+              'quint_as_result':sum(1 for x in records if x.get('result')=='30'),
+              'quint_as_parent':sum(1 for x in records if x.get('monster_1')=='30' or x.get('monster_2')=='30'),
+              'quint_possible_breedings':sum(1 for x in records if x.get('result')=='30' and x.get('probability') not in ('0','0.0','0.00','0.000','NULL',''))}
     elif table=='quests':
         game[table]={'count':len(rows),'first':records[:125],'suspicious_names':[x for x in records if re.search('test|debug|dummy|placeholder|unused|legacy',x.get('name',''),re.I)][:40]}
     elif table=='entities':
