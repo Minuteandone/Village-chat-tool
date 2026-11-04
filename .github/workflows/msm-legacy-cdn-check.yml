@@ -1,0 +1,68 @@
+name: One-shot MSM documented public legacy CDN check
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: read
+  issues: write
+jobs:
+  probe:
+    if: >-
+      github.event.issue.number == 3 &&
+      !github.event.issue.pull_request &&
+      github.event.issue.user.login == github.repository_owner &&
+      github.event.comment.user.login == github.repository_owner &&
+      github.event.comment.body == '/msm-legacy-cdn-check'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Test only evidence-backed legacy companion-app asset paths
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib,urllib.request,urllib.error,urllib.parse,time
+          root='https://dlc.bbbgame.net/companion_app/dlc/'
+          trials=[
+            ('1044/android/msm1.unity3d','Documented in historic public GameBanana tutorial'),
+            ('1428/android/Server','Version 1428 explicitly preserved at Internet Archive'),
+            ('1427/android/Server','One hypothesized earlier version based on embedded 1427')
+          ]
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self,req,fp,code,msg,headers,newurl):
+                  return None
+          opener=urllib.request.build_opener(NoRedirect())
+          results=[]
+          for path,why in trials:
+              if results and results[-1].get("status") in (401,403):
+                  break
+              url=root+path
+              row={"path":path,"why":why}
+              try:
+                  req=urllib.request.Request(url,headers={"User-Agent":"MSM-Public-Preservation-Check/1.0","Range":"bytes=0-127"},method="GET")
+                  with opener.open(req,timeout=12) as resp:
+                      chunk=resp.read(128)
+                      row.update({"status":resp.status,"content_type":resp.headers.get("Content-Type",""),
+                          "content_range":resp.headers.get("Content-Range",""),"first_bytes_hex":chunk[:16].hex()})
+              except urllib.error.HTTPError as e:
+                  row["status"]=e.code
+                  if 300<=e.code<400:row["redirect_to_host"]=urllib.parse.urlsplit(e.headers.get("Location","")).hostname
+              except Exception as e:row["error"]=type(e).__name__+": "+str(e)[:180]
+              results.append(row)
+              time.sleep(1)
+          pathlib.Path(os.environ["RUNNER_TEMP"],"legacy-cdn-check.json").write_text(json.dumps(results,indent=2))
+          print(json.dumps(results,indent=2))
+          PY
+      - name: Post results to owner issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import os,pathlib,json
+          p=pathlib.Path(os.environ["RUNNER_TEMP"]);path=p/"legacy-cdn-check.json"
+          content=path.read_text() if path.exists() else "No result file generated"
+          body="### MSM historical companion-app CDN — narrow public check\n\n"
+          body+="Tested three evidence-backed paths maximum; did not use credentials, bypass 401/403, or download complete game binaries.\n\n```json\n"+content+"\n```"
+          (p/"issue.json").write_text(json.dumps({"body":body}))
+          PY
+          gh api -X POST "repos/$GITHUB_REPOSITORY/issues/3/comments" --input "$RUNNER_TEMP/issue.json"
