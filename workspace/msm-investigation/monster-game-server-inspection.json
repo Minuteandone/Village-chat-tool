@@ -1309,796 +1309,564 @@
   "textual_cues": [
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/BBBServerExtension.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer;  import com.bigbluebubble.BBBServer.util.CacheWrapper; import com.bigbluebubble.BBBServer.util.DbWrapper; import com.bigbluebubble.BBBServer.util.Misc; import com.bigbluebu",
-          "package com.bigbluebubble.BBBServer;  import com.bigbluebubble.BBBServer.util.CacheWrapper; import com.bigbluebubble.BBBServer.util.DbWrapper; import com.bigbluebubble.BBBServer.util.Misc; import com.bigbluebubble.BBBServer.util.SnsWrapper; impor",
-          "rt com.bigbluebubble.BBBServer.util.CacheWrapper; import com.bigbluebubble.BBBServer.util.DbWrapper; import com.bigbluebubble.BBBServer.util.Misc; import com.bigbluebubble.BBBServer.util.SnsWrapper; import com.bigbluebubble.BBBServer.util.SqsWrapper; import ",
-          "mport com.bigbluebubble.BBBServer.util.DbWrapper; import com.bigbluebubble.BBBServer.util.Misc; import com.bigbluebubble.BBBServer.util.SnsWrapper; import com.bigbluebubble.BBBServer.util.SqsWrapper; import com.smartfoxserver.bitswarm.sessions.ISession; impo",
-          "er; import com.bigbluebubble.BBBServer.util.Misc; import com.bigbluebubble.BBBServer.util.SnsWrapper; import com.bigbluebubble.BBBServer.util.SqsWrapper; import com.smartfoxserver.bitswarm.sessions.ISession; import com.smartfoxserver.v2.core.SFSEventType; im"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 5
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/AccountNotFoundException.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.exceptions;  public class AccountNotFoundException extends Exception {  \t/** \t *  \t */ \tprivate static final long serialVersionUID = 1L; } "
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/FacebookAuthenticationException.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.exceptions;  public class FacebookAuthenticationException extends Exception {  \t/** \t *  \t */ \tprivate static final long serialVersionUID = 1L; } "
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/NoAccountUserBindingFoundException.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.exceptions;  public class NoAccountUserBindingFoundException extends Exception { \t/** \t *  \t */ \tprivate static final long serialVersionUID = 1L; \tpublic int accountId; } "
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/TooManyRecordsReturned.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.exceptions;  public class TooManyRecordsReturned extends Exception {  \t/** \t *  \t */ \tprivate static final long serialVersionUID = 1L; } "
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/exceptions/UserNotFoundException.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.exceptions;  public class UserNotFoundException extends Exception {  \t/** \t *  \t */ \tprivate static final long serialVersionUID = 1L; } "
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/ServerEventHandler.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer;  import java.io.BufferedReader; import java.io.IOException; import java.io.InputStream; import java.io.InputStreamReader; import java.net.HttpURLConnection; import java.net",
-          "HttpsURLConnection;  import org.json.JSONObject;  import com.bigbluebubble.BBBServer.exceptions.FacebookAuthenticationException; import com.bigbluebubble.BBBServer.util.Misc; import com.smartfoxserver.bitswarm.sessions.ISession; import com.smartfoxserver.v2.",
-          "erver.exceptions.FacebookAuthenticationException; import com.bigbluebubble.BBBServer.util.Misc; import com.smartfoxserver.bitswarm.sessions.ISession; import com.smartfoxserver.v2.core.ISFSEvent; import com.smartfoxserver.v2.core.SFSEventParam; import com.sma",
-          "n session = (ISession) event.getParameter(SFSEventParam.SESSION); \t\tString bbbIdFromUser = (String) event.getParameter(SFSEventParam.LOGIN_NAME); \t\tString encryptedPass = (String) event.getParameter(SFSEventParam.LOGIN_PASSWORD); \t\tSFSObject additionalData =",
-          "a.getUtfString(\"client_platform\"); \t\t\t} \t\t\tacctData = checkAuthCredentials(bbbIdFromUser, clientPlatform);  \t\t\t \t\t\tif(acctData == null){ \t\t\t\tSFSErrorData errData = new SFSErrorData(SFSErrorCode.LOGIN_BAD_USERNAME); \t\t\t\tthrow new SFSLoginException(\"Login Fail"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 5
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/BatchingSNSWorker.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;\r \r import java.util.ArrayList;\r import java.util.Collection;\r \r import com.amazonaws.auth.BasicAWSCredentials;\r import com.amazonaws.regions.Region;\r import com.bigblu",
-          "edentials;\r import com.amazonaws.regions.Region;\r import com.bigbluebubble.BBBServer.BBBServerExtension;\r \r import net.spy.memcached.util.StringUtils;\r \r public class BatchingSNSWorker extends SNSWorker {\r \tprivate static final int COMMA_BYTE_LENGTH = getByt",
-          "\r import com.amazonaws.regions.Region;\r import com.bigbluebubble.BBBServer.BBBServerExtension;\r \r import net.spy.memcached.util.StringUtils;\r \r public class BatchingSNSWorker extends SNSWorker {\r \tprivate static final int COMMA_BYTE_LENGTH = getByteLength();",
-          "static final int MAX_FLUSH_INTERVAL = 60000;\r \t\r \tpublic BatchingSNSWorker(BBBServerExtension ext, Region region, String topic, String bucket, String prefix, int maxThreads, BasicAWSCredentials credentials) {\r \t\tsuper(ext, region, topic, bucket, prefix, maxT"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 4
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/BBBToken.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;\r \r import java.io.PrintStream;\r import java.net.URL;\r import java.util.ArrayList;\r import java.util.Iterator;\r \r import org.json.JSONArray;\r import org.json.JSONExcept",
-          "mport org.json.JSONException;\r import org.json.JSONObject;\r \r public class BBBToken {\r \t\r \tString rawEncrypted;\r \tJSONObject rawJson;\r \t\r \tlong generatedOn;\r \tlong expiresAt;\r \tArrayList<String> userGameIds;\r \tArrayList<String> permissions;\r \tString username",
-          "missions;\r \tString username = null;\r \tString loginType = null;\r \t\r \tpublic BBBToken(JSONObject json)\r \t{\r \t\tthis.rawJson = json;\r \t\ttry {\r \t\t\tgeneratedOn = json.getInt(\"generated_on\");\r \t\t\r \t\t\texpiresAt = json.getInt(\"expires_at\");\r \t\t\tJSONArray gameIdsJson ",
-          "n){\r \t\tthis.rawEncrypted = encryptedAccessToken;\r \t}\r \t\r \t\r \tpublic static BBBToken getAuthTokenFromServer(String gameId, String authServerUrl, String useHttps, String username, String password, String loginType, String vector, String secret) throws Exceptio",
-          "an, username, password, loginType, vector, secret);\r \t}\r \t\r \tpublic static BBBToken getAuthTokenFromServer(String gameId, String authServerUrl, boolean useHttps, String username, String password, String loginType, String vector, String secret) throws Excepti"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 5
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/ByteBuffer.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;\r \r /**\r  * Byte array class cause java really sucks with primitives\r  */\r public class ByteBuffer\r {\r \tprivate transient byte[] _bytes;\r \tprivate transient int _writeI"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/CacheWrapper.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;\r \r import java.io.IOException;\r import java.net.InetSocketAddress;\r import java.util.concurrent.ExecutionException;\r import java.util.concurrent.Future;\r import java.u"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/CooldownCounter.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;\r \r public class CooldownCounter {\r \tprivate int currentCount = 0;\r \tprivate long lastIncrementTime = 0;\r \tprivate long cooldownTime;\r \t\r \tpublic CooldownCounter(long c"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/CustomSerializingTranscoder.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;\r \r import java.io.ByteArrayInputStream;\r import java.io.Closeable;\r import java.io.IOException;\r import java.io.ObjectInputStream;\r import java.io.ObjectStreamClass;\r "
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/DbWrapper.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;  //import com.smartfoxserver.v2.db.DBConfig; import com.smartfoxserver.v2.db.DBConfig; import com.smartfoxserver.v2.db.IDBManager; import com.smartfoxserver.v2.db.SFSD"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/DoubleBuffer.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;\r \r import java.lang.reflect.Array;\r \r /**\r  * DoubleBuffer class for thread-safe producer/consumer action.\r  * \r  * @author jeremypa\r  *\r  * @param <E>\r  */\r public cl"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/Encryption.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;\r \r import javax.crypto.Cipher;\r import javax.crypto.spec.IvParameterSpec;\r import javax.crypto.spec.SecretKeySpec;\r \r import org.apache.commons.codec.binary.Base64;\r \r"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/HttpPost.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;\r \r import java.io.DataOutputStream;\r import java.net.HttpURLConnection;\r import java.net.URL;\r \r \r public class HttpPost implements Runnable\r {\r \tfinal private String "
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/MigBase64.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [
-          " IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND\r  * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\r  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.\r  * IN NO EVENT SHALL THE "
-        ],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;\r \r import java.util.Arrays;\r \r /** A very fast and memory efficient class to encode and decode to and from BASE64 in full accordance\r  * with RFC 2045.<br><br>\r  * On "
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 1,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/Misc.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "ates  * and open the template in the editor.  */ package com.bigbluebubble.BBBServer.util;  import java.io.ByteArrayOutputStream; import java.io.PrintStream; import java.io.PrintWriter; import java.io.StringWriter; import java.security.*; import java.util.zi"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SFSHelpers.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;\r \r import java.util.Iterator;\r import java.util.Map;\r \r import com.smartfoxserver.v2.entities.data.*;\r \r /*\r  * Some helper functions for dealing with smart fox object"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SNSWorker.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;\r \r import java.io.ByteArrayInputStream;\r import java.util.ArrayList;\r import java.util.Collection;\r import java.util.List;\r import java.util.concurrent.BlockingQueue;\r",
-          "com.amazonaws.services.sns.model.PublishRequest;\r import com.bigbluebubble.BBBServer.BBBServerExtension;\r \r public class SNSWorker {\t\r \tprotected  static final int MAX_SNS_MESSAGE_SIZE = 262144; \t// 256KB\r \t\r \tprivate static final int CONNECTION_TIMEOUT = 10",
-          "aws.services.sns.model.PublishRequest;\r import com.bigbluebubble.BBBServer.BBBServerExtension;\r \r public class SNSWorker {\t\r \tprotected  static final int MAX_SNS_MESSAGE_SIZE = 262144; \t// 256KB\r \t\r \tprivate static final int CONNECTION_TIMEOUT = 1000; // 1 s",
-          "ooldownCounter(MIN_TIME_TO_WAIT_BETWEEN_WORKER_SPAWNS);\r \t\r \tprivate final BBBServerExtension ext;\r \t\r \tpublic SNSWorker(BBBServerExtension ext, Region region, String topic, String bucket, String prefix, int maxThreads, BasicAWSCredentials credentials )\r \t{\r",
-          "_SPAWNS);\r \t\r \tprivate final BBBServerExtension ext;\r \t\r \tpublic SNSWorker(BBBServerExtension ext, Region region, String topic, String bucket, String prefix, int maxThreads, BasicAWSCredentials credentials )\r \t{\r \t\tthis.ext = ext;\r \t\tthis.snsTopic = topic;\r "
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 5
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SnsWrapper.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;\r \r import java.util.concurrent.TimeUnit;\r \r import org.json.JSONObject;\r \r import com.amazonaws.auth.BasicAWSCredentials;\r import com.amazonaws.services.sns.AmazonSNSC",
-          "com.amazonaws.services.sns.model.PublishRequest;\r import com.bigbluebubble.BBBServer.BBBServerExtension;\r import com.smartfoxserver.v2.SmartFoxServer;\r \r \r public class SnsWrapper\r {\r \tBBBServerExtension ext = null;\r \tAmazonSNSClient sns = null;\r \t\r \tpublic ",
-          "aws.services.sns.model.PublishRequest;\r import com.bigbluebubble.BBBServer.BBBServerExtension;\r import com.smartfoxserver.v2.SmartFoxServer;\r \r \r public class SnsWrapper\r {\r \tBBBServerExtension ext = null;\r \tAmazonSNSClient sns = null;\r \t\r \tpublic SnsWrapper",
-          "rt com.smartfoxserver.v2.SmartFoxServer;\r \r \r public class SnsWrapper\r {\r \tBBBServerExtension ext = null;\r \tAmazonSNSClient sns = null;\r \t\r \tpublic SnsWrapper(BBBServerExtension ext, BasicAWSCredentials awsCredentials)\r \t{\r \t\tthis.ext = ext;\r \t\t//append the ",
-          "Extension ext = null;\r \tAmazonSNSClient sns = null;\r \t\r \tpublic SnsWrapper(BBBServerExtension ext, BasicAWSCredentials awsCredentials)\r \t{\r \t\tthis.ext = ext;\r \t\t//append the classpath properties provider to the default credentials chain to make a custom chai"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 5
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/SqsWrapper.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;\r \r import java.util.concurrent.TimeUnit;\r \r import org.json.JSONObject;\r \r import com.amazonaws.auth.BasicAWSCredentials;\r import com.amazonaws.services.sqs.AmazonSQSC",
-          "amazonaws.services.sqs.model.SendMessageRequest;\r import com.bigbluebubble.BBBServer.BBBServerExtension;\r import com.smartfoxserver.v2.SmartFoxServer;\r \r \r public class SqsWrapper {\r \tBBBServerExtension ext = null;\r \tAmazonSQSClient sqs = null;\r \t\r \tpublic S",
-          "services.sqs.model.SendMessageRequest;\r import com.bigbluebubble.BBBServer.BBBServerExtension;\r import com.smartfoxserver.v2.SmartFoxServer;\r \r \r public class SqsWrapper {\r \tBBBServerExtension ext = null;\r \tAmazonSQSClient sqs = null;\r \t\r \tpublic SqsWrapper(",
-          "ort com.smartfoxserver.v2.SmartFoxServer;\r \r \r public class SqsWrapper {\r \tBBBServerExtension ext = null;\r \tAmazonSQSClient sqs = null;\r \t\r \tpublic SqsWrapper(BBBServerExtension ext, BasicAWSCredentials awsCredentials){\r \t\tthis.ext = ext;\r \t\t//append the cla",
-          "Extension ext = null;\r \tAmazonSQSClient sqs = null;\r \t\r \tpublic SqsWrapper(BBBServerExtension ext, BasicAWSCredentials awsCredentials){\r \t\tthis.ext = ext;\r \t\t//append the classpath properties provider to the default credentials chain to make a custom chain\r "
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 5
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/VersionInfo.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;\r \r /**\r * Basic version class consisting of 3 parts:\r *\tMajor Minor Revision\r */\r public class VersionInfo implements Comparable<VersionInfo>\r {\r \tprivate int major;\r "
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/BBBServer/util/WebHelper.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.BBBServer.util;\r \r import java.io.BufferedReader;\r import java.io.DataOutputStream;\r import java.io.IOException;\r import java.io.InputStream;\r import java.io.InputStreamReader;\r impor",
-          "tatic String getDataFromUrl(URL url, boolean secure, String urlParameters, BBBToken token){\r \t\tString returnValue = null;\r \t\ttry{\r \t\t\tInputStream response;\r \t\t\tString contentType;\r \t\t\tif(secure){\r \t\t\t\tHttpsURLConnection connection = (HttpsURLConnection) url."
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 2
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/metrics/MetricsRequest.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          " endpoint;\r \t}\r \t\r \t/**\r \t * Adds a parameter to the metrics request (i.e. bbbId=12345)\r \t * @param key\r \t * @param value\r \t */\r \tpublic void addParam(String key, String value)\r \t{\r \t\ttry \r \t\t{\r \t\t\tparams.put(key, value);\r \t\t}\r \t\tcatch( JSONException jsonEx "
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/com/bigbluebubble/metrics/MetricsSessionTask.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "et.URL;\r import java.util.concurrent.TimeUnit;\r \r import com.bigbluebubble.BBBServer.BBBServerExtension;\r import com.bigbluebubble.BBBServer.util.DoubleBuffer;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.smartfoxserver.v2.SmartFoxServer;\r impo",
-          "mport java.util.concurrent.TimeUnit;\r \r import com.bigbluebubble.BBBServer.BBBServerExtension;\r import com.bigbluebubble.BBBServer.util.DoubleBuffer;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.smartfoxserver.v2.SmartFoxServer;\r import com.sma",
-          " com.bigbluebubble.BBBServer.BBBServerExtension;\r import com.bigbluebubble.BBBServer.util.DoubleBuffer;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.smartfoxserver.v2.SmartFoxServer;\r import com.smartfoxserver.v2.extensions.ExtensionLogLevel;\r ",
-          "t com.bigbluebubble.BBBServer.util.DoubleBuffer;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.smartfoxserver.v2.SmartFoxServer;\r import com.smartfoxserver.v2.extensions.ExtensionLogLevel;\r \r /**\r  * Task to send bulk session data to metrics/aut",
-          "onTask implements Runnable\r {\r \tfinal private String _url;\r \tfinal private BBBServerExtension _ext;\r \tfinal private DoubleBuffer<String> _sessions;\r \t\r \tpublic static java.util.concurrent.ScheduledFuture<?> schedule(BBBServerExtension ext, DoubleBuffer<Strin"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 5
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/CDL.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [
-          "t Evil.\r \r THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r AUTHORS OR COPYRIGHT HOL"
-        ],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 1,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/Cookie.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [
-          "t Evil.\r \r THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r AUTHORS OR COPYRIGHT HOL"
-        ],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 1,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/CookieList.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [
-          "t Evil.\r \r THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r AUTHORS OR COPYRIGHT HOL"
-        ],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 1,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/HTTP.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [
-          "t Evil.\r \r THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r AUTHORS OR COPYRIGHT HOL"
-        ],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 1,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/HTTPTokener.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [
-          "t Evil.\r \r THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r AUTHORS OR COPYRIGHT HOL"
-        ],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 1,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONArray.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [
-          "not Evil.  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDER"
-        ],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 1,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONML.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [
-          "not Evil.  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDER"
-        ],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 1,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONObject.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [
-          "not Evil.  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDER"
-        ],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 1,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONStringer.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [
-          "t Evil.\r \r THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r AUTHORS OR COPYRIGHT HOL"
-        ],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 1,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONTokener.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [
-          "not Evil.  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDER"
-        ],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 1,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/JSONWriter.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [
-          "t Evil.\r \r THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r AUTHORS OR COPYRIGHT HOL"
-        ],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 1,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/XML.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [
-          "not Evil.  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDER"
-        ],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 1,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/external/src/org/json/XMLTokener.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [
-          "t Evil.\r \r THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r AUTHORS OR COPYRIGHT HOL"
-        ],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 1,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/BreedingLookup.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "import java.util.concurrent.ConcurrentHashMap;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.player.PlayerIsland;\r import com.smartfoxserver.v2.en"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Entity.java",
-      "cues": {
-        "community_attribution": [
-          "leCost(CurrencyType type, Integer keyIslandId) throws Exception\r \t{\r \t\tint originalCost = 0;\r \t\t\r \t\tif(type.equals(CurrencyType.Keys) && keyIslandId != null)\r \t\t\toriginalCost = getCostKeys(keyIslandId);\r \t\telse\r \t\t\toriginalCost = getCurrencyCost(type);\r \t\t\r \t\tif(",
-          " = 0;\r \t\t\r \t\tif(type.equals(CurrencyType.Keys) && keyIslandId != null)\r \t\t\toriginalCost = getCostKeys(keyIslandId);\r \t\telse\r \t\t\toriginalCost = getCurrencyCost(type);\r \t\t\r \t\tif(originalCost == 0)\r \t\t\treturn 0;\r \t\t\r \t\tfloat currentPercentDiscount = 0;\r \t\tint curren",
-          "IslandId != null)\r \t\t\toriginalCost = getCostKeys(keyIslandId);\r \t\telse\r \t\t\toriginalCost = getCurrencyCost(type);\r \t\t\r \t\tif(originalCost == 0)\r \t\t\treturn 0;\r \t\t\r \t\tfloat currentPercentDiscount = 0;\r \t\tint currentCurrencySalePrice = -1;\r \t\t\r \t\tif(type != CurrencyTy",
-          "(keyIslandId);\r \t\telse\r \t\t\toriginalCost = getCurrencyCost(type);\r \t\t\r \t\tif(originalCost == 0)\r \t\t\treturn 0;\r \t\t\r \t\tfloat currentPercentDiscount = 0;\r \t\tint currentCurrencySalePrice = -1;\r \t\t\r \t\tif(type != CurrencyType.Starpower)\r \t\t{\r \t\t\t\r \t\t\tArrayList<EntitySale",
-          "medEventType.EntitySale, getEntityId());\r \t\t\tif(sales == null)\r \t\t\t\treturn originalCost;\r \t\r \t\t\tfor(int i=0; i < sales.size(); i++)\r \t\t\t{\r \t\t\t\tEntitySalesEvent e = sales.get(i);\r \t\t\t\tDiscountType t = e.getDiscountType();\r \t\t\t\tif(t == DiscountType.Discount)\r \t\t\t\t{"
-        ],
-        "framework": [],
-        "known_project": [
-          "gmonsters.data;\r \r import java.util.ArrayList;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.data.t",
-          " \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.data.timed_events.TimedEvent.TimedEventType;\r import "
-        ]
+      "indicators": {
+        "community_attribution": 5,
+        "framework": 0,
+        "known_project": 2
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Gene.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "kage com.bigbluebubble.mysingingmonsters.data;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.smartfoxserver.v2.entities.data.ISFSObject;\r \r public class Gene {\r \r \tprotected final static String GENE_ID_KEY = \"gene_letter\";\r \tprotected f"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/Advertisement2018Group.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "rs.data.groups;\r \r import java.util.ArrayList;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r \r public class Advertisement2018Group extends BaseGroup \r {\r \tpublic Advertisement2018Group(Stri"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/BaseGroup.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "rt java.util.Iterator;\r import java.util.List;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.smartfoxserver.v2.entities.data.ISFSObject;\r import com.smartfoxserver.v2.entities.data.SFSObject;\r \r abstract class BaseGroup extends UserGrou"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/groups/ScientificRevenueGroup.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "t java.util.ArrayList;\r import java.util.List;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.smartfoxserver.v2.entities.data.ISFSObject;\r import com.smartfoxserver.v2.entities.da",
-          "ic class ScientificRevenueGroup extends UserGroup\r {\r \tfinal protected int bbb_;\r \tfinal protected int control_;\r \tfinal protected double chance_;\r \tfinal protected VersionInfo version_;\r \tfinal protected List<String> platforms_;\r \t\r \t///////////////////////",
-          "cks!!\r \tprivate static int staticActiveId = -1;\r \tprivate static int staticBBBControlId = -1;\r \tprivate static int staticSRControlId = -1;\r \tprivate static double staticChance = 0;\r \tprivate static VersionInfo staticVersion;\r \tprivate static List<String> sta",
-          "ticVersion = g.version_;\r \t\t\t\tstaticPlatforms = g.platforms_;\r \t\t\t}\r \t\t\t// BBB control group\r \t\t\telse if (g.bbb_ != 0)\r \t\t\t{\r \t\t\t\tstaticBBBControlId = g.id();\r \t\t\t}\r \t\t\t// SR control group\r \t\t\telse\r \t\t\t{\r \t\t\t\tstaticSRControlId = g.id();\r \t\t\t}\r \t\t}\r \t\t\r \t\tMSM",
-          "ticPlatforms = g.platforms_;\r \t\t\t}\r \t\t\t// BBB control group\r \t\t\telse if (g.bbb_ != 0)\r \t\t\t{\r \t\t\t\tstaticBBBControlId = g.id();\r \t\t\t}\r \t\t\t// SR control group\r \t\t\telse\r \t\t\t{\r \t\t\t\tstaticSRControlId = g.id();\r \t\t\t}\r \t\t}\r \t\t\r \t\tMSMExtension.getInstance().trace(Str"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 5
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Island.java",
-      "cues": {
-        "community_attribution": [
-          "public int getTimedSaleCost(CurrencyType type) throws Exception\r \t{\r \t\tint originalCost = 0;\r \t\t\r \t\tif(type == CurrencyType.Coins)\r \t\t\toriginalCost = getCoinCost();\r \t\telse if(type == CurrencyType.Diamonds)\r \t\t\toriginalCost = getDiamondCost();\r \t\t\r \t\tif(originalC",
-          "ion\r \t{\r \t\tint originalCost = 0;\r \t\t\r \t\tif(type == CurrencyType.Coins)\r \t\t\toriginalCost = getCoinCost();\r \t\telse if(type == CurrencyType.Diamonds)\r \t\t\toriginalCost = getDiamondCost();\r \t\t\r \t\tif(originalCost == 0)\r \t\t\treturn 0;\r \t\t\r \t\tfloat currentPercentDiscount ",
-          "riginalCost = getCoinCost();\r \t\telse if(type == CurrencyType.Diamonds)\r \t\t\toriginalCost = getDiamondCost();\r \t\t\r \t\tif(originalCost == 0)\r \t\t\treturn 0;\r \t\t\r \t\tfloat currentPercentDiscount = 0;\r \t\tint currentCurrencySalePrice = -1;\r \t\t\r \t\tArrayList<IslandSalesEvent",
-          "e == CurrencyType.Diamonds)\r \t\t\toriginalCost = getDiamondCost();\r \t\t\r \t\tif(originalCost == 0)\r \t\t\treturn 0;\r \t\t\r \t\tfloat currentPercentDiscount = 0;\r \t\tint currentCurrencySalePrice = -1;\r \t\t\r \t\tArrayList<IslandSalesEvent> sales = TimedEventList.Instance().current",
-          "OnKey(TimedEventType.IslandSale, getID());\r \t\tif(sales == null)\r \t\t\treturn originalCost;\r \r \t\tfor(int i=0; i < sales.size(); i++)\r \t\t{\r \t\t\tIslandSalesEvent e = sales.get(i);\r \t\t\tIslandSalesEvent.DiscountType t = e.getDiscountType();\r \t\t\tif(t == IslandSalesEvent.D"
-        ],
-        "framework": [],
-        "known_project": [
-          "va.util.ArrayList;\r import java.util.Iterator;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.SFSHelpers;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtensio",
-          " \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.SFSHelpers;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.",
-          "ort com.bigbluebubble.BBBServer.util.SFSHelpers;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.data.timed_events.TimedEventList;\r import com.bigblue"
-        ]
+      "indicators": {
+        "community_attribution": 5,
+        "framework": 0,
+        "known_project": 3
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Mail.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "ing MAIL_SEGMENTATION = \"segmentation\";\r \tprivate static final String MAIL_BBBID = \"bbb_id\";\r \t\r \tprivate long id = 0;\r \tprivate String title = null;\r \tprivate String shortTitle = null;\r \tprivate String message = null;\r \tprivate String sender = null;\r \tpriva",
-          "SEGMENTATION = \"segmentation\";\r \tprivate static final String MAIL_BBBID = \"bbb_id\";\r \t\r \tprivate long id = 0;\r \tprivate String title = null;\r \tprivate String shortTitle = null;\r \tprivate String message = null;\r \tprivate String sender = null;\r \tprivate String",
-          "n enabled = true;\r \tprivate ISFSObject segmentation = null;\r \tprivate long bbbId = 0;\r \t\r \tpublic Mail(ISFSObject mailData)\r \t{\r \t\tid = mailData.getLong(MAIL_ID);\r \t\ttitle = mailData.getUtfString(MAIL_TITLE);\r \t\t\r \t\tif(mailData.containsKey(MAIL_SHORT_TITLE))",
-          "Data.getUtfString(MAIL_SEGMENTATION));\r \t\t\r \t\tif(mailData.containsKey(MAIL_BBBID))\r \t\t\tbbbId = mailData.getLong(MAIL_BBBID);\r \t}\r \t\r \tpublic ISFSObject toSFSObject()\r \t{\r \t\tISFSObject obj = new SFSObject();\r \t\t\r \t\tobj.putLong(MAIL_ID, id);\r \t\tobj.putUtfStrin",
-          "tring(MAIL_SEGMENTATION));\r \t\t\r \t\tif(mailData.containsKey(MAIL_BBBID))\r \t\t\tbbbId = mailData.getLong(MAIL_BBBID);\r \t}\r \t\r \tpublic ISFSObject toSFSObject()\r \t{\r \t\tISFSObject obj = new SFSObject();\r \t\t\r \t\tobj.putLong(MAIL_ID, id);\r \t\tobj.putUtfString(MAIL_TITLE"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 5
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Monster.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "import java.util.concurrent.ConcurrentHashMap;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.player.PlayerMonster;\r import com.smartfoxserver.v2.e"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/MsmSession.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "a;\r \r public class MsmSession\r {\r \tpublic String userGameId;\r \tpublic Long bbbId;\r \tpublic Integer level;\r \tpublic Long starpower;\r \tpublic Long diamonds;\r \tpublic Long coins;\r \tpublic Long ethCurrency;\r \tpublic Long food;\r \tpublic Long keys;\r \tpublic Long r"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/QuestLookup.java",
-      "cues": {
-        "community_attribution": [
-          "e\r \t\t\t\tquest.putSFSObject( \"rewards\", new SFSObject() );\r \t\t}\r \t\t\r \t\t//get original tutorial group\r \t\tdefaultTutorialQuests = new SFSArray();\r \t\tTutorialGroup t = (TutorialGroup)TutorialGroup.getGroupById(2);\r \t\tif(t != null)\r \t\t{\r \t\t\tISFSArray initialQuests = t."
-        ],
-        "framework": [],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 1,
+        "framework": 0,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/ScientificRevenue.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "util.Map.Entry;\r \r import org.json.JSONObject;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.SFSHelpers;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.smartfoxserver.v2.entities.data.ISFSArr",
-          " \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.SFSHelpers;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.smartfoxserver.v2.entities.data.ISFSArray;\r import com.smartfoxserver.v2.entities.data",
-          "ts.containsKey(platform);\r \t}\r \t\r \tpublic static Offer getCachedOffer(long bbbId, String platform)\r \t{\r \t\t// HAX SR PLATFORM get ios offers on pc\r \t\tif (platform.equalsIgnoreCase(\"pc\"))\r \t\t\tplatform = \"ios\";\r \t\t\r \t\t// query DB for cached offer\r \t\tISFSObject ",
-          " \t\t// query DB for cached offer\r \t\tISFSObject offerObject = getDBOfferWall(bbbId, platform);\r \t\tif (offerObject != null)\r \t\t{\r \t\t\tString offerData = offerObject.getUtfString(\"paywall_data\");\r \t\t\t\r \t\t\ttry\r \t\t\t{\r \t\t\t\t// decompress offer data if necessary\r \t\t\t\t",
-          "ng custom cached SR offer for user '%d' on platform '%s' created at '%d'\", bbbId, platform, offerStart));\r \t\t\t\treturn new Offer(offerJSON, offerStart);\r \t\t\t}\r \t\t\tcatch (Exception e)\r \t\t\t{\r \t\t\t\tMSMExtension.getInstance().trace(\"Error converting cached JSON of"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 5
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/ScratchTicketFunctions.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "java.util.ArrayList;\r import java.util.Random;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.player",
-          " \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.player.Player;\r import com.smartfoxserver.v2.entities"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 2
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Sticker.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "kage com.bigbluebubble.mysingingmonsters.data;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.smartfoxserver.v2.entities.data.ISFSObject;\r \r public class Sticker\r {\r \tprotected static final String ID_KEY = \"sticker_id\";\r \tprotected stati"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StoreCurrencyLookup.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "import java.util.concurrent.ConcurrentHashMap;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.smartfoxserver.v2.entities.data.ISFSObject;\r \r public class StoreCurrencyLookup {\r \r \tpublic static ConcurrentHashMap<Integer, ISFSObject> curr"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StoreGroupsLookup.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "import java.util.concurrent.ConcurrentHashMap;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.smartfoxserver.v2.entities.data.ISFSObject;\r \r public class StoreGroupsLookup {\r \r \tpublic static ConcurrentHashMap<Integer, ISFSObject> groups"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/StoreItemsLookup.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "import java.util.concurrent.ConcurrentHashMap;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.smartfoxserver.v2.entities.data.ISFSObject;\r \r public class StoreItemsLookup {\r \r \tpublic static ConcurrentHashMap<Integer, ISFSObject> items;\r"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/Structure.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "kage com.bigbluebubble.mysingingmonsters.data;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.smartfoxserver.v2.entities.data.ISFSObject;\r import com.smartfoxserver.v2.entities.data.SFSA"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/CurrencyAvailabilityEvent.java",
-      "cues": {
-        "community_attribution": [
-          "e for future reference\r \t//private static final String ORIG_ITEM_ID_KEY = \"original_store_item_id\"; \r \r \tprivate Integer storeItemId;\r \t//private Integer originalStoreItemId = -1;\r \r \t//[{\"store_item_id\":19}] (shows \"Available\" text, but not original/sale price t",
-          "inal_store_item_id\"; \r \r \tprivate Integer storeItemId;\r \t//private Integer originalStoreItemId = -1;\r \r \t//[{\"store_item_id\":19}] (shows \"Available\" text, but not original/sale price tag)\r \t//[{\"store_item_id\":1, \"original_store_item_id\":2}]  (shows \"Available\" t",
-          "ItemId = -1;\r \r \t//[{\"store_item_id\":19}] (shows \"Available\" text, but not original/sale price tag)\r \t//[{\"store_item_id\":1, \"original_store_item_id\":2}]  (shows \"Available\" text, AND original/sale price tag)\r \tpublic CurrencyAvailabilityEvent(ISFSObject timedEve",
-          "vailable\" text, but not original/sale price tag)\r \t//[{\"store_item_id\":1, \"original_store_item_id\":2}]  (shows \"Available\" text, AND original/sale price tag)\r \tpublic CurrencyAvailabilityEvent(ISFSObject timedEventData) throws Exception\r \t{\r \t\tsuper(timedEventDat",
-          "ore_item_id\":1, \"original_store_item_id\":2}]  (shows \"Available\" text, AND original/sale price tag)\r \tpublic CurrencyAvailabilityEvent(ISFSObject timedEventData) throws Exception\r \t{\r \t\tsuper(timedEventData);\r \t\t\r \t\tif(eventDataSfsArray.size() != 1)\r \t\t\tthrow new"
-        ],
-        "framework": [],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 5,
+        "framework": 0,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/MegafySale.java",
-      "cues": {
-        "community_attribution": [
-          "ost)\r \t\t{\r \t\t\treturn (int)getDiscountValue();\r \t\t}\r \t\telse\r \t\t{\r \t\r \t\t\tint originalCost = Integer.parseInt(MSMExtension.getInstance().getGameSetting(\"USER_DIAMOND_COST_PER_PERMALIT_MEGAMONSTER\"));\r \t\t\tint newCost = originalCost;\r \t\t\t\r \t\t\tfloat currentPercentDisco",
-          "eSetting(\"USER_DIAMOND_COST_PER_PERMALIT_MEGAMONSTER\"));\r \t\t\tint newCost = originalCost;\r \t\t\t\r \t\t\tfloat currentPercentDiscount = getDiscountValue();\r \t\t\tif(currentPercentDiscount != 0)\r \t\t\t\tnewCost = (int)((originalCost * (1.0f-currentPercentDiscount))+0.5);\r \t\t\t",
-          "DiscountValue();\r \t\t\tif(currentPercentDiscount != 0)\r \t\t\t\tnewCost = (int)((originalCost * (1.0f-currentPercentDiscount))+0.5);\r \t\t\t\r \t\t\tif(newCost < 0)\r \t\t\t\tnewCost = 0;\r \t\t\telse if(newCost > originalCost)\r \t\t\t{\r \t\t\t\tMSMExtension.getInstance().trace(\"SOME SORT OF",
-          "t))+0.5);\r \t\t\t\r \t\t\tif(newCost < 0)\r \t\t\t\tnewCost = 0;\r \t\t\telse if(newCost > originalCost)\r \t\t\t{\r \t\t\t\tMSMExtension.getInstance().trace(\"SOME SORT OF PROBLEM HERE: TimedEvents: newCost ends up more than original cost for megafy sale defaulting to original price\");\r ",
-          ").trace(\"SOME SORT OF PROBLEM HERE: TimedEvents: newCost ends up more than original cost for megafy sale defaulting to original price\");\r \t\t\t\tnewCost = originalCost;\r \t\t\t}\r \t\t\t\r \t\t\treturn newCost;\r \t\t}\r \t}\r \t\r \tprotected String myStringRep()\r \t{\r \t\ttry\r \t\t{\r \t\t\tr"
-        ],
-        "framework": [],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 5,
+        "framework": 0,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/PermalightTorchSale.java",
-      "cues": {
-        "community_attribution": [
-          "ost)\r \t\t{\r \t\t\treturn (int)getDiscountValue();\r \t\t}\r \t\telse\r \t\t{\r \t\r \t\t\tint originalCost = Integer.parseInt(MSMExtension.getInstance().getGameSetting(\"USER_DIAMOND_COST_PER_PERMALIT_TORCH\"));\r \t\t\tint newCost = originalCost;\r \t\t\t\r \t\t\tfloat currentPercentDiscount = ",
-          "getGameSetting(\"USER_DIAMOND_COST_PER_PERMALIT_TORCH\"));\r \t\t\tint newCost = originalCost;\r \t\t\t\r \t\t\tfloat currentPercentDiscount = getDiscountValue();\r \t\t\tif(currentPercentDiscount != 0)\r \t\t\t\tnewCost = (int)((originalCost * (1.0f-currentPercentDiscount))+0.5);\r \t\t\t",
-          "DiscountValue();\r \t\t\tif(currentPercentDiscount != 0)\r \t\t\t\tnewCost = (int)((originalCost * (1.0f-currentPercentDiscount))+0.5);\r \t\t\t\r \t\t\tif(newCost < 0)\r \t\t\t\tnewCost = 0;\r \t\t\telse if(newCost > originalCost)\r \t\t\t{\r \t\t\t\tMSMExtension.getInstance().trace(\"SOME SORT OF",
-          "t))+0.5);\r \t\t\t\r \t\t\tif(newCost < 0)\r \t\t\t\tnewCost = 0;\r \t\t\telse if(newCost > originalCost)\r \t\t\t{\r \t\t\t\tMSMExtension.getInstance().trace(\"SOME SORT OF PROBLEM HERE: TimedEvents: newCost ends up more than original cost for torch sale defaulting to original price\");\r \t",
-          ").trace(\"SOME SORT OF PROBLEM HERE: TimedEvents: newCost ends up more than original cost for torch sale defaulting to original price\");\r \t\t\t\tnewCost = originalCost;\r \t\t\t}\r \t\t\t\r \t\t\treturn newCost;\r \t\t}\r \t}\r \t\r \tprotected String myStringRep()\r \t{\r \t\ttry\r \t\t{\r \t\t\tre"
-        ],
-        "framework": [],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 5,
+        "framework": 0,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/event_types/ShortenedFuzing.java",
-      "cues": {
-        "community_attribution": [
-          ").trace(\"SOME SORT OF PROBLEM HERE: TimedEvents: newCost ends up more than original cost for torch sale defaulting to original price\");\r \t\t\t\tnewTime = origFuzeTime;\r \t\t\t}\r \t\t\t\r \t\t\treturn newTime;\r \t\t}\r \t\t\r \t}\r \t\r \tprotected String myStringRep()\r \t{\r \t\ttry\r \t\t{\r \t",
-          "ents: newCost ends up more than original cost for torch sale defaulting to original price\");\r \t\t\t\tnewTime = origFuzeTime;\r \t\t\t}\r \t\t\t\r \t\t\treturn newTime;\r \t\t}\r \t\t\r \t}\r \t\r \tprotected String myStringRep()\r \t{\r \t\ttry\r \t\t{\r \t\t\treturn \"Torch Lighting sale on to Decreas"
-        ],
-        "framework": [],
-        "known_project": []
+      "indicators": {
+        "community_attribution": 2,
+        "framework": 0,
+        "known_project": 0
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEvent.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "data.timed_events;\r \r \r import java.util.Date;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.smartfoxserver.v2.entities.data.ISFSArray;\r import com.smartfoxserver.v2.entities.data.ISFSO"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEventList.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "a.timed_events;\r \r import java.util.ArrayList;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.data.timed_events.TimedEvent.TimedEventType;\r import com.big"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/timed_events/TimedEventListBuilder.java",
-      "cues": {
-        "community_attribution": [
-          "ent end_time from the map\r \t\t\t//removing from the headMap removes from the original map, yo:\r \t\t\teventDatesThatHaveEnded.remove();\r \t\t}\r \t}\r \t\r \tprivate void addNewlyActiveEvents() throws Exception\r \t{\r \t\tLong time24HoursFromNow = MSMExtension.CurrentDBTime()+msI",
-          "currentEvent);\r \t\t\t}\r \t\t\t\r \t\t\t//removing from the headMap removes from the original map, yo:\r \t\t\tnewlyStartedInactiveEvents.remove();\r \t\t}\r \t}\r \t\r \tprivate void addToActiveEvents(ISFSObject s) throws Exception\r \t{\r \t\t\r \t\tLong endDate = s.getLong(TimedEvent.END_DA"
-        ],
-        "framework": [],
-        "known_project": [
-          "java.util.Iterator;\r import java.util.TreeMap;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.mysingingmonsters.data.timed_events.TimedEvent.TimedEventType;\r import com.sma"
-        ]
+      "indicators": {
+        "community_attribution": 2,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/data/VersionData.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "ava.util.Map.Entry;\r import java.util.TreeMap;\r \r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.smartfoxserver.v2.entities.data.SFSObject;\r \r public class VersionData {\r \r \t\r \tprivate static String MIN_CLIENT_VERSION_KEY = \"min_client_vers"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/Helpers.java",
-      "cues": {
-        "community_attribution": [
-          "\t\t\t\tthrow new Exception(\"ERROR: Decompressed user json data does not match original\");\r \t\t\t\t\t\r \t\t\t\t\t//ext.trace(String.format(\">>> Successfully %s user json data\", compressData == 2 ? \"compressed\" : \"test compressed\"));\r \t\t\t\t\t\r \t\t\t\t\t// return compressed data if r",
-          "PRESSION_ERROR\", String.format(\"Decompressed user json data does not match original\"));\r \t\t}\r \t\t\r \t\treturn textData;\r \t}\r \t\r }\r "
-        ],
-        "framework": [],
-        "known_project": [
-          "package com.bigbluebubble.mysingingmonsters;\r \r import com.bigbluebubble.BBBServer.util.Misc;\r \r public class Helpers {\r \r \tpublic static String implode( String[] ary, String delim )\r \t{\r \t\tStringBuilder out = new StringBuilder();\r \t\tfor ( int i = 0; i < a"
-        ]
+      "indicators": {
+        "community_attribution": 2,
+        "framework": 0,
+        "known_project": 1
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/logging/MSMCommandLogging.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "om.bigbluebubble.mysingingmonsters.MSMExtension;\r import com.bigbluebubble.BBBServer.util.ByteBuffer;\r import com.bigbluebubble.BBBServer.util.MigBase64;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.smartfoxserver.v2.entities.User;\r \r /////////",
-          "ort com.bigbluebubble.BBBServer.util.ByteBuffer;\r import com.bigbluebubble.BBBServer.util.MigBase64;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.smartfoxserver.v2.entities.User;\r \r //////////////////////////////////////////////////////////////",
-          "port com.bigbluebubble.BBBServer.util.MigBase64;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.smartfoxserver.v2.entities.User;\r \r ///////////////////////////////////////////////////////////////////////////\r // This class contains the methods to",
-          "ring(e));;\r \t\t\t}\r \t\t}\r \t}\r \t\r \t/**\r \t* clear and setup request log header (bbbid / login time)\r \t*/\r \tprivate static void initClientRequestLog(User user)\r \t{\t\r \t\ttry\r \t\t{\r \t\t\tByteBuffer buffer = (ByteBuffer) user.getProperty(\"commands\");\r \t\t\tbuffer.clear();\r",
-          "perty(\"commands\");\r \t\t\tbuffer.clear();\r \t\t\t\t\r \t\t\t// first 16 bytes will be bbbId and user login time for this session\r \t\t\tlong bbbId = (Long) user.getSession().getProperty(\"bbb_id\");\r \t\t\tlong start = user.getLoginTime();\r \t\t\t\r \t\t\tdebugLog(String.format(\">>>>"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 5
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/MSMExtension.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          ";  import com.amazonaws.auth.BasicAWSCredentials; import com.bigbluebubble.BBBServer.BBBServerExtension; import com.bigbluebubble.BBBServer.exceptions.UserNotFoundException; import com.bigbluebubble.BBBServer.util.BBBToken; import com.bigbluebubble.BBBServer",
-          "com.amazonaws.auth.BasicAWSCredentials; import com.bigbluebubble.BBBServer.BBBServerExtension; import com.bigbluebubble.BBBServer.exceptions.UserNotFoundException; import com.bigbluebubble.BBBServer.util.BBBToken; import com.bigbluebubble.BBBServer.util.Cach",
-          "t com.bigbluebubble.BBBServer.BBBServerExtension; import com.bigbluebubble.BBBServer.exceptions.UserNotFoundException; import com.bigbluebubble.BBBServer.util.BBBToken; import com.bigbluebubble.BBBServer.util.CacheWrapper; import com.bigbluebubble.BBBServer.",
-          "ubble.BBBServer.exceptions.UserNotFoundException; import com.bigbluebubble.BBBServer.util.BBBToken; import com.bigbluebubble.BBBServer.util.CacheWrapper; import com.bigbluebubble.BBBServer.util.DbWrapper; import com.bigbluebubble.BBBServer.util.Misc; import ",
-          ".exceptions.UserNotFoundException; import com.bigbluebubble.BBBServer.util.BBBToken; import com.bigbluebubble.BBBServer.util.CacheWrapper; import com.bigbluebubble.BBBServer.util.DbWrapper; import com.bigbluebubble.BBBServer.util.Misc; import com.bigbluebubb"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 5
       }
     },
     {
       "path": "monster-game-server-266e600f69ed8e462f26416704266d042dd2cf84/src/com/bigbluebubble/mysingingmonsters/MSMServerEventHandler.java",
-      "cues": {
-        "community_attribution": [],
-        "framework": [],
-        "known_project": [
-          "rt java.util.Iterator;\r import java.util.List;\r \r import com.bigbluebubble.BBBServer.util.BBBToken;\r import com.bigbluebubble.BBBServer.ServerEventHandler;\r import com.bigbluebubble.BBBServer.util.CacheWrapper;\r import com.bigbluebubble.BBBServer.util.Misc;\r",
-          "erator;\r import java.util.List;\r \r import com.bigbluebubble.BBBServer.util.BBBToken;\r import com.bigbluebubble.BBBServer.ServerEventHandler;\r import com.bigbluebubble.BBBServer.util.CacheWrapper;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.big",
-          "mport com.bigbluebubble.BBBServer.util.BBBToken;\r import com.bigbluebubble.BBBServer.ServerEventHandler;\r import com.bigbluebubble.BBBServer.util.CacheWrapper;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.VersionInf",
-          " com.bigbluebubble.BBBServer.ServerEventHandler;\r import com.bigbluebubble.BBBServer.util.CacheWrapper;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.data.MsmS",
-          "t com.bigbluebubble.BBBServer.util.CacheWrapper;\r import com.bigbluebubble.BBBServer.util.Misc;\r import com.bigbluebubble.BBBServer.util.VersionInfo;\r import com.bigbluebubble.mysingingmonsters.data.MsmSession;\r import com.bigbluebubble.mysingingmonsters.dat"
-        ]
+      "indicators": {
+        "community_attribution": 0,
+        "framework": 0,
+        "known_project": 5
       }
     }
-  ]
+  ],
+  "note": "This is a metadata-only summary. The source code and arbitrary source excerpts are not reproduced. File paths and inventory are based on verified archival ZIP."
 }
